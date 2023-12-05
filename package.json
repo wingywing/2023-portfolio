@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:eleventy": "npx @11ty/eleventy --serve"
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass sass:_site/css --watch",
+    "start": "npm run watch:eleventy & npm run" 
   },
   "author": "Wing Pang",
   "license": "GPL-3.0-or-later",
@@ -13,7 +15,7 @@
     "@11ty/eleventy": "^2.0.1"
   },
   "dependencies": {
-    "eleventy-sass": "^2.2.4",
+"eleventy-sass": "^2.2.4",
     "eslint": "^8.55.0",
     "gsap": "^3.12.3",
     "sass": "^1.69.5"
