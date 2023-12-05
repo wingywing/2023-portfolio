@@ -1,0 +1,31 @@
+@use 'breakpoints.scss' as bp;
+//Some mobile responsive grid mixins
+@mixin main-grid { //for main grid layouts
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    @include bp.tablet(){
+        gap: .625rem;
+    }
+    @include bp.desktop(){
+        gap: 1rem;
+    }
+}
+
+@mixin subgrid($number-of-columns) { //for browsers that don't support subgrid
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat($number-of-columns, minmax(0, 1fr));
+    @include bp.tablet(){
+        gap: .625rem;
+    }
+    @include bp.desktop(){
+        gap: 1rem;
+    }
+}
+
+@mixin simple-grid($number-of-columns, $gap) { //for misc grid requirements
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat($number-of-columns, minmax(0, 1fr)); 
+}
