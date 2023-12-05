@@ -1,7 +1,26 @@
 //Global stylesheet
 @use 'fonts.scss';
-@use '_mixin/colours.scss' as colours;
+@use 'mixin/colours.scss' as colours;
 
 html {
-    color: colours.$negative;
+    color: colours.$text-primary;
+    font-family: 'overpass';
+    font-size: 1.25rem; //body text default size
+    line-height: 150%;
+}
+
+a { //links colour
+    color: colours.$links;
+}
+
+.text-heading {
+
+}
+
+.text-heading-caption {
+
+}
+
+.text-title {
+
 }
