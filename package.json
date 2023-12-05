@@ -1,0 +1,21 @@
+{
+  "name": "2023-portfolio",
+  "version": "1.0.0",
+  "description": "Wing's 2023 portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:eleventy": "npx @11ty/eleventy --serve"
+  },
+  "author": "Wing Pang",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "eleventy-sass": "^2.2.4",
+    "eslint": "^8.55.0",
+    "gsap": "^3.12.3",
+    "sass": "^1.69.5"
+  }
+}

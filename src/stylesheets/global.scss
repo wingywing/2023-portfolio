@@ -1,0 +1,7 @@
+//Global stylesheet
+@use 'fonts.scss';
+@use '_mixin/colours.scss' as colours;
+
+html {
+    color: colours.$negative;
+}
