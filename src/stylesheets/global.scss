@@ -5,31 +5,41 @@
 html {
     color: colours.$text-primary;
     font-family: 'overpass';
-    font-size: 1.25rem; //body text default size
-    line-height: 150%;
+    font-size: 16px;
 }
 
 a { //links colour
+    font-size: 1.125em;
     color: colours.$links;
 }
 
-.text-heading {
+b {
+    font-weight: 900;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 150%;
+}
+
+.text-hero {
     font-family: 'mondwest';
     font-weight: bold;
     font-size: 4.5rem;
 }
 
-.text-heading-caption {
-    font-family: 'mondwest';
+aside {
+    color: colours.$text-subdued;
+    font-family: 'overpass';
     font-weight: normal;
     font-size: 1.5rem;
 }
 
-.text-title {
+h1 {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.text-sm {
+text-sm {
     font-size: 1rem;
 }
