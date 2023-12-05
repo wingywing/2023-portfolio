@@ -14,13 +14,22 @@ a { //links colour
 }
 
 .text-heading {
-
+    font-family: 'mondwest';
+    font-weight: bold;
+    font-size: 4.5rem;
 }
 
 .text-heading-caption {
-
+    font-family: 'mondwest';
+    font-weight: normal;
+    font-size: 1.5rem;
 }
 
 .text-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
+.text-sm {
+    font-size: 1rem;
 }
