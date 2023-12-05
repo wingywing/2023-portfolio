@@ -4,11 +4,13 @@
   "description": "Wing's 2023 portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:eleventy": "npx @11ty/eleventy --serve",
-    "watch:sass": "npx sass sass:_site/css --watch",
-    "start": "npm run watch:eleventy & npm run" 
-  },
+    "watch:sass": "sass --watch src/stylesheets:dist/stylesheets",
+    "build:sass": "sass src/stylesheets:dist/stylesheets",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
+  },  
   "author": "Wing Pang",
   "license": "GPL-3.0-or-later",
   "devDependencies": {

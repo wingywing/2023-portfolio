@@ -4,5 +4,5 @@ A new portfolio using 11ty as base
 src folder for .scss stylesheets
 dist folder used for page layouts (.css files mirror the src file + minified)
 
-# npm run watch:eleventy
+run npm run start
 
