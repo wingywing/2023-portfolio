@@ -9,8 +9,19 @@ html {
 }
 
 a { //links colour
-    font-size: 1.125em;
+    &:where(:hover, :focus-visible) {
+        background: linear-gradient(0deg, colours.$accent-emphasis, colours.$accent-emphasis) no-repeat left bottom / 100% 100%;
+    }
+    background: linear-gradient(0deg, colours.$seasalt, colours.$seasalt) no-repeat right bottom / 0 100%;
     color: colours.$links;
+    font-size: 1.125em;
+    transition: background-size .75s, background-color 1s;
+    @media (prefers-reduced-motion) {
+        &:where(:hover, :focus-visible) {
+            background: none;
+        }
+        background: none;
+    }
 }
 
 b {
