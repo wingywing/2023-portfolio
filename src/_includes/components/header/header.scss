@@ -1,0 +1,11 @@
+@use 'base';
+@use 'mobile';
+@use 'tablet';
+@use 'desktop';
+
+header {
+    @include base.header-base;
+    @include mobile.header-mobile;
+    @include tablet.header-tablet;
+    @include desktop.header-desktop;
+}
