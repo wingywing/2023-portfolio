@@ -1,6 +1,8 @@
 //Global stylesheet
-@use 'fonts.scss';
+@use 'fonts.scss' as fonts;
+@use 'variables.scss' as variables;
 @use 'mixin/colours.scss' as colours;
+@use 'mixin/breakpoints.scss' as bp;
 
 html {
     color: colours.$text-primary;
@@ -51,6 +53,38 @@ h1 {
     font-weight: bold;
 }
 
-text-sm {
+.text-sm {
     font-size: 1rem;
+}
+
+a.skip-main {
+    &:where(:hover, :focus-visible) {
+        background: linear-gradient(0deg, colours.$bg-primary, colours.$bg-primary) no-repeat left bottom / 100% 100%;
+    }
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+    color: transparent;
+    opacity: 0;
+}
+a.skip-main:focus, a.skip-main:active {
+    color: colours.$links;
+    background-color: colours.$bg-primary;
+    left: 0;
+    top: calc(variables.$header-mobile-height + .625rem);
+    width: fit-content;
+    height: fit-content;
+    padding: .75rem;
+    border-radius: .5rem;
+    border: 1px solid colours.$links;
+    text-align: center;
+    opacity: 1;
+    z-index:999;
+    @include bp.desktop {
+        top: calc(variables.$header-desktop-height + .625rem);
+    }
 }
