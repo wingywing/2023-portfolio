@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-
+    {% for cssFile in collections.stylesheets %}
+        <link rel="stylesheet" href="{{ cssFile.url }}">
+    {% endfor %}
     <link rel="stylesheet" href="../../stylesheets/global.css"/>
 </head>
 <body>
     <a href="#main-content" class="skip-main">Skip to main content</a>
+
+    {% include "src/_includes/components/header/header.njk" %}
     <main id="main-content">
         {{ content | safe }}
     </main>

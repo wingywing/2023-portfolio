@@ -3,6 +3,7 @@
 @use 'variables.scss' as variables;
 @use 'mixin/colours.scss' as colours;
 @use 'mixin/breakpoints.scss' as bp;
+@use '../_includes/components/components.scss';
 
 html {
     color: colours.$text-primary;
