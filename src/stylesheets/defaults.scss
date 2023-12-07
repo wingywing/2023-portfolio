@@ -9,6 +9,10 @@ html {
     font-size: 16px;
 }
 
+body {
+    margin: 0;
+}
+
 a { //links colour
     &:where(:hover, :focus-visible) {
         background: linear-gradient(0deg, colours.$accent-emphasis, colours.$accent-emphasis) no-repeat left bottom / 100% 100%;
