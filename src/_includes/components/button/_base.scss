@@ -1,0 +1,15 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+
+
+@mixin button-base(){
+    align-items: center;
+    border-radius: .5rem;
+    border: none;
+    color: colours.$text-primary;
+    display: flex;
+    font-size: 1.125rem;
+    font-weight: bold;
+    gap: .625rem;
+    padding: 1rem 1.5rem;
+}

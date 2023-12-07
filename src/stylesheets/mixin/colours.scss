@@ -8,7 +8,6 @@ $bg-primary: #F6F5F3; //Main bg colour
 $bg-secondary: #FFFFFF; //Used on top of main bg colour
 $bg-tertiary: #F1ECE4; //Misc
 
-
 //Below colours work with text-primary and text-subdued for contrast
 $rose: #FFC6C6;
 $sunspray: #F8D0A1;
@@ -29,4 +28,82 @@ $emphasis: #736002;
 $success: #436808;
 $links: #116969;
 
+//Classes for component styling
+$main-colours-list: (
+    primary: $text-primary,
+    secondary: $text-subdued,
+
+    neutral: $border-neutral,
+
+    inverted: $bg-primary,
+
+    negative: $negative,
+    warning: $warning,
+    emphasis: $emphasis,
+    success: $success,
+    links: $links,
+
+    rose: $rose, 
+    sunspray: $sunspray,
+    lemonade: $lemonade, 
+    lucky: $lucky, 
+    seasalt: $seasalt,
+    );
+
+@mixin generate-classes($prefix, $property){
+    @each $colour-name, $colour in $main-colours-list {
+        .#{$prefix}-#{$colour-name}{
+            #{$property}: $colour;
+        }
+    }
+}
+
+@include generate-classes("text", "color");
+@include generate-classes("border", "border-color");
+
+
+.border-dashed {
+    border: 1px dashed;
+}
+.border-solid {
+    border: 2px solid;
+}
+
+//Create classes for bg component styles
+$bg-colours-list: (
+    primary: $bg-primary,
+    secondary: $bg-secondary,
+    tertiary: $bg-tertiary,
+
+    primary-inverted: $text-primary,
+    secondary-inverted: $text-subdued,
+
+    negative: $accent-negative,
+    warning: $accent-warning,
+    emphasis: $accent-emphasis,
+    success: $accent-success,
+    links: $accent-links,
+
+    negative-inverted: $negative,
+    warning-inverted: $warning,
+    emphasis-inverted: $emphasis,
+    success-inverted: $success,
+    links-inverted: $links,
+
+    rose: $rose, 
+    sunspray: $sunspray,
+    lemonade: $lemonade, 
+    lucky: $lucky, 
+    seasalt: $seasalt,
+    );
+
+@mixin generate-classes($prefix, $property){
+    @each $colour-name, $colour in $bg-colours-list {
+        .#{$prefix}-#{$colour-name}{
+            #{$property}: $colour;
+        }
+    }
+}
+
+@include generate-classes("bg", "background");
 

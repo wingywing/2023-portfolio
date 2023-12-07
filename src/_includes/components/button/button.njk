@@ -1,0 +1,18 @@
+{# 
+    You can pass through:
+    - class for classname
+    - onclick for onclick event
+    - text for text
+    - icon for icon --> located in the assets/img/icons folder
+#}
+
+<button {% if params.class %}class="{{params.class}}"{% endif %} {% if params.onclick %}onclick={{params.onclick}}{% endif %}>
+    {{ params.text }}
+    {# Only show icon if icon is passed through #}
+
+
+    {% if params.icon %}
+    <img src="{{ "../../../assets/img/icons/" + params.icon + ".svg"}}" alt="" class="button-icon">
+    {% endif %}
+
+</button>
