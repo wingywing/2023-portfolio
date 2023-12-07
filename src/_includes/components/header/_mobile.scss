@@ -1,5 +1,7 @@
 @use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/variables.scss' as variables;
+
 
 @mixin header-mobile(){
-    
+    height: variables.$header-mobile-height;
 }

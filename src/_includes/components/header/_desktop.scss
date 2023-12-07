@@ -1,6 +1,9 @@
 @use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/variables.scss' as variables;
+
 
 @mixin header-desktop(){
-    @include bp.desktop
-        
+    @include bp.desktop {
+        height: variables.$header-desktop-height;
+    }
 }
