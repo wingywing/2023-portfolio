@@ -2,5 +2,18 @@
 @use '../../../stylesheets/mixin/colours.scss' as colours;
 
 
-@mixin button-base(){
+@mixin header-base(){
+    display: flex;
+    flex-direction: row;
+
+    a {
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+        text-decoration: none;
+        color: colours.$text-subdued;
+        font-family: 'mondwest';
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
 }
