@@ -1,0 +1,6 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+
+@mixin button-tablet(){
+    @include bp.tablet
+        
+}

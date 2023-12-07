@@ -1,6 +1,5 @@
----
-layout: base.njk
----
+{%- extends "src/_includes/layouts/base.njk" -%}
+{%- block content -%}
 
 <h1>2023-portfolio</h1>
 <p>A new portfolio using 11ty as base. This is normal para and <b>bold</b></p>
@@ -10,3 +9,9 @@ layout: base.njk
 <h1>this is paragraph/article title</h1>
 <p class="text-sm">this is small-text</p>
 YEEHAWsda
+
+{{ component('button', {
+    text: 'Hello'
+}) }}
+
+{%- endblock -%}

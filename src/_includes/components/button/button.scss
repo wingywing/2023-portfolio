@@ -1,0 +1,11 @@
+@use 'base';
+@use 'mobile';
+@use 'tablet';
+@use 'desktop';
+
+button {
+    @include base.button-base;
+    @include mobile.button-mobile;
+    @include tablet.button-tablet;
+    @include desktop.button-desktop;
+}
