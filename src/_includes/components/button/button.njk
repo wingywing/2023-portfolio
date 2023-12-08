@@ -6,7 +6,19 @@
     - icon for icon --> located in the assets/img/icons folder
 #}
 
-<button {% if params.class %}class="{{params.class}}"{% endif %} {% if params.onclick %}onclick={{params.onclick}}{% endif %}>
+<button 
+    {% if params.class %}
+    class="{{params.class}}"
+    {% endif %} 
+
+    {% if params.onclick %}
+    onclick="{{params.onclick}}"
+    {% endif %}
+
+    {% if params.arialabel %}
+    aria-label="{{params.arialabel}}"
+    {% endif %}
+>
     {{ params.text }}
     {# Only show icon if icon is passed through #}
 
