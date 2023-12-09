@@ -11,7 +11,22 @@
         height: 100%;
     }
 
+    .header-logo {
+        transition: color .3s, fill .3s;
+        &:hover {
+            background: unset;
+            color: colours.$text-primary;
+            path {
+                fill: colours.$text-primary;
+            }
+        }
+    }
+
     a {
+        &:hover {
+            color: colours.$text-primary;
+            font-weight: 600;
+        }
         display: flex;
         gap: .5rem;
         align-items: center;
@@ -20,11 +35,11 @@
         font-family: 'mondwest';
         font-weight: bold;
         font-size: 1.5rem;
+        transition: background-size .75s, background-color 1s, font-weight .3s;
     }
 
     ul {
         display: flex;
-        gap: 1rem;
         list-style-type: '';
         margin-block-start: 0;
         margin-block-end: 0;
@@ -32,10 +47,9 @@
         li {
             width: 100%;
             a {
-                justify-content: center;
-                padding: 1rem 0;
+                font-family: overpass;
+                font-weight: 400;
                 text-align: center;
-                width: 100%;
             }
         }
     }
