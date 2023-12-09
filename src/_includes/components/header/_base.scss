@@ -1,10 +1,15 @@
 @use '../../../stylesheets/mixin/breakpoints.scss' as bp;
 @use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
 
 
 @mixin header-base(){
-    display: flex;
-    flex-direction: row;
+    @include grids.main-grid();
+    .header-inner {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
 
     a {
         display: flex;
@@ -16,4 +21,23 @@
         font-weight: bold;
         font-size: 1.5rem;
     }
+
+    ul {
+        display: flex;
+        gap: 1rem;
+        list-style-type: '';
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+        li {
+            width: 100%;
+            a {
+                justify-content: center;
+                padding: 1rem 0;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
 }

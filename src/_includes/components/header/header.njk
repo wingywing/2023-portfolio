@@ -1,23 +1,40 @@
+
 <header>
-    <a href="/">
-        Wing Pang
-        <img src="../../../assets/img/slime.svg" alt="Slime with wing icon">
-    </a>
-    <nav> 
-        <ul>
-            <li>Design</li>
-            <li>Illustrations</li>
-            <li>Writing</li>
-            <li>About</li>
-        </ul>
+    <div class="header-inner">
+        <a href="/">
+            Wing&nbsp;Pang
+            <img src="../../../assets/img/slime.svg" alt="Slime with wing icon">
+        </a>
         {{
             component('button',{
-                text: 'Send me an email!',
-                class: 'header__email-button bg-lemonade',
+                innercontent: '
+                <div class="hamburger-icon">
+                    <div class="hamburger-icon-line-one line"></div>
+                    <div class="hamburger-icon-line-two line"></div>
+                    <div class="hamburger-icon-line-three line"></div>
+                </div>
+                ',
+                class: 'header__mobile-hamburger-button mobile',
                 onclick: 'location.href="mailto:hello@wingpang.com"',
-                icon: 'mail',
                 arialabel: 'Click to send an email'
             })
         }}
+    </div>
+    <nav class="header-nav" aria-label="Main navigation menu"> 
+        <ul>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Illustrations</a></li>
+            <li><a href="#">Writing</a></li>
+            <li><a href="#">About</a></li>
+            {{
+                component('button',{
+                    innercontent: 'Send me an email!',
+                    class: 'header__email-button bg-lemonade',
+                    onclick: 'location.href="mailto:hello@wingpang.com"',
+                    icon: 'mail',
+                    arialabel: 'Click to send an email'
+                })
+            }}
+        </ul>
     </nav>
 </header>
