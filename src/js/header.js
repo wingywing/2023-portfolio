@@ -11,4 +11,3 @@ function toggleMobileMenu() {
     document.getElementById('header-nav').classList.toggle('active')
     document.getElementById('header__mobile-hamburger-button').classList.toggle('active')
 }
-
