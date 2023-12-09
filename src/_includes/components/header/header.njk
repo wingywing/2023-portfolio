@@ -1,40 +1,42 @@
 
 <header>
     <div class="header-inner">
-        <a href="/">
+        <a href="/" class="header-logo">
             Wing&nbsp;Pang
-            <img src="../../../assets/img/slime.svg" alt="Slime with wing icon">
+            <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.4444 1.57143H18.6667V0H26.4444V1.57143ZM24.8889 9.42857V6.28571H20.2222V4.71429H26.4444V1.57143H28V6.28571H26.4444V9.42857H24.8889ZM24.8889 9.42857H18.6667V11H21.7778V14.1429H18.6667V15.7143H17.1111V11H15.5556V9.42857H14V7.85714H15.5556V6.28571H17.1111V4.71429H18.6667V1.57143H17.1111V4.71429H15.5556V6.28571H12.4444V7.85714H10.8889V6.28571H9.33333V4.71429H7.77778V6.28571H6.22222V7.85714H3.11111V9.42857H1.55556V11H0V18.8571H1.55556V20.4286H3.11111V22H14V20.4286H15.5556V18.8571H17.1111V17.2857H18.6667V15.7143H21.7778V14.1429H23.3333V11H24.8889V9.42857ZM6.22222 11H4.66667V15.7143H6.22222V11ZM9.33333 11H7.77778V15.7143H9.33333V11ZM7.77778 17.2857H6.22222V18.8571H7.77778V17.2857Z" fill="#7C6E65"/>
+            </svg>        
         </a>
         {{
             component('button',{
                 innercontent: '
                 <div class="hamburger-icon">
-                    <div class="hamburger-icon-line-one line"></div>
-                    <div class="hamburger-icon-line-two line"></div>
-                    <div class="hamburger-icon-line-three line"></div>
+                    <div class="line-one line"></div>
+                    <div class="line-two line"></div>
+                    <div class="line-three line"></div>
                 </div>
                 ',
                 class: 'header__mobile-hamburger-button mobile',
-                onclick: 'location.href="mailto:hello@wingpang.com"',
-                arialabel: 'Click to send an email'
+                onclick: '',
+                arialabel: 'Open mobile navigation menu'
             })
         }}
     </div>
-    <nav class="header-nav" aria-label="Main navigation menu"> 
-        <ul>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Illustrations</a></li>
-            <li><a href="#">Writing</a></li>
-            <li><a href="#">About</a></li>
-            {{
-                component('button',{
-                    innercontent: 'Send me an email!',
-                    class: 'header__email-button bg-lemonade',
-                    onclick: 'location.href="mailto:hello@wingpang.com"',
-                    icon: 'mail',
-                    arialabel: 'Click to send an email'
-                })
-            }}
-        </ul>
-    </nav>
+            <nav class="header-nav" aria-label="Main navigation menu"> 
+            <ul>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Illustrations</a></li>
+                <li><a href="#">Writing</a></li>
+                <li><a href="#">About</a></li>
+                {{
+                    component('button',{
+                        innercontent: 'Send me an email!',
+                        class: 'header__email-button bg-lemonade',
+                        onclick: 'location.href="mailto:hello@wingpang.com"',
+                        icon: 'mail',
+                        arialabel: 'Send an email to hello@wingpang.com'
+                    })
+                }}
+            </ul>
+        </nav>
 </header>

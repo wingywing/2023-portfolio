@@ -3,6 +3,9 @@
 
 
 @mixin button-base(){
+    &:hover {
+        cursor: pointer;
+    }
     align-items: center;
     border-radius: .5rem;
     border: none;

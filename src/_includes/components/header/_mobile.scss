@@ -23,9 +23,17 @@
             background-color: colours.$bg-primary;
             flex-direction: column;
             gap: 0;
-            padding-top: 4rem;
+            padding-top: 2rem;
             height: 100%;
             width: 100%;
+
+            li {
+                a {
+                    justify-content: center;
+                    padding: 1rem 0;
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -35,6 +43,22 @@
     }
 
     .hamburger-icon {
+        &:hover {
+            .line {
+                background-color: colours.$text-primary;
+                transition: background-color .3s;
+            }
+            .line-one {
+                transform: rotate(45deg);
+            }
+            .line-two {
+
+            }
+            .line-three {
+                transform: rotate(-45deg);
+
+            }
+        }
         align-items: center;
         border-radius: 0;
         background: none;
@@ -49,6 +73,7 @@
             background-color: colours.$text-subdued;
             height: 4px;
             width: 32px;
+            transition: background-color .3s, transform 1s, opacity .3s;
         }
     }
 
