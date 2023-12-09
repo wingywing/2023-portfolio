@@ -1,3 +1,4 @@
+<script src="/js/header.js"></script>
 
 <header>
     <div class="header-inner">
@@ -17,12 +18,13 @@
                 </div>
                 ',
                 class: 'header__mobile-hamburger-button mobile',
-                onclick: '',
+                id: 'header__mobile-hamburger-button',
+                onclick: 'toggleMobileMenu()',
                 arialabel: 'Open mobile navigation menu'
             })
         }}
     </div>
-            <nav class="header-nav" aria-label="Main navigation menu"> 
+            <nav class="header-nav" id="header-nav" aria-label="Main navigation menu"> 
             <ul>
                 <li><a href="#">Design</a></li>
                 <li><a href="#">Illustrations</a></li>
