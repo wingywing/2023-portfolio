@@ -4,9 +4,5 @@
 
 @mixin header-desktop(){
     @include bp.desktop {
-        height: variables.$header-desktop-height;
-        ul {
-            gap: 1rem;
-        }
     }
 }
