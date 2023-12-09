@@ -1,7 +1,0 @@
-@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
-
-@mixin header-tablet(){
-    @include bp.tablet{
-
-    }
-}
