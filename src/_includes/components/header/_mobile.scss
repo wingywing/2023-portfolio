@@ -14,6 +14,7 @@
     }
 
     .header-nav {
+        display: none;
         position: absolute;
         top: calc(variables.$header-mobile-height + 1px);
         width: 100%;
@@ -38,27 +39,30 @@
     }
 
     .header__mobile-hamburger-button {
+        &:hover, &.active {
+            .line {
+                background-color: colours.$text-primary;
+            }
+            .line-one {
+                transform-origin: 0 0;
+                transform: translate(20%, 0%) rotate(45deg);
+            }
+            .line-two {
+                transform-origin: center;
+                width: 0;
+                opacity: 0;
+            }
+            .line-three {
+                transform-origin: 0 100%;
+                transform: translate(20%, 1.25px) rotate(-45deg);
+
+            }
+        }
         background: none;
         padding: 0;
     }
 
     .hamburger-icon {
-        &:hover {
-            .line {
-                background-color: colours.$text-primary;
-                transition: background-color .3s;
-            }
-            .line-one {
-                transform: rotate(45deg);
-            }
-            .line-two {
-
-            }
-            .line-three {
-                transform: rotate(-45deg);
-
-            }
-        }
         align-items: center;
         border-radius: 0;
         background: none;
@@ -73,7 +77,7 @@
             background-color: colours.$text-subdued;
             height: 4px;
             width: 32px;
-            transition: background-color .3s, transform 1s, opacity .3s;
+            transition: all .7s;
         }
     }
 
