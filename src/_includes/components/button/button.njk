@@ -19,7 +19,7 @@
     aria-label="{{params.arialabel}}"
     {% endif %}
 >
-    {{ params.text }}
+    {{ params.innercontent | safe}}
     {# Only show icon if icon is passed through #}
 
 

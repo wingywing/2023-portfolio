@@ -1,7 +1,60 @@
 @use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
 @use '../../../stylesheets/variables.scss' as variables;
 
 
 @mixin header-mobile(){
     height: variables.$header-mobile-height;
+
+    .header-inner {
+        display: flex;
+        grid-column: 2/12;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .header-nav {
+        position: absolute;
+        top: calc(variables.$header-mobile-height + 1px);
+        width: 100%;
+        height: 100vh;
+
+        ul {
+            background-color: colours.$bg-primary;
+            flex-direction: column;
+            gap: 0;
+            padding-top: 4rem;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .header__mobile-hamburger-button {
+        background: none;
+        padding: 0;
+    }
+
+    .hamburger-icon {
+        align-items: center;
+        border-radius: 0;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        gap: 6px;
+        width: 2rem;
+        height: 2rem;
+        .line {
+            background-color: colours.$text-subdued;
+            height: 4px;
+            width: 32px;
+        }
+    }
+
+    .header__email-button {
+        align-self: center;
+        margin-top: 2rem;
+        width: fit-content;
+    }
 }
