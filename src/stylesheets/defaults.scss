@@ -10,6 +10,9 @@ html {
 }
 
 body {
+    @media (prefers-reduced-motion) {
+        animation: none;
+    }
     margin: 0;
 
     //bg animated grid (modified from Bernardo Baquero Stand)
