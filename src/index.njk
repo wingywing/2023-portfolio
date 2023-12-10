@@ -1,6 +1,47 @@
 {%- extends "src/_includes/layouts/base.njk" -%}
 {%- block content -%}
 
+<section id="home-intro">
+    <h1>I'm Wing Pang</h1>
+    <div class="home-intro__pills">
+        {{
+            component('pill',{
+                innercontent: 'UI/UX',
+                class: 'home-intro__pill'
+            })
+        }}
+        {{
+            component('pill',{
+                innercontent: 'Code',
+                class: 'home-intro__pill'
+            })
+        }}        
+        {{
+            component('pill',{
+                innercontent: 'Illustrations',
+                class: 'home-intro__pill'
+            })
+        }}
+    </div>
+    <p>A Sydney-based junior product designer with an interest in 
+        <b>accessible UI and design systems</b>. I work with developers to 
+        build <b>scalable UI components working across HTML, SASS and React</b>.
+    </p>
+    <p>
+        If I’m not nerding out on obscure, niche hobbies, or going down 
+        rabbitholes on the internet, you might find me 
+        at a foodie hotspot near you. (<a href="#">now</a>)
+    </p>
+</section>
+<section id="home-design">
+
+</section>
+<section id="home-tools">
+    
+</section>
+
+
+
 
 <h1 id="test">2023-portfolio</h1>
 <p>A new portfolio using 11ty as base. This is normal para and <b>bold</b></p>

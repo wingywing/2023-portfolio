@@ -1,0 +1,43 @@
+{# 
+    You can pass through:
+    - class for classname
+    - onclick for onclick event --> IF there's no onClick, the pill will be a decorative div instead of a button
+    - text for text
+    - icon for icon --> located in the assets/img/icons folder
+    
+#}
+
+{% if params.onclick %}
+    <Button 
+        {% if params.class %}
+        class="pill {{params.class}}"
+        {% endif %} 
+
+        {% if params.id %}
+        id="{{params.id}}"
+        {% endif %} 
+
+        {% if params.onclick %}
+        onclick="{{params.onclick}}"
+        {% endif %}
+
+        {% if params.arialabel %}
+        aria-label="{{params.arialabel}}"
+        {% endif %}
+        >
+        {{ params.innercontent | safe}}
+    </Button>
+{% else %}
+    <div 
+        {% if params.class %}
+        class="pill {{params.class}}"
+        {% endif %} 
+
+        {% if params.id %}
+        id="{{params.id}}"
+        {% endif %} 
+    >
+        {{ params.innercontent | safe}}
+    </div>
+{% endif %}
+
