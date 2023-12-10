@@ -6,7 +6,7 @@ function enFadeOut() {
 async function fadeInOut(lang){
     var delayTime
     if (lang !== 'en' ) {
-        delayTime = 6500; //non english animations are 3000ms + 1500ms delay + 400ms fadeIn + 400ms fadeout))
+        delayTime = 6500; //this number came from trial + error
     } else if (lang === 'en') {
         delayTime = 5500; //english animation is 4000ms (+ 1500ms delay))
     }
@@ -32,3 +32,11 @@ async function runAnimations() {
 }
 
 runAnimations();
+
+//GSAP
+
+$("#home-intro__slime").on("mouseenter", function() {
+    var duration = 1;
+    gsap.to("#home-intro__slime", {y:-50, ease:Power2.easeOut});
+    gsap.to("#home-intro__slime", {y:0, ease:Bounce.easeOut, delay:duration / 4});
+});
