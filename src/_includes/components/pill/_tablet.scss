@@ -1,0 +1,10 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/variables.scss' as variables;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+
+
+
+@mixin pill-tablet(){
+    @include bp.tablet{
+    }
+}

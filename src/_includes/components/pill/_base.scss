@@ -1,0 +1,13 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+
+
+@mixin pill-base(){
+    &.home-intro__pill {
+        background-color: colours.$bg-secondary;
+        border-radius: 3rem;
+        font-weight: 500;
+        width: fit-content;
+    }
+}

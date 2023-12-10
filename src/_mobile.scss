@@ -1,0 +1,34 @@
+@use './stylesheets/mixin/breakpoints.scss' as bp;
+@use './stylesheets/mixin/colours.scss' as colours;
+
+
+@mixin home-page-mobile(){
+$mobile-heading-height: 4rem;
+    h1 {
+        font-size: min(12vw, $mobile-heading-height);
+    }
+    #home-intro__slime{
+        height: $mobile-heading-height;
+    }
+    #home-intro__name-span {
+        &::after {
+            bottom: .25rem;
+            height: 1rem;
+        }
+    }
+    .home-intro__hello-group {
+        margin-bottom: -4rem;
+        margin-left: -1rem;
+    }
+    .home-intro__pills {
+        flex-direction: row;
+        gap: .75rem;
+        max-width: 100%;
+        align-items: flex-start;
+        div {
+            display: flex;
+            justify-content: flex-start;
+            padding: .75rem 1rem;
+        }
+    }
+}

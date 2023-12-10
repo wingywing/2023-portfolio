@@ -1,0 +1,11 @@
+@use 'base';
+@use 'mobile';
+@use 'tablet';
+@use 'desktop';
+
+.pill {
+    @include base.pill-base;
+    @include mobile.pill-mobile;
+    @include tablet.pill-tablet;
+    @include desktop.pill-desktop;
+}

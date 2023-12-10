@@ -1,0 +1,11 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/variables.scss' as variables;
+
+
+@mixin pill-mobile(){
+    &.home-intro__pill {
+        font-size: 1.125rem;
+        padding: .75rem 1.5rem;
+    }
+}
