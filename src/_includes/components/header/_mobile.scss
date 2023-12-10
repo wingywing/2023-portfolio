@@ -41,7 +41,12 @@
     }
 
     .header__mobile-hamburger-button {
-        &:hover, &.active {
+        &:focus {
+            .line {
+                background-color: colours.$text-primary;
+            }
+        }
+        &:hover, &.active  {
             .line {
                 background-color: colours.$text-primary;
             }
@@ -61,7 +66,8 @@
             }
         }
         background: none;
-        padding: 0;
+        padding: 1rem;
+        margin: -1rem;
     }
 
     .hamburger-icon {
