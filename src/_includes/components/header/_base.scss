@@ -13,7 +13,7 @@
 
     .header-logo {
         transition: color .3s, fill .3s;
-        &:hover {
+        &:hover, &:focus {
             background: unset;
             color: colours.$text-primary;
             path {
@@ -23,7 +23,7 @@
     }
 
     a {
-        &:hover {
+        &:hover, &:focus {
             color: colours.$text-primary;
             font-weight: 600;
         }

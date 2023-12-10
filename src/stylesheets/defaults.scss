@@ -97,7 +97,7 @@ a.skip-main {
 }
 a.skip-main:focus, a.skip-main:active {
     color: colours.$links;
-    background-color: colours.$bg-primary;
+    background: linear-gradient(0deg, colours.$bg-secondary, colours.$bg-secondary) no-repeat left top / 100% 100%;
     left: 0;
     top: calc(variables.$header-mobile-height + .625rem);
     width: fit-content;

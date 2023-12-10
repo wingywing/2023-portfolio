@@ -47,7 +47,7 @@
                             margin-bottom: .9rem;
                             z-index: -1;
                         }
-                        &:hover {
+                        &:hover,  &:focus {
                             flex-direction: column;
                             &::after {
                                 content: '';
