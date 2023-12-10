@@ -2,6 +2,8 @@
 
 $text-small: 1rem;
 
+
+
 @font-face {
     font-family: 'mondwest';
     src: url('../assets/fonts/mondwest-regular.woff2') format('woff2'),
@@ -17,13 +19,13 @@ $text-small: 1rem;
 }
 
 @font-face {
-    font-family: 'overpass';
+    font-family: 'overpass' sans-serif;
     src: url('../assets/fonts/overpass.ttf') format('ttf');
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'overpass';
+    font-family: 'overpass' sans-serif;
     src: url('../assets/fonts/overpass-italic.ttf') format('ttf');
     font-style: italic;
 }
