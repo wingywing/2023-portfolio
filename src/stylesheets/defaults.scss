@@ -11,6 +11,24 @@ html {
 
 body {
     margin: 0;
+
+    //bg animated grid (modified from Bernardo Baquero Stand)
+
+    $body-bg-colour: colours.$bg-primary;
+    $grid-colour: colours.$bg-secondary;
+    $size: 3.75rem;
+    background-color: $body-bg-colour;
+    background-image: linear-gradient($grid-colour, 1px, transparent 0), linear-gradient(90deg, $grid-colour, 1px, transparent 0);
+    background-size: $size $size, $size $size;
+    animation: moveX 15s linear infinite;
+
+    @keyframes moveX {
+        from {
+            background-position: 0 0, 0 0;
+        } to {
+            background-position: $size $size;
+        }
+    }
 }
 
 a { //links colour
