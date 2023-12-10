@@ -1,0 +1,115 @@
+@use './stylesheets/mixin/breakpoints.scss' as bp;
+@use './stylesheets/mixin/grids.scss' as grids;
+@use './stylesheets/mixin/colours.scss' as colours;
+
+
+@mixin home-page-base(){
+    @include grids.main-grid();
+    section {
+        grid-column: 2/12;
+    }
+    h1 {
+        color: var(--text-primary, #4E4843);
+        font-family: 'mondwest';
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transform: rotate(-1deg);
+        margin-block: 1rem;
+        white-space: nowrap;
+    }
+    .home-intro__pills {
+        display: flex;
+    }
+    #home-intro__slime {
+        transform: rotate(6.954deg) translateY(.5rem);
+        path {
+            fill: colours.$text-primary;
+        }
+    }
+    .home-intro__i-am {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .home-intro__hello-group {
+        position: relative;
+        z-index: -1;
+        .placeholder {
+            z-index: -1;
+        }
+        .home-intro__hello {
+            position: absolute;
+            z-index: 1;
+            left: 0;
+        }
+        #home-intro__hello-tc {
+            path {
+                @for $i from 2 through 27 {
+                    &:nth-of-type(#{$i}){
+                        animation-delay: calc($i*.2s);
+                    }
+                }
+                stroke-dasharray: 700;
+                stroke-dashoffset: 700;
+                animation: draw 3s linear forwards;
+            }
+        }
+        #home-intro__hello-cn {
+            path {
+                @for $i from 2 through 10 {
+                    &:nth-of-type(#{$i}){
+                        animation-delay: calc($i*.6s);
+                    }
+                }
+                stroke-dasharray: 700;
+                stroke-dashoffset: 700;
+                animation: draw 3s linear forwards;
+            }
+        }
+        #home-intro__hello-jp {
+            path {
+                @for $i from 2 through 13 {
+                    &:nth-of-type(#{$i}){
+                        animation-delay: calc($i*.4s);
+                    }
+                }
+                stroke-dasharray: 700;
+                stroke-dashoffset: 700;
+                animation: draw 3s linear forwards;
+            }
+        }
+        #home-intro__hello-en {
+            path {
+                &:nth-of-type(2){
+                    animation-delay: 4s;
+                }
+                &:nth-of-type(3){
+                    animation-delay: 4.2s;
+                }
+                stroke-dasharray: 1500;
+                stroke-dashoffset: 1500;
+                animation: draw 4s linear forwards;
+            }
+        }
+    }
+    #home-intro__name-span {
+        position: relative;
+        &::after {
+            background: colours.$seasalt;
+            content: '';
+            left: 0;
+            background-blend-mode: multiply;
+            mix-blend-mode: multiply;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+
+    @keyframes draw {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+}
