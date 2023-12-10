@@ -17,7 +17,7 @@ $mobile-heading-height: 4rem;
         }
     }
     .home-intro__hello-group {
-        margin-bottom: -4rem;
+        margin-bottom: -2.7rem;
         margin-left: -1rem;
     }
     .home-intro__pills {
@@ -30,5 +30,11 @@ $mobile-heading-height: 4rem;
             justify-content: flex-start;
             padding: .75rem 1rem;
         }
+    }
+    #home-intro {
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 }

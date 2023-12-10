@@ -15,14 +15,14 @@
         font-weight: 400;
         line-height: normal;
         transform: rotate(-1deg);
-        margin-block: 1rem;
+        margin-block: 0;
         white-space: nowrap;
     }
     .home-intro__pills {
         display: flex;
     }
     #home-intro__slime {
-        transform: rotate(6.954deg) translateY(.5rem);
+        transform: rotate(6.954deg)  translateY(-.5rem);
         path {
             fill: colours.$text-primary;
         }
