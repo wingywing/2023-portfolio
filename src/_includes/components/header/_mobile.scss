@@ -41,12 +41,12 @@
     }
 
     .header__mobile-hamburger-button {
-        &:focus {
+        &:focus, &:hover {
             .line {
                 background-color: colours.$text-primary;
             }
         }
-        &:hover, &.active  {
+        &.active  {
             .line {
                 background-color: colours.$text-primary;
             }
