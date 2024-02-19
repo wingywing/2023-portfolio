@@ -2,6 +2,9 @@
 @use './stylesheets/mixin/grids.scss' as grids;
 @use './stylesheets/mixin/colours.scss' as colours;
 
+@mixin transition-all {
+    transition: all, .5s;
+}
 
 @mixin home-page-base(){
     @include grids.main-grid();
@@ -9,6 +12,7 @@
         grid-column: 2/12;
     }
     h1 {
+        @include transition-all();
         color: colours.$text-primary;
         font-family: 'mondwest';
         font-style: normal;
@@ -113,6 +117,7 @@
     }
 
     #home-intro__image {
+        @include transition-all();
         position: relative;
         max-width: 20rem;
         img {
