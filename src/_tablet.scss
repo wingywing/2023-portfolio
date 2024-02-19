@@ -1,15 +1,17 @@
 @use './stylesheets/mixin/breakpoints.scss' as bp;
+@use './stylesheets/variables.scss' as variables;
+
 
 $tablet-heading-height: 6rem;
 
 @mixin home-page-tablet(){
     @include bp.tablet{
         #home-intro {
-            padding-top: 8rem;
             display: grid;
             grid-template-columns: subgrid;
             gap: inherit;
             row-gap: 2rem;
+            min-height: calc(100dvh - variables.$header-desktop-height)
         } 
         #home-intro__hero {
             grid-column: 1/10;

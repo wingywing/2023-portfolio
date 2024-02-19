@@ -1,9 +1,14 @@
 @use './stylesheets/mixin/breakpoints.scss' as bp;
 @use './stylesheets/mixin/colours.scss' as colours;
+@use './stylesheets/variables.scss' as variables;
+
 
 
 @mixin home-page-mobile(){
 $mobile-heading-height: 4rem;
+    #home-intro {
+        min-height: calc(100dvh - variables.$header-mobile-height)
+    }
     h1 {
         font-size: min(12vw, $mobile-heading-height);
     }
@@ -18,7 +23,7 @@ $mobile-heading-height: 4rem;
         }
     }
     .home-intro__hello-group {
-        margin-bottom: -2.7rem;
+        margin-bottom: -3rem;
         margin-left: -1rem;
     }
     .home-intro__pills {
@@ -33,7 +38,6 @@ $mobile-heading-height: 4rem;
         }
     }
     #home-intro {
-        padding: 3rem 0;
         display: flex;
         flex-direction: column;
         gap: 2rem;
