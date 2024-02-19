@@ -15,7 +15,7 @@ body {
         animation: none;
     }
     margin: 0;
-
+    text-wrap: pretty;
     //bg animated grid (modified from Bernardo Baquero Stand)
     $body-bg-colour: colours.$bg-primary;
     $grid-colour: colours.$bg-secondary;

@@ -9,6 +9,7 @@ $mobile-heading-height: 4rem;
     }
     #home-intro__slime{
         height: $mobile-heading-height;
+        width: $mobile-heading-height;
     }
     #home-intro__name-span {
         &::after {
@@ -36,5 +37,15 @@ $mobile-heading-height: 4rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
+    }
+
+    #home-intro__image {
+        img {
+            transform: rotate(1.82deg);
+        }
+        .home-deco-circle {
+            bottom: -1rem;
+            right: -1rem;
+        }
     }
 }

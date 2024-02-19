@@ -3,6 +3,8 @@
 @mixin main-grid { //for main grid layouts
     display: grid;
     gap: 0;
+    margin: auto;
+    max-width: 1440px;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     @include bp.tablet(){
         gap: .625rem;
