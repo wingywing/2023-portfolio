@@ -31,6 +31,9 @@ $tablet-heading-height: 6rem;
             grid-column: 1/6;
         }
         #home-intro__image {
+            img {
+                transform: rotate(3.64deg);
+            }
             margin-top: -1rem;
             grid-column: 7/11;
         }
@@ -40,6 +43,16 @@ $tablet-heading-height: 6rem;
                 justify-content: flex-start;
                 padding: 1rem 2rem;
             }
+        }
+        #home-intro__name-span {
+            &::after {
+                bottom: .75rem;
+                height: 1.5rem;
+            }
+        }
+
+        .home-intro__i-am {
+            gap: 2rem;
         }
     }
 }
