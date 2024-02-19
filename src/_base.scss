@@ -1,6 +1,7 @@
 @use './stylesheets/mixin/breakpoints.scss' as bp;
 @use './stylesheets/mixin/grids.scss' as grids;
 @use './stylesheets/mixin/colours.scss' as colours;
+@use './stylesheets/variables.scss' as variables;
 
 @mixin transition-all {
     transition: all, .5s;
@@ -10,6 +11,9 @@
     @include grids.main-grid();
     section {
         grid-column: 2/12;
+    }
+    #home-intro {
+        align-content: center
     }
     h1 {
         @include transition-all();
