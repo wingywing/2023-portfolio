@@ -7,10 +7,22 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("node_modules/gsap/dist/all.js"); //to add GSAP
     eleventyConfig.addPassthroughCopy("node_modules/jquery/dist/jquery.min.js"); //to add jquery
     eleventyConfig.addPassthroughCopy("src/js"); //to add jquery
-
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/wenc-setup.js");
     eleventyConfig.setTemplateFormats(["njk"]);
+    eleventyConfig.addShortcode("image", async function(src, alt, sizes){
+        let metadata = await Image(src, {
+            widths: [300, 600],
+            formats: ["jpeg"]
+        });
+        let imageAttributes = {
+            alt,
+            sizes,
+            loading: "lazy",
+            decoding: "async",
+        };
+        return Image.generateHTML(metadata, imageAttributes);
+    });
     return { 
         dir: { 
             input: "src", 

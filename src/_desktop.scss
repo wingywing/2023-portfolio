@@ -1,7 +1,28 @@
 @use './stylesheets/mixin/breakpoints.scss' as bp;
 
+$desktop-heading-height: 9.375rem;
+
 @mixin home-page-desktop(){
     @include bp.desktop{
-        
+        #home-intro__hero {
+            grid-column: 1/10;
+            h1 {
+                font-size: min(12vw, $desktop-heading-height);
+            }
         }
+        #home-intro__slime{
+            height: $desktop-heading-height;
+            width: $desktop-heading-height;
+        }
+        #home-intro__image {
+            margin-top: -1rem;
+            grid-column: 8/11;
+        }
+        #home-intro__name-span {
+            &::after {
+                bottom: 1rem;
+                height: 2rem;
+            }
+        }
+    }
 }
