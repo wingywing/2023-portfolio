@@ -2,7 +2,17 @@
 
 $text-small: 1rem;
 
+.neue-bit {
+    font-family: 'neuebit';
+    font-size: 1.5rem;
+}
 
+@font-face {
+    font-family: 'neuebit';
+    src: url('../assets/fonts/neuebit-regular.woff2') format('woff2'),
+        url('../assets/fonts/neuebit-regular.woff') format('woff');
+    font-weight: normal;
+}
 
 @font-face {
     font-family: 'mondwest';

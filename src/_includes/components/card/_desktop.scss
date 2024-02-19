@@ -1,0 +1,9 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/variables.scss' as variables;
+
+
+@mixin card-desktop(){
+    @include bp.desktop {
+
+    }
+}

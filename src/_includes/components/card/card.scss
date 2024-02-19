@@ -1,0 +1,11 @@
+@use 'base';
+@use 'mobile';
+@use 'tablet';
+@use 'desktop';
+
+.card {
+    @include base.card-base;
+    @include mobile.card-mobile;
+    @include tablet.card-tablet;
+    @include desktop.card-desktop;
+}
