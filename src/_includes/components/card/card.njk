@@ -11,29 +11,28 @@
 <a     
     href="{{params.a}}"
 
-    {% if params.class %}
-    class="{{params.class}}"
-    {% endif %} 
+    class="card{% if params.class %} {{params.class}}{% endif %}"
 
     {% if params.id %}
     id="{{params.id}}"
     {% endif %} 
 >
-    <div>
+    <div class="container">
         {% if params.img %}
         <img src="{{ "../../../assets/img/" + params.img}}" alt="{{params.alt}}" class="card-image">
         {% endif %}
         {% if params.heading %}
-        <h3>
-            {{params.heading | safe}}
-        </h3>
-        {% endif %}
-        {% if params.caption %}
-        <p>
-            {{params.caption | safe}}
-        </p>
-        {% endif %}
-        
+        <div class="text">
+            <h3>
+                {{params.heading | safe}}
+            </h3>
+            {% endif %}
+            {% if params.caption %}
+            <p>
+                {{params.caption | safe}}
+            </p>
+            {% endif %}
+        </div>
     </div>
 </a>
 
