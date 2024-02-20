@@ -1,8 +1,27 @@
 @use '../../../stylesheets/mixin/breakpoints.scss' as bp;
 @use '../../../stylesheets/mixin/colours.scss' as colours;
 @use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/fonts.scss' as fonts;
+
 
 
 @mixin card-base(){
-
+    text-decoration: none;
+    color: colours.$text-primary;
+    div.container {
+        background-color: colours.$bg-secondary;
+        display: flex;
+        flex-direction: column;
+    }
+    h3, p {
+        margin: 0;
+    }
+    div.text {
+        padding: 1rem 1.5rem;
+    }
+    h3 {
+        font-size: fonts.$title;
+        text-wrap: pretty;
+        line-height: 150%;
+    }
 }
