@@ -8,10 +8,12 @@
 @mixin card-base(){
     text-decoration: none;
     color: colours.$text-primary;
+    background: colours.$bg-secondary;
+    width: fit-content;
+    height: fit-content;
+
     div.container {
-        background-color: colours.$bg-secondary;
-        display: flex;
-        flex-direction: column;
+        background: colours.$bg-secondary;
     }
     h3, p {
         margin: 0;

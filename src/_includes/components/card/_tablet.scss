@@ -6,5 +6,6 @@
 
 @mixin card-tablet(){
     @include bp.tablet{
+        flex-direction: column;
     }
 }

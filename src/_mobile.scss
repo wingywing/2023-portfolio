@@ -9,6 +9,14 @@ $mobile-heading-height: 4rem;
     #home-intro {
         min-height: calc(100dvh - variables.$header-mobile-height)
     }
+    #home-design {
+        display: grid;
+        grid-template-columns: subgrid;
+        align-content: center;
+        align-items: center;
+        gap: 2rem;
+        min-height: 100dvh
+    }
     h1 {
         font-size: min(12vw, $mobile-heading-height);
     }
@@ -51,5 +59,10 @@ $mobile-heading-height: 4rem;
             bottom: -1rem;
             right: -1rem;
         }
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 }
