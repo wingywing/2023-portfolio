@@ -113,7 +113,18 @@
         </div>
     </section>
     <section id="home-design">
-        <h2>Design</h2>
+        <h2>
+            Design
+            <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M38.5174 4.87653L34.5641 4.26696L33.9545 8.22024L37.9078 8.82981L38.5174 4.87653ZM10.2348 4.56285L22.0947 6.39154L21.4851 10.3448L9.62526 8.51613L5.3583 36.1891L33.0313 40.4561L34.86 28.5962L38.8132 29.2058L36.375 45.0189L0.795454 39.5328L6.28155 3.95328L10.2348 4.56285ZM15.7031 21.5951L11.7498 20.9855L9.92115 32.8454L21.781 34.6741L22.3906 30.7208L26.3438 31.3304L26.9534 27.3771L23.0001 26.7675L22.3906 30.7208L14.484 29.5017L15.7031 21.5951ZM24.2193 18.861L20.266 18.2514L19.6564 22.2047L15.7031 21.5951L16.3127 17.6418L20.266 18.2514L20.8755 14.2981L24.8288 14.9077L25.4384 10.9544L29.3917 11.564L28.7821 15.5172L24.8288 14.9077L24.2193 18.861ZM30.0012 7.61068L33.9545 8.22024L33.3449 12.1735L29.3917 11.564L30.0012 7.61068ZM37.9078 8.82981L41.8611 9.43937L41.2515 13.3927L45.2048 14.0022L44.5952 17.9555L40.6419 17.3459L40.0324 21.2992L36.0791 20.6897L35.4695 24.6429L31.5162 24.0334L32.1258 20.0801L36.0791 20.6897L36.6887 16.7364L40.6419 17.3459L41.2515 13.3927L37.2982 12.7831L37.9078 8.82981ZM27.563 23.4238L31.5162 24.0334L30.9067 27.9866L26.9534 27.3771L27.563 23.4238Z" fill="#4E4843"/>
+            </svg>
+                
+            <svg class="home-design-squiggle" width="307" height="83" viewBox="0 0 307 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:multiply">
+                <path d="M11.7101 73.6286C24.3319 58.2176 60.897 25.9703 106.183 20.2683C162.791 13.1408 158.905 51.5842 138.381 58.2756C117.857 64.9669 105.085 31.3945 168.924 20.667C219.995 12.085 281.254 14.0091 305.5 16.044" stroke="#C2DFE1" stroke-width="28"/>
+                </g>
+            </svg>   
+        </h2>         
         <aside>
             <p class="aside-main">
                 I think these are kinda neat. <span class="neue-bit">☕</span>
@@ -122,14 +133,35 @@
                 Please <a href="mailto:hello@wingpang.com">contact me</a> if you want a detailed explanation.
             </p>
         </aside>
-        {{
-            component('card',{
-                a: '#',
-                img: 'home/open-law.png',
-                heading: 'Scalable design system for a legal non-profit',
-                caption: 'Design system and branding'
-            })
-        }}
+        <div class="cards">
+            {{
+                component('card',{
+                    a: '#',
+                    class: 'ol',
+                    img: 'home/open-law.png',
+                    heading: 'Scalable design system for a legal non-profit',
+                    caption: 'Design system and branding'
+                })
+            }}
+            {{
+                component('card',{
+                    a: '#',
+                    class: 'vr',
+                    img: 'home/victorian-reports.png',
+                    heading: 'Website redesign for the Victorian Reports',
+                    caption: 'Web design, HTML, SASS, React'
+                })
+            }}
+            {{
+                component('card',{
+                    a: '#',
+                    class: 'darlo',
+                    img: 'home/darlinghurst.png',
+                    heading: 'Web design for a historical project about Darlinghurst',
+                    caption: 'Web design, HTML, SASS, Hugo'
+                })
+            }}
+        </div>
     </section>
     <section id="home-tools">
         

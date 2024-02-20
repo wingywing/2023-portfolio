@@ -4,6 +4,6 @@
 
 @mixin card-desktop(){
     @include bp.desktop {
-
+        max-width: 23.625rem;
     }
 }

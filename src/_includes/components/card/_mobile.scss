@@ -4,5 +4,17 @@
 
 
 @mixin card-mobile(){
-
+    img {
+        width: 100%;
+    }
+    div.container {
+        display: flex;
+        flex-direction: column;
+        max-width: 25.125rem;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
