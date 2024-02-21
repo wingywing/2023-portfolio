@@ -144,9 +144,16 @@
         row-gap: 2rem;
         align-content: center;
     }
-
+    #home-design {
+        h2 {
+            rotate: -1deg;
+        }
+    }
     #home-tools {
         padding: 5rem 0;
+        h2 {
+            rotate: 1deg;
+        }
         .tools {
             display: flex;
             flex-direction: column;
