@@ -53,7 +53,7 @@ $tablet-heading-height: 6rem;
             }
         }
         .home-intro__i-am {
-            gap: 2rem;
+            row-gap: 2rem;
         }
         #home-design {
             .cards {
@@ -85,6 +85,25 @@ $tablet-heading-height: 6rem;
                 rotate: 1deg;
             }
         }
-        
+        #home-tools {
+            display: grid;
+            grid-template-columns: subgrid;
+            gap: inherit;
+            row-gap: 4rem;
+            h3 {
+                white-space: nowrap;
+            }
+            .tools {
+                display: grid;
+                grid-template-columns: subgrid;
+                gap: inherit;
+            }
+            .design {
+                grid-column: 2/5;
+            }
+            .code {
+                grid-column: 7/10;
+            }
+        }
     }
 }
