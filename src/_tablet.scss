@@ -156,7 +156,8 @@ $tablet-heading-height: 6rem;
             .in {
                 grid-column: 5/6;
                 grid-row: 2;
-                right: 3rem;
+                right: 1rem;
+                top: 1rem;
                 rotate: 1deg;
             }
             .ps {
@@ -170,6 +171,46 @@ $tablet-heading-height: 6rem;
                 bottom: -1rem;
                 left: -1rem;
                 rotate: 2deg;
+            }
+            .et {
+                grid-column: 1/2;
+                grid-row: 1;
+                top: -1rem;
+                left: 1rem;
+                rotate: -2deg;
+            }
+            .ht {
+                grid-column: 4/5;
+                grid-row: 1;
+                right: -1rem;
+                rotate: 5deg;
+
+            }
+            .hg {
+                grid-column: 3/4;
+                grid-row: 2;
+                left: -3rem;
+                top: -5rem;
+            }
+            .rc {
+                grid-column: 1/2;
+                grid-row: 3;
+                right: -3rem;
+                top: -5rem;
+                rotate: -1deg;
+            }
+            .sa {
+                grid-column: 3/4;
+                grid-row: 3;
+                left: -.45rem;
+                rotate: 1deg;
+            }
+            .tw {
+                grid-column: 5/6;
+                grid-row: 3;
+                bottom: 6rem;
+                left: -3rem;
+                rotate: 3deg;
             }
         }
     }
