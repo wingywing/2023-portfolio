@@ -9,11 +9,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/js"); //to add jquery
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/wenc-setup.js");
-    eleventyConfig.setTemplateFormats(["njk"]);
+    eleventyConfig.setTemplateFormats(["njk,md"]);
+    eleventyConfig.addLayoutAlias('project', 'layouts/project/project.njk');
     eleventyConfig.addShortcode("image", async function(src, alt, sizes){
         let metadata = await Image(src, {
             widths: [300, 600],
-            formats: ["jpeg"]
+            formats: ["jpeg", "png"]
         });
         let imageAttributes = {
             alt,
@@ -24,6 +25,14 @@ module.exports = function(eleventyConfig) {
         return Image.generateHTML(metadata, imageAttributes);
     });
     return { 
+        templateFormats: [
+            "md",
+            "njk",
+            "html",
+            "liquid",
+        ],
+        markdownTemplateEngine: "njk",
+        htmlTemplateEngine: "njk",
         dir: { 
             input: "src", 
             output: "dist", 

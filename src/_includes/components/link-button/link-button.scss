@@ -1,0 +1,11 @@
+@use 'base';
+@use 'mobile';
+@use 'tablet';
+@use 'desktop';
+
+button {
+    @include base.link-button-base;
+    @include mobile.link-button-mobile;
+    @include tablet.link-button-tablet;
+    @include desktop.link-button-desktop;
+}

@@ -20,13 +20,17 @@
     
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/gsap/dist/all.js"></script>
-
+    <script>
+        var element = document.getElementById('back-link')
+        element.setAttribute('href', document.referrer);
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-main">Skip to main content</a>
     {% include "src/_includes/components/header/header.njk" %}
     <main id="main-content">
         {% block content %}{% endblock %}
+        {{ content | safe }}
     </main>
 </body>
 </html>

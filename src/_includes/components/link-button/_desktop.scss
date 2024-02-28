@@ -1,0 +1,7 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+
+@mixin link-button-desktop(){
+    @include bp.desktop{
+
+    }
+}
