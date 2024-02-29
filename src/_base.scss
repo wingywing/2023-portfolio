@@ -9,7 +9,6 @@
 
 @mixin home-page-base(){
     @include grids.main-grid();
-    padding-bottom: 4rem;
 
     section {
         scroll-snap-align: start;
