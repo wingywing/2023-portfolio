@@ -16,6 +16,7 @@
 .snap-scroll{
     scroll-behavior: smooth!important;
     overflow: scroll;
+    overflow-x: hidden;
     scroll-snap-type: y proximity;
     max-height: calc(100dvh - variables.$header-mobile-height);
     @include bp.tablet();
