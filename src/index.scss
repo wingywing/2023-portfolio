@@ -14,6 +14,7 @@
     @include desktop.home-page-desktop;
 }
 .snap-scroll{
+    scroll-behavior: smooth!important;
     overflow: scroll;
     scroll-snap-type: y proximity;
     max-height: calc(100dvh - variables.$header-mobile-height);
