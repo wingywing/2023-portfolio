@@ -5,16 +5,22 @@
 
 @mixin project-page-base(){
     @include grids.main-grid;
+    position: relative;
     * :not(.project-header) {
-        grid-column: 2/12;
         gap: inherit;
-        max-width: 100%;
+        max-width: 44.5rem;        
+    }
+    h1, h2{
+        margin-inline: 0;
+        margin-block: 0;
+        text-wrap: balance;
     }
     .project-header {
-        h1{
-            margin-inline: 0;
-            margin-block: 0;
-        }
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: subgrid;
+        gap: inherit;
+
         .project-banner {
             grid-column: 1/13;
         }
@@ -27,10 +33,6 @@
         .details {
             font-size: 1rem;
         }
-        grid-column: 1/13;
-        display: grid;
-        grid-template-columns: subgrid;
-        gap: inherit;
         a {
             font-size: 1rem;
             margin: -.5rem; 
@@ -50,15 +52,18 @@
         svg {
             flex-shrink: 0;
         }
-        color: colours.$links;
-        background: none;
-        padding: .5rem;
-        display: flex;
         align-items: center;
-        height: fit-content;
+        background: none;
+        color: colours.$links;
+        display: flex;
         gap: .25rem;
+        grid-column: 2/4;
+        height: fit-content;
+        justify-self: flex-start;
+        margin: 0 -1rem;
+        overflow: visible;
+        padding: 1rem;
         text-decoration: underline;
-        grid-column: 2/5;
-        padding: 1rem 0;
+        width: fit-content;
     }
 }
