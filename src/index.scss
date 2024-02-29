@@ -1,3 +1,7 @@
+@use './stylesheets/mixin/breakpoints.scss' as bp;
+@use './stylesheets/mixin/colours.scss' as colours;
+@use './stylesheets/variables.scss' as variables;
+
 @use 'base';
 @use 'mobile';
 @use 'tablet';
@@ -8,4 +12,13 @@
     @include mobile.home-page-mobile;
     @include tablet.home-page-tablet;
     @include desktop.home-page-desktop;
+}
+.snap-scroll{
+    overflow: scroll;
+    scroll-snap-type: y proximity;
+    max-height: calc(100dvh - variables.$header-mobile-height);
+    @include bp.tablet();
+        scroll-snap-type: y mandatory;
+        max-height: calc(100dvh - variables.$header-desktop-height);
+
 }

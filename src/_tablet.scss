@@ -60,6 +60,7 @@ $tablet-heading-height: 6rem;
                 grid-column: 1/11;
                 display: flex;
                 flex-direction: row;
+                scroll-snap-align: center;
                 gap: 2rem;
                 .card.ol {
                     rotate: -1deg;
@@ -87,14 +88,17 @@ $tablet-heading-height: 6rem;
             }
         }
         #home-tools {
-            h2 {
-                grid-column: 6/11;
-                rotate: 1deg;
-            }
             display: grid;
             grid-template-columns: subgrid;
             gap: inherit;
             row-gap: 4rem;
+            scroll-snap-align: end;
+            h2 {
+                grid-column: 6/11;
+                rotate: 1deg;
+                white-space: nowrap;
+                margin-top: 0;
+            }
             h3 {
                 white-space: nowrap;
             }
@@ -212,6 +216,9 @@ $tablet-heading-height: 6rem;
                 left: -3rem;
                 rotate: 3deg;
             }
+        }
+        #home-design, #home-tools {
+            min-height: calc(100dvh - variables.$header-mobile-height);
         }
     }
 }
