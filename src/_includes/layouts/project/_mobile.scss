@@ -1,0 +1,14 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/variables.scss' as variables;
+
+@mixin project-page-mobile(){
+    .content {
+        display: grid;
+        gap: inherit;
+        grid-column: 1/13;
+        grid-template-columns: subgrid;
+        background-color: colours.$bg-secondary;
+    }
+}

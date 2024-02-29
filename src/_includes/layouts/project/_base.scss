@@ -1,0 +1,60 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/variables.scss' as variables;
+
+@mixin project-page-base(){
+    @include grids.main-grid;
+    * :not(.project-header) {
+        grid-column: 2/12;
+        gap: inherit;
+        max-width: 100%;
+    }
+    .project-header {
+        h1{
+            margin-inline: 0;
+            margin-block: 0;
+        }
+        .project-banner {
+            grid-column: 1/13;
+        }
+        .information {
+            padding: 2rem 0;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+        .details {
+            font-size: 1rem;
+        }
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: subgrid;
+        gap: inherit;
+        a {
+            font-size: 1rem;
+        }
+        .award-badge {
+            display: flex;
+            width: fit-content;
+            background-color: colours.$bg-tertiary;
+            padding: 0.375rem 1rem;
+            border-radius: 10rem;
+            margin-top: .5rem;
+        }
+    }
+    #back-link{
+        svg {
+            flex-shrink: 0;
+        }
+        color: colours.$links;
+        background: none;
+        padding: .5rem;
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        gap: .25rem;
+        text-decoration: underline;
+        grid-column: 2/5;
+    }
+}

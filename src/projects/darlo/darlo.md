@@ -2,11 +2,37 @@
 layout: project/project.njk
 tags: project
 title: Darlinghurst Liverpool Street Web Project
+role: Webdesign, Html, SASS, Hugo
+projecttype: Collaboration
+year: 2023
+duration: 6 months (part-time)
+link: https://darlostories.au
+award: Macquarie-PHA Applied History Award
 ---
 
-<video autoplay loop muted>
-    <source src="/projects/darlo/LiverpoolStMapVideo.mp4" type="video/mp4">
-</video>
+<div class="project-header">
+    <div class="project-banner">
+        <video autoplay loop muted>
+            <source src="/projects/darlo/LiverpoolStMapVideo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="information">
+        <h1>{{ title }}</h1>
+        <div class="details">
+            <span>{{ role }}</span>
+            <span>•</span>
+            <span>{{ projecttype }}</span>   
+            <span>•</span>
+            <span>{{ year }}</span>   
+            <span>•</span>
+            <span>{{ duration }}</span>
+        </div>
+        <a href="{{ link }}">{{ link }}</a>
+        <div class="award-badge">{{ award }}</div>
+    </div>
+</div>
+
+
 
 
 I became involved in the Darlinghurst Liverpool Street Project on **May 25, 2023**.

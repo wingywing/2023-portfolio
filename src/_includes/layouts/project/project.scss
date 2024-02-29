@@ -1,0 +1,11 @@
+@use 'base';
+@use 'mobile';
+@use 'tablet';
+@use 'desktop';
+
+#project-page {
+    @include base.project-page-base;
+    @include mobile.project-page-mobile;
+    @include tablet.project-page-tablet;
+    @include desktop.project-page-desktop;
+}

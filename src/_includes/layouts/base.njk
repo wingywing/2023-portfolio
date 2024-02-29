@@ -21,8 +21,13 @@
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/gsap/dist/all.js"></script>
     <script>
-        var element = document.getElementById('back-link')
-        element.setAttribute('href', document.referrer);
+        var backlink = document.getElementById('back-link')
+        backlink.setAttribute('href', document.referrer);
+
+        backlink.onclick = function() {
+            history.back();
+            return false;
+        }
     </script>
 </head>
 <body>
