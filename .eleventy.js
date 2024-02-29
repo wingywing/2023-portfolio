@@ -1,7 +1,11 @@
 const eleventySass = require("eleventy-sass");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const { eleventyImagePlugin } = require("@11ty/eleventy-img");
+
+
 
 module.exports = function(eleventyConfig) {
+
     eleventyConfig.addPlugin(eleventySass); //to add SASS support from src
     eleventyConfig.addPlugin(EleventyRenderPlugin);
     eleventyConfig.addPassthroughCopy("node_modules/gsap/dist/all.js"); //to add GSAP
@@ -9,20 +13,23 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/js"); //to add jquery
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/wenc-setup.js");
+    eleventyConfig.addPassthroughCopy("src/projects/**/**.png"); //Passthrough project case study media
+    eleventyConfig.addPassthroughCopy("src/projects/**/**.jpg"); 
+    eleventyConfig.addPassthroughCopy("src/projects/**/**.mp4");
     eleventyConfig.setTemplateFormats(["njk,md"]);
     eleventyConfig.addLayoutAlias('project', 'layouts/project/project.njk');
-    eleventyConfig.addShortcode("image", async function(src, alt, sizes){
-        let metadata = await Image(src, {
-            widths: [300, 600],
-            formats: ["jpeg", "png"]
-        });
-        let imageAttributes = {
-            alt,
-            sizes,
-            loading: "lazy",
-            decoding: "async",
-        };
-        return Image.generateHTML(metadata, imageAttributes);
+    eleventyConfig.addPlugin(eleventyImagePlugin, {
+      // Set global default options
+      formats: ["webp", "jpeg"],
+      urlPath: "/img/",
+  
+      // Notably `outputDir` is resolved automatically
+      // to the project output directory
+  
+      defaultAttributes: {
+        loading: "lazy",
+        decoding: "async"
+      }
     });
     return { 
         templateFormats: [
