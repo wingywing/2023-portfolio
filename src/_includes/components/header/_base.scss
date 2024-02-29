@@ -5,6 +5,7 @@
 
 @mixin header-base(){
     @include grids.main-grid();
+    z-index: 10;
     .header-inner {
         display: flex;
         flex-direction: row;
