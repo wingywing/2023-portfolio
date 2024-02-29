@@ -18,7 +18,7 @@
         position: absolute;
         top: calc(variables.$header-mobile-height + 1px);
         width: 100%;
-        height: calc(100vh - variables.$header-mobile-height -1px);
+        height: calc(100vh - variables.$header-mobile-height - 1px);
         z-index: 10;
         overflow: hidden;
 
