@@ -139,7 +139,6 @@
     }
 
     #home-tools, #home-design {
-        min-height: 100dvh;
         display: grid;
         grid-template-columns: subgrid;
         row-gap: 2rem;
@@ -151,10 +150,8 @@
         }
     }
     #home-tools {
-        padding: 5rem 0;
         h2 {
             rotate: 1deg;
-            white-space: nowrap;
         }
         .tools {
             display: flex;

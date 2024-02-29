@@ -2,8 +2,6 @@
 @use './stylesheets/mixin/colours.scss' as colours;
 @use './stylesheets/variables.scss' as variables;
 
-
-
 @mixin home-page-mobile(){
 $mobile-heading-height: 4rem;
     #home-intro {
@@ -72,6 +70,14 @@ $mobile-heading-height: 4rem;
                 height: 2.625rem;
                 width: 2.625rem;
             }
+        }
+    }
+    #home-tools, #home-designs{
+        min-height: calc(100dvh - variables.$header-desktop-height);
+    }
+    #home-tools {
+        h2 {
+            margin-top: 2rem;
         }
     }
 }
