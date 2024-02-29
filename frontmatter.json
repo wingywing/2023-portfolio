@@ -7,39 +7,67 @@
       "previewPath": null,
       "fields": [
         {
-          "title": "Title",
-          "name": "title",
+          "title": "layout",
+          "name": "layout",
           "type": "string"
         },
         {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
-          "title": "Tags",
+          "title": "tags",
           "name": "tags",
           "type": "tags"
         },
         {
-          "title": "Categories",
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "role",
+          "name": "role",
+          "type": "string"
+        },
+        {
+          "title": "projecttype",
+          "name": "projecttype",
+          "type": "string"
+        },
+        {
+          "title": "year",
+          "name": "year",
+          "type": "number"
+        },
+        {
+          "title": "duration",
+          "name": "duration",
+          "type": "string"
+        },
+        {
+          "title": "link",
+          "name": "link",
+          "type": "string"
+        },
+        {
+          "title": "award",
+          "name": "award",
+          "type": "string"
+        },
+        {
+          "title": "description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "preview",
+          "name": "preview",
+          "type": "string"
+        },
+        {
+          "title": "categories",
           "name": "categories",
           "type": "categories"
         }
@@ -47,7 +75,7 @@
     }
   ],
   "frontMatter.framework.id": "11ty",
-  "frontMatter.preview.host": "http://localhost:8080",
+  "frontMatter.preview.host": "http://localhost:8080/projects",
   "frontMatter.content.pageFolders": [
     {
       "title": "darlo",
