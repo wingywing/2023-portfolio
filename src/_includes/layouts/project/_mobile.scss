@@ -4,6 +4,11 @@
 @use '../../../stylesheets/variables.scss' as variables;
 
 @mixin project-page-mobile(){
+    * :not(.project-header) {
+        grid-column: 2/12;
+        gap: inherit;
+        max-width: 100%;
+    }
     .content {
         display: grid;
         gap: inherit;
