@@ -18,8 +18,9 @@
         position: absolute;
         top: calc(variables.$header-mobile-height + 1px);
         width: 100%;
-        height: 100vh;
-        z-index: 1;
+        height: calc(100vh - variables.$header-mobile-height);
+        z-index: 10;
+        overflow: hidden;
 
         ul {
             background-color: colours.$bg-primary;

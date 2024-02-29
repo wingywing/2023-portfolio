@@ -15,12 +15,12 @@
 }
 .snap-scroll{
     scroll-behavior: smooth!important;
-    overflow: scroll;
+    overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y proximity;
     max-height: calc(100dvh - variables.$header-mobile-height);
-    @include bp.tablet();
+    @include bp.tablet() {
         scroll-snap-type: y mandatory;
         max-height: calc(100dvh - variables.$header-desktop-height);
-
+    }
 }

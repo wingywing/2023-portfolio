@@ -4,6 +4,8 @@
 
 @mixin home-page-mobile(){
 $mobile-heading-height: 4rem;
+padding-bottom: 4rem;
+
     #home-intro {
         min-height: calc(100dvh - variables.$header-mobile-height)
     }
