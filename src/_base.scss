@@ -208,6 +208,7 @@
     .squiggle {
         position: absolute;
         left: 0;
+        z-index: -1;
         &.home-design-squiggle {
             bottom: -2rem;
         }
@@ -221,6 +222,7 @@
         font-family: 'mondwest';
         margin: 0;
         position: relative;
+        z-index: 1;
     }
 
     h2, aside, .cards {
