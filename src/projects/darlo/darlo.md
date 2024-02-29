@@ -76,17 +76,17 @@ We started off the design process with some **mood-boards and brainstorming**. B
 ### Avoiding information fatigue
 To avoid information fatigue, data is visualised in an interactive way, where users can click on ‘points of interest’ on a map to view stories that they’re interested in. 
 
-![Screenshot of a focal point that has been clicked on.](/projects/darlo/02.jpg "Screenshot of a focal point that has been clicked on.")
+![Screenshot of a focal point that has been clicked on.](/projects/darlo/02.png "Screenshot of a focal point that has been clicked on.")
 
 ### Tying information together from separate time periods
 In the main map section of the project, users can flick through vectorised versions of archival maps from different time periods and compare the changes throughout Liverpool Street.
 
-![Screenshot of the map from 1888 – notice how this map shows building composition!](/projects/darlo/03.jpg "Screenshot of the map from 1888 – notice how this map shows building composition!")
+![Screenshot of the map from 1888 – notice how this map shows building composition!](/projects/darlo/03.png "Screenshot of the map from 1888 – notice how this map shows building composition!")
 
 ### Incorporating archival images
 Archival images paid an important role in tying the project together visually. They also served as icons for data visualisation. Elevation technical diagrams where also used as a visual cue for what certain types of buildings may have looked like in the past. 
 
-![The first two building plans only had line-art available, so I coloured and match the style of the third by hand. The question mark for Unknown was also illustrated by hand as a suitable image could not be found in the archive.](/projects/darlo/04.jpg "Screenshot of the data visualisation section with archival images. Two graphics are shown where one is showing different structure types on Liverpool St and the other shows the gender of landlords/rate payers in 1888.")
+![The first two building plans only had line-art available, so I coloured and match the style of the third by hand. The question mark for Unknown was also illustrated by hand as a suitable image could not be found in the archive.](/projects/darlo/04.png "Screenshot of the data visualisation section with archival images. Two graphics are shown where one is showing different structure types on Liverpool St and the other shows the gender of landlords/rate payers in 1888.")
 
 ## 5. Design process
 ### Brainstorming
@@ -109,23 +109,23 @@ Some initial ideas in the reply:
 ### Sketching
 The initial sketches for the project looked very different to how the site looks now. These sketches had more reliance on overlays and popups, which ended up not being a good idea for the amount of information we ended up having. However, some aspects like the timeline and graphical style carried through.
 
-![Initial sketches based on the brief provided by Nicole.](/projects/darlo/05.jpg "Initial sketches based on the brief provided by Nicole.")
+![Initial sketches based on the brief provided by Nicole.](/projects/darlo/05.png "Initial sketches based on the brief provided by Nicole.")
 
 ### Iterations
 The first iterations of the site was a single page site with only the map as focus. However, as the project's scope expanded, the designs were revisited to match the new content.
 
-![Initial home page design.](/projects/darlo/06.jpg "Screenshot of the initial home page design.")
+![Initial home page design.](/projects/darlo/06.png "Screenshot of the initial home page design.")
 
-![Mobile responsive design with popup overlays.](/projects/darlo/07.jpg "Screenshot of the original mobile responsive design with popup overlays.")
+![Mobile responsive design with popup overlays.](/projects/darlo/07.png "Screenshot of the original mobile responsive design with popup overlays.")
 
 Nicole and Nick implemented the Stories, Street Data and About pages, I helped with styling the Stories Pages using CSS in the front-end. The addition of these pages meant that a header was needed to bring the site pages together.
 
-![Header design in Figma.](/projects/darlo/08.jpg "Screenshot of the header design in Figma.")
+![Header design in Figma.](/projects/darlo/08.png "Screenshot of the header design in Figma.")
 
 An alternative layout for the stories of Liverpool Street was also designed for the home page but wasn't implemented in the end. The icons of the stories were derived from archival images provided by Nicole. 
 Some of the icons were hand-illustrated for consistency since there weren't any inked archival drawings available.
 
-![Alternative tile layout for stories of Liverpool Street in the home page.](/projects/darlo/09.jpg "Screenshot of the alternative tile layout for stories of Liverpool Street in the home page.")
+![Alternative tile layout for stories of Liverpool Street in the home page.](/projects/darlo/09.png "Screenshot of the alternative tile layout for stories of Liverpool Street in the home page.")
 
 ## 6. Challenges
 ### Tracing the maps
@@ -133,9 +133,9 @@ One of the biggest challenges in this project was vectorising existing archival 
 
 It required piecing large scanned map images together in illustrator, and tracing buildings on the street by hand.
 
-![Screenshot of the messy map-tracing process.](/projects/darlo/10.jpg "Screenshot of the messy map-tracing process.")
+![Screenshot of the messy map-tracing process.](/projects/darlo/10.png "Screenshot of the messy map-tracing process.")
 
-![The maps looked completely different from one another, so some adjustments had to be made while tracing.](/projects/darlo/11.jpg "Screenshot of the 1930s map, which is in black and white (rather than sepia-toned) and a lot cleaner than the maps from previous time periods.")
+![The maps looked completely different from one another, so some adjustments had to be made while tracing.](/projects/darlo/11.png "Screenshot of the 1930s map, which is in black and white (rather than sepia-toned) and a lot cleaner than the maps from previous time periods.")
 
 ### Expanding scope and time management
 Since the size of the project exceeded what I had originally thought it would be (a single webpage), time management became difficult as I juggled university, a part-time job, and other professional commitments.
