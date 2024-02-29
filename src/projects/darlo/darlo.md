@@ -105,7 +105,7 @@ Some initial ideas in the reply:
 > 		- Maybe gender proportion can be represented through pedestrian icons on the map, with a pie chart in the corner of the map for clarity
 > 			- It would be interesting to have some of these icons be clickable to view stories of people with their portraits  
 > - To show how the street transforms over time, maybe there could be a scrollable timeline where the user can see how the map changes depending on what year they’re on
-> 	- A bit like this: [https://earthengine.google.com/timelapse/](https://earthengine.google.com/timelapse/) but at a smaller scale and with illustrations instead of satellite images  
+> 	- A bit like this: [Google Earth Engine](https://earthengine.google.com/timelapse/) but at a smaller scale and with illustrations instead of satellite images  
 > - The overall style of the project will use an ink-like illustration style with a sepia tone similar to the documents shown.
 
 ### Sketching
