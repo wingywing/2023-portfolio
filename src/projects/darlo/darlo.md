@@ -4,11 +4,15 @@ tags: project
 title: Darlinghurst Liverpool Street Web Project
 ---
 
-[](/src/projects/darlo/LiverpoolStMapVideo.mp4)
+<video autoplay loop muted>
+    <source src="/projects/darlo/LiverpoolStMapVideo.mp4" type="video/mp4">
+</video>
+
+
 I became involved in the Darlinghurst Liverpool Street Project on **May 25, 2023**.
 I remember that, at this point, it had already been several months since **Nick Clark** had spoken about **Nicole Cama**'s brilliant research and ideas for a web project. Nick was an old coworker of mine, and it was very exciting for me to work on a project with him outside of the work context.
 
-I was hooked from the get-go when I heard that the project would be about showing the history of a place where most Sydney-siders would have walked past without thinking twice. In fact, I'm pretty sure that I've walked through that street many times myself!
+I was hooked from the get-go when I heard that the project would be about showing the history of a place where most Sydney-siders would have walked past without thinking twice. In fact, I'm pretty sure that I've walked through that street many times myself! 
 
 I think that Nicole's passionate deep dive into the stories and histories of Liverpool Street might also encourage viewers of this project to consider the hidden stories behind streets or locations of their own neighbourhoods. How many of us walk by a historically significant site without knowing at all? I hope that this project will spark curiosity not only towards Liverpool Street, but also beyond.
 
@@ -23,7 +27,7 @@ The design process for this project included a lot of **brainstorming**, **sketc
 From the first briefing email, Nicole provided me with a clear outline and attached a detailed brief along with some images for the vibe of the site:
 > *...a **data visualisation project** mapping the people and structures of Liverpool Street, Darlinghurst based on a particular historical source dating **from 1845 to 1948**. I need to produce a website which will creatively illustrate the data from this source **using graphics, media and other interactive strategies**.*
 
-> *Screenshot of mood board that Nicole provided* % image "01.png", "alt text" "300" %
+> *Screenshot of mood board that Nicole provided* !![](/projects/darlo/01.jpg)
 
  
  The images and brief given gave me a roadmap for the look and feel of the site, as well as a source for images in the public domain that can be used as assets in the project.
@@ -46,36 +50,37 @@ Some of these ideas were changed in later iterations of the project for technica
 ### Sketching
 The initial sketches for the project looked very different to how the site looks now.
 These sketches had more reliance on overlays and popups, which ended up not being a good idea for the amount of information we ended up having. However, some aspects like the timeline and graphical style carried through.
-[](/src/02.png)
+![](/projects/darlo/02.jpg)
 ### Iterations
 The first iterations of the site was a single page site with only the map as focus. 
 However, as the project's scope expanded, the design process became a lot more agile. 
 
-[](/src/04.png)[](/src/03.png)
+![](/projects/darlo/04.png)
+![](/projects/darlo/03.png)
 
-Nicole and Nick implemented the Stories, Street Data and About pages and I helped with styling the Stories Pages using CSS in the front-end. Nick and Nicole designed the About and Street Data pages entirely! I designed a header to bring the site pages together.
-[](/src/05.png)
+Nicole and Nick implemented the Stories, Street Data and About pages, I helped with styling the Stories Pages using CSS in the front-end. Nick and Nicole designed the About and Street Data pages entirely! I designed a header to bring the site pages together.
+![](/projects/darlo/05.png)
 
 As the site evolved away from using overlays, new panels were designed using archival images to show statistics of building owners and types. Originally, the architectural drawings of the first two buildings didn't have colour, which required me to shade it manually to match the other diagrams. The question mark for Unknown was also illustrated to fit in with the rest of the site:
 
-[](/src/06.png)
+![](/projects/darlo/06.png)
 
 An alternative layout for the stories of Liverpool Street was also designed for the home page but wasn't implemented in the end. The icons of the stories were derived from archival images provided by Nicole. 
 Some of the icons were hand-illustrated for consistency since there weren't any inked archival drawings available.
 
-[](/src/07.png)
+![](/projects/darlo/07.png)
 ## What was your biggest design challenge with this website?
 
 I think the hardest design challenge with this website was digitising the many map pieces from 1865–1930s so that they would overlap and show changes throughout time. Very grateful to Nicole for getting the map files together and finding missing parts of maps. It was so satisfying putting the map pieces in place like a jigsaw puzzle. 
 
 I found it incredible how maps created almost 200 years ago were so accurate without having satellite technology or even helicopters -- especially how they're all drawn with ink and watercolour! Tracing the maps in Illustrator was already a super time-consuming process (even with the focus only on Liverpool Street). I wonder how they used to be done.
 
-[](/src/10.png)
+![](/projects/darlo/10.png)]
 
-[](/src/08.png)
+![](/projects/darlo/08.png)
 
-[](/src/09.png)
-[](/src/11.png)
+![](/projects/darlo/09.png)
+![](/projects/darlo/11.png)
 ## What part are you most proud of?
 
 I'm most proud of the digitised maps of Liverpool Street!
@@ -83,7 +88,7 @@ I'm also quite happy about the way the stories pages turned out.
 The layout and design of the stories pages were done by Nick Clark and I helped to refine the CSS for stylistic consistency with the rest of the site. Nicole provided the writing and archival images for each story.
 I feel like as a whole, the stories pages feel very comfortable and engaging to read.
 
-[](/src/12.png)
+![](/projects/darlo/12.png)
 
 ## What did you learn from doing this project?
 
