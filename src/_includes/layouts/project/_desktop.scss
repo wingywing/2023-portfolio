@@ -5,7 +5,6 @@
 
 @mixin project-page-desktop(){
     @include bp.desktop{
-        padding-top: 4.375rem;
         .content {
             grid-column: 4/10;
         }

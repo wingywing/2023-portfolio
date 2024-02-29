@@ -37,6 +37,8 @@ categories:
     </div>
 </div>
 
+*We acknowledge the Aboriginal people as the Traditional Owners of this land, and pay our respects to Elders past and present. Working from Darug and Gadigal land.*
+
 A visual web project representing historical data mapping the changes of Darlinghurst’s Liverpool Street.
 <br/>
 
@@ -47,7 +49,7 @@ A visual web project representing historical data mapping the changes of Darling
 4. [Solving the problem](#4.-solving-the-problem)
 5. [Design process](#5.-design-process)
 6. [Challenges](#6.-challenges)
-7. [Learnings](#7.-learnings)
+7. [Final comments](#8.-final-comments)
 
 
 ## 1. The team
@@ -148,7 +150,12 @@ Nonetheless, I’m grateful to have been able to work on this project with the a
 ### Sometimes, design is messy and non-linear
 While we can do our best to work in an organised design process, sometimes things change during the project which will require us to adapt and think on the spot. 
 
-For example, the implementation of the stories tab had a quick turnaround time, which meant that the blog format was already coded before designs were made. By using my knowledge in SASS and html, I was able to help style the site to look coherent efficiently.
+For example, the implementation of the stories tab had a quick turnaround time, which meant that the blog format was already coded before designs were made. By using my knowledge in SASS and HTML, I was able to help style the site to look coherent efficiently.
 
 ### Communication is key
 In the beginning of this project, a lot of the communication was done through email only. I found that once we were able to organise a time to call and talk the project through live, ideas started flying and we had a place to start our work.
+
+## 8. Final comments
+I absolutely loved working on this project! The topic of local histories is so interesting and I really enjoyed chatting to [Nicole&nbsp;Cama](https://nicolecama.com.au) and [Nick&nbsp;Clark](https://clarx.dev/) about fun trivia tidbits surrounding Liverpool Street. 
+
+As the project came to a close, it got me thinking about how there could be so many stories and secrets hidden away from us in plain view. I hope that this project could help spark some curiosity in researching the streets that surround you!
