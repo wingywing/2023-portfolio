@@ -38,6 +38,7 @@ categories:
 </div>
 
 A visual web project representing historical data mapping the changes of Darlinghurst’s Liverpool Street.
+<br/>
 
 ## Contents
 1. [The team](#1.-the-team)
@@ -59,12 +60,13 @@ A visual web project representing historical data mapping the changes of Darling
 ## 2. The brief
 From the first briefing email, Nicole provided me with a clear outline and attached a detailed brief along with some images for the vibe of the site:
 > ...a **data visualisation project** mapping the people and structures of Liverpool Street, Darlinghurst based on a particular historical source dating **from 1845 to 1948**. [...] a website which will creatively illustrate the data from this source **using graphics, media and other interactive strategies**.
-
+<br/>
 ## 3. The problem
 > “How can we visualise a whole century of historical data for a modern, general audience?”
 1. How can we avoid information fatigue?
 2. How do we tie together information from separate time periods?
 3. Can we incorporate archival images?
+<br/>
 
 ## 4. Solving the problem
 We started off the design process with some **mood-boards and brainstorming**. Below is a mood-board that Nicole had included in the project brief, which had some archival images that set the tone of how the project might look and feel. These images are in the public domain and some were used as visual assets in the final project.
@@ -132,6 +134,7 @@ One of the biggest challenges in this project was vectorising existing archival 
 It required piecing large scanned map images together in illustrator, and tracing buildings on the street by hand.
 
 ![Screenshot of the messy map-tracing process.](/projects/darlo/10.jpg "Screenshot of the messy map-tracing process.")
+
 ![The maps looked completely different from one another, so some adjustments had to be made while tracing.](/projects/darlo/11.jpg "Screenshot of the 1930s map, which is in black and white (rather than sepia-toned) and a lot cleaner than the maps from previous time periods.")
 
 ### Expanding scope and time management
@@ -140,7 +143,7 @@ Since the size of the project exceeded what I had originally thought it would be
 This meant that some features that would’ve been nice to be implemented ran out of available time/budget for. (E.g. scroll animations, grain textures and page transitions). 
 
 Nonetheless, I’m grateful to have been able to work on this project with the amazing Nicole Cama and Nick Clark.
-
+<br/>
 ## 7. Learnings
 ### Sometimes, design is messy and non-linear
 While we can do our best to work in an organised design process, sometimes things change during the project which will require us to adapt and think on the spot. 

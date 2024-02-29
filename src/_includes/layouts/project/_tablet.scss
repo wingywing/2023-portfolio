@@ -25,7 +25,10 @@
             max-width: 44.5rem;
             padding-bottom: 2rem;
             margin-bottom: 2rem;
-            p, h2, h3 {
+            p {
+                padding: 0 2rem;
+            }
+            h2, h3 {
                 padding: 0 2rem;
                 margin-block: 0;
                 margin-inline: 0;
@@ -47,6 +50,10 @@
             li {
                 line-height: 150%;
             }
+        }
+        figure {
+            margin-block: 2rem;
+            margin-inline: 0;
         }
     }
 }
