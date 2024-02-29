@@ -1,7 +1,7 @@
 const eleventySass = require("eleventy-sass");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const { eleventyImagePlugin } = require("@11ty/eleventy-img");
-
+const implicitFigures = require('markdown-it-image-figures');
 
 
 module.exports = function(eleventyConfig) {
@@ -17,6 +17,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/projects/**/**.jpg"); 
     eleventyConfig.addPassthroughCopy("src/projects/**/**.mp4");
     eleventyConfig.setTemplateFormats(["njk,md"]);
+    eleventyConfig.amendLibrary("md", mdLib => mdLib.use(implicitFigures, {
+      figcaption: "alt"
+    }));
     eleventyConfig.addLayoutAlias('project', 'layouts/project/project.njk');
     eleventyConfig.addPlugin(eleventyImagePlugin, {
       // Set global default options

@@ -7,8 +7,8 @@
     @include bp.tablet{
         justify-items: center;
         padding-top: 1.5rem;
-        * :not(.project-header) {
-            grid-column: 1/10;
+        .information {
+            grid-column: 1/13;
         }
         .project-header {
             row-gap: 0;
@@ -41,6 +41,12 @@
         #back-link {
             position: sticky;
             top: 2rem;
+        }
+        ol, ul, table {
+            margin: 0 2rem;
+            li {
+                line-height: 150%;
+            }
         }
     }
 }

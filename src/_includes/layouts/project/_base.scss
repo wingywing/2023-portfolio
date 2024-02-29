@@ -67,4 +67,21 @@
         text-decoration: underline;
         width: fit-content;
     }
+    table {
+        th, td {
+            padding: .5rem;
+            vertical-align: text-top;
+        }
+    }
+    table, li {
+        font-size: 1.125rem;
+    }
+    figcaption {
+        text-align: center;
+        font-style: italic;
+        color: colours.$text-subdued;
+        a {
+            font-size: 1rem;
+        }
+    }
 }
