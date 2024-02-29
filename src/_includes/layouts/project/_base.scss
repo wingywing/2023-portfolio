@@ -5,6 +5,7 @@
 
 @mixin project-page-base(){
     @include grids.main-grid;
+    transition: all, .5s;
     position: relative;
     * :not(.project-header) {
         gap: inherit;
