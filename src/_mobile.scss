@@ -4,7 +4,6 @@
 
 @mixin home-page-mobile(){
 $mobile-heading-height: 4rem;
-padding-bottom: 4rem;
 
     #home-intro {
         min-height: calc(100dvh - variables.$header-mobile-height)
@@ -63,6 +62,10 @@ padding-bottom: 4rem;
         align-items: center;
     }
     #home-tools {
+        padding-bottom: 4rem;
+        h2 {
+            margin-top: 2rem;
+        }
         .home-tools-toggle, h2, .tools {
             grid-column: 1/11;
         }
@@ -76,10 +79,5 @@ padding-bottom: 4rem;
     }
     #home-tools, #home-designs{
         min-height: calc(100dvh - variables.$header-desktop-height);
-    }
-    #home-tools {
-        h2 {
-            margin-top: 2rem;
-        }
     }
 }
