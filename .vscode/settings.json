@@ -11,5 +11,7 @@
             "other": "off"
         },
         "editor.minimap.enabled": false
-    }
+    },
+    "markdown.extension.toc.updateOnSave": false,
+    "markdown.extension.completion.enabled": true
 }
