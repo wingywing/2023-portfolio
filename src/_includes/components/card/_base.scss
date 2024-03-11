@@ -6,6 +6,32 @@
 
 
 @mixin card-base(){
+    &.wip {
+        &::after {
+            color: white;
+            font-weight: bold;
+            display: flex;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            justify-content: center;
+            top: 30%;
+            content: "Work in progress";
+            z-index: 1;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+            padding: 1rem 0;
+        }
+        &:hover {
+            &::after {
+                backdrop-filter: contrast(.1) blur(5px);
+                opacity: 100%;
+            }
+        }
+        .card-image {
+            transition: all .5s ease-in-out;
+        }
+    }
     text-decoration: none;
     color: colours.$text-primary;
     background: colours.$bg-secondary;
