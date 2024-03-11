@@ -23,6 +23,7 @@
             padding: 1rem 0;
         }
         &:hover {
+            cursor: default;
             &::after {
                 backdrop-filter: contrast(.1) blur(5px);
                 opacity: 100%;
