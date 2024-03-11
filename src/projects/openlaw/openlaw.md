@@ -219,7 +219,7 @@ In 2023, Figma released [colour variables and modes](https://help.figma.com/hc/e
 
 <br/>
 
-1. **Working from (almost) zero** <br/><br/>
+3. **Working from (almost) zero** <br/><br/>
 Other than the original JADE logo and some of the colour palettes seen in the [Rebranding section](#rebranding), all of the work in this document was completed by myself as the sole designer. Although it was challenging to complete, I'm grateful for the inputs of my colleague in improving and iterating the design system.
 
 <br/>
