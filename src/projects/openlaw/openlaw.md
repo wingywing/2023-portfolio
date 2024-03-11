@@ -40,7 +40,6 @@ categories:
 <br/>
 
 ## Contents
-- [Contents](#contents)
 - [Special thanks](#special-thanks)
 - [1. The team](#1.-the-team)
 - [2. The brief](#2.-the-brief)
