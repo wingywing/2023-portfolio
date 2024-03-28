@@ -226,3 +226,11 @@ Other than the original JADE logo and some of the colour palettes seen in the [R
 
 ## 5. Final comments
 Working on the Open Law Design System and rebranding was one of the most rewarding projects I've done to date (as of 2024!). Seeing the impact that my work has on the organisation is very rewarding and I've learnt a lot along the way.
+
+<br/>
+<br/>
+<br/>
+
+
+
+<p style="font-size: .95rem; color: grey; text-align: center;">© 2024 BarNetwork Pty Limited (ABN 32 092 121 198) and Wing Pang<p>
