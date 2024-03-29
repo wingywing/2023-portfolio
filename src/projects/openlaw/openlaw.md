@@ -324,10 +324,10 @@ There are a few types of illustrations:
    
 2. **Sketch illustrations** – an illustration style specifically for Jasmine which has a steampunk-esque feel to it; gives off the feeling of "bleeding-edge" technology since Jasmine is our AI semantic search engine
 
-        <div class="lightgallery">
+    <div class="lightgallery">
         <a href="/projects/openlaw/21.png">
             <figure>
-            <img src="/projects/openlaw/21.png" alt="Illustrations for Jasmine"/>
+                <img src="/projects/openlaw/21.png" alt="Illustrations for Jasmine"/>
             </figure>
         </a>
     </div>
