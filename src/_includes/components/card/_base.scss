@@ -8,6 +8,7 @@
 @mixin card-base(){
     &.wip {
         &::after {
+            max-width: 25.125rem;
             color: white;
             font-weight: bold;
             display: flex;
@@ -21,6 +22,9 @@
             opacity: 0;
             transition: all .5s ease-in-out;
             padding: 1rem 0;
+            @include bp.tablet {
+                max-width: 100%;
+            }
         }
         &:hover {
             cursor: not-allowed;
