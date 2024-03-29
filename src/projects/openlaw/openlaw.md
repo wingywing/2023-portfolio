@@ -8,7 +8,7 @@ year: 2023
 duration: Ongoing
 description: A scalable design system for Open Law, a BarNet non-profit initiative aiming to improve access to legal information through a collection of digital tools.
 date: 2024-03-01T11:39:19.628Z
-preview: 
+preview: null
 categories:
     - case-study
 ---

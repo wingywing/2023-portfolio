@@ -80,6 +80,28 @@
     {
       "title": "darlo",
       "path": "[[workspace]]/src/projects/darlo"
+    },
+    {
+      "title": "openlaw",
+      "path": "[[workspace]]/src/projects/openlaw"
+    },
+    {
+      "title": "vr",
+      "path": "[[workspace]]/src/projects/vr"
     }
-  ]
+  ],
+  "frontMatter.content.snippets": {
+    "Gallery": {
+      "description": "Image inside lightGallery image lightbox",
+      "body": [
+        "<a href=\"[[&mediaUrl]]\">",
+        "    <figure>",
+        "        <img src=\"[[&mediaUrl]]\" alt= \"[[alt text]]\"/>",
+        "        <figcaption> [[image caption]] </figcaption>",
+        "    </figure>",
+        "</a>"
+      ],
+      "isMediaSnippet": true
+    }
+  }
 }
