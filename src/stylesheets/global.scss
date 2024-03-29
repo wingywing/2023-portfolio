@@ -47,4 +47,23 @@ body {
     .lg-sub-html {
         color: colours.$text-primary;
     }
+    .lg-img-wrap {
+        padding: 2rem;
+    }
+    .lg-image {
+        border-radius: 1rem;
+        box-shadow: -2px 13px 24px -9px rgba(0,0,0,.19);
+    }
+    .lg-outer .lg-thumb-outer {
+        background-color: colours.$bg-secondary;
+    }
+    .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+        border-color: colours.$links;
+    }
+    .lg-toolbar .lg-icon:hover {
+        color: colours.$links;
+    }
+    .lg-next, .lg-prev {
+        color: white;
+    }
 }
