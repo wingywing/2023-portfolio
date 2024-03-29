@@ -33,7 +33,9 @@ categories:
             <span>{{ duration }}</span>
         </div>
         <a href="{{ link }}">{{ link }}</a>
+        <a href="https://historycouncilnsw.org.au/awards-and-prizes-2023/annual-history-awards-winners-2023/" style="text-decoration: none; background: none; color: #4E4843;">
         <div class="award-badge">{{ award }}</div>
+        </a>
     </div>
 </div>
 
