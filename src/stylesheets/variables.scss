@@ -1,2 +1,8 @@
 $header-mobile-height: 3.125rem;
 $header-desktop-height: 4.375rem;
+
+@mixin box-shadow {
+    box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);
+    -webkit-box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);
+    -moz-box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19); 
+}
