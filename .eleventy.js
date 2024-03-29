@@ -12,6 +12,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget('src/projects/**/**.md');
     eleventyConfig.addPassthroughCopy("node_modules/gsap/dist/all.js"); //to add GSAP
     eleventyConfig.addPassthroughCopy("node_modules/jquery/dist/jquery.min.js"); //to add jquery
+    eleventyConfig.addPassthroughCopy("node_modules/lightgallery/"); //to add lightGallery
+
     eleventyConfig.addPassthroughCopy("src/js"); //to add jquery
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/wenc-setup.js");
