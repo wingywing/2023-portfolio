@@ -91,7 +91,9 @@
         }
     }
     blockquote {
-        margin-block: 0;
+        border-left: 4px solid colours.$lemonade;
+        padding-left: 1rem;
+        margin-block: 1rem;
         margin-inline: 0;
     }
     h2, p {

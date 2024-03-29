@@ -76,11 +76,11 @@ In the process of rebranding Open Law and its product offerings,we also want to 
 
 **Open Law's Mission**
 
-*To provide open access to legal information to enhance justice outcomes for all past, present and future generations.*
+> *To provide open access to legal information to enhance justice outcomes for all past, present and future generations.*
 
 **Open Law's Vision**
 
-*To be the leading legal informatics company that organises and provides the best legal information accessible to all.*
+> *To be the leading legal informatics company that organises and provides the best legal information accessible to all.*
 
 ## 3. Design process
 ### Rebranding
