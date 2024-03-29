@@ -87,6 +87,7 @@ In the process of rebranding Open Law and its product offerings,we also want to 
 #### Logos
 The previous logos for Open Law, JADE, and the Victorian Reports had vastly differing design styles, making each product standalone from one another.
 
+
 <div class="lightgallery">
     <a href="/projects/openlaw/01.png">
         <figure>
