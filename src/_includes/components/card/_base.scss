@@ -1,3 +1,5 @@
+@use '../../../stylesheets/variables.scss' as variables;
+
 @use '../../../stylesheets/mixin/breakpoints.scss' as bp;
 @use '../../../stylesheets/mixin/colours.scss' as colours;
 @use '../../../stylesheets/mixin/grids.scss' as grids;
@@ -6,6 +8,9 @@
 
 
 @mixin card-base(){
+    &:hover {
+        @include variables.box-shadow;
+    }
     &.wip {
         &::after {
             max-width: 25.125rem;
@@ -42,6 +47,7 @@
     background: colours.$bg-secondary;
     width: fit-content;
     height: fit-content;
+    transition: box-shadow .3s;
 
     div.container {
         background: colours.$bg-secondary;
