@@ -39,7 +39,20 @@ categories:
 {{ description }}
 <br/>
 
-![](/projects/vr/00.png)
+<div id="lightgallery">
+    <a href="/projects/vr/00.png">
+        <figure>
+            <img src="/projects/vr/00.png" alt= "test"/>
+            <figcaption> Newly redesigned homescreen </figcaption>
+        </figure>
+    </a>
+        <a href="/projects/vr/00.png">
+    <figure>
+        <img src="/projects/vr/00.png" alt= "test"/>
+        <figcaption> Newly redesigned homescreen </figcaption>
+    </figure>
+    </a>
+</div>
 
 ## Contents
 - [Special thanks](#special-thanks)
@@ -63,15 +76,7 @@ Thank you to the director of Open Law – [Michael Green SC](https://www.linkedi
 
 Updating the user interface design to have a more **modern look and feel** while **identifying painpoints in user experience**.
 
-<div id="lightgallery">
-    <a href="/projects/vr/00.png">
-    <figure>
-        <img src="/projects/vr/00.png" alt= "test"/>
-        <figcaption> Test </figcaption>
-    </figure>
-    </a>
-    
-</div>
+
 
 
 ### The old interface
