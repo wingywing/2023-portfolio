@@ -20,11 +20,9 @@ body {
         background: none;
         figure, video { 
             &:hover {
+                @include variables.box-shadow;
                 transform: scale(1.03); 
-                box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);
-                -webkit-box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);
-                -moz-box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);                 
-                padding: .75rem;
+                padding: 1rem;
             }
         }
         text-decoration: none;
@@ -52,8 +50,8 @@ body {
         padding: 2rem;
     }
     .lg-image, video  {
+        @include variables.box-shadow;
         border-radius: 1rem;
-        box-shadow: -2px 13px 24px -9px rgba(0,0,0,.19);
     }
     .lg-outer .lg-thumb-outer {
         background-color: colours.$bg-secondary;

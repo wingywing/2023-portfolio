@@ -357,6 +357,4 @@ Working on the Open Law Design System and rebranding was one of the most rewardi
 <br/>
 <br/>
 
-
-
 <p style="font-size: .95rem; color: grey; text-align: center;">© 2024 BarNetwork Pty Limited (ABN 32 092 121 198) and Wing Pang<p>

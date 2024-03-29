@@ -95,3 +95,9 @@ Updating the user interface design to have a more **modern look and feel** while
 ### Testing
 
 ### UI Design
+
+<br/>
+<br/>
+<br/>
+
+<p style="font-size: .95rem; color: grey; text-align: center;">© 2024 BarNetwork Pty Limited (ABN 32 092 121 198) and Wing Pang<p>
