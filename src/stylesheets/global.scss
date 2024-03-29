@@ -14,3 +14,37 @@ html {
 body {
     overflow-x: hidden;
 }
+
+#lightgallery {
+    a {
+        background: none;
+        figure { 
+            &:hover {
+                transform: scale(1.03); 
+                box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);
+                -webkit-box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);
+                -moz-box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);                 
+                padding: .75rem 0;
+            }
+        }
+        text-decoration: none;
+        display: flex;
+        figure {
+            background-color: white;
+            transition: all .5s;
+            border-radius: 1rem;
+        }
+    }
+}
+
+.lg-container {
+    div {
+        font-family: 'overpass';
+    }
+    > div {
+        background-color: colours.$bg-primary;
+    }
+    .lg-sub-html {
+        color: colours.$text-primary;
+    }
+}
