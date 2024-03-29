@@ -94,12 +94,27 @@
     "Gallery": {
       "description": "Image inside lightGallery image lightbox",
       "body": [
-        "<a href=\"[[&mediaUrl]]\">",
+        "<a href=\"/[[&mediaUrl]]\">",
         "    <figure>",
-        "        <img src=\"[[&mediaUrl]]\" alt= \"[[alt text]]\"/>",
+        "        <img src=\"/[[&mediaUrl]]\" alt= \"[[alt text]]\"/>",
         "        <figcaption> [[image caption]] </figcaption>",
         "    </figure>",
         "</a>"
+      ],
+      "isMediaSnippet": true
+    },
+    "Video in lightGallery snippet": {
+      "description": "A snippet for mp4 video in light gallery",
+      "body": [
+        "    <a ",
+        "        data-video='{\"source\": [{\"src\":\"/[[&mediaUrl]]\", \"type\":\"video/mp4\"}], \"attributes\": {\"preload\": true}}'  ",
+        "        data-sub-html=\"<p>[[video caption]]</p>\">",
+        "        <video [[html video player settings]]>",
+        "            <source src=\"/[[&mediaUrl]]\" type=\"video/mp4\">",
+        "            <p>[[video caption]]</p>",
+        "        </video>",
+        "        <img src=\"[[thumbnail image]]\" style=\"display: none; visibility: hidden\"></img>",
+        "    </a>"
       ],
       "isMediaSnippet": true
     }

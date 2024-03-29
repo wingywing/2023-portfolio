@@ -45,13 +45,15 @@
     <script src="/node_modules/lightgallery/lightgallery.min.js"></script>
     <script src="/node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="/node_modules/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="/node_modules/lightgallery/plugins/video/lg-video.min.js"></script>
+
 
     <script type="text/javascript">
         var galleries = document.getElementsByClassName('lightgallery');
         for (let item of galleries) {
             lightGallery(item, {
                 thumbnail: true,
-                plugins: [lgZoom, lgThumbnail],
+                plugins: [lgZoom, lgThumbnail, lgVideo],
                 subHtmlSelectorRelative: true,
                 download: false,
             })
