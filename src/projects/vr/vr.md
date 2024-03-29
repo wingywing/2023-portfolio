@@ -39,18 +39,13 @@ categories:
 {{ description }}
 <br/>
 
-<div id="lightgallery">
+<div class="lightgallery">
     <a href="/projects/vr/00.png">
         <figure>
-            <img src="/projects/vr/00.png" alt= "test"/>
-            <figcaption> Newly redesigned homescreen </figcaption>
+            <img src="/projects/vr/00.png" alt= "Newly redesigned homescreen with both desktop and mobile designs"/>
+            <figcaption> Newly redesigned homescreen with both desktop and mobile designs
+            </figcaption>
         </figure>
-    </a>
-        <a href="/projects/vr/00.png">
-    <figure>
-        <img src="/projects/vr/00.png" alt= "test"/>
-        <figcaption> Newly redesigned homescreen </figcaption>
-    </figure>
     </a>
 </div>
 
@@ -76,10 +71,16 @@ Thank you to the director of Open Law – [Michael Green SC](https://www.linkedi
 
 Updating the user interface design to have a more **modern look and feel** while **identifying painpoints in user experience**.
 
-
-
-
 ### The old interface
+<div class="lightgallery">
+    <a href="/projects/vr/01.png">
+        <figure>
+            <img src="/projects/vr/01.png" alt= ""/>
+            <figcaption>  </figcaption>
+        </figure>
+    </a>
+</div>
+
 
 ### Painpoints in user experience
 

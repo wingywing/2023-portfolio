@@ -47,13 +47,15 @@
     <script src="/node_modules/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
 
     <script type="text/javascript">
-        lightGallery(document.getElementById('lightgallery'), {
-            thumbnail: true,
-            plugins: [lgZoom, lgThumbnail],
-            subHtmlSelectorRelative: true,
-            download: false,
-            
-        });        
+        var galleries = document.getElementsByClassName('lightgallery');
+        for (let item of galleries) {
+            lightGallery(item, {
+                thumbnail: true,
+                plugins: [lgZoom, lgThumbnail],
+                subHtmlSelectorRelative: true,
+                download: false,
+            })
+        }        
     </script>
 
 </body>
