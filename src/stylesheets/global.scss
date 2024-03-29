@@ -18,7 +18,7 @@ body {
 .lightgallery {
     a {
         background: none;
-        figure { 
+        figure, video { 
             &:hover {
                 transform: scale(1.03); 
                 box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);
@@ -29,11 +29,12 @@ body {
         }
         text-decoration: none;
         display: flex;
-        figure {
+        figure, video {
             background-color: white;
             transition: all .5s;
             border-radius: 1rem;
         }
+        justify-content: center;
     }
 }
 
@@ -50,7 +51,7 @@ body {
     .lg-img-wrap {
         padding: 2rem;
     }
-    .lg-image {
+    .lg-image, video  {
         border-radius: 1rem;
         box-shadow: -2px 13px 24px -9px rgba(0,0,0,.19);
     }
@@ -65,5 +66,8 @@ body {
     }
     .lg-next, .lg-prev {
         color: white;
+    }
+    .lg-sub-html p {
+        font-size: 1rem;
     }
 }
