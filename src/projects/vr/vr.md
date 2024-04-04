@@ -39,11 +39,11 @@ categories:
 {{ description }}
 <br/>
 
-<div class="lightgallery">
+<div class="lightgallery inline-gallery">
     <a href="/projects/vr/00.png">
         <figure>
-            <img src="/projects/vr/00.png" alt= "Newly redesigned homescreen with both desktop and mobile designs"/>
-            <figcaption> Newly redesigned homescreen with both desktop and mobile designs
+            <img src="/projects/vr/00.png" alt= "Redesigned homescreen"/>
+            <figcaption> Redesigned homescreen
             </figcaption>
         </figure>
     </a>
@@ -69,30 +69,36 @@ Thank you to the director of Open Law – [Michael Green SC](https://www.linkedi
 
 ## 2. The Problem
 
-Updating the user interface design to have a more **modern look and feel** while **identifying painpoints in user experience**.
+> Updating the user interface design to have a more **modern look and feel** while **identifying painpoints in user experience**.
 
-### The old interface
+When I first started on the Victorian Reports redesign, my main goal was to identify **issues in accessibility and user flow** that can be improved upon for a better experience. At the same time, I also wanted to revitalise the interface to be more modern and consistent with the other redesigns I've been working on for the Open Law suite.
+
+In order to achieve this, I **worked closely with the software development team and legal professionals within our organisation** to understand the technical and user needs of this product.
+
+Currently, the redesigns for the Victorian Reports have been fully completed, and a majority of the frontend development have also been done. We are hoping to launch the redesign soon.
+
+
+## Solving the problem
+
+This project was completed using a **lean-agile approach**, focusing on **how we can bring value to our customers** through iterative cycles and continuous feedback loops.
+
 <div class="lightgallery">
-    <a href="/projects/vr/01.png">
+    <a href="/projects/vr/04.png">
         <figure>
-            <img src="/projects/vr/01.png" alt= ""/>
-            <figcaption>  </figcaption>
+            <img src="/projects/vr/04.png" alt= "The design infinity loop showing the endless process of observation, building and reflection."/>
+            <figcaption> The design infinity loop showing the endless process of observation,<br/> building and reflection.
+            </figcaption>
         </figure>
     </a>
 </div>
 
+Since the Victorian Reports website has been a long-standing platform available to users online, I **started the design process from reflecting on what we have so far**.
 
-### Painpoints in user experience
+### Reflection
 
-## Solving the problem
+### Observe
 
-### Discovery
-
-### Ideation
-
-### Prototyping
-
-### Testing
+### Build
 
 ### UI Design
 
