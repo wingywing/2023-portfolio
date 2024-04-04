@@ -57,7 +57,14 @@
                 subHtmlSelectorRelative: true,
                 download: false,
             })
-        }        
+        }
+        var ilContainer = document.getElementsByClassName('inline-gallery-container');
+        var inlineGallery = lightGallery(ilContainer, {
+            container: ilContainer,
+            dynamic: true,
+            
+        })
+        
     </script>
 
 </body>
