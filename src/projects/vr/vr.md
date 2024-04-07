@@ -39,12 +39,45 @@ categories:
 {{ description }}
 <br/>
 
-<div class="lightgallery inline-gallery">
+<div class="lightgallery">
     <a href="/projects/vr/00.png">
         <figure>
             <img src="/projects/vr/thumbs/00.png" alt= "Redesigned homescreen"/>
             <figcaption> Redesigned homescreen
             </figcaption>
+        </figure>
+    </a>
+</div>
+
+<div id="inline-gallery-container" style="margin-top: -1rem">
+    <a href="/projects/vr/17.png">
+        <figure>
+            <img src="/projects/vr/thumbs/17.png" alt= "Components and branding for Victorian Reports"/>
+            <figcaption> Components and branding for Victorian Reports </figcaption>
+        </figure>
+    </a>
+        <a href="/projects/vr/18.png">
+        <figure>
+            <img src="/projects/vr/thumbs/18.png" alt= "Screenshot of assorted redesigned screens (home, about, settings)"/>
+            <figcaption> Assorted redesigned screens (home, about, settings) </figcaption>
+        </figure>
+    </a>
+            <a href="/projects/vr/19.png">
+        <figure>
+            <img src="/projects/vr/thumbs/19.png" alt= "Screenshot of redesigned store pages"/>
+            <figcaption> Redesigned store pages </figcaption>
+        </figure>
+    </a>
+    <a href="/projects/vr/20.png">
+        <figure>
+            <img src="/projects/vr/thumbs/20.png" alt= "Screenshot of redesigned browse pages"/>
+            <figcaption> Redesigned browse pages </figcaption>
+        </figure>
+    </a>
+    <a href="/projects/vr/21.png">
+        <figure>
+            <img src="/projects/vr/thumbs/21.png" alt= "Screenshot of redesigned error pages, with a Typeform styled to be like a chatbot"/>
+            <figcaption> Redesigned error pages, with a Typeform styled to be like a chatbot </figcaption>
         </figure>
     </a>
 </div>
