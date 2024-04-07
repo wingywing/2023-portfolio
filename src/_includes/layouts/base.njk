@@ -59,12 +59,19 @@
                 download: false,
             })
         }
-        var ilContainer = document.getElementsByClassName('inline-gallery-container');
-        var inlineGallery = lightGallery(ilContainer, {
-            container: ilContainer,
-            dynamic: true,
-            
-        })
+        const $lgContainer = document.getElementById("inline-gallery-container");
+        const lg = lightGallery($lgContainer, {
+        licenseKey: '685DED29-DB6A49B0-8BE25647-A8269362',
+        speed: 500,
+        container: $lgContainer,
+        // Do not allow users to close the gallery
+        closable: false,
+        // Add maximize icon to enlarge the gallery
+        showMaximizeIcon: true,
+        plugins: [lgZoom, lgThumbnail]
+        });
+        lg.openGallery(0);
+        
         
     </script>
 
