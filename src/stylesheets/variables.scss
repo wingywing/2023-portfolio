@@ -1,6 +1,16 @@
 $header-mobile-height: 3.125rem;
 $header-desktop-height: 4.375rem;
 
+@mixin transition-all {
+    transition: all, .5s;
+}
+
+@mixin squiggle {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
 @mixin box-shadow {
     box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);
     -webkit-box-shadow: -2px 13px 24px -9px rgba(0,0,0,0.19);

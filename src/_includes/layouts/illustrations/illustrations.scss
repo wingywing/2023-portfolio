@@ -1,0 +1,106 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/variables.scss' as variables;
+@use '../../../stylesheets/fonts.scss' as fonts;
+
+
+#illustrations-page {
+    .squiggle {
+        @include variables.squiggle();
+        bottom: -1rem;
+    }
+    h1 {
+        @include fonts.big-title();
+        margin-top: 2rem;
+        grid-row: 1;
+        grid-column: 2/12;
+        height: fit-content;
+        rotate: -1deg;
+        text-align: left;
+        justify-self: flex-start;
+        span {
+            align-items: center;
+            gap: 1rem;
+            display: flex;
+            flex-wrap: nowrap;
+            svg {
+                margin-left: 1rem;
+            }
+        }
+    }
+    aside {
+        grid-column: 2/12;
+        grid-row: 2;
+        font-size: 1.125rem;
+        margin: 2rem 0;
+        text-wrap: pretty;
+        height: fit-content;
+        rotate: 1deg;
+    }
+    .content {
+        background: none;
+        grid-column: 1/13;
+        .lightgallery {
+            grid-column: 1/13;
+            figure {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 550px ) {
+        .lightgallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            a {
+                width: 50%;
+            }
+        }
+    }
+    @include bp.tablet {
+        h1 {
+            margin-top: 0;
+        }
+        aside {
+            grid-column: 7/12;
+            grid-row: 1;
+            text-wrap: balance;
+            text-align: right;
+            justify-self: flex-end;
+        }
+        .lightgallery {
+            gap: 0.625rem;
+        }
+        .content {
+            grid-row: 2;
+            grid-column: 2/10;
+            display: unset;
+            max-width: 60rem;
+            .lightgallery {
+                a {
+                    width: calc(((100% / 3) - 0.625rem));
+                }
+            }
+        }
+    }
+    @include bp.desktop {
+        h1 {
+            grid-column: 2/7;
+        }
+        .content {
+            .lightgallery {
+                gap: 1rem;
+                a {
+                    width: calc(((100% / 3) - 1rem));
+                }
+            }
+        }
+    }
+}
