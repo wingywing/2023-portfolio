@@ -2,15 +2,41 @@
 layout: base.njk
 ---
 
-<div id="project-page">
-    <button id="back-link" onclick="history.back()">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21.3334 6.66666V9.33332H18.6667V6.66666H21.3334ZM16 12V9.33332H18.6667V12H16ZM13.3334 14.6667V12H16V14.6667H13.3334ZM13.3334 17.3333H10.6667V14.6667H13.3334V17.3333ZM16 20V17.3333H13.3334V20H16ZM16 20H18.6667V22.6667H16V20ZM21.3334 25.3333V22.6667H18.6667V25.3333H21.3334Z" fill="#116969"/>
-        </svg>
-        Back
-    </button>
+{# Illustrations page use the same styles as the project page #}
+
+<div id="illustrations-page">
+    <h1>
+        <span>
+            Illustrations
+            <svg class="header-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_227_5781)">
+                <path d="M15.8333 6.60862L12.6228 5.71222L4.55521 34.6071L36.6606 43.5711L44.7282 14.6762L15.8333 6.60862ZM40.6213 16.9904L34.3465 39.4641L8.66215 32.293L14.9369 9.81916L40.6213 16.9904ZM29.1969 20.7222L25.9863 19.8258L25.0899 23.0364L21.8794 22.14L20.983 25.3505L17.7724 24.4541L16.876 27.6647L13.6655 26.7683L12.7691 29.9788L15.9796 30.8752L16.876 27.6647L20.0866 28.5611L20.983 25.3505L24.1935 26.2469L25.0899 23.0364L28.3005 23.9328L27.4041 27.1433L30.6146 28.0397L29.7182 31.2503L32.9287 32.1467L33.8251 28.9361L30.6146 28.0397L31.511 24.8292L28.3005 23.9328L29.1969 20.7222ZM20.4616 14.8225L17.2511 13.9261L16.3547 17.1366L19.5652 18.033L20.4616 14.8225Z" fill="#4E4843"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_227_5781">
+                <rect width="40" height="40" fill="white" transform="translate(10.7568) rotate(15.6)"/>
+                </clipPath>
+                </defs>
+                </svg>
+        </span>
+        <svg class="squiggle" width="474" height="67" viewBox="0 0 474 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g style="mix-blend-mode:multiply">
+            <path d="M11 25.3309C24.5698 40.8061 64.9354 52.061 148.719 43.8441C198.09 39.0022 228.405 20.2042 228.405 20.2042C262.185 43.8441 321.648 61.782 378.122 48.3385C434.595 34.895 453.688 20.2042 464 9.95068" stroke="#C6E790" stroke-width="28"/>
+            </g>
+        </svg> 
+    </h1>     
+
+    <aside>I like to draw on my iPad when I have free time <span class="neue-bit">☺</span> <br/> I hope you like my illustrations!</aside>
     <div class="content">
-        {{ content | safe }}
+        <div class="lightgallery" id="illustration-gallery">
+            {% for image in images %}
+            <a href="{{ image.src }}">
+                <figure>
+                    <img src="{{ image.thumb }}" alt= "{{ image.alt }}"/>
+                </figure>
+            </a>
+            {% endfor %}
+        </div>
     </div>
 </div>
 

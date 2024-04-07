@@ -1,6 +1,18 @@
+@use './variables.scss' as variables;
+@use './mixin/colours.scss' as colours;
+
+
 //Fonts!
 $title: 1.5rem;
 $text-small: 1rem;
+
+@mixin big-title {
+    font-size: 4.5rem;
+    font-family: 'mondwest';
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
 
 .neue-bit {
     font-family: 'neuebit';
