@@ -367,7 +367,7 @@ For mobile screens, having collapsible sections really help to reduce the amount
 #### Aesthetics do matter
 The main user flow/functionality of the redesign remained quite similar to the existing website, but by updating the design to look and feel more modern, [**the product feels more usable**](https://medium.com/@coffeeandjunk/design-psychology-aesthetic-usability-effect-494ed0f22571).
 
-I really enjoyed working on this project and pushing the boundaries on how I could give the Victorian Reports a refreshed branding. In the future, I would like to spend more time on the research and prototyping stages to create a truly unique user experience that focuses on the cus****tomer needs.
+I really enjoyed working on this project and pushing the boundaries on how I could give the Victorian Reports a refreshed branding. In the future, I would like to spend more time on the research and prototyping stages to create a truly unique user experience that focuses on the customer needs.
 
 <br/>
 <br/>
