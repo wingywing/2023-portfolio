@@ -57,7 +57,8 @@ categories:
   - [Reflect](#reflect)
   - [Observe](#observe)
   - [Make](#make)
-- [4. Final comments](#4.-final-comments)
+- [4. UI designs](#4-ui-designs)
+- [5. Final comments](#5.-final-comments)
 
 ## Special thanks
 Thank you to the director of Open Law – [Michael Green SC](https://www.linkedin.com/in/michael-green-sc-42118b1/) for the opportunity to work on this project. I would also like to thank [Nick&nbsp;Clark](https://clarx.dev/) who showed me the ropes to Tailwind, SASS and taught me so much about frontend development with immense patience.
@@ -104,19 +105,19 @@ The existing Victorian Reports website had several **blockers in the user flow**
 #### Disruptive eCommerce flow
 A cohesive and seamless eCommerce flow is essential to any digital product for bringing in monetary value for the business. 
 
-The previous user flow of the Victorian Reports website required the user to **[recall rather than recognise](https://www.nngroup.com/articles/recognition-and-recall/)** what items they have already added to their cart, and how much money each item costed. The lack of information onscreen to help customers make informed purchase decisions contributes to the ****[ambiguity effect](https://onlinelibrary.wiley.com/doi/abs/10.1002/bdm.3960010303)****, which can decrease their feelings of trust towards the platform and lead to hesitiation to finalise purchases.
+The previous user flow of the Victorian Reports website required the user to **[recall rather than recognise](https://www.nngroup.com/articles/recognition-and-recall/)** what items they have already added to their cart, and how much money each item costed. The lack of information onscreen to help customers make informed purchase decisions contributes to the ****[ambiguity effect](https://onlinelibrary.wiley.com/doi/abs/10.1002/bdm.3960010303)****, which can decrease their feelings of trust towards the platform and lead to hesitation to finalise purchases.
 
 <div class="lightgallery">
     <a href="/projects/vr/05.png">
         <figure>
             <img src="/projects/vr/05.png" alt= "Screenshot of the original shop screen showing how much the user has spent, without what they have already added to the cart"/>
-            <figcaption> Screenshot of the original shop screen showing how much the user has spent, without what they have already added to the cart </figcaption>
+            <figcaption>Original shop screen showing how much the user has spent, without what they have already added to the cart </figcaption>
         </figure>
     </a>
     <a href="/projects/vr/06.png">
     <figure>
         <img src="/projects/vr/06.png" alt= "Screenshot of the original single volume screen, which lacks a preview of selected volumes and a way to purchase multiple"/>
-        <figcaption>Screenshot of the original single volume screen, which lacks a preview of selected volumes and a way to purchase multiple</figcaption>
+        <figcaption>Original single volume screen, which lacks a preview of selected volumes and a way to purchase multiple</figcaption>
     </figure>
 </a>
 </div>
@@ -128,13 +129,13 @@ Throughout the site, there were **areas that did not adhere to the WCAG AA acces
     <a href="/projects/vr/07.png">
         <figure>
             <img src="/projects/vr/07.png" alt= "Screenshot of the former homescreen design, which is difficult to read due to the background image and small text"/>
-            <figcaption> Screenshot of the former homescreen design, which is difficult to read due to the background image and small text </figcaption>
+            <figcaption> Former homescreen design, which is difficult to read due to the background image and small text </figcaption>
         </figure>
     </a>
     <a href="/projects/vr/08.png">
         <figure>
             <img src="/projects/vr/08.png" alt= "Screenshot of title text (in beige) in the former design, which fails the WCAG colour contrast test"/>
-            <figcaption>Screenshot of title text in the former design, which fails the WCAG colour contrast test</figcaption>
+            <figcaption>Title text in the former design, which fails the WCAG colour contrast test</figcaption>
         </figure>
     </a>
 </div>
@@ -158,30 +159,182 @@ Throughout the site, there were **areas that did not adhere to the WCAG AA acces
 </div>
 
 ### Observe
-After reflecting on the key issues in the existing design, **observation of users** was the next step crucial to designing for a **user-centric** solution. In order to do so, I created some lean personas with different needs and painpoints. User journey maps were also used to identify painpoints in user flows.
+After reflecting on the key issues in the existing design, **observation of users** was the next step crucial to designing for a **user-centric** solution. I created lean personas representative of the key needs and painpoints of our target users. User journey maps were also used to identify painpoints in user flows.
 
-#### Lean Personas
-Olivia Smith
+#### Lean persona
 
-Needs:
-- Access to current and comprehensive legal information
-- Ability to order physical copies of the Victorian Reports
-- Search feature to look through reports
-- Download .pdf versions of reports for offline use
-- Save useful documents for future use
+<div class="persona">
+<div class="title">
+    <img class="portrait" src="/projects/vr/11.png" alt="AI-generated image of Jane Doe">
+    <span class="name"> <b> Jane Doe </b> –&nbsp;An&nbsp;Australian&nbsp;Lawyer </span>
+</div>
 
-Painpoints:
-- Purchasing required reports quickly
-- Integrating technology to streamline the research process
-- Having an easier way to view connections between cases and legislation
-- Finding cases that are useful to their practice
+<blockquote>"I want an online platform that will let me access the most up-to-date legal information conveniently"</blockquote>
+    <div class="needs-and-pains">
+        <div class="needs">
+        <b class="subheading">Needs:</b>
+        <ul>
+            <li>Access to <b>current and comprehensive</b> legal information</li>
+            <li>Search feature to look through reports</li>
+            <li>Download .pdf versions of <b>reports for offline use</b></li>
+            <li><b>Save useful documents</b> for future use</li>
+        </ul>
+        </div>
+        <div class="pains">
+        <b class="subheading">Painpoints:</b>
+        <ul>
+            <li>A need to purchase required reports <b>quickly</b></li>
+            <li>Integrating technology to <b>streamline the research process</b></li>
+            <li>Wanting an easier way to <b>view connections between cases and legislation</b></li>
+            <li>Difficulty finding cases that are useful to their practice</li>
+        </ul>
+        </div>
+    </div>
+ </div>
+<div class="persona">
+<div class="title">
+    <img class="portrait" src="/projects/vr/11-2.png" alt="AI-generated image of John Doe">
+    <span class="name"> <b> John Doe </b> –&nbsp;An&nbsp;Australian&nbsp;Lawyer </span>
+</div>
+<blockquote>"I want to be able to stock up on physcial copies of the Victorian Reports for my office library"</blockquote>
+    <div class="needs-and-pains">
+        <div class="needs">
+        <b class="subheading">Needs:</b>
+        <ul>
+            <li>Ability to <b>order physical bound volumes</b> of the Victorian Reports</li>
+            <li>Desire to <b>backfill orders</b> for missing volumes in his library</li>
+            <li>Need to keep track of <b>purchasing invoices</b> for tax and billing purposes</li>
+        </ul>
+        </div>
+        <div class="pains">
+        <b class="subheading">Painpoints:</b>
+        <ul>
+            <li>Finds it difficult to navigate digital websites</li>
+            <li>Difficulty <b>purchasing multiple copies</b> when needed</b></li>
+            <li>Wanting an easier way to find the exact volume they're missing</li>
+        </ul>
+        </div>
+    </div>
+ </div>
 
+#### User journey maps
+Some user journey maps of the existing site were created to see opportunities for improvement in the existing **eCommerce** and **adding to shelf** journey.
 
-
+<div class="lightgallery" style="margin-top: -1rem">
+    <a href="/projects/vr/12.png">
+    <figure>
+        <img src="/projects/vr/12.png" alt= "Flowchart showing the user journey from the homescreen to finishing a purchase"/>
+        <figcaption>User journey from the homescreen to finishing a purchase </figcaption>
+    </figure>
+    </a>
+    <a href="/projects/vr/13.png">
+    <figure>
+        <img src="/projects/vr/13.png" alt= "Flowchart showing the user journey from the homescreen to adding an item to the shelf"/>
+        <figcaption> User journey from the homescreen to adding an item to the shelf </figcaption>
+    </figure>
+    </a>
+</div>
 
 ### Make
+After doing an audit of the existing website, I got around to creating designs for the renewed website. This involved **sketching** and **prototyping**.
 
-### 4. Final comments
+#### Sketches
+Sketches for the initial ideas were messy, but helped to jot down the key components that we wanted to revamp. 
+
+The below sketches shows some drafts of **UI that adapted to authentication**, a new navigation bar with more useful links, and engaging store pages with **mobile-responsive design**.
+
+<div class="lightgallery">
+    <a href="/projects/vr/14.png">
+    <figure>
+        <img style src="/projects/vr/14.png" alt= "Rough sketches showing changes to the homescreen, shop screen and navigation bar"/>
+        <figcaption> Initial ideas and sketches </figcaption>
+    </figure>
+</a>
+</div>
+
+#### Prototyping
+The prototyping phase involved **wireframing** and **high-fidelity prototypes**. Wireframes were used to help with the initial iterative process before [components from the Open Law Design System](/projects/openlaw/#reuseable-components) was integrated.
+
+<div class="lightgallery" style="margin-top: -1rem">
+    <a href="/projects/vr/15.png">
+        <figure>
+            <img style src="/projects/vr/15.png" alt= "Wireframe of the adding to shelf flow"/>
+            <figcaption> Wireframe of the adding to shelf flow </figcaption>
+        </figure>
+    </a>
+        <a href="/projects/vr/16.png">
+        <figure>
+            <img style src="/projects/vr/16.png" alt= "Hi-fi prototype of the adding to shelf flow"/>
+            <figcaption> Hi-fi prototype of the adding to shelf flow </figcaption>
+        </figure>
+    </a>
+            <a href="/projects/vr/16-2.png">
+        <figure>
+            <img style src="/projects/vr/16-2.png" alt= "Hi-fi prototype of the store flow"/>
+            <figcaption> Hi-fi prototype of the store flow </figcaption>
+        </figure>
+    </a>
+            <a href="/projects/vr/16-3.png">
+        <figure>
+            <img style src="/projects/vr/16-3.png" alt= "Hi-fi prototype of the add to cart flow"/>
+            <figcaption> Hi-fi prototype of the add to cart flow </figcaption>
+        </figure>
+    </a>
+
+</div>
+
+### 4. UI designs
+
+By the end of the project, virtually every screen of the existing website was refreshed to follow the new branding.
+
+<div class="lightgallery" style="margin-top: -1rem">
+    <a href="/projects/vr/17.png">
+        <figure>
+            <img style src="/projects/vr/17.png" alt= "Components and branding for Victorian Reports"/>
+            <figcaption> Components and branding for Victorian Reports </figcaption>
+        </figure>
+    </a>
+        <a href="/projects/vr/18.png">
+        <figure>
+            <img style src="/projects/vr/18.png" alt= "Screenshot of assorted redesigned screens (home, about, settings)"/>
+            <figcaption> Assorted redesigned screens (home, about, settings) </figcaption>
+        </figure>
+    </a>
+            <a href="/projects/vr/19.png">
+        <figure>
+            <img style src="/projects/vr/19.png" alt= "Screenshot of redesigned store pages"/>
+            <figcaption> Redesigned store pages </figcaption>
+        </figure>
+    </a>
+    <a href="/projects/vr/20.png">
+        <figure>
+            <img style src="/projects/vr/20.png" alt= "Screenshot of redesigned browse pages"/>
+            <figcaption> Redesigned browse pages </figcaption>
+        </figure>
+    </a>
+    <a href="/projects/vr/21.png">
+        <figure>
+            <img style src="/projects/vr/21.png" alt= "Screenshot of redesigned error pages, with a Typeform styled to be like a chatbot"/>
+            <figcaption> Redesigned error pages, with a Typeform styled to be like a chatbot </figcaption>
+        </figure>
+    </a>
+</div>
+
+### 5. Final comments
+After finishing the Figma redesigns and prototypes, I went on to help with building the frontend components using** SASS and HTML**. Although the project hasn't been launched yet, most of the frontend has been completed.
+
+Some key takeaways and learnings I've gotten from this project through user testing and self-reflection were:
+
+#### The small things add up
+Analysing the small inconsistencies in design of the existing website showed that **small differences in padding, style and spacing can lead to a disjointed user experience**.
+
+#### Collapse where possible
+For mobile screens, having collapsible sections really help to reduce the amount of scrolling required, allowing users to **skip right to where they want their content**.
+
+### Aesthetics do matter
+The main user flow/functionality of the redesign remained quite similar to the existing website, but by updating the design to look and feel more modern, [**the product feels more usable**](https://medium.com/@coffeeandjunk/design-psychology-aesthetic-usability-effect-494ed0f22571).
+
+I really enjoyed working on this project and pushing the boundaries on how I could give the Victorian Reports a refreshed branding. In the future, I would like to spend more time on the research and prototyping stages to create a truly unique user experience that focuses on the customer needs.
 
 <br/>
 <br/>

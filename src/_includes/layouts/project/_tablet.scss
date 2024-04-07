@@ -58,5 +58,25 @@
         figcaption {
             padding: 0 1rem;
         }
+        .persona {
+            padding: 0 2rem;
+            .needs-and-pains {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                .needs, .pains {
+                    padding: 1rem;
+                }
+                .needs {
+                    grid-column: 1/2;
+                }
+                .pains {
+                    grid-column: 2/3;
+                }
+                ul {
+                    margin: 0;
+                    padding: 1rem 0;
+                }
+            }
+        }
     }
 }
