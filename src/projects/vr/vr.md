@@ -321,7 +321,7 @@ By the end of the project, virtually every screen of the existing website was re
 </div>
 
 ### 5. Final comments
-After finishing the Figma redesigns and prototypes, I went on to help with building the frontend components using** SASS and HTML**. Although the project hasn't been launched yet, most of the frontend has been completed.
+After finishing the Figma redesigns and prototypes, I went on to help with building the frontend components using **SASS and HTML**. Although the project hasn't been launched yet, most of the frontend has been completed.
 
 Some key takeaways and learnings I've gotten from this project through user testing and self-reflection were:
 
