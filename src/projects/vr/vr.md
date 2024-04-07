@@ -90,7 +90,7 @@ categories:
   - [Reflect](#reflect)
   - [Observe](#observe)
   - [Make](#make)
-- [4. UI designs](#4-ui-designs)
+- [4. UI designs](#4.-ui-designs)
 - [5. Final comments](#5.-final-comments)
 
 ## Special thanks
