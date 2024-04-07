@@ -57,7 +57,7 @@ A visual web project representing historical data mapping the changes of Darling
 ## 1. The team
 | Human | Role |
 |:-- |:--|
-| [Nicole&nbsp;Cama](https://nicolecama.com.au) | Project Lead – professional historian specialising in public history who led this project, provided archival images and conducted the all the historical research for this project |
+| [Nicole&nbsp;Cama](https://nicolecama.com.au) | Project Lead – professional historian specialising in public history who led this project, provided archival images and conducted all the historical research for this project |
 | [Nick&nbsp;Clark](https://clarx.dev/) | Software Engineer – created the site from the ground-up and provided the base for SASS styling |
 | Me! | Lead Designer – digitising archival maps, graphic and web design, and SASS styling site-wide |
 
