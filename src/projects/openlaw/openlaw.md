@@ -134,9 +134,9 @@ The first logo that received the overhaul was the JADE logo. A couple of changes
 After the main JADE logo has been refreshed, I moved on to redesigning the logos for Open Law and Victorian Reports to have the same visual design language, while maintaining their previous colour schemes (for recognisability).
 
 <div class="lightgallery">
-    <a href="/projects/openlaw/04.png">
+    <a href="/projects/openlaw/07.png">
         <figure>
-            <img src="/projects/openlaw/04.png" alt= "Sketches of ideas for the new logo designs"/>
+            <img src="/projects/openlaw/07.png" alt= "Sketches of ideas for the new logo designs"/>
         <figcaption>Sketches of ideas for the new logo designs</figcaption>
         </figure>
     </a>
