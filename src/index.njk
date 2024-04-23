@@ -189,59 +189,96 @@
                 <div class="design">
                     <h3>Design and Illustration</h3>
                     <div class="tiles-container">
-                        <div class="tile" id="ae">
-                            <img src="assets/img/home/aftereffects.png" alt=""/>
-                            <p>After Effects</p>
-                        </div>
-                        <div class="tile" id="fg">
-                            <img src="assets/img/home/figma.png" alt=""/>
-                            <p>Figma</p>
-                        </div>
-                        <div class="tile" id="il">
-                            <img src="assets/img/home/illustrator.png" alt=""/>
-                            <p>Illustrator</p>
-                        </div>
-                        <div class="tile" id="in">
-                            <img src="assets/img/home/indesign.png" alt=""/>
-                            <p>InDesign</p>
-                        </div>
-                        <div class="tile" id="ps">
-                            <img src="assets/img/home/photoshop.png" alt=""/>
-                            <p>Photoshop</p>
-                        </div>
-                        <div class="tile" id="pr">
-                            <img src="assets/img/home/procreate.png" alt=""/>
-                            <p>Procreate</p>
-                        </div>
+                        {{
+                            component('tile',{
+                                id: 'ae',
+                                innercontent: 'After Effects',
+                                icon: 'home/aftereffects.png'
+                            })
+                        }}
+                        {{
+                            component('tile',{
+                                id: 'fg',
+                                innercontent: 'Figma',
+                                icon: 'home/figma.png'
+                            })
+                        }}
+                        {{
+                            component('tile', {
+                                id: 'il',
+                                innercontent: 'Illustrator',
+                                icon: 'home/illustrator.png'
+                            })
+                        }}
+                        {{
+                            component('tile', {
+                                id: 'in',
+                                innercontent: 'InDesign',
+                                icon: 'home/indesign.png'
+                            })
+                        }}
+                        {{
+                            component('tile', {
+                                id: 'ps',
+                                innercontent: 'Photoshop',
+                                icon: 'home/photoshop.png'
+                            })
+                        }}
+                        {{
+                            component('tile', {
+                                id: 'pr',
+                                innercontent: 'Procreate',
+                                icon: 'home/procreate.png'
+                            })
+                        }}
                     </div>
                 </div>
                 <div class="code">
                     <h3>Code</h3>
                     <div class="tiles-container">
-                        <div class="tile" id="et">
-                            <img src="assets/img/home/11ty.png" alt=""/>
-                            <p>11ty</p>
-                        </div>
-                        <div class="tile" id="ht">
-                            <img src="assets/img/home/html5.png" alt=""/>
-                            <p>HTML5</p>
-                        </div>
-                        <div class="tile" id="hg">
-                            <img src="assets/img/home/hugo.png" alt=""/>
-                            <p>Hugo</p>
-                        </div>
-                        <div class="tile" id="rc">
-                            <img src="assets/img/home/react.png" alt=""/>
-                            <p>React</p>
-                        </div>
-                        <div class="tile" id="sa">
-                            <img src="assets/img/home/sass.png" alt=""/>
-                            <p>SASS</p>
-                        </div>
-                        <div class="tile" id="tw">
-                            <img src="assets/img/home/tailwind.png" alt=""/>
-                            <p>Tailwind</p>
-                        </div>
+                        {{
+                            component('tile', {
+                                id: 'et',
+                                innercontent: '11ty',
+                                icon: 'home/11ty.png'
+                            })
+                        }}
+                        {{
+                            component('tile', {
+                                id: 'ht',
+                                innercontent: 'HTML5',
+                                icon: 'home/html5.png'
+                            })
+                        }}
+                        {{
+                            component('tile', {
+                                id: 'hg',
+                                innercontent: 'Hugo',
+                                icon: 'home/hugo.png'
+                            })
+                        }}
+                        {{
+                            component('tile', {
+                                id: 'rc',
+                                innercontent: 'React',
+                                icon: 'home/react.png'
+                            })
+                        }}
+                        {{
+                            component('tile', {
+                                id: 'sa',
+                                innercontent: 'SASS',
+                                icon: 'home/sass.png'
+                            })
+                        }}
+                        {{
+                            component('tile', {
+                                id: 'tw',
+                                innercontent: 'Tailwind',
+                                icon: 'home/tailwind.png'
+                            })
+                        }}
+
                     </div>
                 </div>
             </div>

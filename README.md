@@ -1,11 +1,18 @@
 # 2023-portfolio
-A new portfolio using 11ty as base
+A new portfolio using 11ty as base.
 
+
+## Why 11ty?
+It's fast! Also well-loved by the IndieWeb community.
+
+
+## Dev
 run `npm run start`
 
 Add component styles to components.scss which will be imported by global.scss 
 
-You can import components using this macro: 
+You can import components using the macro below
+**Make sure commas are in the right place!** 
 ```njk
         {{
             component('button',{ //button is the component name
