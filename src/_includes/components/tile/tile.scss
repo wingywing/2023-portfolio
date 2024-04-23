@@ -1,0 +1,23 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/variables.scss' as variables;
+
+.tile {
+    box-sizing: border-box;
+    display: flex;
+    height: 4.75rem;
+    min-width: fit-content;
+    min-height: fit-content;
+    border-radius: 1rem;
+    gap: 1rem;
+    white-space: nowrap;
+    align-items: center;
+    transition: all, .5s;
+    padding: 1rem;
+    p {
+        margin: 0;
+    }
+    img {
+        height: 2.625rem;
+        width: 2.625rem;
+    }
+} 
