@@ -1,24 +1,24 @@
 {# 
     You can pass through:
+    - innercontent for text
+    - linkurl for links
     - class for classname
     - id for id
-    - link for links
-    - text for text (wrap it)
     - icon for icon --> include file extension 
     
 #}
 
-{% if params.onclick %}
-    <a href="{{params.link}}" 
-       class="tile {{params.class}}"
-       id="{{params.id}}"
+{% if params.linkurl %}
+    <a href="{{params.linkurl}}" 
+       class="tile {{ params.class if params.class }}"
+       id="{{ params.id if params.id}}"
        >
        <img src="{{ "../../../assets/img/" + params.icon}}" alt="" class="tile-icon">
        <p>{{ params.innercontent | safe}}</p>
     </a>
 {% else %}
-    <div class="tile"
-         id="{{params.id}}"
+    <div class="tile {{ params.class if params.class }}"
+         id="{{ params.id if params.id }}"
     >
         <img src="{{ "../../../assets/img/" + params.icon}}" alt="" class="tile-icon">
         <p> {{ params.innercontent | safe}} </p>
