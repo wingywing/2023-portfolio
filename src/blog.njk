@@ -25,13 +25,15 @@ layout: base.njk
     </h1>  
     <aside>Long rambles about things that interest me
         <br/>
-        <a href="rss-link">Follow my RSS</a>
+        {# <a href="rss-link">Follow my RSS</a> TODO: Add RSS#}
     </aside>
     {# <div class="filters"></div> TODO: create search filters#}
     <div class="blogroll-posts">
         <ul>
             {%- for post in collections.post -%}
-                <li>{{ post.data.title }}</li>
+                <li><a href="{{ post.url }}">
+                    {{ post.data.title }}
+                </a></li>
             {%- endfor -%}
         </ul>
     </div>

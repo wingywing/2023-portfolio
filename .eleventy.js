@@ -27,7 +27,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.amendLibrary("md", mdLib => mdLib.use(mdAnchor));
     eleventyConfig.addLayoutAlias('project', 'layouts/project/project.njk');
     eleventyConfig.addLayoutAlias('illustrations', 'layouts/illustrations/illustrations.njk');
-
+    eleventyConfig.addCollection("posts", function (collectionAPI) {
+      return collectionAPI.getFilteredByGlob("src/blog/*.md");
+    });
     eleventyConfig.addPlugin(eleventyImagePlugin, {
       // Set global default options
       formats: ["webp", "jpeg"],
