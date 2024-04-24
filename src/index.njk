@@ -1,3 +1,7 @@
+---
+title: Wing Pang
+---
+
 {%- extends "src/_includes/layouts/base.njk" -%}
 {%- block content -%}
 
@@ -97,6 +101,15 @@
                     })
                 }}
             </div>
+            {{
+                component('link-button',{
+                    innercontent: 'View my resumé',
+                    class: 'bg-seasalt',
+                    linkurl: 'https://drive.google.com/file/d/1455OJd8kqjmnODrE_ZsO1i5WEjXFWZBU/view?usp=sharing',
+                    icon: 'article',
+                    arialabel: 'View my resumé'
+                })
+            }}
             <div id="home-intro__paragraphs">
                 <p>A Sydney-based product designer with an interest in 
                     <b>accessible UI and design systems</b>. I work with developers to 

@@ -6,6 +6,7 @@
     &:hover {
         cursor: pointer;
     }
+    width: fit-content;
     align-items: center;
     border-radius: .5rem;
     border: none;
@@ -15,4 +16,9 @@
     font-weight: bold;
     gap: .625rem;
     padding: 1rem 1.5rem;
+    text-decoration: none;
+    img {
+        width: 1.5rem;
+    }
+
 }

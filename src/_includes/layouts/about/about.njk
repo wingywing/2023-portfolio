@@ -1,6 +1,9 @@
 ---
-layout: base.njk
+title: About me
 ---
+{%- extends "src/_includes/layouts/base.njk" -%}
+{%-block content-%}
+
 <div id="about-page">
     <div class="text-container">
         <div class="about-content first-content-block">
@@ -27,16 +30,14 @@ layout: base.njk
                 </h1>
             </div>
             <div class="content">
-                {{ block content1 }}
-                    Content
-                {{ endblock }}
+                {% block content1 %}
+                {% endblock %}
             </div>
         </div>
         <div class="about-content second-content-block">
-            <h2> {{ title }} </h2>
-            {{ block content2 }}
-                Content
-            {{ endblock }}
+            <h2> On being a global-minded designer </h2>
+            {% block content2 %}
+            {% endblock %}
         </div>
     </div>
     <div class="image-container">
@@ -66,6 +67,21 @@ layout: base.njk
                 arialabel: 'Send an email to hello@wingpang.com'
             })
         }}
-        
+        {{
+            component('tile',{
+                id: 'ae',
+                innercontent: 'After Effects',
+                icon: 'home/aftereffects.png'
+            })
+        }}
+        {{
+            component('tile',{
+                id: 'fg',
+                innercontent: 'Figma',
+                icon: 'home/figma.png'
+            })
+        }}
     </div>
 </div>
+
+{%- endblock -%}
