@@ -3,12 +3,15 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 const implicitFigures = require('markdown-it-image-figures');
 const mdAnchor = require('markdown-it-anchor');
+const blogTools = require("eleventy-plugin-blog-tools");
 
 
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPlugin(eleventySass); //to add SASS support from src
     eleventyConfig.addPlugin(EleventyRenderPlugin);
+    eleventyConfig.addPlugin(blogTools);
+
     eleventyConfig.addWatchTarget('src/projects/**/**.md');
     eleventyConfig.addPassthroughCopy("node_modules/gsap/dist/all.js"); //to add GSAP
     eleventyConfig.addPassthroughCopy("node_modules/jquery/dist/jquery.min.js"); //to add jquery
@@ -28,7 +31,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('project', 'layouts/project/project.njk');
     eleventyConfig.addLayoutAlias('illustrations', 'layouts/illustrations/illustrations.njk');
     eleventyConfig.addCollection("posts", function (collectionAPI) {
-      return collectionAPI.getFilteredByGlob("src/blog/*.md");
+      return collectionAPI.getFilteredByGlob("src/writing/*.md");
     });
     eleventyConfig.addPlugin(eleventyImagePlugin, {
       // Set global default options
