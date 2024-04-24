@@ -12,4 +12,17 @@ layout: project/project.njk
     <div class="blogpost-content">
         {{ content | safe }}
     </div>
+    <div class="blogpost-footer">
+        <div class="tags" id="blogpost-footer-tags">
+            {% for tag in tags %}
+                <div class="tag" href="#">
+                    #{{ tag }}
+                </div>
+            {% endfor %}
+        </div>
+        {# <div id="blogpost-footer-actions">
+            <button class="like"></button>
+            <button class="reply"></button>
+        </div> TODO: Add IndieWeb interactions#}
+    </div>
 </div>
