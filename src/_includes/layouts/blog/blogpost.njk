@@ -6,7 +6,7 @@ layout: project/project.njk
     <div class="blogpost-header">
         <div class="information">
             <h1>{{ title }}</h1>
-            <time>{{ date  }}</time>
+            <time>{{ date.toUTCString()  }}</time>
         </div>
     </div>
     <div class="blogpost-content">
