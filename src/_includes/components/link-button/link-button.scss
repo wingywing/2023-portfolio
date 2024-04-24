@@ -3,7 +3,7 @@
 @use 'tablet';
 @use 'desktop';
 
-button {
+.link-button {
     @include base.link-button-base;
     @include mobile.link-button-mobile;
     @include tablet.link-button-tablet;

@@ -1,14 +1,14 @@
 {# 
     You can pass through:
     - class for classname
-    - href for link url
+    - linkurl for link url
     - text for text
     - icon for icon --> located in the assets/img/icons folder
 #}
 
 <a 
     {% if params.class %}
-    class="{{params.class}}"
+    class="link-button {{params.class}}"
     {% endif %} 
 
     {% if params.id %}
