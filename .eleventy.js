@@ -13,6 +13,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(blogTools);
 
     eleventyConfig.addWatchTarget('src/**/**.md');
+    eleventyConfig.addWatchTarget('src/**/**.njk');
+
     eleventyConfig.addPassthroughCopy("node_modules/gsap/dist/all.js"); //to add GSAP
     eleventyConfig.addPassthroughCopy("node_modules/jquery/dist/jquery.min.js"); //to add jquery
     eleventyConfig.addPassthroughCopy("node_modules/lightgallery/"); //to add lightGallery
