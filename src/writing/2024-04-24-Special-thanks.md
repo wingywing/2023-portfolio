@@ -4,6 +4,7 @@ tags:
     - code
 title: Special thanks to the indieweb for motivating this website
 date: 2024-04-24T01:55:47.582Z
+layout: blog/blogpost.njk
 slug: special-indieweb-motivating-website
 ---
 
