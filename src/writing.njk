@@ -3,7 +3,7 @@ title: Writing
 layout: base.njk
 ---
 
-<div class="writing-page">
+<div id="writing-page">
     <h1>
         <span>
             Writing
@@ -32,25 +32,24 @@ layout: base.njk
         <ul>
             {%- for post in collections.posts -%}
                 <li class="post-thumbnail">
-                    <a href="{{ post.url }}">
                     <h2>{{ post.data.title }}</h2>
+                    <a class="post-thumbnail__link" href="{{ post.url }}"><span>Link to open this post</span></a>
                     <time>{{ post.date.toUTCString() }}</time>
                     <p class="post-excerpt">{% excerpt post %}</p>
-                </a>
-                <div class="blogpost-footer">
-                    <div class="tags" id="blogpost-footer-tags">
-                        {% for tag in post.data.tags %}
-                            {# TODO: sort by tag + allow users to click to a page that filters it #}
-                            <div class="tag" href="#">
-                                #{{ tag }}
-                            </div>
-                        {% endfor %}
+                    <div class="blogpost-footer">
+                        <div class="tags" id="blogpost-footer-tags">
+                            {% for tag in post.data.tags %}
+                                {# TODO: sort by tag + allow users to click to a page that filters it #}
+                                <div class="tag" href="#">
+                                    #{{ tag }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {# <div id="blogpost-footer-actions">
+                            <button class="like"></button>
+                            <button class="reply"></button>
+                        </div> TODO: Add IndieWeb interactions#}
                     </div>
-                    {# <div id="blogpost-footer-actions">
-                        <button class="like"></button>
-                        <button class="reply"></button>
-                    </div> TODO: Add IndieWeb interactions#}
-                </div>
                 </li>
             {%- endfor -%}
         </ul>
