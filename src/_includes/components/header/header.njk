@@ -29,8 +29,8 @@
                 <li><a class="" href="/#home-design">Design</a></li>
                 <li><a class="{% if page.url == "/illustrations/"%} current-page {% endif %}" href="/illustrations">Illustrations</a></li>
                 <li><a class="{% if page.url == "/writing/"%} current-page {% endif %}" href="/writing">Writing</a></li>
-                <li><a class="" href="https://github.com/wingywing">Github</a></li>
-                {# <li><a href="#">About</a></li> #}
+                <li><a class="" href="https://github.com/wingywing">GitHub</a></li>
+                <li><a class="{% if page.url == "/about/"%} current-page {% endif %}" href="/about/">About</a></li>
                 {{
                     component('button',{
                         innercontent: 'Send me an email!',
