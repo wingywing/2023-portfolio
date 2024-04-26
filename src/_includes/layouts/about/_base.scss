@@ -2,8 +2,45 @@
 @use '../../../stylesheets/mixin/grids.scss' as grids;
 @use '../../../stylesheets/mixin/colours.scss' as colours;
 @use '../../../stylesheets/variables.scss' as variables;
+@use '../../../stylesheets/fonts.scss' as fonts;
 
-@mixin project-page-base(){
+
+@mixin about-page-base(){
     @include grids.main-grid; 
-
+    padding-top: 2rem;
+    .squiggle {
+        @include variables.squiggle();
+        top: -1.5rem;
+        left: 9rem;
+    }
+    h1 {
+        @include fonts.big-title();
+        z-index: -1;
+        grid-row: 1;
+        height: fit-content;
+        rotate: -1deg;
+        text-align: left;
+        justify-self: flex-start;
+        span {
+            align-items: center;
+            gap: 1rem;
+            display: flex;
+            flex-wrap: nowrap;
+            svg {
+                margin-left: 1rem;
+            }
+        }
+    }
+    .about-cta {
+        .cta-heading, .cta-caption {
+            @include fonts.big-title();
+        }
+    }
+    .tile {
+        &:hover {
+            @include variables.box-shadow();
+            background: colours.$bg-secondary;
+        }
+        text-decoration: none;
+    }
 }
