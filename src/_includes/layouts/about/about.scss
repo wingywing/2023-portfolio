@@ -1,0 +1,11 @@
+@use 'base';
+@use 'mobile';
+@use 'tablet';
+@use 'desktop';
+
+#about-page {
+    @include base.about-page-base;
+    @include mobile.about-page-mobile;
+    @include tablet.about-page-tablet;
+    @include desktop.about-page-desktop;
+}

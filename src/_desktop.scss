@@ -4,6 +4,7 @@ $desktop-heading-height: 9.375rem;
 
 @mixin home-page-desktop(){
     @include bp.desktop{
+        row-gap: 0;
         #home-intro__hero {
             grid-column: 1/10;
             h1 {
