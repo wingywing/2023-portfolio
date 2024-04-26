@@ -1,0 +1,18 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/variables.scss' as variables;
+
+@mixin writing-tablet(){
+    @include bp.tablet{
+        aside {
+            justify-self: flex-end;
+            grid-column: 8/12;
+            grid-row: 1;
+            text-align: right;
+        }
+        .writing-posts {
+            grid-column: 3/11;
+        }
+    }
+}

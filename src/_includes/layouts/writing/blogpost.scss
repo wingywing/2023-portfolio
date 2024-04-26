@@ -1,0 +1,44 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/variables.scss' as variables;
+
+
+.blogpost {
+    .information {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .blogpost-header {
+        padding: 2rem 0;
+        @include bp.tablet {
+            padding: 2rem;
+        }
+    }
+    .blogpost-footer {
+        padding-block: 2rem;
+        #blogpost-footer-tags {
+            display: flex;
+            gap: .5rem;
+        }
+        .tag {
+            padding: .75rem 1rem;
+            border-radius: 90rem;
+            background-color: colours.$bg-tertiary;
+            color: colours.$text-primary;
+            text-decoration: none;
+        }
+    }
+
+    @include bp.tablet {
+        .blogpost-footer {
+            padding-block: 2rem 0;
+        }
+        #blogpost-footer-tags {
+            padding: 0 2rem;
+        }
+    }
+
+}
+
