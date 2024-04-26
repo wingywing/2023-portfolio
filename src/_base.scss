@@ -174,16 +174,9 @@
             gap: 1rem;
         }
         .design {
-            display: flex;
-            flex-direction: column;
             gap: 2rem;
-            .tile {
-                background-color: colours.$bg-secondary;
-            }
         }
         .code {
-            display: flex;
-            flex-direction: column;
             gap: 2rem;
             .tile {
                 background-color: colours.$bg-primary;
