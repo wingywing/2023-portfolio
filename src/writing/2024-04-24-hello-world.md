@@ -20,7 +20,7 @@ A way to feel connected to people and share my own creations.
 
 I’m still starting out at coding but seeing [IndieWeb Standards](https://spec.indieweb.org/) like webmentions fired up that 10-year old inside me who loved reading through random how-to guides and videos to learn and create things that are uniquely mine.
 
-And so, while I put off re-designing and re-coding my website for a very long time, I finally did it! For now, I've produce a MVP that allows me to show off my designs abd illustrations. I'm still figuring out how to implement webmentions, but I'll get there in due time.
+And so, while I put off re-designing and re-coding my website for a very long time, I finally did it! For now, I've produce a MVP that allows me to show off my designs and illustrations. I'm still figuring out how to implement webmentions, but I'll get there in due time.
 
 Coding this site has been a really fun journey. I opted to go for [11ty](https://11ty.dev/) as the framework due to its speedy loading times and great performance. I've also already done some projects with Hugo ([my first web project](https://bomby.neocities.org/)) and React before and wanted to get my hands dirty with something new!
 
