@@ -56,18 +56,23 @@
                 rotate: -2.12deg;
                 z-index: 1;
                 grid-row: 1;
+                width: 11dvw;
+                min-width: 10rem;
             }
             .niigata {
                 margin-top: -37rem;
                 grid-column: 2/5;
                 rotate: 3.18deg;
                 grid-row: 2;
+                width: 14dvw;
+                min-width: 12rem;
             }
             .syd {
                 grid-column: 4/5;
                 rotate: 12.04deg;
                 grid-row: 1;
-                margin-top: -8rem;
+                margin-top: -8dvw;
+                z-index: -1;
             }
             .hk {
                 grid-column: 1/3;
