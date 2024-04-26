@@ -136,16 +136,6 @@ $tablet-heading-height: 6rem;
                 width: 100%;
                 height: 100%;
             }
-            .tile {
-                position: relative;
-                flex-direction: column;
-                height: fit-content;
-                width: fit-content;
-                img {
-                    width: 6.25rem;
-                    height: 6.25rem;
-                }
-            }
             #ae {
                 grid-column: 2/3;
                 grid-row: 1;
