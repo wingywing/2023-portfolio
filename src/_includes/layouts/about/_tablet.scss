@@ -43,43 +43,50 @@
             scroll-snap-align: center;
         }
         .about-images {
-            width: 100%;
             height: 50%;
         }
         .first-image-block {
             @include grids.simple-grid(6, 0);
+            max-width: 43.75rem;
             align-items: center;
             justify-items: center;
             .me {
-                margin-top: -4rem;
                 grid-column: 2/4;
                 rotate: -2.12deg;
                 z-index: 1;
                 grid-row: 1;
                 width: 11dvw;
                 min-width: 10rem;
+                max-width: 13.0625rem;
+                align-self: flex-end;
+                margin-bottom: -2rem;
             }
             .niigata {
-                margin-top: -37rem;
                 grid-column: 2/5;
                 rotate: 3.18deg;
                 grid-row: 2;
                 width: 14dvw;
                 min-width: 12rem;
+                max-width: 17.75rem;
+                margin-top: -2rem;
+                align-self: flex-start;
             }
             .syd {
                 grid-column: 4/5;
                 rotate: 12.04deg;
                 grid-row: 1;
-                margin-top: -8dvw;
                 z-index: -1;
+                margin-bottom: 4rem;
+                align-self: flex-end;
             }
             .hk {
                 grid-column: 1/3;
                 rotate: -7.84deg;
                 grid-row: 2;
-                margin-top: -44rem;
                 z-index: -1;
+                align-self: flex-start;
+                margin-top: 4rem;
+
             }
         }
     }
