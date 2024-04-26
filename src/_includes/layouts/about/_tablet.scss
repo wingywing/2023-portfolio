@@ -5,5 +5,77 @@
 
 @mixin about-page-tablet(){
     @include bp.tablet{
+        @include variables.snap-scroll();
+        .text-container {
+            grid-column: 2/8;
+            .about-content {
+                display: flex;
+                max-width: 52ch;
+                justify-content: center;
+                margin-top: -3rem;
+                flex-direction: column;
+                min-height: calc(100dvh - variables.$header-desktop-height);
+            }
+        }
+        .content {
+            margin-left: 3rem
+        }
+        .image-container {
+            @include variables.box-shadow();
+            grid-column: 8/13;
+            background-color: transparentize($color: colours.$bg-secondary, $amount: .7);
+            transform: rotate(0.84deg);
+            margin-left: 1rem;
+            min-width: 50dvw;
+        }
+        h2 {
+            font-size: 2.3rem;
+            margin-top: 0;
+        }
+        .about-content {
+            scroll-snap-align: start;
+        }
+        .about-content.second-content-block {
+            margin-top: 0;
+            min-height: 100dvh;
+        }
+        .about-cta {
+            scroll-snap-align: center;
+        }
+        .about-images {
+            width: 100%;
+            height: 50%;
+        }
+        .first-image-block {
+            @include grids.simple-grid(6, 0);
+            align-items: center;
+            justify-items: center;
+            .me {
+                margin-top: -4rem;
+                grid-column: 2/4;
+                rotate: -2.12deg;
+                z-index: 1;
+                grid-row: 1;
+            }
+            .niigata {
+                margin-top: -37rem;
+                grid-column: 2/5;
+                rotate: 3.18deg;
+                grid-row: 2;
+            }
+            .syd {
+                grid-column: 4/5;
+                rotate: 12.04deg;
+                grid-row: 1;
+                margin-top: -8rem;
+            }
+            .hk {
+                grid-column: 1/3;
+                rotate: -7.84deg;
+                grid-row: 2;
+                margin-top: -44rem;
+                z-index: -1;
+            }
+        }
     }
 }

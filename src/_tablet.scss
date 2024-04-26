@@ -214,7 +214,10 @@ $tablet-heading-height: 6rem;
             }
         }
         #home-design, #home-tools {
-            min-height: calc(100dvh - variables.$header-mobile-height);
+            min-height: calc(100dvh - variables.$header-mobile-height - 4rem);
+        }
+        #home-intro, #home-design, #home-tools {
+            padding: 2rem 0;
         }
     }
 }
