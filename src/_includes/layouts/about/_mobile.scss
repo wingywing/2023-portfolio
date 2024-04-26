@@ -18,7 +18,7 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        padding-bottom: 2rem;
+        padding-block: 5rem;
         button {
             width: fit-content;
         }
@@ -33,5 +33,13 @@
     .about-images {
         display: none;
         visibility: hidden;
+    }
+    .mobile-me {
+        object-fit: contain;
+        aspect-ratio: 1/1;
+        rotate: 1deg;
+        object-fit: contain;
+        max-height: 20rem;
+        margin-block: 2rem;
     }
 }

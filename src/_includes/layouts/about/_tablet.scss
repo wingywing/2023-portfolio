@@ -6,6 +6,10 @@
 @mixin about-page-tablet(){
     @include bp.tablet{
         @include variables.snap-scroll();
+        .mobile-me {
+            display: none;
+            visibility: hidden;
+        }
         .about-images {
             display: unset;
             visibility: visible;
