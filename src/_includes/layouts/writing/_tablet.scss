@@ -5,6 +5,9 @@
 
 @mixin writing-tablet(){
     @include bp.tablet{
-        
+        aside {
+            grid-column: 8/12;
+            grid-row: 1
         }
+    }
 }

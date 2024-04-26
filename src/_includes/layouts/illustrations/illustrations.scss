@@ -30,6 +30,9 @@
         }
     }
     aside {
+        .aside-main {
+            font-size: 1.5rem;
+        }
         grid-column: 2/12;
         grid-row: 2;
         font-size: 1.125rem;

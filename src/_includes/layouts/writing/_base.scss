@@ -38,6 +38,9 @@
     }
     .writing-posts {
         ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
             padding-inline: 0;
             margin-inline: 0;
             margin-block: 0
@@ -59,6 +62,18 @@
             list-style-type: none;
             background-color: colours.$bg-secondary;
             padding: 2rem;
+            max-width: 36.8125rem;
+        }
+        .tags {
+            display: flex;
+            flex-direction: row;
+            gap: .5rem;
+        }
+        .tag {
+            border-radius: 99rem;
+            padding: .5rem 1rem;
+            background-color: colours.$bg-tertiary;
+            width: fit-content;
         }
     }
 }
