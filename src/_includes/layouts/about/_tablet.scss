@@ -6,6 +6,10 @@
 @mixin about-page-tablet(){
     @include bp.tablet{
         @include variables.snap-scroll();
+        .about-images {
+            display: unset;
+            visibility: visible;
+        }
         .text-container {
             grid-column: 2/8;
             .about-content {
