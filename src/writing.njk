@@ -33,7 +33,7 @@ layout: base.njk
             {%- for post in collections.posts -%}
                 <li class="post-thumbnail">
                     <h2>{{ post.data.title }}</h2>
-                    <a class="post-thumbnail__link" href="{{ post.url }}"><span>Link to open this post</span></a>
+                    <a class="post-thumbnail__link" href="{{ post.url }}"><span>Link to open post titled {{ post.data.title }}</span></a>
                     <time>{{ post.date.toUTCString() }}</time>
                     <p class="post-excerpt">{% excerpt post %}</p>
                     <div class="blogpost-footer">
