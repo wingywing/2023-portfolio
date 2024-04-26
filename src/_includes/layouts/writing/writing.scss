@@ -1,0 +1,11 @@
+@use 'base';
+@use 'mobile';
+@use 'tablet';
+@use 'desktop';
+
+#writing-page {
+    @include base.writing-base;
+    @include mobile.writing-mobile;
+    @include tablet.writing-tablet;
+    @include desktop.writing-desktop;
+}

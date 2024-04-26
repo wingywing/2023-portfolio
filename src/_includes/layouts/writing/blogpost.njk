@@ -1,0 +1,29 @@
+---
+layout: project/project.njk 
+--- 
+
+<div class="blogpost">
+    <div class="blogpost-header">
+        <div class="information">
+            <h1>{{ title }}</h1>
+            <time>{{ date.toUTCString()  }}</time>
+        </div>
+    </div>
+    <div class="blogpost-content">
+        {{ content | safe }}
+    </div>
+    <div class="blogpost-footer">
+        <div class="tags" id="blogpost-footer-tags">
+            {% for tag in tags %}
+                {# TODO: sort by tag + allow users to click to a page that filters it #}
+                <div class="tag" href="#">
+                    #{{ tag }}
+                </div>
+            {% endfor %}
+        </div>
+        {# <div id="blogpost-footer-actions">
+            <button class="like"></button>
+            <button class="reply"></button>
+        </div> TODO: Add IndieWeb interactions#}
+    </div>
+</div>

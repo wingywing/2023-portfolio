@@ -1,0 +1,59 @@
+---
+title: Writing
+layout: base.njk
+---
+
+<div id="writing-page">
+    <h1>
+        <span>
+            Writing
+            <svg class="header-icon" width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_31_463)">
+                <path d="M10.9086 5.7809L24.0457 8.05979L23.476 11.3441L10.3388 9.06519L6.9205 28.7709L20.0576 31.0498L23.476 11.3441L26.7603 11.9138L23.3419 31.6195L36.4791 33.8984L39.8974 14.1927L26.7603 11.9138L27.33 8.62951L43.7514 11.4781L39.1936 37.7524L22.7722 34.9038L22.2025 38.1881L18.9182 37.6184L19.4879 34.3341L3.06649 31.4855L7.62427 5.21118L10.9086 5.7809ZM35.1888 21.8337L28.6202 20.6942L28.0505 23.9785L34.6191 25.118L35.1888 21.8337ZM29.4748 15.7678L36.0434 16.9072L35.4737 20.1915L28.9051 19.0521L29.4748 15.7678ZM31.0499 26.1904L27.7657 25.6207L27.1959 28.9049L30.4802 29.4747L31.0499 26.1904Z" fill="#4E4843"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_31_463">
+                <rect width="40" height="40" fill="white" transform="translate(6.83667) rotate(9.84111)"/>
+                </clipPath>
+                </defs>
+            </svg>
+        </span>
+        <svg class="squiggle" width="322" height="56" viewBox="0 0 322 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g style="mix-blend-mode:multiply">
+                <path d="M5.99995 42.9535C23.1157 35.8991 73.7835 20.5945 139.528 15.8118C205.273 11.0291 286.552 24.1996 318.973 31.3826" stroke="#EEE485" stroke-width="28"/>                </g>
+        </svg> 
+    </h1>  
+    <aside>Long rambles about things that interest me
+        <br/>
+        {# <a href="rss-link">Follow my RSS</a> TODO: Add RSS#}
+    </aside>
+    {# <div class="filters"></div> TODO: create search filters#}
+    <div class="writing-posts">
+        <ul>
+            {%- for post in collections.posts -%}
+                <li class="post-thumbnail">
+                    <div class="post-header">
+                        <h2>{{ post.data.title }}</h2>
+                        <time>{{ post.date.toUTCString() }}</time>
+                    </div>
+                    <a class="post-thumbnail__link" href="{{ post.url }}"><span>Link to open post titled {{ post.data.title }}</span></a>
+                    <p class="post-excerpt">{% excerpt post %}</p>
+                    <div class="blogpost-footer">
+                        <div class="tags" id="blogpost-footer-tags">
+                            {% for tag in post.data.tags %}
+                                {# TODO: sort by tag + allow users to click to a page that filters it #}
+                                <div class="tag" href="#">
+                                    #{{ tag }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {# <div id="blogpost-footer-actions">
+                            <button class="like"></button>
+                            <button class="reply"></button>
+                        </div> TODO: Add IndieWeb interactions#}
+                    </div>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+</div>

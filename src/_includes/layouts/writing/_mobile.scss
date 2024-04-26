@@ -1,0 +1,22 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/variables.scss' as variables;
+
+@mixin writing-mobile(){
+    h1 {
+        grid-column: 2/12;
+    }
+    aside {
+        grid-column: 2/12;
+        grid-row: 2;
+    }
+    .writing-posts {
+        grid-column: 2/12;
+    }
+    .post-thumbnail {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
