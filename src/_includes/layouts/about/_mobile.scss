@@ -4,5 +4,30 @@
 @use '../../../stylesheets/variables.scss' as variables;
 
 @mixin about-page-mobile(){
-
+    .text-container, .image-container, .about-cta {
+        grid-column: 2/12;
+    }
+    .content {
+        margin-top: 2rem;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+        button {
+            width: fit-content;
+        }
+        .cta-heading {
+            font-size: 3rem;
+            line-height: normal;
+        }
+        .cta-caption {
+            font-size: 2rem;
+        }
+    }
 }
