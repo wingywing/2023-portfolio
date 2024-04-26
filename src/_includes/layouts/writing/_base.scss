@@ -30,13 +30,15 @@
         }
     }
     aside {
-        font-size: 1.125rem;
+        font-size: 1.5rem;
         margin: 2rem 0;
         text-wrap: pretty;
         height: fit-content;
         rotate: 1deg;
     }
     .writing-posts {
+        display: flex;
+        justify-content: center;
         ul {
             display: flex;
             flex-direction: column;
@@ -46,6 +48,9 @@
             margin-block: 0
         }
         li {
+            &:hover {
+                @include variables.box-shadow();
+            }
             .post-thumbnail__link {
                 text-decoration: none;
                 width: 100%;
@@ -62,7 +67,8 @@
             list-style-type: none;
             background-color: colours.$bg-secondary;
             padding: 2rem;
-            max-width: 36.8125rem;
+            max-width: 40rem;
+            transition: all, .3s;
         }
         .tags {
             display: flex;

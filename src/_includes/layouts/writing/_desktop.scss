@@ -5,6 +5,8 @@
 
 @mixin writing-desktop(){
     @include bp.desktop{
-        
+        .writing-posts {
+            grid-column: 4/10;
         }
+    }
 }
