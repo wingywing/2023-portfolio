@@ -1,5 +1,7 @@
 @use '../../../stylesheets/mixin/breakpoints.scss' as bp;
 @use '../../../stylesheets/variables.scss' as variables;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+
 
 .tile {
     box-sizing: border-box;
@@ -13,11 +15,29 @@
     align-items: center;
     transition: all, .5s;
     padding: 1rem;
+    background-color: colours.$bg-secondary;
     p {
         margin: 0;
     }
     img {
         height: 2.625rem;
         width: 2.625rem;
+    }
+    @include bp.tablet {
+        position: relative;
+        flex-direction: column;
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        img {
+            width: 6.25rem;
+            height: 6.25rem;
+        }
+    }
+    .external-link-icon {
+        width: 1.25rem;
+        height: auto;
+        display: inline;
+        margin-bottom: -.2rem;
     }
 } 
