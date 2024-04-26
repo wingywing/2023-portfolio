@@ -14,7 +14,9 @@ I felt like that particular art account held a lot of sentimental value for me s
 
 I do miss being able to share my drawings with friends and family though, and it got me thinking that I should create a platform of my own, where the content is mine alone. -->
 
-Recently, I came across the [IndieWeb movement](https://indieweb.org/) after hopping through rabbit-holes on the internet and thought ‘neat!’. It was exactly what I was looking for! A way to feel connected to people and share my own creations.
+Recently, I came across the [IndieWeb movement](https://indieweb.org/) after hopping through rabbit-holes on the internet and thought ‘neat!’. It was exactly what I was looking for! 
+
+A way to feel connected to people and share my own creations.
 
 I’m still starting out at coding but seeing [IndieWeb Standards](https://spec.indieweb.org/) like webmentions fired up that 10-year old inside me who loved reading through random how-to guides and videos to learn and create things that are uniquely mine.
 
