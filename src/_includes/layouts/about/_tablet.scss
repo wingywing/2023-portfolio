@@ -48,7 +48,32 @@
             min-height: 100dvh;
         }
         .about-cta {
+            display: grid;
+            grid-template-columns: subgrid;
+            gap: inherit;
             scroll-snap-align: center;
+            min-height: calc(100dvh - variables.$header-desktop-height);
+            padding-block: 0;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            justify-items: center;
+            .cta-heading, .cta-caption, button {
+                grid-column: 3/9
+            }
+            .tile {
+                align-self: center;
+                margin-top: 2rem;
+                grid-row: 4;
+                rotate: -7.99deg;
+            }
+            #li {
+                grid-column: 4/6;
+            }
+            #re {
+                grid-column: 6/8;
+                rotate: 11.1deg;
+            }
         }
         .about-images {
             @include grids.simple-grid(6, 0);
