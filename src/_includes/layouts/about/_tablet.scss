@@ -43,13 +43,14 @@
             scroll-snap-align: center;
         }
         .about-images {
-            height: 50%;
-        }
-        .first-image-block {
             @include grids.simple-grid(6, 0);
             max-width: 43.75rem;
             align-items: center;
             justify-items: center;
+            height: 50%;
+            transform: rotate(-0.84deg);
+        }
+        .first-image-block {
             .me {
                 grid-column: 2/4;
                 rotate: -2.12deg;
@@ -87,6 +88,57 @@
                 align-self: flex-start;
                 margin-top: 4rem;
 
+            }
+        }
+        .second-image-block {
+            .about-image-container {
+                display: grid;
+                grid-template-columns: subgrid;
+                grid-column: 1/7;
+                margin-top: -4rem;
+            }
+            .baby {
+                grid-column: 3/5;
+                grid-row: 1;
+                align-self: flex-end;
+                justify-self: flex-end;
+                rotate: 1.82deg;
+                width: 9dvw;
+                min-width: 8rem;
+                max-width: 10.6875rem;
+            }
+            .globe {
+                grid-column: 2/4;
+                grid-row: 1;
+                align-self: center;
+                margin-bottom: 10rem;
+                justify-self: center;
+                margin-right: -1rem;
+                rotate: -2.28deg;
+                z-index: -1;
+            }
+            .nanjing {
+                grid-column: 2/4;
+                grid-row: 2;
+                align-self: flex-start;
+                justify-self: flex-end;
+                z-index: 1;
+                margin-top: -10rem;
+                rotate: 2.28deg;
+                min-width: 11rem;
+                width: 10.6dvw;
+                max-width: 13.375rem;
+            }
+            .japan {
+                grid-column: 2/5;
+                grid-row: 3;
+                align-self: flex-start;
+                justify-self: flex-end;
+                margin-top: -1rem;
+                rotate: 7.12deg;
+                min-width: 14rem;
+                width: 13dvw;
+                max-width: 16.485625rem;
             }
         }
     }
