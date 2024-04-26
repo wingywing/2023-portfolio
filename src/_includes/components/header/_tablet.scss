@@ -37,6 +37,10 @@
                     width: auto;
                     position: relative;
                     a {
+                        &.current-page{
+                            color: colours.$text-primary;
+                            font-weight: 600;
+                        }
                         &::after {
                             content: '';
                             height: 0;
@@ -47,7 +51,7 @@
                             margin-bottom: .9rem;
                             z-index: -1;
                         }
-                        &:hover,  &:focus {
+                        &:hover,  &:focus, &.current-page {
                             flex-direction: column;
                             &::after {
                                 content: '';
