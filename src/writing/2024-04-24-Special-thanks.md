@@ -2,7 +2,7 @@
 tags:
     - design
     - code
-title: Special thanks to the indieweb for motivating this website
+title: Special thanks to the IndieWeb for motivating this website
 date: 2024-04-24T01:55:47.582Z
 layout: writing/blogpost.njk
 slug: special-indieweb-motivating-website

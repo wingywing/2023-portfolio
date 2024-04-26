@@ -6,8 +6,12 @@
 @mixin writing-tablet(){
     @include bp.tablet{
         aside {
+            justify-self: flex-end;
             grid-column: 8/12;
             grid-row: 1
+        }
+        .writing-posts {
+            grid-column: 3/11;
         }
     }
 }
