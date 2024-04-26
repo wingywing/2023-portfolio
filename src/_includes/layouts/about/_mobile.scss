@@ -4,5 +4,45 @@
 @use '../../../stylesheets/variables.scss' as variables;
 
 @mixin about-page-mobile(){
-
+    .text-container, .image-container, .about-cta {
+        grid-column: 2/12;
+    }
+    .content {
+        margin-top: 2rem;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-block: 5rem;
+        button {
+            width: fit-content;
+        }
+        .cta-heading {
+            font-size: 3rem;
+            line-height: normal;
+        }
+        .cta-caption {
+            font-size: 2rem;
+        }
+    }
+    .about-images {
+        display: none;
+        visibility: hidden;
+    }
+    .mobile-me {
+        object-fit: contain;
+        aspect-ratio: 1/1;
+        rotate: 1deg;
+        object-fit: contain;
+        max-height: 20rem;
+        margin-block: 2rem;
+    }
+    h2 {
+        margin-top: 4rem;
+    }
 }
