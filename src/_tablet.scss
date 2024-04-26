@@ -7,6 +7,11 @@ $tablet-heading-height: 6rem;
 @mixin home-page-tablet(){
     @include bp.tablet{
         padding-bottom: 0;
+        row-gap: 4rem;
+        .link-button {
+            grid-column: 1/4;
+            margin-bottom: -1em;
+        }
         #home-intro {
             display: grid;
             grid-template-columns: subgrid;

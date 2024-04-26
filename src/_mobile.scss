@@ -69,13 +69,6 @@ $mobile-heading-height: 4rem;
         .home-tools-toggle, h2, .tools {
             grid-column: 1/11;
         }
-        .tile {
-            padding: 1rem;
-            img {
-                height: 2.625rem;
-                width: 2.625rem;
-            }
-        }
     }
     #home-tools, #home-designs{
         min-height: calc(100dvh - variables.$header-desktop-height);
