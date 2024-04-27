@@ -30,3 +30,17 @@ You can import components using the macro below
             })
         }}
 ```
+
+## Stylesheets
+Each page (and some components) have five stylesheets hooked up to it for scoped and mobile responsive designs.
+
+The structure looks something like this:
+- page.scss -- the main stylesheet that imports all the sass partials for responsive design
+- _base.scss -- contains styles that are shared across all device sizes
+- _mobile.scss -- mobile only styles (note that there is no mobile viewport width media query since I code from a mobile-first approach)
+- _tablet.scss and _desktop.scss -- these import breakpoints from a breakpoints mixins stylesheet in the global stylesheets folder.
+
+All pages are styled following a responsive 12-column grid system (in grids.scss), where column gaps increase in value as the screen width increases.
+
+This 12-column grid is mapped to the grid system I use in Figma (mobile: 0, tablet: 0.625rem and desktop: 1rem).
+
