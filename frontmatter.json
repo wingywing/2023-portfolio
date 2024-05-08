@@ -70,6 +70,16 @@
           "title": "categories",
           "name": "categories",
           "type": "categories"
+        },
+        {
+          "title": "permalink",
+          "name": "permalink",
+          "type": "boolean"
+        },
+        {
+          "title": "externalLink",
+          "name": "externalLink",
+          "type": "string"
         }
       ]
     }
