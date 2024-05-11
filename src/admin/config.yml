@@ -1,9 +1,7 @@
 backend:
   #this is used for DecapCMS
-  # name: git-gateway
+  name: git-gateway
   # branch: master
-  # #github integration
-  name: github
   repo: wingywing/2023-portfolio
 
 media_folder: "src/assets/img"
