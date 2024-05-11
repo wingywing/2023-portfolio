@@ -9,8 +9,6 @@ tags:
 ---
 Recently, I implemented DecapCMS into this website. It's been a complete game-changer to how easily I can create and publish pieces to this writing page! Essentially, it has allowed me to write and edit on the go, without having to use a code editor like I had to before.
 
-
-
 ## What is a CMS?
 
 CMS is short for Content Management System.
@@ -34,7 +32,6 @@ To put it visually, it is the interface you see if you've ever used a blogging p
 
 Before I integrated DecapCMS into this site, making or editing posts was really clunky. Since this is a statically generated website built on [11ty](https://11ty.dev/), every time I wanted to make changes, I had to manually edit a markdown file on [my website's Github Repo](https://github.com/wingywing/2023-portfolio) and push it up. Thanks to Netlify, the website automatically redeploys after a change is merged into the main branch, but this made it very difficult to post from my phone or iPad. It's also much less visual (even with the really cool [Frontmatter CMS plugin](frontmatter.codes) for VSCode) compared to DecapCMS, which has a beautiful rich text editor. It also helps to keep my files neat and tidy...
 
-
 <div class="lightgallery">
     <a href="/assets/img/2024-05-11-screenshot-2.jpg">
         <figure>
@@ -51,3 +48,9 @@ Since I was already using Netlify to host and deploy my website, DecapCMS was th
 The tutorial below was really helpful in getting it set up:
 
 https://www.youtube.com/watch?v=4wD00RT6d-g
+
+## Conclusion
+
+There are still some areas that I can improve in for the writing/publishing process... Specifically, I'd like to create a custom Netlify CMS widget that can replace the default image widget for use with [LightGallery](lightgalleryjs.com/). Right now, I still have to copy and paste in the HTML markup for my image lightboxes to appear (not ideal!).
+
+That's it for now! Thanks for listening to this ramble.
