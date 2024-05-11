@@ -19,6 +19,7 @@ collections:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Description", name: "description", widget: "string" }
     - { label: "Publish Date", name: "date", widget: "datetime" }
+    - { label: "External link", name: "externalLink", widget: "string" }
     - { label: "Body", name: "body", widget: "markdown" }
     - widget: select
       label: "tags"
