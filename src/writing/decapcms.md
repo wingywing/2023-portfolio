@@ -2,7 +2,7 @@
 title: DecapCMS
 description: Ramble about integrating DecapCMS into this website
 date: 2024-05-11T22:51:00.000Z
-externalLink: --
+externalLink: ""
 tags:
   - code
   - webdev
