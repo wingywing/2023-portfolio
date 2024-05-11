@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="/node_modules/gsap/dist/all.js"></script>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 
     <script>
@@ -70,9 +71,19 @@
         showMaximizeIcon: true,
         plugins: [lgZoom, lgThumbnail]
         });
-        lg.openGallery(0);
-        
-        
+        lg.openGallery(0); 
+    </script>
+
+    <script>
+        if (window.netlifyIdentify) {
+            window.netlifyIdentify.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentify.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
     </script>
 
 </body>
