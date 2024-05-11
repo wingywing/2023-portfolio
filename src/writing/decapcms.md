@@ -21,7 +21,14 @@ According to [IBM](https://www.ibm.com/topics/content-management-system):
 
 To put it visually, it is the interface you see if you've ever used a blogging platform like Blogger or Wordpress!
 
-![Screenshot of what the CMS looks like in the process of writing this post](/assets/img/2024-05-11-screenshot.jpg "Screenshot of what the CMS looks like in the process of writing this post")
+<div class="lightgallery">
+    <a href="/assets/img/2024-05-11-screenshot.jpg">
+        <figure>
+            <img src="/assets/img/2024-05-11-screenshot.jpg" alt="Screenshot of what the CMS looks like in the process of writing this post." />
+            <figcaption>Screenshot of what the CMS looks like in the process of writing this post.</figcaption>
+        </figure>
+    </a>
+</div>
 
 ## Why use a CMS?
 
