@@ -6,7 +6,7 @@ backend:
   name: github
   repo: wingywing/2023-portfolio
   media_folder: "src/assets/img"
-  public_folder: "/dist/assets/img"
+  public_folder: "dist/assets/img"
 
   collections:
   - label: "Writing"
