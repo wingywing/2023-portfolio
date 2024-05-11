@@ -1,7 +1,7 @@
 backend:
   #this is used for DecapCMS
   name: git-gateway
-  # branch: master
+  branch: main
   repo: wingywing/2023-portfolio
 
 publish_mode: editorial_workflow
