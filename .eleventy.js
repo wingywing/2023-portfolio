@@ -4,13 +4,14 @@ const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 const implicitFigures = require('markdown-it-image-figures');
 const mdAnchor = require('markdown-it-anchor');
 const blogTools = require("eleventy-plugin-blog-tools");
-
+const embedYoutube = require("eleventy-plugin-youtube-embed");
 
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPlugin(eleventySass); //to add SASS support from src
     eleventyConfig.addPlugin(EleventyRenderPlugin);
     eleventyConfig.addPlugin(blogTools);
+    eleventyConfig.addPlugin(embedYoutube);
 
     eleventyConfig.addWatchTarget('src/**/**.md');
     eleventyConfig.addWatchTarget('src/**/**.njk');
