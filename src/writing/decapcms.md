@@ -9,6 +9,8 @@ tags:
 ---
 Recently, I implemented DecapCMS into this website. It's been a complete game-changer to how easily I can create and publish pieces to this writing page! Essentially, it has allowed me to write and edit on the go, without having to use a code editor like I had to before.
 
+
+
 ## What is a CMS?
 
 CMS is short for Content Management System.
@@ -28,6 +30,8 @@ To put it visually, it is the interface you see if you've ever used a blogging p
     </a>
 </div>
 
+
+
 ## Why use a CMS?
 
 Before I integrated DecapCMS into this site, making or editing posts was really clunky. Since this is a statically generated website built on [11ty](https://11ty.dev/), every time I wanted to make changes, I had to manually edit a markdown file on [my website's Github Repo](https://github.com/wingywing/2023-portfolio) and push it up. Thanks to Netlify, the website automatically redeploys after a change is merged into the main branch, but this made it very difficult to post from my phone or iPad. It's also much less visual (even with the really cool [Frontmatter CMS plugin](frontmatter.codes) for VSCode) compared to DecapCMS, which has a beautiful rich text editor. It also helps to keep my files neat and tidy...
@@ -41,6 +45,8 @@ Before I integrated DecapCMS into this site, making or editing posts was really 
     </a>
 </div>
 
+
+
 ## Why use DecapCMS?
 
 Since I was already using Netlify to host and deploy my website, DecapCMS was the easiest solution to integrate for my use case! DecapCMS was originally known as NetlifyCMS and is perfectly integrated with the Netlify client and Github. It also allows me to use authentication from Netlify as well – you can check out the [login page here,](https://wingpang.com/admin/#/) which has Github authentication too.
@@ -48,6 +54,8 @@ Since I was already using Netlify to host and deploy my website, DecapCMS was th
 The tutorial below was really helpful in getting it set up:
 
 https://www.youtube.com/watch?v=4wD00RT6d-g
+
+
 
 ## Conclusion
 
