@@ -59,6 +59,6 @@ https://www.youtube.com/watch?v=4wD00RT6d-g
 
 ## Conclusion
 
-There are still some areas that I can improve in for the writing/publishing process... Specifically, I'd like to create a custom Netlify CMS widget that can replace the default image widget for use with [LightGallery](lightgalleryjs.com/). Right now, I still have to copy and paste in the HTML markup for my image lightboxes to appear (not ideal!).
+There are still some areas that I can improve in for the writing/publishing process... Specifically, I'd like to create a custom Netlify CMS widget that can replace the default image widget for use with [LightGallery](https://www.lightgalleryjs.com/). Right now, I still have to copy and paste in the HTML markup for my image lightboxes to appear (not ideal!).
 
 That's it for now! Thanks for listening to this ramble.
