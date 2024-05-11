@@ -16,7 +16,7 @@ collections:
   folder: "src/writing"
   create: true
   editor:
-    preview: true
+    preview: false
   fields:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Description", name: "description", widget: "string" }
