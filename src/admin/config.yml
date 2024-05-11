@@ -1,64 +1,65 @@
 backend:
   #this is used for DecapCMS
   name: git-gateway
-  branch: master
-  #github integration
-  name: github
-  repo: wingywing/2023-portfolio
-  media_folder: "src/assets/img"
-  public_folder: "dist/assets/img"
+  # branch: master
+  # #github integration
+  # name: github
+  # repo: wingywing/2023-portfolio
 
-  collections:
-  - label: "Writing"
-    name: "writing"
-    folder: "src/writing"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["design", "code", "webdev", "ui", "ux", "react", "research", "culture", "life"]
-  - label: "Settings"
-    name: "settings"
-    editor:
-      preview: false
-    files:
-      - label: "Navigation"
-        name: "items"
-        file: "src/_data/navigation.yaml"
-        fields:
-          - label: Nav Items
-            name: items
-            widget: list
-            allow_add: false
-            collapsed: false
-            fields:
-              - { label: Title, name: text, widget: string }
-              - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
-        fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
-      - label: "Meta Settings"
-        name: "settings"
-        file: "src/_data/settings.yaml"
-        fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+media_folder: "src/assets/img"
+public_folder: "dist/assets/img"
+
+collections:
+- label: "Writing"
+  name: "writing"
+  folder: "src/writing"
+  create: true
+  editor:
+    preview: false
+  fields:
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Description", name: "description", widget: "string" }
+    - { label: "Publish Date", name: "date", widget: "datetime" }
+    - { label: "Body", name: "body", widget: "markdown" }
+    - widget: select
+      label: "tags"
+      name: "tags"
+      multiple: true
+      create: true
+      options: ["design", "code", "webdev", "ui", "ux", "react", "research", "culture", "life"]
+- label: "Settings"
+  name: "settings"
+  editor:
+    preview: false
+  files:
+    - label: "Navigation"
+      name: "items"
+      file: "src/_data/navigation.yaml"
+      fields:
+        - label: Nav Items
+          name: items
+          widget: list
+          allow_add: false
+          collapsed: false
+          fields:
+            - { label: Title, name: text, widget: string }
+            - { label: URL, name: url, widget: string }
+    - label: "Quick Links"
+      name: "links"
+      file: "src/_data/quicklinks.yaml"
+      fields:
+        - label: Nav Items
+          name: links
+          widget: list
+          collapsed: false
+          fields:
+            - { label: Title, name: title, widget: string }
+            - { label: URL, name: url, widget: string }
+            - { label: Description, name: desc, widget: string }
+    - label: "Meta Settings"
+      name: "settings"
+      file: "src/_data/settings.yaml"
+      fields:
+        - { label: Name, name: name, widget: string }
+        - { label: Author, name: author, widget: string }
+        - { label: URL, name: url, widget: string }
