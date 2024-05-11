@@ -34,7 +34,15 @@ To put it visually, it is the interface you see if you've ever used a blogging p
 
 Before I integrated DecapCMS into this site, making or editing posts was really clunky. Since this is a statically generated website built on [11ty](https://11ty.dev/), every time I wanted to make changes, I had to manually edit a markdown file on [my website's Github Repo](https://github.com/wingywing/2023-portfolio) and push it up. Thanks to Netlify, the website automatically redeploys after a change is merged into the main branch, but this made it very difficult to post from my phone or iPad. It's also much less visual (even with the really cool [Frontmatter CMS plugin](frontmatter.codes) for VSCode) compared to DecapCMS, which has a beautiful rich text editor. It also helps to keep my files neat and tidy...
 
-![Screenshot of my very pink VSCode setup with the Frontmatter CMS plugin](/assets/img/2024-05-11-screenshot-2.jpg "Screenshot of my very pink VSCode setup with the Frontmatter CMS plugin")
+
+<div class="lightgallery">
+    <a href="/assets/img/2024-05-11-screenshot-2.jpg">
+        <figure>
+            <img src="/assets/img/2024-05-11-screenshot-2.jpg" alt="Screenshot of my very pink VSCode setup with the Frontmatter CMS plugin." />
+            <figcaption>Screenshot of my very pink VSCode setup with the Frontmatter CMS plugin.</figcaption>
+        </figure>
+    </a>
+</div>
 
 ## Why use DecapCMS?
 
