@@ -8,14 +8,13 @@ publish_mode: editorial_workflow
 media_folder: "src/assets/img"
 public_folder: "/assets/img"
 
-slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-
 collections:
 - label: "Writing"
   name: "writing"
   preview_path: "writing/{{slug}}"
   folder: "src/writing"
   create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
   editor:
     preview: true
   fields:
