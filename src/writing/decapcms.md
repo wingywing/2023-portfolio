@@ -9,7 +9,7 @@ tags:
 ---
 Recently, I implemented DecapCMS into this website. It's been a complete game-changer to how easily I can create and publish pieces to this writing page! Essentially, it has allowed me to write and edit on the go, without having to use a code editor like I had to before.
 
-<br/>
+
 
 ## What is a CMS?
 
@@ -30,7 +30,7 @@ To put it visually, it is the interface you see if you've ever used a blogging p
     </a>
 </div>
 
-<br/>
+
 
 ## Why use a CMS?
 
@@ -45,7 +45,7 @@ Before I integrated DecapCMS into this site, making or editing posts was really 
     </a>
 </div>
 
-<br/>
+
 
 ## Why use DecapCMS?
 
