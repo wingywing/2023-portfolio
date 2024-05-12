@@ -2,7 +2,10 @@
 layout: project/project.njk 
 --- 
 
-<div class="blogpost">
+{%- from "components/components.njk" import component -%}
+
+<div class="blogpost" data-pagefind-body>
+    {% if externalLink %} <a class="externalLink" href="{{ externalLink }}"> </a> {% else %}{% endif %}
     <div class="blogpost-header">
         <div class="information">
             <h1>{{ title }}</h1>
@@ -11,6 +14,17 @@ layout: project/project.njk
     </div>
     <div class="blogpost-content">
         {{ content | safe }}
+        
+        {% if externalLink %} 
+        {{
+            component('link-button',{
+                innercontent: 'View external document',
+                class: 'view-external-doc bg-rose',
+                linkurl: externalLink,
+                icon: 'article'
+            })
+        }}
+        {% else %}{% endif %}
     </div>
     <div class="blogpost-footer">
         <div class="tags" id="blogpost-footer-tags">

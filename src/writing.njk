@@ -3,6 +3,15 @@ title: Writing
 layout: base.njk
 ---
 
+<link href="/writing/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/writing/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script>
+
 <div id="writing-page">
     <h1>
         <span>
