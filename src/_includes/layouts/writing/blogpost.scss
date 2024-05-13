@@ -38,6 +38,14 @@
         #blogpost-footer-tags {
             padding: 0 2rem;
         }
+        .blogpost-content {
+            display: flex;
+            flex-direction: column;
+            .view-external-doc {
+                align-self: center;
+                margin: 2rem;
+            }
+        }
     }
 
 }
