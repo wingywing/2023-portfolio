@@ -8,11 +8,11 @@ layout: project/project.njk
     {% if externalLink %} <a class="externalLink" href="{{ externalLink }}"> </a> {% else %}{% endif %}
     <div class="blogpost-header">
         <div class="information">
-            <h1>{{ title }}</h1>
-            <time data-pagefind-sort="date">{{ date.toUTCString()  }}</time>
+            <h1 class="p-name"> {{ title }}</h1>
+            <time class="dt-published" data-pagefind-sort="date">{{ date.toUTCString()  }}</time>
         </div>
     </div>
-    <div class="blogpost-content">
+    <div class="blogpost-content e-content">
         {{ content | safe }}
         
         {% if externalLink %} 
@@ -25,12 +25,14 @@ layout: project/project.njk
             })
         }}
         {% else %}{% endif %}
+        <a href="https://www.wingpang.com" class="rel=author hidden" aria-hidden>Wing Pang</a>
+        <a href="{{ url }}" class="u-url hidden" aria-hidden>Link to {{ title }} article</a>
     </div>
     <div class="blogpost-footer">
         <div class="tags" id="blogpost-footer-tags">
             {% for tag in tags %}
                 {# TODO: sort by tag + allow users to click to a page that filters it #}
-                <div data-pagefind-filter="Filter by tags" class="tag" href="#">
+                <div data-pagefind-filter="Filter by tags" class="tag p-category" href="#">
                     #{{ tag }}
                 </div>
             {% endfor %}
