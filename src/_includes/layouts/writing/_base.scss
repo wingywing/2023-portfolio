@@ -39,7 +39,7 @@
     .writing-posts {
         display: flex;
         justify-content: center;
-        ul {
+        > ul {
             display: flex;
             flex-direction: column-reverse;
             gap: 2rem;
@@ -47,7 +47,7 @@
             margin-inline: 0;
             margin-block: 0
         }
-        li {
+        > ul li {
             &:hover {
                 @include variables.box-shadow();
             }
@@ -80,6 +80,68 @@
             padding: .5rem 1rem;
             background-color: colours.$bg-tertiary;
             width: fit-content;
+        }
+    }
+    #writing-search {
+        max-width: 44rem;
+        align-self: center;
+        width: 100%;
+        margin: 2rem;
+        font-family: inherit;
+        .pagefind-ui {
+            &__drawer {
+                max-height: 25rem;
+                overflow: scroll;
+                border: colours.$text-subdued 2px solid;
+                border-top: 0;
+                position: absolute;
+                z-index: 1;
+                background-color: white;
+                padding: 1rem 2rem;
+                font-family: overpass, sans-serif;
+                font-size: 1rem;
+                line-height: 150%;
+                width: 100%;
+                p {
+                    font-size: 1rem;
+                    line-height: 150%;
+                }
+                mark {
+                    background-color: colours.$rose;
+                }
+            }
+            &__form {
+                &::before {
+                    height: 20px;
+                    width: 20px;
+                    margin-top: -3px;
+                    webkit-mask-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 0H12V2H4V0ZM2 4V2H4V4H2ZM2 12H0V4H2V12ZM4 14H2V12H4V14ZM12 14V16H4V14H12ZM14 12H12V14H14V16H16V18H18V20H20V18H18V16H16V14H14V12ZM14 4H16V12H14V4ZM14 4V2H12V4H14Z" fill="%237C6E65"/></svg>');
+                    mask-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 0H12V2H4V0ZM2 4V2H4V4H2ZM2 12H0V4H2V12ZM4 14H2V12H4V14ZM12 14V16H4V14H12ZM14 12H12V14H14V16H16V18H18V20H20V18H18V16H16V14H14V12ZM14 4H16V12H14V4ZM14 4V2H12V4H14Z" fill="%237C6E65"/></svg>');
+                }
+                input {
+                    &::placeholder {
+                        color: colours.$text-subdued;
+                        font-style: italic;
+                        font-weight: normal;
+                        opacity: 100%;
+                    }
+                    background-color: transparent;
+                    border: colours.$text-subdued 2px solid;
+                    border-radius: 0;
+                    font-family: overpass, sans-serif;
+                    
+                }
+                button {
+                    padding: 1rem;
+                    padding-top: .9rem;
+                    font-size: 1rem;
+                    font-family: overpass;
+                    border-radius: 0;
+                    background-color: transparent;
+                    border-left: colours.$text-subdued 2px solid;
+                    color: colours.$text-subdued;
+                }
+            }
         }
     }
 }
