@@ -109,6 +109,9 @@
             margin: 0;
         }
         .pagefind-ui {
+            &__search-input {
+                background-color: transparent;
+            }
             &__filter-group {
                 flex-wrap: wrap;
                 flex-direction: row;
