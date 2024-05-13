@@ -3,6 +3,47 @@ title: Writing
 layout: base.njk
 ---
 
+<link href="/writing/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/writing/pagefind/pagefind-ui.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ 
+            element: "#writing-search", 
+            showSubResults: false, 
+            showImages: false,
+            translations: {
+                placeholder: 'Search key terms or tags'
+            }
+        });
+    });
+
+    window.addEventListener("click", (e) => {
+        const searchDropdown = document.getElementsByClassName("pagefind-ui__drawer")[0];
+        let target = e.target;
+        do {
+            if(target == searchDropdown) {
+                return;
+            }
+            target = target.parentNode;
+        } while (target);
+        searchDropdown.classList.add('pagefind-ui__hidden')
+    })
+
+    window.addEventListener("click", (e) => {
+        const searchBar = document.getElementsByClassName("pagefind-ui__form")[0];
+        const searchInput = document.getElementsByClassName("pagefind-ui__search-input")[0];
+        let target = e.target;
+        
+        do {
+            if(target == searchBar && searchInput.value != '') {
+                document.getElementsByClassName('pagefind-ui__drawer')[0].classList.remove('pagefind-ui__hidden')
+            }
+            target = target.parentNode;
+        } while (target);
+        return;
+    })
+</script>
+
 <div id="writing-page">
     <h1>
         <span>
@@ -29,6 +70,7 @@ layout: base.njk
     </aside>
     {# <div class="filters"></div> TODO: create search filters#}
     <div class="writing-posts">
+    <div id="writing-search"></div>
         <ul>
             {%- for post in collections.posts -%}
                 <li class="post-thumbnail">
