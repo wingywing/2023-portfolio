@@ -88,20 +88,68 @@
         width: 100%;
         margin: 2rem;
         font-family: inherit;
+        .pagefind-ui__filter-checkbox:checked {
+            background: colours.$text-subdued;
+        }
+        .pagefind-ui__filter-block {
+            padding: 0;
+            border-bottom: none;
+        }
+        .pagefind-ui__filter-group {
+            padding: 1rem 2rem 0 2rem;
+        }
+        .pagefind-ui__filter-name {
+            &::after {
+                right: 2rem;
+            }
+            font-size: 1rem;   
+            padding: 1rem 2rem;
+            background-color: colours.$bg-primary;
+            height: min-content;
+            margin: 0;
+        }
         .pagefind-ui {
+            &__search-input {
+                background-color: transparent;
+            }
+            &__filter-group {
+                flex-wrap: wrap;
+                flex-direction: row;
+                label {
+                    font-size: 1rem;
+                }
+            }
+            &__filter-panel {
+                margin-top: 0;
+            }
+            &__filter-value {
+                width: fit-content;
+                label {
+                    padding: 1rem 1rem 1rem 3rem;
+                    margin: -1rem -1rem -1rem -3rem;
+                }
+            }
+            &__results-area {
+                display: block;
+                width: 100%;
+                flex: 0;
+                padding: 1rem 2rem;
+            }
             &__drawer {
-                max-height: 25rem;
+                max-height: 30rem;
                 overflow: scroll;
                 border: colours.$text-subdued 2px solid;
                 border-top: 0;
                 position: absolute;
                 z-index: 1;
                 background-color: white;
-                padding: 1rem 2rem;
                 font-family: overpass, sans-serif;
                 font-size: 1rem;
                 line-height: 150%;
                 width: 100%;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                gap: 0;
                 p {
                     font-size: 1rem;
                     line-height: 150%;
@@ -125,7 +173,6 @@
                         font-weight: normal;
                         opacity: 100%;
                     }
-                    background-color: transparent;
                     border: colours.$text-subdued 2px solid;
                     border-radius: 0;
                     font-family: overpass, sans-serif;
