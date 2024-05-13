@@ -32,7 +32,7 @@ layout: project/project.njk
         <div class="tags" id="blogpost-footer-tags">
             {% for tag in tags %}
                 {# TODO: sort by tag + allow users to click to a page that filters it #}
-                <div data-pagefind-filter="Filter by tags" class="tag" href="#">
+                <div data-pagefind-filter="Filter by tags" class="tag p-category" href="#">
                     #{{ tag }}
                 </div>
             {% endfor %}
