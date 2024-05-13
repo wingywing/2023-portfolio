@@ -25,10 +25,11 @@ layout: project/project.njk
             })
         }}
         {% else %}{% endif %}
-        <a href="https://www.wingpang.com" class="rel=author hidden" aria-hidden>Wing Pang</a>
-        <a href="{{ url }}" class="u-url hidden" aria-hidden>Link to {{ title }} article</a>
+        
     </div>
     <div class="blogpost-footer">
+        <a rel=author href="https://www.wingpang.com" class="hidden p-author" aria-hidden>Wing Pang</a>
+        <a href="{{ url }}" class="u-url hidden" aria-hidden>Link to {{ title }} article</a>
         <div class="tags" id="blogpost-footer-tags">
             {% for tag in tags %}
                 {# TODO: sort by tag + allow users to click to a page that filters it #}
