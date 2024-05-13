@@ -1,2 +1,4 @@
 site: dist/writing
 output_subdir: pagefind
+exclude_selectors:
+  - ".blogpost-header > .information > ç time"
