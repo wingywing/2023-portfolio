@@ -140,4 +140,21 @@
             padding-top: 1rem;
         }
     }
+    .webmentions {
+        max-width: 44.5rem;
+        width: 100%;
+        &-header {
+            > .webmentions-header_title {
+                display: flex;
+                gap: 1ch;
+                span {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
