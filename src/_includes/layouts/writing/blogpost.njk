@@ -1,5 +1,6 @@
 ---
 layout: project/project.njk 
+type: writing
 --- 
 
 {%- from "components/components.njk" import component -%}
@@ -43,63 +44,8 @@ layout: project/project.njk
             {% endfor %}
         </div>
         <div id="blogpost-footer-actions">
-            <span class="like">{{ reactions.length }}</button>
-            <span class="reply">{{ replies.length }}</button>
+            <span class="like"><img src="/assets/img/icons/heart.svg" alt=""> {{ reactions.length }}</span>
+            <span class="reply"><img src="/assets/img/icons/comment.svg" alt="">{{ replies.length }}</span>
         </div>
-    </div>
-    <div class="webmentions">
-        <div class="webmentions-header">
-            <h1>Webmentions </h1><span>({{ webmentions.length}})</span>
-            <a href="https://indieweb.org/Webmention">What is a webmention?</a>
-        </div>
-        <div class="replies">
-            <h2>Replies</h2> <span>({{ replies.length }})</span>
-            
-            {% for reply in inreplies %} 
-            <div class="inreply">
-                <div class="reply-header">
-                    <img src="{{ reply.author.photo }}" alt=""/>
-                    <div>
-                        <div class="author">
-                            <a href="{{ reply.author.url }}">{{ reply.author.name }}</a>
-                        </div>
-                        <time>
-                            {{ reply.published }}
-                        </time>
-                    </div>
-                </div>
-                <div class="reply-content">
-                    {{ reply.content.text }}
-                </div>
-            </div>
-            {% endfor %}
-
-            {% for mention in mentions %} 
-            <div class="mention">
-                <div class="mention">
-                    <img src="{{ mention.author.photo }}" alt=""/>
-                    <div>
-                        <div class="author">
-                            <a href="{{ mention.author.url }}">{{ mention.author.name }}</a>
-                        </div>
-                        <time>
-                            {{ mention.published }}
-                        </time>
-                    </div>
-                </div>
-                <div class="mention-content">
-                    {{ mention.content.text }}
-                </div>
-            </div>
-            {% endfor %}
-            
-        </div>
-        <div class="reactions">
-            <h2>Reactions</h2><span> ({{ reactions.length }})</span>
-            {% for reaction in reactions %}
-                {{ reaction }}
-            {% endfor %}
-        </div>
-
     </div>
 </div>
