@@ -5,6 +5,8 @@ const implicitFigures = require('markdown-it-image-figures');
 const mdAnchor = require('markdown-it-anchor');
 const blogTools = require("eleventy-plugin-blog-tools");
 const embedYoutube = require("eleventy-plugin-youtube-embed");
+const pluginWebmentions = require("@chrisburnell/eleventy-cache-webmentions");
+const configWebmentions = require("./_data/webmentions.js")
 
 module.exports = function(eleventyConfig) {
 
@@ -12,7 +14,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(EleventyRenderPlugin);
     eleventyConfig.addPlugin(blogTools);
     eleventyConfig.addPlugin(embedYoutube);
+    eleventyConfig.addPlugin(pluginWebmentions, configWebmentions);
 
+    
     eleventyConfig.addWatchTarget('src/**/**.md');
     eleventyConfig.addWatchTarget('src/**/**.njk');
 

@@ -3,6 +3,10 @@ layout: project/project.njk
 --- 
 
 {%- from "components/components.njk" import component -%}
+{% set replies = webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to'])%}
+{% set reactions = webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}
+{% set mentions = webmentions | getWebmentionsByTypes(['mention-of']) %}
+{% set inreplies = webmentions | getWebmentionsByTypes(['in-reply-to'])%}
 
 <div class="blogpost h-entry" data-pagefind-body>
     {% if externalLink %} <a class="externalLink" href="{{ externalLink }}"> </a> {% else %}{% endif %}
@@ -38,9 +42,64 @@ layout: project/project.njk
                 </div>
             {% endfor %}
         </div>
-        {# <div id="blogpost-footer-actions">
-            <button class="like"></button>
-            <button class="reply"></button>
-        </div> TODO: Add IndieWeb interactions#}
+        <div id="blogpost-footer-actions">
+            <span class="like">{{ reactions.length }}</button>
+            <span class="reply">{{ replies.length }}</button>
+        </div>
+    </div>
+    <div class="webmentions">
+        <div class="webmentions-header">
+            <h1>Webmentions </h1><span>({{ webmentions.length}})</span>
+            <a href="https://indieweb.org/Webmention">What is a webmention?</a>
+        </div>
+        <div class="replies">
+            <h2>Replies</h2> <span>({{ replies.length }})</span>
+            
+            {% for reply in inreplies %} 
+            <div class="inreply">
+                <div class="reply-header">
+                    <img src="{{ reply.author.photo }}" alt=""/>
+                    <div>
+                        <div class="author">
+                            <a href="{{ reply.author.url }}">{{ reply.author.name }}</a>
+                        </div>
+                        <time>
+                            {{ reply.published }}
+                        </time>
+                    </div>
+                </div>
+                <div class="reply-content">
+                    {{ reply.content.text }}
+                </div>
+            </div>
+            {% endfor %}
+
+            {% for mention in mentions %} 
+            <div class="mention">
+                <div class="mention">
+                    <img src="{{ mention.author.photo }}" alt=""/>
+                    <div>
+                        <div class="author">
+                            <a href="{{ mention.author.url }}">{{ mention.author.name }}</a>
+                        </div>
+                        <time>
+                            {{ mention.published }}
+                        </time>
+                    </div>
+                </div>
+                <div class="mention-content">
+                    {{ mention.content.text }}
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+        <div class="reactions">
+            <h2>Reactions</h2><span> ({{ reactions.length }})</span>
+            {% for reaction in reactions %}
+                {{ reaction }}
+            {% endfor %}
+        </div>
+
     </div>
 </div>
