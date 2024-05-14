@@ -31,6 +31,9 @@
         margin-top: 1rem;
     }
     .webmentions {
+        &-header {
+            padding: 0;
+        }
         grid-column: 1/13;
         background: colours.$bg-secondary;
         display: grid;

@@ -26,52 +26,65 @@ layout: base.njk
             <a href="https://indieweb.org/Webmention">What is a webmention?</a>
         </div>
         <div class="replies">
-            <h2>Replies</h2> <span>({{ replies.length }})</span>
-            
-            {% for reply in inreplies %} 
-            <div class="inreply">
-                <div class="reply-header">
-                    <img src="{{ reply.author.photo }}" alt=""/>
-                    <div>
-                        <div class="author">
-                            <a href="{{ reply.author.url }}">{{ reply.author.name }}</a>
+            <details>
+                <summary><span class="webmentions-h2"><h2>Replies</h2> <span>({{ replies.length }})</span></span></summary>
+                {% if replies.length == 0 %}
+                    <div class="webmentions-nowebmentions">No replies so far!</div>
+                {% endif %}
+                {% for reply in inreplies %} 
+                <div class="inreply">
+                    <div class="reply-header">
+                        <img src="{{ reply.author.photo }}" alt=""/>
+                        <div>
+                            <div class="author">
+                                <a href="{{ reply.author.url }}">{{ reply.author.name }}</a>
+                            </div>
+                            <time>
+                                {{ reply.published }}
+                            </time>
                         </div>
-                        <time>
-                            {{ reply.published }}
-                        </time>
+                    </div>
+                    <div class="reply-content">
+                        {{ reply.content.text }}
                     </div>
                 </div>
-                <div class="reply-content">
-                    {{ reply.content.text }}
-                </div>
-            </div>
-            {% endfor %}
-    
-            {% for mention in mentions %} 
-            <div class="mention">
+                {% endfor %}
+                {% for mention in mentions %} 
                 <div class="mention">
-                    <img src="{{ mention.author.photo }}" alt=""/>
-                    <div>
-                        <div class="author">
-                            <a href="{{ mention.author.url }}">{{ mention.author.name }}</a>
+                    <div class="mention">
+                        <img src="{{ mention.author.photo }}" alt=""/>
+                        <div>
+                            <div class="author">
+                                <a href="{{ mention.author.url }}">{{ mention.author.name }}</a>
+                            </div>
+                            <time>
+                                {{ mention.published }}
+                            </time>
                         </div>
-                        <time>
-                            {{ mention.published }}
-                        </time>
+                    </div>
+                    <div class="mention-content">
+                        {{ mention.content.text }}
                     </div>
                 </div>
-                <div class="mention-content">
-                    {{ mention.content.text }}
-                </div>
-            </div>
-            {% endfor %}
-            
+                {% endfor %}
+            </details>     
         </div>
         <div class="reactions">
-            <h2>Reactions</h2><span> ({{ reactions.length }})</span>
-            {% for reaction in reactions %}
-                {{ reaction }}
-            {% endfor %}
+            <details>
+                <summary>
+                <span class="webmentions-h2">
+                    <h2>Reactions</h2><span> ({{ reactions.length }})</span>
+                </span>    
+            </summary>
+            </details>
+            <div>
+                {% if reactions.length == 0 %} 
+                    <div class="webmentions-nowebmentions">No reactions so far!</div>
+                {% endif %}
+                {% for reaction in reactions %}
+                    {{ reaction }}
+                {% endfor %}
+            </div>
         </div>
 
     </div>
