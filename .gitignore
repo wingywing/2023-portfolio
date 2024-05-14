@@ -3,6 +3,7 @@ node_modules/
 dist
 *.css
 dist/stylesheets/global.css
+.env
 
 # Local Netlify folder
 .netlify
