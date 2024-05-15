@@ -74,6 +74,11 @@ layout: base.njk
     <div id="writing-search"></div>
         <ul>
             {%- for post in collections.posts -%}
+            {% set replies = post.data.webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to'])%}
+            {% set reactions = post.data.webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}
+            {% set mentions = post.data.webmentions | getWebmentionsByTypes(['mention-of']) %}
+            {% set inreplies = post.data.webmentions | getWebmentionsByTypes(['in-reply-to'])%}
+
                 <li class="post-thumbnail">
                     <div class="post-header">
                         <h2>{{ post.data.title }}</h2>
@@ -84,16 +89,15 @@ layout: base.njk
                     <div class="blogpost-footer">
                         <div class="tags" id="blogpost-footer-tags">
                             {% for tag in post.data.tags %}
-                                {# TODO: sort by tag + allow users to click to a page that filters it #}
                                 <div class="tag">
                                     #{{ tag }}
                                 </div>
                             {% endfor %}
                         </div>
-                        {# <div id="blogpost-footer-actions">
-                            <button class="like"></button>
-                            <button class="reply"></button>
-                        </div> TODO: Add IndieWeb interactions#}
+                        <div id="blogpost-footer-actions">
+                            <span class="like"><img src="/assets/img/icons/heart.svg" alt=""> {{ reactions.length | log }}</span>
+                            <span class="reply"><img src="/assets/img/icons/comment.svg" alt="">{{ replies.length | log }}</span>
+                        </div>
                     </div>
                 </li>
             {%- endfor -%}

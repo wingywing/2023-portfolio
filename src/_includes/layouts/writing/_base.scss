@@ -81,6 +81,19 @@
             background-color: colours.$bg-tertiary;
             width: fit-content;
         }
+        .blogpost-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+        #blogpost-footer-actions {
+            display: flex;
+            gap: 1rem;
+            span {
+                display: flex;
+                align-items: center;
+                gap: .25rem;
+            }
+        }
     }
     #writing-search {
         max-width: 44rem;
