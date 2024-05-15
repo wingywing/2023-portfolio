@@ -88,7 +88,27 @@ layout: base.njk
                 <div class="webmentions-nowebmentions">No reactions so far!</div>
             {% endif %}
             {% for reaction in reactions %}
-                {{ reaction }}
+                <div class="webmention reaction">
+                        <img src="{{ reaction.author.photo }}" alt=""/>
+                        <div>
+                            <span class="reaction-inline">
+                                <span >{{ reaction.author.name }}</span>
+                                <a href="{{ reaction.author.url }}">{{ reaction.author.url }}</a>
+                                <span class="reaction">
+                                {% if reaction['like-of'] is defined %}
+                                    liked this!
+                                {% elif reaction['repost-of'] is defined %}
+                                    reposted this!
+                                {% elif reaction['bookmark-of'] is defined %}
+                                    bookmarked this!
+                                {% endif %}
+                                </span>
+                            </span>
+                            <time>
+                                {{ reaction.published }}
+                            </time>
+                        </div>
+                </div>
             {% endfor %}
             </div>
             </details>

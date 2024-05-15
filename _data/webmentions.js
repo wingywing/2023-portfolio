@@ -4,7 +4,7 @@ const { defaults } = require("@chrisburnell/eleventy-cache-webmentions")
 require("dotenv").config()
 
 module.exports = Object.assign({}, defaults, {
-    domain: "https://wingpang.COM",
+    domain: "https://wingpang.com",
     feed: `https://webmention.io/api/mentions.jf2?domain=wingpang.com&token=${process.env.WEBMENTION_IO_TOKEN}&per-page=9001`,
     key: "children",
 })

@@ -10,6 +10,7 @@
     "watch:pagefind": "pagefind --serve",
     "build:eleventy": "eleventy",
     "build:pagefind": "pagefind",
+    "build:netlify": "netlify build",
     "start": "npm-run-all build:sass --parallel watch:* & netlify dev",
     "build": "npm-run-all build:*"
   },
