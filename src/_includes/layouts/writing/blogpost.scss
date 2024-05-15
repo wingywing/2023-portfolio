@@ -18,6 +18,18 @@
     }
     .blogpost-footer {
         padding-block: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #blogpost-footer-actions {
+            display: flex;
+            gap: 1rem;
+            span {
+                display: flex;
+                align-items: center;
+                gap: .25rem;
+            }
+        }
         #blogpost-footer-tags {
             display: flex;
             gap: .5rem;

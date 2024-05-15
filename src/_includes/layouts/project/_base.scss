@@ -140,4 +140,86 @@
             padding-top: 1rem;
         }
     }
+    .webmentions {
+        &-header {
+            > .webmentions-header_title {
+                display: flex;
+                gap: 1ch;
+                span {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+            a {
+                width: fit-content;
+            }
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        max-width: 44.5rem;
+        width: 100%;
+        .webmention {
+            &:first-of-type {
+                margin-block: 1rem;
+            }
+            &:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
+            background-color: colours.$bg-primary;
+            padding: 1rem;
+            .header {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 1rem;
+                div {
+                    .author {
+                        font-size: 1.25rem;
+                    }
+                }
+                img {
+                    height: 3.75rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+        details {
+            margin-bottom: 2rem;
+            &[open]{
+                summary {
+                    .chevron-down {
+                        rotate: 0deg;
+                    }
+                }
+            }
+            summary {
+                display: flex;
+                gap: 1rem;
+                .chevron-down {
+                    rotate: 180deg;
+                    transition: transform, .3s;
+                }
+            }
+        }
+        .webmentions-h2 {
+            align-content: center;
+            display: flex;
+            gap: 1ch;
+            color: colours.$text-subdued;
+            h2 {
+                margin-bottom: 0;
+            }
+            span {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }
+        .p-name {
+            font-size: 1.25rem;
+        }
+        .u-url {
+            font-size: 1.25rem;
+        }
+    }
 }
