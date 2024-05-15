@@ -33,11 +33,14 @@
     .webmentions {
         &-header {
             padding: 0;
+            flex-direction: column;
+            margin-bottom: 2rem;
         }
         grid-column: 1/13;
         background: colours.$bg-secondary;
         display: grid;
         grid-template-columns: subgrid;
         margin-top: 1rem;
+        padding: 2rem 0;
     }
 }

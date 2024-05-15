@@ -27,17 +27,23 @@ layout: base.njk
         </div>
         <div class="replies">
             <details open>
-                <summary><span class="webmentions-h2"><h2>Replies</h2> <span>({{ replies.length }})</span></span></summary>
+                <summary>
+                    <span class="webmentions-h2"
+                    ><h2>Replies</h2> <span>({{ replies.length }})</span>
+                    </span>
+                    <img class="chevron-down" src="/assets/img/icons/chevron-down.svg">
+                </summary>
                 {% if replies.length == 0 %}
                     <div class="webmentions-nowebmentions">No replies so far!</div>
                 {% endif %}
-                {% for reply in inreplies %} 
-                <div class="inreply">
-                    <div class="reply-header">
-                        <img src="{{ reply.author.photo }}" alt=""/>
+                {% for reply in inreplies | log %} 
+                <div class="webmention inreply">
+                    <div class="header">
+                        <img  src="{{ reply.author.photo }}" alt=""/>
                         <div>
                             <div class="author">
-                                <a href="{{ reply.author.url }}">{{ reply.author.name }}</a>
+                                <span>{{ reply.author.name }}</span>
+                                <a" href="{{ reply.author.url }}">{{ reply.author.url }}</a>
                             </div>
                             <time>
                                 {{ reply.published }}
@@ -50,12 +56,13 @@ layout: base.njk
                 </div>
                 {% endfor %}
                 {% for mention in mentions %} 
-                <div class="mention">
-                    <div class="mention">
+                <div class="webmention mention">
+                    <div class="header">
                         <img src="{{ mention.author.photo }}" alt=""/>
                         <div>
                             <div class="author">
-                                <a href="{{ mention.author.url }}">{{ mention.author.name }}</a>
+                                <span >{{ reply.author.name }}</span>
+                                <a href="{{ reply.author.url }}">{{ reply.author.url }}</a>
                             </div>
                             <time>
                                 {{ mention.published }}
@@ -74,19 +81,17 @@ layout: base.njk
                 <summary>
                 <span class="webmentions-h2">
                     <h2>Reactions</h2><span> ({{ reactions.length }})</span>
-                </span>    
+                </span>
+                <img class="chevron-down" src="/assets/img/icons/chevron-down.svg">    
             </summary>
-            </details>
-            <div>
-                {% if reactions.length == 0 %} 
-                    <div class="webmentions-nowebmentions">No reactions so far!</div>
-                {% endif %}
-                {% for reaction in reactions %}
-                    {{ reaction }}
-                {% endfor %}
+            {% if reactions.length == 0 %} 
+                <div class="webmentions-nowebmentions">No reactions so far!</div>
+            {% endif %}
+            {% for reaction in reactions %}
+                {{ reaction }}
+            {% endfor %}
             </div>
-        </div>
-
+            </details>
     </div>
     {% endif %}
 </div>
