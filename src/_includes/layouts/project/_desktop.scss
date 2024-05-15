@@ -5,8 +5,12 @@
 
 @mixin project-page-desktop(){
     @include bp.desktop{
+        margin-bottom: 4rem;
         .content {
             grid-column: 4/10;
+        }
+        .webmentions-header {
+            flex-direction: row;
         }
     }
 }

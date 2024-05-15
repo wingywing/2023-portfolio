@@ -24,7 +24,7 @@
             margin-inline: 0;
             max-width: 44.5rem;
             padding-bottom: 2rem;
-            margin-bottom: 2rem;
+
             p {
                 padding: 0 2rem;
             }
@@ -77,6 +77,17 @@
                     padding: 1rem 0;
                 }
             }
+        }
+        #blogpost-footer-actions {
+            padding: 0 2rem;
+        }
+        .webmentions {
+            & > * {
+                padding: 0 2rem;
+            }
+            width: 100%;
+            display: block;
+            grid-column: 3/11;
         }
     }
 }

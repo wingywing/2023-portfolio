@@ -1,8 +1,13 @@
 ---
 layout: project/project.njk 
+type: writing
 --- 
 
 {%- from "components/components.njk" import component -%}
+{% set replies = webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to'])%}
+{% set reactions = webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}
+{% set mentions = webmentions | getWebmentionsByTypes(['mention-of']) %}
+{% set inreplies = webmentions | getWebmentionsByTypes(['in-reply-to'])%}
 
 <div class="blogpost h-entry" data-pagefind-body>
     {% if externalLink %} <a class="externalLink" href="{{ externalLink }}"> </a> {% else %}{% endif %}
@@ -38,9 +43,9 @@ layout: project/project.njk
                 </div>
             {% endfor %}
         </div>
-        {# <div id="blogpost-footer-actions">
-            <button class="like"></button>
-            <button class="reply"></button>
-        </div> TODO: Add IndieWeb interactions#}
+        <div id="blogpost-footer-actions">
+            <span class="like"><img src="/assets/img/icons/heart.svg" alt=""> {{ reactions.length }}</span>
+            <span class="reply"><img src="/assets/img/icons/comment.svg" alt="">{{ replies.length }}</span>
+        </div>
     </div>
 </div>

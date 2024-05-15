@@ -2,6 +2,8 @@
 layout: base.njk
 ---
 
+
+
 <div id="project-page">
     <button id="back-link" onclick="history.back()">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,5 +14,85 @@ layout: base.njk
     <div class="content">
         {{ content | safe }}
     </div>
+    {% if type == "writing" %}
+        {% set replies = webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to'])%}
+        {% set reactions = webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}
+        {% set mentions = webmentions | getWebmentionsByTypes(['mention-of']) %}
+        {% set inreplies = webmentions | getWebmentionsByTypes(['in-reply-to'])%}
+
+    <div class="webmentions">
+        <div class="webmentions-header">
+            <span class="webmentions-header_title"><h1>Webmentions </h1><span>({{ webmentions.length}})</span></span>
+            <a href="https://indieweb.org/Webmention">What is a webmention?</a>
+        </div>
+        <div class="replies">
+            <details open>
+                <summary>
+                    <span class="webmentions-h2"
+                    ><h2>Replies</h2> <span>({{ replies.length }})</span>
+                    </span>
+                    <img class="chevron-down" src="/assets/img/icons/chevron-down.svg">
+                </summary>
+                {% if replies.length == 0 %}
+                    <div class="webmentions-nowebmentions">No replies so far!</div>
+                {% endif %}
+                {% for reply in inreplies | log %} 
+                <div class="webmention inreply">
+                    <div class="header">
+                        <img  src="{{ reply.author.photo }}" alt=""/>
+                        <div>
+                            <div class="author">
+                                <span>{{ reply.author.name }}</span>
+                                <a" href="{{ reply.author.url }}">{{ reply.author.url }}</a>
+                            </div>
+                            <time>
+                                {{ reply.published }}
+                            </time>
+                        </div>
+                    </div>
+                    <div class="reply-content">
+                        {{ reply.content.text }}
+                    </div>
+                </div>
+                {% endfor %}
+                {% for mention in mentions %} 
+                <div class="webmention mention">
+                    <div class="header">
+                        <img src="{{ mention.author.photo }}" alt=""/>
+                        <div>
+                            <div class="author">
+                                <span >{{ reply.author.name }}</span>
+                                <a href="{{ reply.author.url }}">{{ reply.author.url }}</a>
+                            </div>
+                            <time>
+                                {{ mention.published }}
+                            </time>
+                        </div>
+                    </div>
+                    <div class="mention-content">
+                        {{ mention.content.text }}
+                    </div>
+                </div>
+                {% endfor %}
+            </details>     
+        </div>
+        <div class="reactions">
+            <details open>
+                <summary>
+                <span class="webmentions-h2">
+                    <h2>Reactions</h2><span> ({{ reactions.length }})</span>
+                </span>
+                <img class="chevron-down" src="/assets/img/icons/chevron-down.svg">    
+            </summary>
+            {% if reactions.length == 0 %} 
+                <div class="webmentions-nowebmentions">No reactions so far!</div>
+            {% endif %}
+            {% for reaction in reactions %}
+                {{ reaction }}
+            {% endfor %}
+            </div>
+            </details>
+    </div>
+    {% endif %}
 </div>
 
