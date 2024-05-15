@@ -143,6 +143,11 @@
     .webmentions {
         max-width: 44.5rem;
         width: 100%;
+        details {
+            &::marker {
+                position: absolute;
+            }
+        }
         &-header {
             > .webmentions-header_title {
                 display: flex;

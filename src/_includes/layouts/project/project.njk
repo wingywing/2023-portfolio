@@ -26,7 +26,7 @@ layout: base.njk
             <a href="https://indieweb.org/Webmention">What is a webmention?</a>
         </div>
         <div class="replies">
-            <details>
+            <details open>
                 <summary><span class="webmentions-h2"><h2>Replies</h2> <span>({{ replies.length }})</span></span></summary>
                 {% if replies.length == 0 %}
                     <div class="webmentions-nowebmentions">No replies so far!</div>
@@ -70,7 +70,7 @@ layout: base.njk
             </details>     
         </div>
         <div class="reactions">
-            <details>
+            <details open>
                 <summary>
                 <span class="webmentions-h2">
                     <h2>Reactions</h2><span> ({{ reactions.length }})</span>
