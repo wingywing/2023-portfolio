@@ -5,6 +5,7 @@
 
 @mixin writing-desktop(){
     @include bp.desktop{
+        padding-bottom: 4rem;
         .writing-posts {
             grid-column: 4/10;
         }
