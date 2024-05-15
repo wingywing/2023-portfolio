@@ -171,11 +171,15 @@
                     font-size: 0.875rem;
                 }
                 img {
-                    width: 3.75rem;
+                    width: 2rem;
                     border-radius: 1rem;
                 }
                 a {
                     font-size: 1rem;
+                }
+                > .photo {
+                    background: transparent;
+                    font-size: unset;
                 }
                 background-color: transparent;
                 display: flex;

@@ -89,7 +89,7 @@ layout: base.njk
             {% endif %}
             {% for reaction in reactions %}
                 <div class="webmention reaction">
-                        <img src="{{ reaction.author.photo }}" alt=""/>
+                        <a class="photo" href="{{ reaction.author.url }}"><img src="{{ reaction.author.photo }}" alt=""/></a>
                         <div>
                             <span class="reaction-inline">
                                 <span >{{ reaction.author.name }}</span>
