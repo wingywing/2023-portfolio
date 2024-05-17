@@ -25,7 +25,9 @@
     {%- for note in collections.notes | reverse %}
     {%- set absolutePostUrl = note.url | absoluteUrl(metadata.url) %}
     <item>
+      {% if note.data.title %}
       <title>{{ note.data.title }}</title>
+      {% endif %}
       <link>{{ absolutePostUrl }}</link>
       <description>{{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
       <pubDate>{{ note.date | dateToRfc822 }}</pubDate>
