@@ -68,7 +68,7 @@ module.exports = function(eleventyConfig) {
             input: "src", 
             output: "dist", 
             includes: "_includes",
-            excludes: "functions",ç
+            excludes: "functions",
             layouts: "_includes/layouts"
         } };
 };
