@@ -8,6 +8,9 @@
 @mixin writing-base(){
     @include grids.main-grid();
     padding-top: 2rem;
+    .header-icon.notes {
+        width: 5rem;
+    }
     .squiggle {
         @include variables.squiggle();
         bottom: -0.25rem;

@@ -14,7 +14,7 @@ layout: base.njk
     <div class="content">
         {{ content | safe }}
     </div>
-    {% if type == "writing" %}
+    {% if (type == "writing") or (type == "note") %}
         {% set replies = webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to'])%}
         {% set reactions = webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}
         {% set mentions = webmentions | getWebmentionsByTypes(['mention-of']) %}
