@@ -10,8 +10,8 @@
     "watch:pagefind": "pagefind --serve",
     "build:eleventy": "eleventy",
     "build:pagefind": "pagefind",
-    "build:tina" : "tinacms build",
-    "start:tina" : "tinacms build",
+    "build:tina": "tinacms build",
+    "start:tina": "tinacms build",
     "start": "npm-run-all build:sass --parallel watch:* && start:*",
     "build": "npm-run-all build:*"
   },
