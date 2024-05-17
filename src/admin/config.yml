@@ -1,0 +1,55 @@
+backend:
+  branch: main
+  ### enable below lines for github integration ###
+  name: github
+  repo: wingywing/2023-portfolio
+media_folder: "src/assetsimg"
+public_folder: "/assets/img"
+
+# Please run "npx @staticcms/proxy-server" for local backend
+# local_backend: true
+publish_mode: editorial_workflow
+collections:
+  - label: "Writing"
+    name: "writing"
+    folder: "src/writing"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "External Link", name: "externalLink", widget: "string", required: false }
+      - widget: select
+        label: "tags"
+        name: "tags"
+        multiple: true
+        create: true
+        options: ["webdev", "culture", "ui", "ux", "research"]
+  - label: "Notes"
+    name: "note"
+    folder: "src/notes"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "External Link", name: "externalLink", widget: "string", required: false }
+      - { label: "Mention Target", name: "mentionTarget", widget: "string", required: false }
+      - widget: select
+        label: "Tags"
+        name: "tags"
+        multiple: true
+        create: true
+        options: ["life", "food", "random", "indieweb", "work"]
+      - widget: select
+        label: "Note type"
+        name: "notetype"
+        multiple: false
+        create: false
+        options: ["note", "photo", "reply", "bookmark", "repost", "like"]

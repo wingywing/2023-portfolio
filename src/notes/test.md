@@ -1,6 +1,6 @@
 ---
 date: 2024-04-28T12:40:47.488Z
-
+notetype: note
 ---
 
 <a href="https://webmention.rocks/test/1">Test 1</a>
