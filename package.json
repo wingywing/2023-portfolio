@@ -17,6 +17,7 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
     "autoprefixer": "^10.4.19",
     "lodash": "^4.17.21",
     "markdown-it-eleventy-img": "^0.10.1",
