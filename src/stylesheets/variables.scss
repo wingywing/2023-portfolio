@@ -22,7 +22,7 @@ $header-desktop-height: 4.375rem;
 @mixin snap-scroll {
     .snap-scroll{
         scroll-behavior: smooth!important;
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
         scroll-snap-type: y proximity;
         max-height: calc(100dvh - $header-mobile-height);

@@ -19,7 +19,14 @@
         flex-direction: column;
     }
     .blogpost-footer {
-        overflow: scroll;
+        overflow: auto;
+        align-items: flex-start;
+        .tags {
+            flex-wrap: wrap;
+        }
+    }
+    #blogpost-footer-actions {
+        padding-top: .25rem;
     }
     .post-thumbnail {
         display: flex;

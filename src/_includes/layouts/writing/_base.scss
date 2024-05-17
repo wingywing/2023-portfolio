@@ -150,7 +150,7 @@
             }
             &__drawer {
                 max-height: 30rem;
-                overflow: scroll;
+                overflow: auto;
                 border: colours.$text-subdued 2px solid;
                 border-top: 0;
                 position: absolute;

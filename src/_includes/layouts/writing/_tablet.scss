@@ -14,5 +14,10 @@
         .writing-posts {
             grid-column: 3/11;
         }
+        .tags {
+            display: flex;
+            flex-direction: row;
+            gap: .5rem;
+        }
     }
 }
