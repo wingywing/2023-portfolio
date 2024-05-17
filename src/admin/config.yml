@@ -27,7 +27,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["webdev", "culture", "ui", "ux", "research"]
+        options: ["webdev", "culture", "ui", "ux", "research", "code"]
   - label: "Notes"
     name: "note"
     folder: "src/notes"
