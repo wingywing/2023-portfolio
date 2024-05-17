@@ -1,8 +1,10 @@
 backend:
   #this is used for DecapCMS
-  name: git-gateway
+  name: github
   branch: main
+  base_url: https://wingpang.com
   repo: wingywing/2023-portfolio
+  auth_endpoint: /api/auth
 
 publish_mode: editorial_workflow
 media_folder: "src/assets/img"
@@ -15,8 +17,6 @@ collections:
   folder: "src/writing"
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-  editor:
-    preview: true
   fields:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Description", name: "description", widget: "string" }
