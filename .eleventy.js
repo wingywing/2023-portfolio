@@ -7,6 +7,7 @@ const blogTools = require("eleventy-plugin-blog-tools");
 const embedYoutube = require("eleventy-plugin-youtube-embed");
 const pluginWebmentions = require("@chrisburnell/eleventy-cache-webmentions");
 const configWebmentions = require("./_data/webmention.js")
+const pluginRss = require("@11ty/eleventy-plugin-rss")
 
 module.exports = function(eleventyConfig) {
 
@@ -15,6 +16,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(blogTools);
     eleventyConfig.addPlugin(embedYoutube);
     eleventyConfig.addPlugin(pluginWebmentions, configWebmentions);
+    eleventyConfig.addPlugin(pluginRss);
     
     eleventyConfig.addWatchTarget('src/**/**.md');
     eleventyConfig.addWatchTarget('src/**/**.njk');
