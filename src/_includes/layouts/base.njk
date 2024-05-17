@@ -37,6 +37,9 @@
             }
         }
     </script>
+    {% if (feedtype == "writing") or (feedtype == "notes") %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://granary.io/url?input=html&output=rss&url=https://wingpang.com/" + {{type}}>
+    {% endif %}
 </head>
 <body>
 
