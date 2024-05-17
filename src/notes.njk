@@ -1,0 +1,48 @@
+---
+title: Notes
+layout: base.njk
+---
+
+<div id="notes-page">
+    <h1>
+        <span>
+            Notes
+            <svg class="header-icon notes" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.4444 1.57143H18.6667V0H26.4444V1.57143ZM24.8889 9.42857V6.28571H20.2222V4.71429H26.4444V1.57143H28V6.28571H26.4444V9.42857H24.8889ZM24.8889 9.42857H18.6667V11H21.7778V14.1429H18.6667V15.7143H17.1111V11H15.5556V9.42857H14V7.85714H15.5556V6.28571H17.1111V4.71429H18.6667V1.57143H17.1111V4.71429H15.5556V6.28571H12.4444V7.85714H10.8889V6.28571H9.33333V4.71429H7.77778V6.28571H6.22222V7.85714H3.11111V9.42857H1.55556V11H0V18.8571H1.55556V20.4286H3.11111V22H14V20.4286H15.5556V18.8571H17.1111V17.2857H18.6667V15.7143H21.7778V14.1429H23.3333V11H24.8889V9.42857ZM6.22222 11H4.66667V15.7143H6.22222V11ZM9.33333 11H7.77778V15.7143H9.33333V11ZM7.77778 17.2857H6.22222V18.8571H7.77778V17.2857Z" fill="#7C6E65"/>
+            </svg>
+        </span>
+    </h1>  
+    <aside>You found me!
+        <br/>
+    </aside>
+    <div class="writing-posts">
+        <ul>
+            {%- for note in collections.notes -%}
+            {% set replies = note.data.webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to'])%}
+            {% set reactions = note.data.webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}
+            {% set mentions = note.data.webmentions | getWebmentionsByTypes(['mention-of']) %}
+            {% set inreplies = note.data.webmentions | getWebmentionsByTypes(['in-reply-to'])%}
+                <li class="post-thumbnail">
+                    <div class="post-header">
+                        <time>{{ note.date.toUTCString() }}</time>
+                    </div>
+                    <a class="post-thumbnail__link" href="{{ note.url }}"><span>Link to open note</span></a>
+                    {{ note.content | safe }}
+                    <div class="blogpost-footer">
+                        <div class="tags" id="blogpost-footer-tags">
+                            {% for tag in note.data.tags %}
+                                <div class="tag">
+                                    #{{ tag }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div id="blogpost-footer-actions">
+                            <span class="like"><img src="/assets/img/icons/heart.svg" alt=""> {{ reactions.length }}</span>
+                            <span class="reply"><img src="/assets/img/icons/comment.svg" alt="">{{ replies.length }}</span>
+                        </div>
+                    </div>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+</div>

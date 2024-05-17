@@ -41,6 +41,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("posts", function (collectionAPI) {
       return collectionAPI.getFilteredByGlob("src/writing/*.md");
     });
+    eleventyConfig.addCollection("notes", function (collectionAPI) {
+      return collectionAPI.getFilteredByGlob("src/notes/*.md");
+    });
     eleventyConfig.addPlugin(eleventyImagePlugin, {
       // Set global default options
       formats: ["webp", "jpeg"],
