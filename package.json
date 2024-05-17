@@ -10,7 +10,9 @@
     "watch:pagefind": "pagefind --serve",
     "build:eleventy": "eleventy",
     "build:pagefind": "pagefind",
-    "start": "npm-run-all build:sass --parallel watch:*",
+    "build:tina" : "tinacms build",
+    "start:tina" : "tinacms build",
+    "start": "npm-run-all build:sass --parallel watch:* && start:*",
     "build": "npm-run-all build:*"
   },
   "author": "Wing Pang",
@@ -18,6 +20,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@tinacms/cli": "^1.5.45",
+    "@types/node": "^20.12.12",
     "autoprefixer": "^10.4.19",
     "lodash": "^4.17.21",
     "markdown-it-eleventy-img": "^0.10.1",
@@ -44,6 +48,7 @@
     "markdown-it-image-figures": "^2.1.1",
     "panelsnap": "^1.3.0",
     "sass": "^1.69.5",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.4",
+    "tinacms": "^1.6.3"
   }
 }
