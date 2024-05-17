@@ -6,7 +6,7 @@ const mdAnchor = require('markdown-it-anchor');
 const blogTools = require("eleventy-plugin-blog-tools");
 const embedYoutube = require("eleventy-plugin-youtube-embed");
 const pluginWebmentions = require("@chrisburnell/eleventy-cache-webmentions");
-const configWebmentions = require("./_data/webmentions.js")
+const configWebmentions = require("./_data/webmention.js")
 
 module.exports = function(eleventyConfig) {
 
@@ -14,12 +14,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(EleventyRenderPlugin);
     eleventyConfig.addPlugin(blogTools);
     eleventyConfig.addPlugin(embedYoutube);
-    eleventyConfig.addPlugin(pluginWebmentions, {
-      domain: "https://www.wingpang.com",
-      feed: `https://webmention.io/api/mentions.jf2?domain=www.wingpang.com&token=${process.env.WEBMENTION_IO_TOKEN}&per-page=9001`,
-      key: "children",
-    });
-
+    eleventyConfig.addPlugin(pluginWebmentions, configWebmentions);
     
     eleventyConfig.addWatchTarget('src/**/**.md');
     eleventyConfig.addWatchTarget('src/**/**.njk');
