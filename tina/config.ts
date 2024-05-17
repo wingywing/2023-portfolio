@@ -1,5 +1,9 @@
 import { defineConfig } from "tinacms";
 
+const dateTime = (new Date()).toUTCString();
+const date = (new Date()).toISOString().split('T')[0];
+
+
 // Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -32,6 +36,12 @@ export default defineConfig({
         name: "writing",
         label: "Writing",
         path: "src/writing",
+        format: "md",
+        defaultItem: () => {
+          return {
+            date: dateTime,
+          }
+        },
         fields: [
           {
             type: "string",
@@ -63,11 +73,22 @@ export default defineConfig({
         name: "notes",
         label: "Notes",
         path: "src/notes",
+        format: "md",
+        defaultItem: () => {
+          return {
+            date: dateTime,
+          }
+        },
         fields: [
           {
             type: "string",
             name: "title",
             label: "Title",
+          },
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
           },
           {
             type: "string",
@@ -89,7 +110,6 @@ export default defineConfig({
             type: "string",
             name: "notetype",
             label: "Note type",
-            list: true,
             options: [
               {
                 value: 'note',
@@ -120,6 +140,19 @@ export default defineConfig({
             list: true,
           }
         ],
+        ui: {
+          filename: {
+            // if disabled, the editor can not edit the filename
+            readonly: true,
+            // Example of using a custom slugify function
+            slugify: (values) => {
+              // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
+              return `${date}-${values.title
+                ?.toLowerCase()
+                .replace(/ /g, '-')}`
+            },
+          },
+        },
       },
     ],
   },
