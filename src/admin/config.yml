@@ -3,7 +3,7 @@ backend:
   name: github
   branch: main
   site_domain: wingpang.com
-  base_url: https://wingpang.com
+  base_url: https://mellow-sixth-vibraphone.glitch.me
   repo: wingywing/2023-portfolio
   auth_endpoint: /api/auth
 
