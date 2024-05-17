@@ -13,7 +13,7 @@ type: note
     <div class="blogpost-header">
         <div class="information">
             <h1 class="p-name"> {{ title }}</h1>
-            <time class="dt-published" data-pagefind-sort="date">{{ date.toUTCString()  }}</time>
+            <time class="dt-published" data-pagefind-sort="date">{% if date %} {{ date.toUTCString()}} {% endif %}</time>
         </div>
     </div>
     <div class="blogpost-content e-content">

@@ -83,7 +83,11 @@ feedtype: writing
                 <li class="post-thumbnail">
                     <div class="post-header">
                         <h2>{{ post.data.title }}</h2>
-                        <time>{{ post.date.toUTCString() }}</time>
+                        <time>
+                            {% if post.date %}
+                            {{ post.date.toUTCString() }}
+                            {% endif %}
+                        </time>
                     </div>
                     <a class="post-thumbnail__link" href="{{ post.url }}"><span>Link to open post titled {{ post.data.title }}</span></a>
                     <p class="post-excerpt">{% excerpt post %}</p>

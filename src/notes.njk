@@ -25,7 +25,11 @@ feedtype: notes
             {% set inreplies = note.data.webmentions | getWebmentionsByTypes(['in-reply-to'])%}
                 <li class="post-thumbnail">
                     <div class="post-header">
-                        <time>{{ note.date.toUTCString() }}</time>
+                        <time>
+                            {% if note.date %}
+                            {{ note.date.toUTCString() }}
+                            {% endif %}
+                        </time>
                     </div>
                     <a class="post-thumbnail__link" href="{{ note.url }}"><span>Link to open note</span></a>
                     {{ note.content | safe }}
