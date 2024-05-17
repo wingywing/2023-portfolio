@@ -14,7 +14,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(EleventyRenderPlugin);
     eleventyConfig.addPlugin(blogTools);
     eleventyConfig.addPlugin(embedYoutube);
-    eleventyConfig.addPlugin(pluginWebmentions, configWebmentions);
+    eleventyConfig.addPlugin(pluginWebmentions, {
+      domain: "https://www.wingpang.com",
+      feed: `https://webmention.io/api/mentions.jf2?domain=www.wingpang.com&token=${process.env.WEBMENTION_IO_TOKEN}&per-page=9001`,
+      key: "children",
+    });
 
     
     eleventyConfig.addWatchTarget('src/**/**.md');
