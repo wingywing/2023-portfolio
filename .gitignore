@@ -4,3 +4,4 @@ dist
 *.css
 dist/stylesheets/global.css
 .env
+node_modules
