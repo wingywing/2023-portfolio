@@ -2,6 +2,7 @@ backend:
   #this is used for DecapCMS
   name: github
   branch: main
+  site_domain: wingpang.com
   base_url: https://wingpang.com
   repo: wingywing/2023-portfolio
   auth_endpoint: /api/auth
