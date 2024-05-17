@@ -10,7 +10,7 @@
     "watch:pagefind": "pagefind --serve",
     "build:eleventy": "eleventy",
     "build:pagefind": "pagefind",
-    "start": "npm-run-all build:sass --parallel watch:* & netlify dev",
+    "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:*"
   },
   "author": "Wing Pang",
@@ -20,7 +20,6 @@
     "autoprefixer": "^10.4.19",
     "lodash": "^4.17.21",
     "markdown-it-eleventy-img": "^0.10.1",
-    "netlify-plugin-cache-folder": "^0.0.8",
     "node-fetch": "^3.3.2",
     "npm-run-all": "4.1.5",
     "pagefind": "^1.1.0"
