@@ -15,13 +15,13 @@ type: note
             <h1 class="p-name"> {{ title }}</h1>
             <time class="dt-published" data-pagefind-sort="date">{% if date %} {{ date.toUTCString()}} {% endif %}</time>
             {% if notetype == "reply" %}
-            <span>In reply to: <a class="u-in-reply-to mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
+            <span class="note-span">In reply to: <a class="u-in-reply-to mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
             {% endif %}
             {% if notetype == "like" %}
-            <span>Liked post: <a class="u-like-of mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
+            <span class="note-span">Liked post: <a class="u-like-of mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
             {% endif %}
             {% if notetype == "bookmark" %}
-            <span>Bookmarked post: <a class="u-bookmark-of h-cite mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
+            <span class="note-span">Bookmarked post: <a class="u-bookmark-of h-cite mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
             {% endif %}
         </div>
     </div>
