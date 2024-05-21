@@ -2,7 +2,7 @@
 title: Hello World
 date: 2024-05-21T05:57:28.000Z
 targetLink: 'https://webmention.rocks/test/1'
-notetype: note
+notetype: reply
 ---
 
 Hello world!
