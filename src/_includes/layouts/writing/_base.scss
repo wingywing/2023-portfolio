@@ -207,4 +207,18 @@
             }
         }
     }
+    .note .mention-link {
+        font-size: 1rem;
+    }
+    .note-content {
+        row-gap: 0;
+    }
+    .post-header.note {
+        display: flex;
+        flex-direction: column;
+        gap: none;
+        h2 {
+            margin: 0;
+        }
+    }
 }
