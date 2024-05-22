@@ -138,7 +138,12 @@ export default defineConfig({
             name: "tag",
             label: "Tag",
             list: true,
-          }
+          },
+          {
+            type: "string",
+            name: "customSlug",
+            label: "Slug",
+          },
         ],
         ui: {
           filename: {
@@ -147,9 +152,17 @@ export default defineConfig({
             // Example of using a custom slugify function
             slugify: (values) => {
               // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
-              return `${date}-${values.title
-                ?.toLowerCase()
-                .replace(/ /g, '-')}`
+              if (values.title) {
+                return `${date}-${values.title
+                  ?.toLowerCase()
+                  .replace(/ /g, '-')}`
+              } else if (values.customSlug){
+                return `${date}-${values.customSlug
+                  ?.toLowerCase()
+                  .replace(/ /g, '-')}`
+              } else {
+                return `${date}`
+              }
             },
           },
         },
