@@ -9,5 +9,16 @@
         .writing-posts {
             grid-column: 4/10;
         }
+        .content-flex {
+            display: flex;
+            flex-direction: row;
+            gap: 5rem;
+            > .column {
+                &:nth-of-type(2) {
+                    margin-top: -3rem;
+                }
+                flex: 1;
+            }
+        }
     }
 }

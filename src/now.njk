@@ -31,72 +31,85 @@ pagination:
             <br/>
             <a href="https://nownownow.com/about">Derek Sivers' brainchild</a>
         </aside>
-        <div class="location column">
-            <h2>Location</h2>
-            <div class="block" id="now-map"></div>
-            {% set latitude = now.data.latitude %}
-            {% set longitude = now.data.longitude %}
-            {% if now.data.zoom %}
-                {% set zoom = now.data.zoom%}
-            {% else %}
-                {% set zoom = 13 %}
-            {% endif %}
-            <script type="text/javascript">
-                    var nowMap = L.map('now-map').setView([{{ latitude }}, {{ longitude }}], {{ zoom }});
-                    
-                    /* L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        maxZoom: 19,
-                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                    }).addTo(nowMap); */
-                    
-                    var Stadia_StamenWatercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
-                        minZoom: 1,
-                        maxZoom: 16,
-                        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                        ext: 'jpg'
-                    }).addTo(nowMap);
-                    var Stadia_StamenTonerLabels = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}{r}.{ext}', {
-                        minZoom: 0,
-                        maxZoom: 20,
-                        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                        ext: 'png'
-                    }).addTo(nowMap);
-            </script>
-            <div class="location-status block">
-                {{ now.data.locationStatus | markdown | safe }}
+        <div class="content-flex">
+            <div class="location column">
+                <h2>Location</h2>
+                <div class="now-map-container">
+                    <div id="now-map"></div>
+                {% set latitude = now.data.latitude %}
+                {% set longitude = now.data.longitude %}
+                {% if now.data.zoom %}
+                    {% set zoom = now.data.zoom%}
+                {% else %}
+                    {% set zoom = 9 %}
+                {% endif %}
+                <script type="text/javascript">
+                        var nowMap = L.map('now-map').setView([{{ latitude }}, {{ longitude }}], {{ zoom }});
+                        
+                        /* L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 19,
+                            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                        }).addTo(nowMap); */
+                        
+                        var Stadia_StamenWatercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
+                            minZoom: 1,
+                            maxZoom: 16,
+                            attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                            ext: 'jpg'
+                        }).addTo(nowMap);
+                        var Stadia_StamenTonerLabels = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}{r}.{ext}', {
+                            minZoom: 0,
+                            maxZoom: 20,
+                            attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                            ext: 'png'
+                        }).addTo(nowMap);
+                </script>
+                <span>{{ now.data.location | markdown | safe }}</span>
+                </div>
+                <div class="location-status block">
+                    {{ now.data.locationStatus | markdown | safe }}
+                </div>
+                <div class="location-weather block">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/n33d87151d21/sydney/" data-font="Overpass" data-icons="Climacons Animated" data-days="5" data-theme="pure" >Sydney NSW, Australia</a>
+                    <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    </script>
+                </div>
             </div>
-        </div>
-        <div class="work-study column">
-            <h2>Work/Study</h2>
-            <div class="work block">
-                {{ now.data.work | markdown | safe }}
+            <div class="work-hobbies column">
+                <div class="work-study column">
+                    <h2>Work/Study</h2>
+                    <div class="work block">
+                        {{ now.data.work | markdown | safe }}
+                    </div>
+                    <div class="study block">
+                        {{ now.data.study | markdown | safe }}
+                    </div>
+                </div>
+                <div class="hobbies column">
+                    <h2>Hobbies</h2>
+                    <div class="hobby-one block">
+                        {{ now.data.hobbyOne | markdown | safe }}
+                    </div>
+                    <div class="hobby-two block">
+                        {{ now.data.hobbyTwo | markdown | safe }}
+                    </div>
+                </div>
             </div>
-            <div class="study block">
-                {{ now.data.study | markdown | safe }}
-            </div>
-        </div>
-        <div class="hobbies column">
-            <h2>Hobbies</h2>
-            <div class="hobby-one block">
-                {{ now.data.hobbyOne | markdown | safe }}
-            </div>
-            <div class="hobby-two block">
-                {{ now.data.hobbyTwo | markdown | safe }}
-            </div>
-        </div>
-        <div class="tech column">
-            <h2>Tech</h2>
-            <div class="computer block">
-                {{ now.data.computer | markdown | safe }}
-            </div>
-            <div class="phone block">
-                {{ now.data.phone | markdown | safe }}
-            </div>
-            <div class="drawing block">
-                {{ now.data.drawing | markdown | safe }}
-            </div>
-            <div class="watch block">
-                {{ now.data.watch | markdown | safe }}
+            <div class="tech column">
+                <h2>Tech</h2>
+                <div class="computer block">
+                    <b>Computer: </b>{{ now.data.computer | markdown | safe }}
+                </div>
+                <div class="phone block">
+                    <b>Phone: </b> {{ now.data.phone | markdown | safe }}
+                </div>
+                <div class="drawing block">
+                    <b>Drawing: </b>{{ now.data.drawing | markdown | safe }}
+                </div>
+                <div class="watch block">
+                    <b>Watch: </b>{{ now.data.watch | markdown | safe }}
+                </div>
             </div>
         </div>
         <span class="last-updated">
