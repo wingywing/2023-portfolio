@@ -45,12 +45,11 @@ pagination:
                 {% endif %}
                 <script type="text/javascript">
                         var nowMap = L.map('now-map').setView([{{ latitude }}, {{ longitude }}], {{ zoom }});
-                        
                         /* L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             maxZoom: 19,
                             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                         }).addTo(nowMap); */
-                        
+
                         var Stadia_StamenWatercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
                             minZoom: 1,
                             maxZoom: 16,
@@ -63,6 +62,12 @@ pagination:
                             attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                             ext: 'png'
                         }).addTo(nowMap);
+                        window.addEventListener('resize', function() {
+                            nowMap.invalidateSize();
+                        });
+                        setTimeout(function () {
+                            window.dispatchEvent(new Event("resize"));
+                         }, 0);
                 </script>
                 <span>{{ now.data.location | markdown | safe }}</span>
                 </div>
@@ -71,8 +76,13 @@ pagination:
                 </div>
                 <div class="location-weather block">
                     <a class="weatherwidget-io" href="https://forecast7.com/en/n33d87151d21/sydney/" data-font="Overpass" data-icons="Climacons Animated" data-days="5" data-theme="pure" >Sydney NSW, Australia</a>
+                    {% if now.data.weatherLink %}
+                    {% set weatherLink = now.data.weatherlink %}
+                    {% else %}
+                    {% set weatherLink = "https://weatherwidget.io/js/widget.min.js" %}
+                    {% endif %}
                     <script>
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='{{ weatherLink }}';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
                     </script>
                 </div>
             </div>
@@ -119,7 +129,7 @@ pagination:
     <section class="archive">
         <h2>Archive</h2>
         {% if collections.nowPages.length == 1 %}
-                <span>No archival pages</span>
+                <span>No archival nows</span>
         {% else %}
         <ul>
             {% for page in collections.nowPages.slice(1) %}
