@@ -167,6 +167,100 @@ export default defineConfig({
           },
         },
       },
+      {
+        name: "now",
+        label: "Now",
+        path: "src/now",
+        format: "md",
+        defaultItem: () => {
+          return {
+            date: dateTime,
+          }
+        },
+        fields: [
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+          },
+          {
+            type: "number",
+            name: "latitude",
+            label: "Location Latitude",
+          },
+          {
+            type: "number",
+            name: "longitude",
+            label: "Location Longitude",
+          },
+          {
+            type: "string",
+            name: "location",
+            label: "Location",
+          },
+          {
+            type: "string",
+            name: "weatherLink",
+            label: "Weather link for weatherwidget.io",
+          },
+          {
+            type: "rich-text",
+            name: "locationStatus",
+            label: "Location Status",
+          },
+          {
+            type: "rich-text",
+            name: "work",
+            label: "Work",
+          },
+          {
+            type: "rich-text",
+            name: "study",
+            label: "Study",
+          },
+          {
+            type: "rich-text",
+            name: "hobbyOne",
+            label: "Hobby One",
+          },
+          {
+            type: "rich-text",
+            name: "hobbyTwo",
+            label: "Hobby Two",
+          },
+          {
+            type: "rich-text",
+            name: "computer",
+            label: "Computer",
+          },
+          {
+            type: "rich-text",
+            name: "phone",
+            label: "Phone",
+          },
+          {
+            type: "rich-text",
+            name: "drawing",
+            label: "Drawing",
+          },
+          {
+            type: "rich-text",
+            name: "watch",
+            label: "Watch",
+          },
+        ],
+        ui: {
+          filename: {
+            // if disabled, the editor can not edit the filename
+            readonly: true,
+            // Example of using a custom slugify function
+            slugify: () => {
+              // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
+                return `${date}-now`
+            },
+          },
+        },
+      },
     ],
   },
 });
