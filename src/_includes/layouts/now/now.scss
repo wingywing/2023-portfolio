@@ -1,0 +1,11 @@
+@use 'base';
+@use 'mobile';
+@use 'tablet';
+@use 'desktop';
+
+#now-page {
+    @include base.now-base;
+    @include mobile.now-mobile;
+    @include tablet.now-tablet;
+    @include desktop.now-desktop;
+}

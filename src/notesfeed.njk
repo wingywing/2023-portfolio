@@ -30,7 +30,7 @@
       {% endif %}
       <link>{{ absolutePostUrl }}</link>
       <description>{{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
-      <pubDate>{{ note.date | dateToRfc822 }}</pubDate>
+      <pubDate>{{ note.date | date }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>
     </item>

@@ -29,7 +29,7 @@ feedtype: notes
                         {% if note.data.title %}
                             <h2 class="p-name"> {{ note.data.title }}</h1>
                         {% endif %}
-                            <time class="dt-published" data-pagefind-sort="date">{% if note.date %} {{ note.date.toUTCString()}} {% endif %}</time>
+                            <time class="dt-published" data-pagefind-sort="date">{% if note.date %} {{ note.date | date }} {% endif %}</time>
                         {% if note.data.notetype == "reply" %}
                             <span>In reply to: <a class="u-in-reply-to mention-link" href="{{ note.data.targetLink }}">{{ note.data.targetLink }}</a></span> 
                         {% endif %}

@@ -1,0 +1,17 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/variables.scss' as variables;
+
+@mixin now-mobile(){
+    h1 {
+        grid-column: 2/12;
+    }
+    aside {
+        grid-column: 2/12;
+        grid-row: 2;
+    }
+    .column, .last-updated {
+        grid-column: 2/12;
+    }
+}

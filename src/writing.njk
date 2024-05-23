@@ -70,7 +70,6 @@ feedtype: writing
         <br/>
         <a href="/writingfeed.xml">Follow my RSS</a>
     </aside>
-    {# <div class="filters"></div> TODO: create search filters#}
     <div class="writing-posts">
     <div id="writing-search"></div>
         <ul>
@@ -85,7 +84,7 @@ feedtype: writing
                         <h2>{{ post.data.title }}</h2>
                         <time>
                             {% if post.date %}
-                            {{ post.date.toUTCString() }}
+                            {{ post.date | date }}
                             {% endif %}
                         </time>
                     </div>

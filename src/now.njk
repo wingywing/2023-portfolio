@@ -1,0 +1,133 @@
+--- 
+layout: base.njk
+title: Now
+pagination:
+    data: collections.nowPages
+    size: 1
+    alias: now
+---
+
+<div id="now-page">
+    <section class="current">
+        <h1>
+            <span>
+                Now
+                <svg class="header-icon" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_35_761)">
+                    <path d="M19.6114 5.24332L13.0006 4.38204L12.1393 10.9928L18.7501 11.8541L19.6114 5.24332ZM29.673 18.3194L30.1037 15.014L6.96589 11.9996L5.02801 26.8739L8.33341 27.3045L7.0415 37.2207L10.3469 37.6513L11.6388 27.7352L14.9442 28.1658L13.6523 38.082L16.9577 38.5126L19.7568 17.0275L29.673 18.3194ZM22.9168 5.67396L41.0965 8.04247L38.082 31.1803L19.9023 28.8117L20.3329 25.5063L35.2072 27.4442L37.3604 10.9172L22.4861 8.97935L22.9168 5.67396Z" fill="#4E4843"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_35_761">
+                    <rect width="40" height="40" fill="white" transform="translate(5.16772) rotate(7.42287)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+            </span>
+            <svg class="squiggle" width="278" height="75" viewBox="0 0 278 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 61.5L148.007 14.3076C151.02 13.3135 153.935 16.0539 153.13 19.1222L143.652 55.2101C142.895 58.0934 145.444 60.762 148.359 60.1374L275 33" stroke="#F8D0A1" stroke-width="28"/>
+            </svg>
+        </h1>  
+        <aside>What in the world is a now page?
+            <br/>
+            <a href="https://nownownow.com/about">Derek Sivers' brainchild</a>
+        </aside>
+        <div class="location column">
+            <h2>Location</h2>
+            <div class="block" id="now-map"></div>
+            {% set latitude = now.data.latitude %}
+            {% set longitude = now.data.longitude %}
+            {% if now.data.zoom %}
+                {% set zoom = now.data.zoom%}
+            {% else %}
+                {% set zoom = 13 %}
+            {% endif %}
+            <script type="text/javascript">
+                    var nowMap = L.map('now-map').setView([{{ latitude }}, {{ longitude }}], {{ zoom }});
+                    
+                    /* L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(nowMap); */
+                    
+                    var Stadia_StamenWatercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
+                        minZoom: 1,
+                        maxZoom: 16,
+                        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                        ext: 'jpg'
+                    }).addTo(nowMap);
+                    var Stadia_StamenTonerLabels = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}{r}.{ext}', {
+                        minZoom: 0,
+                        maxZoom: 20,
+                        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                        ext: 'png'
+                    }).addTo(nowMap);
+            </script>
+            <div class="location-status block">
+                {{ now.data.locationStatus | markdown | safe }}
+            </div>
+        </div>
+        <div class="work-study column">
+            <h2>Work/Study</h2>
+            <div class="work block">
+                {{ now.data.work | markdown | safe }}
+            </div>
+            <div class="study block">
+                {{ now.data.study | markdown | safe }}
+            </div>
+        </div>
+        <div class="hobbies column">
+            <h2>Hobbies</h2>
+            <div class="hobby-one block">
+                {{ now.data.hobbyOne | markdown | safe }}
+            </div>
+            <div class="hobby-two block">
+                {{ now.data.hobbyTwo | markdown | safe }}
+            </div>
+        </div>
+        <div class="tech column">
+            <h2>Tech</h2>
+            <div class="computer block">
+                {{ now.data.computer | markdown | safe }}
+            </div>
+            <div class="phone block">
+                {{ now.data.phone | markdown | safe }}
+            </div>
+            <div class="drawing block">
+                {{ now.data.drawing | markdown | safe }}
+            </div>
+            <div class="watch block">
+                {{ now.data.watch | markdown | safe }}
+            </div>
+        </div>
+        <span class="last-updated">
+            Last updated: <time>{{ now.date | date }}</time>
+        </span>
+    </section>
+    <section class="archive">
+        <h2>Archive</h2>
+        {% if collections.nowPages.length == 1 %}
+                <span>No archival pages</span>
+        {% else %}
+        <ul>
+            {% for page in collections.nowPages.slice(1) %}
+            <li>
+                <details>
+                    <summary>
+                        <span class="archive-item"><time>{{ page.date | date | markdown | safe }}</time></span>
+                    </summary>
+                    <div class="archive-item"><b>Location:</b> {{ page.data.locationStatus | markdown | safe }}</div>
+                    <div class="archive-item"><b>Work:</b> {{ page.data.work | markdown | safe }}</div>
+                    <div class="archive-item"><b>Study:</b> {{ page.data.study | markdown | safe }}</div>
+                    <div class="archive-item"><b>Hobby 1:</b> {{ page.data.hobbyOne | markdown | safe }}</div>
+                    <div class="archive-item"><b>Hobby 2:</b> {{ page.data.hobbyTwo | markdown | safe }}</div>
+                    <div class="archive-item"><b>Computer:</b> {{ page.data.computer | markdown | safe }}</div>
+                    <div class="archive-item"><b>Phone:</b> {{ page.data.phone | markdown | safe }}</div>
+                    <div class="archive-item"><b>Drawing:</b> {{ page.data.drawing | markdown | safe }}</div>
+                    <div class="archive-item"><b>Watch:</b> {{ page.data.watch | markdown | safe }}</div>
+                </details>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </section>
+</div>

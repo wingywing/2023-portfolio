@@ -8,8 +8,18 @@ const embedYoutube = require("eleventy-plugin-youtube-embed");
 const pluginWebmentions = require("@chrisburnell/eleventy-cache-webmentions");
 const configWebmentions = require("./_data/webmention.js")
 const pluginRss = require("@11ty/eleventy-plugin-rss")
+const markdownIt = require("markdown-it")
+const md = new markdownIt();
+const { DateTime } = require("luxon")
 
 module.exports = function(eleventyConfig) {
+
+    eleventyConfig.addFilter("markdown", function(content) {
+      return md.renderInline(content || '');
+    })
+    eleventyConfig.addFilter("date", (dateObj) => {
+      return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATETIME_FULL);
+    })
 
     eleventyConfig.addPlugin(eleventySass); //to add SASS support from src
     eleventyConfig.addPlugin(EleventyRenderPlugin);
@@ -46,6 +56,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("notes", function (collectionAPI) {
       return collectionAPI.getFilteredByGlob("src/notes/*.md");
     });
+    eleventyConfig.addCollection("nowPages", function(collectionApi) {
+      return collectionApi.getFilteredByGlob("src/now/*.md").sort((a, b) => {
+          return b.date - a.date;
+      });
+  });
     eleventyConfig.addPlugin(eleventyImagePlugin, {
       // Set global default options
       formats: ["webp", "jpeg"],
