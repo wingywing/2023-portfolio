@@ -2,7 +2,7 @@
 layout: base.njk
 title: Now
 pagination:
-    data: collections.nowPages
+    data: collections.now
     size: 1
     alias: now
 ---
@@ -133,11 +133,11 @@ pagination:
     </section>
     <section class="archive">
         <h2>Archive</h2>
-        {% if collections.nowPages.length == 1 %}
+        {% if collections.now.length == 1 %}
                 <span>No archival nows</span>
         {% else %}
         <ul>
-            {% for page in collections.nowPages.slice(1) %}
+            {% for page in collections.now.slice(1) %}
             <li>
                 <details>
                     <summary>
