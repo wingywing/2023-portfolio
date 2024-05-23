@@ -75,14 +75,14 @@ pagination:
                     {{ now.data.locationStatus | markdown | safe }}
                 </div>
                 {% if now.data.weatherLink %}
-                {% set weatherLink = now.data.weatherlink %}
+                    {% set weatherLink = now.data.weatherLink %}
                 {% else %}
-                {% set weatherLink = "https://forecast7.com/en/n33d87151d21/sydney/" %}
+                    {% set weatherLink = "https://forecast7.com/en/n33d87151d21/sydney/" %}
                 {% endif %}
                 {% if now.data.location %}
-                {% set location = now.data.location %}
+                    {% set location = now.data.location %}
                 {% else %}
-                {% set location = "Sydney, Australia" %}
+                    {% set location = "Sydney, Australia" %}
                 {% endif %}
                 <div class="location-weather block">
                     <a class="weatherwidget-io" href="{{ weatherLink }}" data-font="Overpass" data-icons="Climacons Animated" data-days="5" data-theme="pure" >Sydney NSW, Australia</a>
