@@ -194,7 +194,7 @@ export default defineConfig({
             label: "Location Longitude",
           },
           {
-            type: "rich-text",
+            type: "string",
             name: "location",
             label: "Location",
           },
@@ -204,47 +204,47 @@ export default defineConfig({
             label: "Weather link for weatherwidget.io",
           },
           {
-            type: "string",
+            type: "rich-text",
             name: "locationStatus",
             label: "Location Status",
           },
           {
-            type: "string",
+            type: "rich-text",
             name: "work",
             label: "Work",
           },
           {
-            type: "string",
+            type: "rich-text",
             name: "study",
             label: "Study",
           },
           {
-            type: "string",
+            type: "rich-text",
             name: "hobbyOne",
             label: "Hobby One",
           },
           {
-            type: "string",
+            type: "rich-text",
             name: "hobbyTwo",
             label: "Hobby Two",
           },
           {
-            type: "string",
+            type: "rich-text",
             name: "computer",
             label: "Computer",
           },
           {
-            type: "string",
+            type: "rich-text",
             name: "phone",
             label: "Phone",
           },
           {
-            type: "string",
+            type: "rich-text",
             name: "drawing",
             label: "Drawing",
           },
           {
-            type: "string",
+            type: "rich-text",
             name: "watch",
             label: "Watch",
           },
@@ -256,7 +256,7 @@ export default defineConfig({
             // Example of using a custom slugify function
             slugify: (values) => {
               // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
-                return `${date}-"now"`
+                return `${date}-now`
             },
           },
         },
