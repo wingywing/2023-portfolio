@@ -101,6 +101,16 @@ export default defineConfig({
             label: "Target Link",
           },
           {
+            type: "image",
+            name: "imageSrc",
+            label: "Image",
+          },
+          {
+            type: "string",
+            name: "alt",
+            label: "Image alt-text",
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body",
@@ -130,6 +140,10 @@ export default defineConfig({
               {
                 value: 'bookmark',
                 label: 'Bookmark',
+              },
+              {
+                value: 'follow',
+                label: 'Follow',
               },
             ]
           },

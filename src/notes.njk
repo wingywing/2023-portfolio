@@ -43,6 +43,9 @@ feedtype: notes
                     </div>
                     <a class="post-thumbnail__link" href="{{ note.url }}"><span>Link to open note</span></a>
                     <div class="note-content">
+                    {% if note.data.imageSrc %}
+                        <img class="u-photo" src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}"/>
+                    {% endif %}
                     {{ note.content | safe }}
                     </div>
                     <div class="blogpost-footer">
