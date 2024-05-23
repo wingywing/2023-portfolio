@@ -50,4 +50,10 @@
         }
         text-decoration: none;
     }
+    aside {
+        text-wrap: balance;
+        a {
+            font-size: inherit;
+        }
+    }
 }

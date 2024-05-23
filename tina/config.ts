@@ -148,7 +148,7 @@ export default defineConfig({
         ui: {
           filename: {
             // if disabled, the editor can not edit the filename
-            readonly: true,
+            readonly: false,
             // Example of using a custom slugify function
             slugify: (values) => {
               // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
@@ -163,6 +163,100 @@ export default defineConfig({
               } else {
                 return `${date}`
               }
+            },
+          },
+        },
+      },
+      {
+        name: "now",
+        label: "Now",
+        path: "src/now",
+        format: "md",
+        defaultItem: () => {
+          return {
+            date: dateTime,
+          }
+        },
+        fields: [
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+          },
+          {
+            type: "number",
+            name: "latitude",
+            label: "Location Latitude",
+          },
+          {
+            type: "number",
+            name: "longitude",
+            label: "Location Longitude",
+          },
+          {
+            type: "rich-text",
+            name: "location",
+            label: "Location",
+          },
+          {
+            type: "string",
+            name: "weatherLink",
+            label: "Weather link for weatherwidget.io",
+          },
+          {
+            type: "string",
+            name: "locationStatus",
+            label: "Location Status",
+          },
+          {
+            type: "string",
+            name: "work",
+            label: "Work",
+          },
+          {
+            type: "string",
+            name: "study",
+            label: "Study",
+          },
+          {
+            type: "string",
+            name: "hobbyOne",
+            label: "Hobby One",
+          },
+          {
+            type: "string",
+            name: "hobbyTwo",
+            label: "Hobby Two",
+          },
+          {
+            type: "string",
+            name: "computer",
+            label: "Computer",
+          },
+          {
+            type: "string",
+            name: "phone",
+            label: "Phone",
+          },
+          {
+            type: "string",
+            name: "drawing",
+            label: "Drawing",
+          },
+          {
+            type: "string",
+            name: "watch",
+            label: "Watch",
+          },
+        ],
+        ui: {
+          filename: {
+            // if disabled, the editor can not edit the filename
+            readonly: true,
+            // Example of using a custom slugify function
+            slugify: (values) => {
+              // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
+                return `${date}-"now"`
             },
           },
         },

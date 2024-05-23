@@ -74,15 +74,20 @@ pagination:
                 <div class="location-status block">
                     {{ now.data.locationStatus | markdown | safe }}
                 </div>
+                {% if now.data.weatherLink %}
+                {% set weatherLink = now.data.weatherlink %}
+                {% else %}
+                {% set weatherLink = "https://forecast7.com/en/n33d87151d21/sydney/" %}
+                {% endif %}
+                {% if now.data.location %}
+                {% set location = now.data.location %}
+                {% else %}
+                {% set location = "Sydney, Australia" %}
+                {% endif %}
                 <div class="location-weather block">
-                    <a class="weatherwidget-io" href="https://forecast7.com/en/n33d87151d21/sydney/" data-font="Overpass" data-icons="Climacons Animated" data-days="5" data-theme="pure" >Sydney NSW, Australia</a>
-                    {% if now.data.weatherLink %}
-                    {% set weatherLink = now.data.weatherlink %}
-                    {% else %}
-                    {% set weatherLink = "https://weatherwidget.io/js/widget.min.js" %}
-                    {% endif %}
+                    <a class="weatherwidget-io" href="{{ weatherLink }}" data-font="Overpass" data-icons="Climacons Animated" data-days="5" data-theme="pure" >Sydney NSW, Australia</a>
                     <script>
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='{{ weatherLink }}';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
                     </script>
                 </div>
             </div>

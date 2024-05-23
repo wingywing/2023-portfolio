@@ -79,6 +79,7 @@
             padding: 1rem;
             #now-map {
                 height: 17.25rem;
+                width: 100%;
                 .leaflet-control-zoom {
                     display: none;
                     visibility: hidden;
@@ -107,7 +108,7 @@
             margin: 0;
             font-weight: 400;
         }
-        h2, ul {
+        h2, ul, span {
             grid-column: 2/12;
             padding-inline: 0;
             margin-block: 0;
