@@ -9,42 +9,80 @@ type: note
 {% set inreplies = webmentions | getWebmentionsByTypes(['in-reply-to'])%}
 
 <div class="blogpost note h-entry" data-pagefind-body>
-    {% if externalLink %} <a class="externalLink" href="{{ externalLink }}"> </a> {% else %}{% endif %}
         <a href="{{ page.url }}" style="display:none; visibility: hidden;" class="u-url hidden" aria-hidden>Link to {{ title }} note</a>
         <a class="u-bridgy-fed" style="display:none; visibility: hidden;" href="https://fed.brid.gy/" hidden="from-humans" aria-hidden></a>
     <div class="blogpost-header">
         <div class="information">
-            <h1 class="p-name"> {{ title }}</h1>
+            {% if title %}
+                <h1 class="p-name"> {{ title }}</h1>
+            {% endif %}
             <time class="dt-published" data-pagefind-sort="date">{% if date %} {{ date | date }} {% endif %}</time>
-            {% if notetype == "reply" %}
-            <span class="note-span">In reply to: <a class="u-in-reply-to mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
-            {% endif %}
-            {% if notetype == "like" %}
-            <span class="note-span">Liked post: <a class="u-like-of mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
-            {% endif %}
-            {% if notetype == "bookmark" %}
-            <span class="note-span">Bookmarked post: <a class="u-bookmark-of h-cite mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
-            {% endif %}
-            {% if notetype == "follow" %}
-            <span class="note-span">Followed: <a class="u-follow-of mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
-            {% endif %}
+
+            {% if notetype == "reply" or inReplyTo %}
+            <span>In reply to: 
+                <a class="u-in-reply-to mention-link" href="
+                {% if targetLink %}
+                    {{ targetLink }}
+                {% elif inReplyTo %}
+                    {{ inReplyTo }}
+                    {% endif %}">
+                    {{ targetLink }}
+                    {{ inReplyTo }}
+                </a>
+            </span> 
+        {% endif %}
+        {% if notetype == "like" or likeOf %}                  
+            <span>Liked post: 
+                <a class="u-like-of mention-link" href="
+                {% if targetLink %}
+                    {{ targetLink }}
+                {% elif likeOf %}
+                    {{ likeOf }}
+                    {% endif %}">
+                    {{ targetLink }}
+                    {{ likeOf }}
+                </a></span> 
+        {% endif %}
+        {% if notetype == "bookmark" or bookmarkOf %}
+            <span>Bookmarked post: 
+                <a class="u-bookmark-of h-cite mention-link" href="
+                {% if targetLink %}
+                    {{ targetLink }}
+                {% elif bookmarkOf %}
+                    {{ bookmarkOf }}
+                    {% endif %}">
+                    {{ targetLink }}
+                    {{ bookmarkOf }}
+                </a>
+            </span> 
+        {% endif %}
+        {% if notetype == "follow" %}
+        <span class="note-span">Followed: <a class="u-follow-of mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
+        {% endif %}
+
         </div>
     </div>
     <div class="blogpost-content e-content">
-        {% if imageSrc%}
-    <img class="u-photo" src="{{ imageSrc }}" alt="{{ alt }}"/>
-    {% endif %}
+        {% if imageSrc or photo %}
+        {% if imageSrc %}
+            <img class="u-photo" src="{{ imageSrc }}" alt="{{ alt }}">
+        {% elif photo %}
+            {% for p in photo %}
+                <img class="u-photo" src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">
+            {% endfor %}
+        {% endif %}
+        {% endif %}
         {{ content | safe }}
     </div>
     <div class="blogpost-footer">
         <a rel="author" href="https://wingpang.com" class="hidden p-author h-card" aria-hidden>Wing Pang<img src="/assets/img/home/me.png" alt="Photo of Wing Pang wearing a kimono" class="u-photo hidden" aria-hidden></a>
         <div class="tags" id="blogpost-footer-tags">
-            {% for tag in note.data.tags %}
+            {% for tag in tags %}
             <div class="tag">
                 #{{ tag }}
             </div>
             {% endfor %}
-            {% for tag in note.data.category %}
+            {% for tag in category %}
                 <div class="tag">
                     #{{ tag }}
                 </div>

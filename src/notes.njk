@@ -43,8 +43,7 @@ feedtype: notes
                                 </a>
                             </span> 
                         {% endif %}
-                        {% if note.data.notetype == "like" or note.data.likeOf %}
-                        
+                        {% if note.data.notetype == "like" or note.data.likeOf %}                  
                             <span>Liked post: 
                                 <a class="u-like-of mention-link" href="
                                 {% if note.data.targetLink %}
@@ -68,6 +67,9 @@ feedtype: notes
                                     {{ note.data.bookmarkOf }}
                                 </a>
                             </span> 
+                        {% endif %}
+                        {% if notetype == "follow" %}
+                            <span class="note-span">Followed: <a class="u-follow-of mention-link" href="{{ targetLink }}">{{ targetLink }}</a></span> 
                         {% endif %}
                     </div>
                     <a class="post-thumbnail__link" href="{{ note.url }}"><span>Link to open note</span></a>
