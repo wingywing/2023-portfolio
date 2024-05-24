@@ -1,0 +1,17 @@
+---
+title: Page Not Found
+---
+{%- extends "src/_includes/layouts/base.njk" -%}
+{%- block content -%}
+<div id="notfound-page">
+    <h1>Page not found!</h1>
+    {{
+        component('link-button',{
+            innercontent: 'Click here to go home',
+            class: 'bg-rose',
+            linkurl: '/',
+            arialabel: 'Click here to go home'
+        })
+    }}
+    {%- endblock -%}
+</div>
