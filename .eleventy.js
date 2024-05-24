@@ -20,6 +20,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("date", (dateObj) => {
       return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATETIME_FULL);
     })
+    // Below is used for images from indiekit to remove the /src prefix
+    eleventyConfig.addFilter("removeSrc", (originalString) => {
+      return originalString.replace('/src', '');
+    })
 
     eleventyConfig.addPlugin(eleventySass); //to add SASS support from src
     eleventyConfig.addPlugin(EleventyRenderPlugin);

@@ -30,27 +30,67 @@ feedtype: notes
                             <h2 class="p-name"> {{ note.data.title }}</h1>
                         {% endif %}
                             <time class="dt-published" data-pagefind-sort="date">{% if note.date %} {{ note.date | date }} {% endif %}</time>
-                        {% if note.data.notetype == "reply" %}
-                            <span>In reply to: <a class="u-in-reply-to mention-link" href="{{ note.data.targetLink }}">{{ note.data.targetLink }}</a></span> 
+                        {% if note.data.notetype == "reply" or note.data.inReplyTo %}
+                            <span>In reply to: 
+                                <a class="u-in-reply-to mention-link" href="
+                                {% if note.data.targetLink %}
+                                    {{ note.data.targetLink }}
+                                {% elif note.data.inReplyTo %}
+                                    {{ note.data.inReplyTo }}
+                                    {% endif %}">
+                                    {{ note.data.targetLink }}
+                                    {{ note.data.inReplyTo }}
+                                </a>
+                            </span> 
                         {% endif %}
-                        {% if note.data.notetype == "like" %}
+                        {% if note.data.notetype == "like" or note.data.likeOf %}
                         
-                            <span>Liked post: <a class="u-like-of mention-link" href="{{ note.data.targetLink }}">{{ note.data.targetLink }}</a></span> 
+                            <span>Liked post: 
+                                <a class="u-like-of mention-link" href="
+                                {% if note.data.targetLink %}
+                                    {{ note.data.targetLink }}
+                                {% elif note.data.likeOf %}
+                                    {{ note.data.likeOf }}
+                                    {% endif %}">
+                                    {{ note.data.targetLink }}
+                                    {{ note.data.likeOf }}
+                                </a></span> 
                         {% endif %}
-                        {% if note.data.notetype == "bookmark" %}
-                            <span>Bookmarked post: <a class="u-bookmark-of h-cite mention-link" href="{{ note.data.targetLink }}">{{ note.data.targetLink }}</a></span> 
+                        {% if note.data.notetype == "bookmark" or note.data.bookmarkOf %}
+                            <span>Bookmarked post: 
+                                <a class="u-bookmark-of h-cite mention-link" href="
+                                {% if note.data.targetLink %}
+                                    {{ note.data.targetLink }}
+                                {% elif note.data.bookmarkOf %}
+                                    {{ note.data.bookmarkOf }}
+                                    {% endif %}">
+                                    {{ note.data.targetLink }}
+                                    {{ note.data.bookmarkOf }}
+                                </a>
+                            </span> 
                         {% endif %}
                     </div>
                     <a class="post-thumbnail__link" href="{{ note.url }}"><span>Link to open note</span></a>
                     <div class="note-content">
-                    {% if note.data.imageSrc %}
-                        <img class="u-photo" src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}"/>
-                    {% endif %}
-                    {{ note.content | safe }}
+                        {% if note.data.imageSrc or note.data.photo %}
+                            {% if note.data.imageSrc %}
+                                <img class="u-photo" src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}">
+                            {% elif note.data.photo %}
+                                {% for p in note.data.photo %}
+                                    <img class="u-photo" src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">
+                                {% endfor %}
+                            {% endif %}
+                        {% endif %}
+                        {{ note.content | safe }}
                     </div>
                     <div class="blogpost-footer">
                         <div class="tags" id="blogpost-footer-tags">
                             {% for tag in note.data.tags %}
+                                <div class="tag">
+                                    #{{ tag }}
+                                </div>
+                            {% endfor %}
+                            {% for tag in note.data.category %}
                                 <div class="tag">
                                     #{{ tag }}
                                 </div>

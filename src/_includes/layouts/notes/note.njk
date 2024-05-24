@@ -39,9 +39,13 @@ type: note
     <div class="blogpost-footer">
         <a rel="author" href="https://wingpang.com" class="hidden p-author h-card" aria-hidden>Wing Pang<img src="/assets/img/home/me.png" alt="Photo of Wing Pang wearing a kimono" class="u-photo hidden" aria-hidden></a>
         <div class="tags" id="blogpost-footer-tags">
-            {% for tag in tags %}
-                {# TODO: sort by tag + allow users to click to a page that filters it #}
-                <div data-pagefind-filter="Filter by tags" class="tag p-category" href="#">
+            {% for tag in note.data.tags %}
+            <div class="tag">
+                #{{ tag }}
+            </div>
+            {% endfor %}
+            {% for tag in note.data.category %}
+                <div class="tag">
                     #{{ tag }}
                 </div>
             {% endfor %}
