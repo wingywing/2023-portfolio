@@ -10,6 +10,8 @@ type: note
 
 <div class="blogpost note h-entry" data-pagefind-body>
     {% if externalLink %} <a class="externalLink" href="{{ externalLink }}"> </a> {% else %}{% endif %}
+        <a href="{{ page.url }}" style="display:none; visibility: hidden;" class="u-url hidden" aria-hidden>Link to {{ title }} note</a>
+        <a class="u-bridgy-fed" style="display:none; visibility: hidden;" href="https://fed.brid.gy/" hidden="from-humans" aria-hidden></a>
     <div class="blogpost-header">
         <div class="information">
             <h1 class="p-name"> {{ title }}</h1>
@@ -35,10 +37,7 @@ type: note
         {{ content | safe }}
     </div>
     <div class="blogpost-footer">
-        <a rel="author" href="https://wingpang.com" class="hidden p-author h-card" aria-hidden>Wing Pang</a>
-        <img src="/assets/img/home/me.png" alt="Photo of Wing Pang wearing a kimono" class="u-photo hidden" aria-hidden>
-        <a href="{{ page.url }}" class="u-url hidden" aria-hidden>Link to {{ title }} note</a>
-        <a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden="from-humans" aria-hidden></a>
+        <a rel="author" href="https://wingpang.com" class="hidden p-author h-card" aria-hidden>Wing Pang<img src="/assets/img/home/me.png" alt="Photo of Wing Pang wearing a kimono" class="u-photo hidden" aria-hidden></a>
         <div class="tags" id="blogpost-footer-tags">
             {% for tag in tags %}
                 {# TODO: sort by tag + allow users to click to a page that filters it #}
