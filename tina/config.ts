@@ -92,11 +92,6 @@ export default defineConfig({
           },
           {
             type: "string",
-            name: "externalLink",
-            label: "External Link",
-          },
-          {
-            type: "string",
             name: "targetLink",
             label: "Target Link",
           },
