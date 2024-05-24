@@ -63,7 +63,7 @@ export default defineConfig({
           },
           {
             type: "string",
-            name: "tag",
+            name: "tags",
             label: "Tag",
             list: true,
           }
@@ -149,7 +149,7 @@ export default defineConfig({
           },
           {
             type: "string",
-            name: "tag",
+            name: "tags",
             label: "Tag",
             list: true,
           },
