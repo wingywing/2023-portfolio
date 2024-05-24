@@ -87,11 +87,6 @@ feedtype: notes
                     </div>
                     <div class="blogpost-footer">
                         <div class="tags" id="blogpost-footer-tags">
-                            {% for tag in note.data.tags %}
-                                <div class="tag">
-                                    #{{ tag }}
-                                </div>
-                            {% endfor %}
                             {% for tag in note.data.category %}
                                 <div class="tag">
                                     #{{ tag }}

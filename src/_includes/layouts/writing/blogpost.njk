@@ -37,7 +37,7 @@ type: writing
     <div class="blogpost-footer">
         <a rel="author" href="https://wingpang.com" class="hidden p-author h-card" aria-hidden>Wing Pang</a>
         <div class="tags" id="blogpost-footer-tags">
-            {% for tag in tags %}
+            {% for tag in category %}
                 {# TODO: sort by tag + allow users to click to a page that filters it #}
                 <div data-pagefind-filter="Filter by tags" class="tag p-category" href="#">
                     #{{ tag }}

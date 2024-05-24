@@ -1,5 +1,5 @@
 ---
-tags:
+category:
     - design
     - code
 title: Hello World!
