@@ -26,9 +26,24 @@
     {%- set absolutePostUrl = note.url | absoluteUrl(metadata.url) %}
     <item>
       {% if note.data.title %}
-      <title>{{ note.data.title }}</title>
+       <title>{{ note.data.title }}</title>
       {% endif %}
+      
       <link>{{ absolutePostUrl }}</link>
+
+      {% if note.data.likeOf %}
+       <a href="{{ note.data.likeOf }}">This note is a like of {{ note.data.likeOf }}</a>
+      {% endif %}
+      {% if note.data.targetLink %}
+        <a href="{{ note.data.targetLink }}">This note mentions {{ note.data.targetLink }}</a>
+      {% endif %}
+      {% if note.data.bookmarkOf %}
+        <a href="{{ note.data.bookmarkOf }}">This note is a bookmark of {{ note.data.bookmarkOf }}</a>
+      {% endif %}
+      {% if note.data.inReplyTo %}
+        <a href="{{ note.data.inReplyTo }}">This note is a reply to {{ note.data.inReplyTo }}</a>
+      {% endif %}
+
       <description>{{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
       <pubDate>{{ note.date | date }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
