@@ -46,7 +46,7 @@
         " href="{{ note.data.targetLink }}">This note mentions {{ note.data.targetLink }}</a>
       {% endif %}
       {% if note.data.bookmarkOf %}
-        <a class="u-bookmark-o h-cite" href="{{ note.data.bookmarkOf }}">This note is a bookmark of {{ note.data.bookmarkOf }}</a>
+        <a class="u-bookmark-of h-cite" href="{{ note.data.bookmarkOf }}">This note is a bookmark of {{ note.data.bookmarkOf }}</a>
       {% endif %}
       {% if note.data.inReplyTo %}
         <a class="u-in-reply-to" href="{{ note.data.inReplyTo }}">This note is a reply to {{ note.data.inReplyTo }}</a>
