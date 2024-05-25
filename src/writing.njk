@@ -72,26 +72,26 @@ feedtype: writing
     </aside>
     <div class="writing-posts">
     <div id="writing-search"></div>
-        <ul>
+        <ul class="h-feed hfeed">
             {%- for post in collections.posts -%}
             {% set replies = post.data.webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to'])%}
             {% set reactions = post.data.webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}
             {% set mentions = post.data.webmentions | getWebmentionsByTypes(['mention-of']) %}
             {% set inreplies = post.data.webmentions | getWebmentionsByTypes(['in-reply-to'])%}
 
-                <li class="post-thumbnail">
+                <li class="post-thumbnail h-entry hentry">
                     <div class="post-header">
-                        <h2>{{ post.data.title }}</h2>
-                        <time>
+                        <h2 class="p-name">{{ post.data.title }}</h2>
+                        <time class="dt-published published">
                             {% if post.date %}
                             {{ post.date | date }}
                             {% endif %}
                         </time>
                     </div>
                     <a class="post-thumbnail__link" href="{{ post.url }}"><span>Link to open post titled {{ post.data.title }}</span></a>
-                    <p class="post-excerpt">{% excerpt post %}</p>
+                    <p class="post-excerpt entry-summary">{% excerpt post %}</p>
                     <div class="blogpost-footer">
-                        <div class="tags" id="blogpost-footer-tags">
+                        <div class="tags p-category" id="blogpost-footer-tags">
                             {% for tag in post.data.category %}
                                 <div class="tag">
                                     #{{ tag }}
