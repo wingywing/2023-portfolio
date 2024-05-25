@@ -259,4 +259,7 @@
     .blogpost.note .blogpost-header {
         gap: 0;
     }
+    .blogpost.note .u-photo:not(:last-child) {
+        margin-bottom: 1rem;;
+    }
 }
