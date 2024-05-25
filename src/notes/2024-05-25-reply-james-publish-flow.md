@@ -1,8 +1,6 @@
 ---
 date: 2024-05-25T17:30:06.244Z
 inReplyTo: https://jamesg.blog/2024/05/25/new-publishing-workflow/
-category:
-  - ""
 references:
   https://jamesgBlog/2024/05/25/newPublishingWorkflow/:
     url: https://jamesg.blog/2024/05/25/new-publishing-workflow/
