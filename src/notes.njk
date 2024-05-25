@@ -25,6 +25,7 @@ feedtype: notes
             {% set mentions = note.data.webmentions | getWebmentionsByTypes(['mention-of']) %}
             {% set inreplies = note.data.webmentions | getWebmentionsByTypes(['in-reply-to'])%}
                 <li class="post-thumbnail h-entry hentry">
+                    <a class="u-bridgy-fed" style="display:none; visibility: hidden;" href="https://fed.brid.gy/" hidden="from-humans" aria-hidden></a>
                     <div class="post-header note">
                         {% if note.data.title %}
                             <h2 class="p-name"> {{ note.data.title }}</h1>
