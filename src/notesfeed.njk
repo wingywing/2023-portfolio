@@ -32,16 +32,24 @@
       <link>{{ absolutePostUrl }}</link>
 
       {% if note.data.likeOf %}
-       <a href="{{ note.data.likeOf }}">This note is a like of {{ note.data.likeOf }}</a>
+       <a class="u-like-of" href="{{ note.data.likeOf }}">This note is a like of {{ note.data.likeOf }}</a>
       {% endif %}
       {% if note.data.targetLink %}
-        <a href="{{ note.data.targetLink }}">This note mentions {{ note.data.targetLink }}</a>
+        <a class="
+        {% if note.notetype == reply %}
+          u-in-reply-to
+        {% elif note.notetype == like %}
+          u-like-of
+        {% elif note.notetype == bookmark %}
+          u-bookmark-of h-cite
+        {% endif %}
+        " href="{{ note.data.targetLink }}">This note mentions {{ note.data.targetLink }}</a>
       {% endif %}
       {% if note.data.bookmarkOf %}
-        <a href="{{ note.data.bookmarkOf }}">This note is a bookmark of {{ note.data.bookmarkOf }}</a>
+        <a class="u-bookmark-o h-cite" href="{{ note.data.bookmarkOf }}">This note is a bookmark of {{ note.data.bookmarkOf }}</a>
       {% endif %}
       {% if note.data.inReplyTo %}
-        <a href="{{ note.data.inReplyTo }}">This note is a reply to {{ note.data.inReplyTo }}</a>
+        <a class="u-in-reply-to" href="{{ note.data.inReplyTo }}">This note is a reply to {{ note.data.inReplyTo }}</a>
       {% endif %}
 
       <description>{{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
