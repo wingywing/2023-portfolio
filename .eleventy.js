@@ -39,6 +39,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({"node_modules/jquery/dist/jquery.min.js" : "js/jquery.js"}); //to add jquery
     eleventyConfig.addPassthroughCopy({"node_modules/lightgallery/" : "js/lightgallery/"}); //to add lightGallery
 
+    eleventyConfig.addPassthroughCopy("src/manifest.json"); //to add animations
     eleventyConfig.addPassthroughCopy("src/js"); //to add animations
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/wenc-setup.js");

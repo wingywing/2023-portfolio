@@ -1,0 +1,11 @@
+{
+    "name": "Wing Pang",
+    "short_name": "Wing",
+    "icons": [{
+        "src": "google-touch-icon.png",
+        "sizes": "512x512"
+    }],
+    "background_color": "#f6f5f3",
+    "theme_color": "#f6f5f3",
+    "display": "fullscreen"
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
   <defs>
     <style>
       .cls-1 {
@@ -8,15 +8,15 @@
       }
     </style>
   </defs>
-  <g id="Layer_1" data-name="Layer 1" shape-rendering="crispEdges">
+  <g id="Layer_1-2" data-name="Layer 1-2" shape-rendering="crispEdges">
     <g>
-      <path class="cls-1" d="M19.2,16.6h-1.7v-1.7h-1.7v-1.7h1.7v-1.7h-3.3v1.7h-1.7v-1.7h-1.7v-1.7h-1.7v1.7h-1.7v1.7h-3.3v1.7h-1.7v1.7h-1.7v8.3h1.7v1.7h1.7v1.7h11.6v-1.7h1.7v-1.7h1.7v-1.7h1.7v-1.7h-1.7v-5ZM9.3,24.9h-1.7v-1.7h1.7v1.7ZM10.9,21.6h-1.7v-5h1.7v5ZM6,16.6h1.7v5h-1.7v-5Z"/>
-      <rect class="cls-1" x="19.2" y="6.7" width="1.7" height="3.3"/>
-      <rect class="cls-1" x="20.9" y="5" width="8.3" height="1.7"/>
-      <rect class="cls-1" x="17.6" y="10" width="1.7" height="1.7"/>
-      <polygon class="cls-1" points="20.9 16.6 24.2 16.6 24.2 19.9 25.8 19.9 25.8 16.6 27.5 16.6 27.5 14.9 20.9 14.9 20.9 16.6"/>
-      <rect class="cls-1" x="20.9" y="19.9" width="3.3" height="1.7"/>
-      <polygon class="cls-1" points="29.2 6.7 29.2 10 22.5 10 22.5 11.6 27.5 11.6 27.5 14.9 29.2 14.9 29.2 11.6 30.8 11.6 30.8 6.7 29.2 6.7"/>
+      <path class="cls-1" d="M19.5,15.9h-1.7v-1.7h-1.7v-1.7h1.7v-1.7h-3.3v1.7h-1.7v-1.7h-1.7v-1.7h-1.7v1.7h-1.7v1.7h-3.3v1.7h-1.7v1.7H1v8.3h1.7v1.7h1.7v1.7h11.6v-1.7h1.7v-1.7h1.7v-1.7h1.7v-1.7h-1.7v-5h0ZM9.6,24.2h-1.7v-1.7h1.7v1.7ZM11.2,20.9h-1.7v-5h1.7v5ZM6.3,15.9h1.7v5h-1.7v-5Z"/>
+      <rect class="cls-1" x="19.5" y="6" width="1.7" height="3.3"/>
+      <rect class="cls-1" x="21.2" y="4.3" width="8.3" height="1.7"/>
+      <rect class="cls-1" x="17.9" y="9.3" width="1.7" height="1.7"/>
+      <polygon class="cls-1" points="21.2 15.9 24.5 15.9 24.5 19.2 26 19.2 26 15.9 27.8 15.9 27.8 14.2 21.2 14.2 21.2 15.9"/>
+      <rect class="cls-1" x="21.2" y="19.2" width="3.3" height="1.7"/>
+      <polygon class="cls-1" points="29.5 6 29.5 9.3 22.8 9.3 22.8 10.9 27.8 10.9 27.8 14.2 29.5 14.2 29.5 10.9 31 10.9 31 6 29.5 6"/>
     </g>
   </g>
 </svg>
