@@ -31,7 +31,7 @@ layout: base.njk
                     <span class="webmentions-h2"
                     ><h2>Replies</h2> <span>({{ replies.length }})</span>
                     </span>
-                    <img class="chevron-down" src="/assets/img/icons/chevron-down.svg">
+                    <img class="chevron-down" src="/assets/img/icons/chevron-down.svg" alt="">
                 </summary>
                 {% if replies.length == 0 %}
                     <div class="webmentions-nowebmentions">No replies so far!</div>
@@ -82,7 +82,7 @@ layout: base.njk
                 <span class="webmentions-h2">
                     <h2>Reactions</h2><span> ({{ reactions.length }})</span>
                 </span>
-                <img class="chevron-down" src="/assets/img/icons/chevron-down.svg">    
+                <img class="chevron-down" src="/assets/img/icons/chevron-down.svg" alt="">    
             </summary>
             {% if reactions.length == 0 %} 
                 <div class="webmentions-nowebmentions">No reactions so far!</div>

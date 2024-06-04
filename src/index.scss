@@ -13,6 +13,10 @@
     @include tablet.home-page-tablet;
     @include desktop.home-page-desktop;
 }
+picture {
+    width: 100%;
+    display: block;
+}
 .snap-scroll{
     scroll-behavior: smooth!important;
     overflow-y: auto;

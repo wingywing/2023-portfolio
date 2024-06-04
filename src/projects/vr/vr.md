@@ -15,7 +15,7 @@ categories:
 
 <div class="project-header">
     <div class="project-banner">
-        <img src="/projects/vr/thumbs/vr-banner.png"/>
+        <img src="/projects/vr/thumbs/vr-banner.png" alt=""/>
         <!-- <video autoplay loop muted>
             <source src="" type="video/mp4">
         </video> -->

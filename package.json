@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Wing's 2023 portfolio",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "watch:sass": "sass --watch src/stylesheets:dist/stylesheets",
     "build:sass": "sass src/stylesheets:dist/stylesheets",
@@ -16,8 +17,9 @@
   "author": "Wing Pang",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "3.0.0-alpha.10",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@jgarber/eleventy-plugin-sass": "^0.3.1",
     "@types/node": "^20.12.12",
     "autoprefixer": "^10.4.19",
     "lodash": "^4.17.21",
@@ -35,7 +37,6 @@
     "dotenv": "^16.4.5",
     "eleventy-plugin-blog-tools": "^0.4.1",
     "eleventy-plugin-youtube-embed": "^1.10.2",
-    "eleventy-sass": "^2.2.4",
     "eslint": "^9.2.0",
     "gsap": "^3.12.3",
     "jquery": "^3.7.1",
@@ -45,7 +46,6 @@
     "markdown-it-anchor": "^9.0.0",
     "markdown-it-image-figures": "^2.1.1",
     "panelsnap": "^1.3.0",
-    "sass": "^1.69.5",
     "sharp": "^0.33.4"
   }
 }
