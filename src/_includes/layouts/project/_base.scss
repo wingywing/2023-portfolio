@@ -258,6 +258,9 @@
     }
     .blogpost.note .blogpost-content {
         row-gap: 0;
+        picture img {
+            width: 100%;
+        }
     }
     .blogpost.note .blogpost-header {
         gap: 0;

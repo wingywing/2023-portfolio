@@ -91,6 +91,7 @@
         #blogpost-footer-actions {
             display: flex;
             gap: 1rem;
+            justify-content: flex-end;
             span {
                 display: flex;
                 align-items: center;

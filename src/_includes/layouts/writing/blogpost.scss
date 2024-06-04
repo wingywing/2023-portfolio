@@ -24,6 +24,8 @@
         #blogpost-footer-actions {
             display: flex;
             gap: 1rem;
+            margin-top: .25rem;
+            align-self: flex-start;
             span {
                 display: flex;
                 align-items: center;
@@ -32,10 +34,12 @@
         }
         #blogpost-footer-tags {
             display: flex;
+            flex-wrap: wrap;
+            flex: 1;
             gap: .5rem;
         }
         .tag {
-            padding: .75rem 1rem;
+            padding: 0.5rem 1rem;
             border-radius: 90rem;
             background-color: colours.$bg-tertiary;
             color: colours.$text-primary;
