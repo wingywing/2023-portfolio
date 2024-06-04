@@ -72,12 +72,12 @@ export default function(eleventyConfig) {
 		extensions: "html",
 
 		// Add any other Image utility options here:
+    svgAllowUpscale: false,
 
 		// optional, output image formats
 		formats: ["webp", "jpeg", "png"],
-
     // optional, output image widths
-
+    widths: ["auto"],
 		// optional, attributes assigned on <img> override these values.
 		defaultAttributes: {
 			loading: "lazy",
