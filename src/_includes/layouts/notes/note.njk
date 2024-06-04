@@ -65,10 +65,10 @@ type: note
     <div class="blogpost-content e-content">
         {% if imageSrc or photo %}
         {% if imageSrc %}
-            <img class="u-photo" src="{{ imageSrc }}" alt="{{ alt }}">
+            <img class="u-photo" src="{{ imageSrc }}" alt="{{ alt }}" eleventy:widths="648">
         {% elif photo %}
             {% for p in photo %}
-                <img class="u-photo" src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">
+                <img class="u-photo" src="{{ p.url | removeSrc }}" alt="{{ p.alt }}" eleventy:widths="648">
             {% endfor %}
         {% endif %}
         {% endif %}
@@ -78,7 +78,7 @@ type: note
         <a rel="author" href="https://wingpang.com" class="hidden p-author h-card" aria-hidden>Wing Pang<img src="/assets/img/home/me.png" alt="Photo of Wing Pang wearing a kimono" class="u-photo hidden" aria-hidden></a>
         <div class="tags" id="blogpost-footer-tags">
             {% for tag in category %}
-                <div class="tag">
+                <div class="tag p-category">
                     #{{ tag }}
                 </div>
             {% endfor %}

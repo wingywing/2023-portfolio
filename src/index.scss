@@ -13,6 +13,21 @@
     @include tablet.home-page-tablet;
     @include desktop.home-page-desktop;
 }
+
+img {
+    object-fit: contain;
+    height: auto;
+}
+
+picture {
+    display: contents;
+    height: auto;
+    
+    img {
+        object-fit: contain;
+        height: auto;
+    }
+}
 .snap-scroll{
     scroll-behavior: smooth!important;
     overflow-y: auto;

@@ -15,7 +15,7 @@ categories:
 
 <div class="project-header">
     <div class="project-banner">
-        <img src="/projects/vr/thumbs/vr-banner.png"/>
+        <img src="/projects/vr/thumbs/vr-banner.png" eleventy:formats="webp" alt=""/>
         <!-- <video autoplay loop muted>
             <source src="" type="video/mp4">
         </video> -->
@@ -42,7 +42,7 @@ categories:
 <div class="lightgallery">
     <a href="/projects/vr/00.png">
         <figure>
-            <img src="/projects/vr/thumbs/00.png" alt= "Redesigned homescreen"/>
+            <img src="/projects/vr/thumbs/00.png" eleventy:formats="webp" alt= "Redesigned homescreen"/>
             <figcaption> Redesigned homescreen
             </figcaption>
         </figure>
@@ -52,31 +52,31 @@ categories:
 <div id="inline-gallery-container" style="margin-top: -1rem">
     <a href="/projects/vr/17.png">
         <figure>
-            <img src="/projects/vr/thumbs/17.png" alt= "Components and branding for Victorian Reports"/>
+            <img src="/projects/vr/thumbs/17.png" eleventy:formats="webp" alt= "Components and branding for Victorian Reports"/>
             <figcaption> Components and branding for Victorian Reports </figcaption>
         </figure>
     </a>
         <a href="/projects/vr/18.png">
         <figure>
-            <img src="/projects/vr/thumbs/18.png" alt= "Screenshot of assorted redesigned screens (home, about, settings)"/>
+            <img src="/projects/vr/thumbs/18.png" eleventy:formats="webp" alt= "Screenshot of assorted redesigned screens (home, about, settings)"/>
             <figcaption> Assorted redesigned screens (home, about, settings) </figcaption>
         </figure>
     </a>
             <a href="/projects/vr/19.png">
         <figure>
-            <img src="/projects/vr/thumbs/19.png" alt= "Screenshot of redesigned store pages"/>
+            <img src="/projects/vr/thumbs/19.png" eleventy:formats="webp" alt= "Screenshot of redesigned store pages"/>
             <figcaption> Redesigned store pages </figcaption>
         </figure>
     </a>
     <a href="/projects/vr/20.png">
         <figure>
-            <img src="/projects/vr/thumbs/20.png" alt= "Screenshot of redesigned browse pages"/>
+            <img src="/projects/vr/thumbs/20.png" eleventy:formats="webp" alt= "Screenshot of redesigned browse pages"/>
             <figcaption> Redesigned browse pages </figcaption>
         </figure>
     </a>
     <a href="/projects/vr/21.png">
         <figure>
-            <img src="/projects/vr/thumbs/21.png" alt= "Screenshot of redesigned error pages, with a Typeform styled to be like a chatbot"/>
+            <img src="/projects/vr/thumbs/21.png" eleventy:formats="webp" alt= "Screenshot of redesigned error pages, with a Typeform styled to be like a chatbot"/>
             <figcaption> Redesigned error pages, with a Typeform styled to be like a chatbot </figcaption>
         </figure>
     </a>
@@ -123,7 +123,7 @@ The infinity diagram below is adapted from the [IBM Enterprise Design Thinking F
 <div class="lightgallery">
     <a href="/projects/vr/04.png">
         <figure>
-            <img src="/projects/vr/thumbs/04.png" alt= "The design infinity loop showing the endless process of observation, building and reflection."/>
+            <img src="/projects/vr/thumbs/04.png" eleventy:formats="webp" alt= "The design infinity loop showing the endless process of observation, building and reflection."/>
             <figcaption> The design infinity loop showing the endless process of observation, building and making.
             </figcaption>
         </figure>
@@ -143,13 +143,13 @@ The previous user flow of the Victorian Reports website required the user to **[
 <div class="lightgallery">
     <a href="/projects/vr/05.png">
         <figure>
-            <img src="/projects/vr/thumbs/05.png" alt= "Screenshot of the original shop screen showing how much the user has spent, without what they have already added to the cart"/>
+            <img src="/projects/vr/thumbs/05.png" eleventy:formats="webp" alt= "Screenshot of the original shop screen showing how much the user has spent, without what they have already added to the cart"/>
             <figcaption>Original shop screen showing how much the user has spent, without what they have already added to the cart </figcaption>
         </figure>
     </a>
     <a href="/projects/vr/06.png">
     <figure>
-        <img src="/projects/vr/thumbs/06.png" alt= "Screenshot of the original single volume screen, which lacks a preview of selected volumes and a way to purchase multiple"/>
+        <img src="/projects/vr/thumbs/06.png" eleventy:formats="webp" alt= "Screenshot of the original single volume screen, which lacks a preview of selected volumes and a way to purchase multiple"/>
         <figcaption>Original single volume screen, which lacks a preview of selected volumes and a way to purchase multiple</figcaption>
     </figure>
 </a>
@@ -161,13 +161,13 @@ Throughout the site, there were **areas that did not adhere to the WCAG AA acces
 <div class="lightgallery">
     <a href="/projects/vr/07.png">
         <figure>
-            <img src="/projects/vr/thumbs/07.png" alt= "Screenshot of the former homescreen design, which is difficult to read due to the background image and small text"/>
+            <img src="/projects/vr/thumbs/07.png" eleventy:formats="webp" alt= "Screenshot of the former homescreen design, which is difficult to read due to the background image and small text"/>
             <figcaption> Former homescreen design, which is difficult to read due to the background image and small text </figcaption>
         </figure>
     </a>
     <a href="/projects/vr/08.png">
         <figure>
-            <img src="/projects/vr/thumbs/08.png" alt= "Screenshot of title text (in beige) in the former design, which fails the WCAG colour contrast test"/>
+            <img src="/projects/vr/thumbs/08.png" eleventy:formats="webp" alt= "Screenshot of title text (in beige) in the former design, which fails the WCAG colour contrast test"/>
             <figcaption>Title text in the former design, which fails the WCAG colour contrast test</figcaption>
         </figure>
     </a>
@@ -179,13 +179,13 @@ Throughout the site, there were **areas that did not adhere to the WCAG AA acces
 <div class="lightgallery">
     <a href="/projects/vr/09.png">
         <figure>
-            <img src="/projects/vr/thumbs/09.png" alt= "Image of browsing selectors for browse by catchwords and browse by name. They share the same functionality, but are styled differently."/>
+            <img src="/projects/vr/thumbs/09.png" eleventy:formats="webp" alt= "Image of browsing selectors for browse by catchwords and browse by name. They share the same functionality, but are styled differently."/>
             <figcaption> Why are these two features of the same page styled differently? </figcaption>
         </figure>
     </a>
     <a href="/projects/vr/10.png">
     <figure>
-        <img src="/projects/vr/thumbs/10.png" alt= "Inconsistent button stylings"/>
+        <img src="/projects/vr/thumbs/10.png" eleventy:formats="webp" alt= "Inconsistent button stylings"/>
         <figcaption> Inconsistent button stylings </figcaption>
     </figure>
 </a>
@@ -256,13 +256,13 @@ Some user journey maps of the existing site were created to see opportunities fo
 <div class="lightgallery" style="margin-top: -1rem">
     <a href="/projects/vr/12.png">
     <figure>
-        <img src="/projects/vr/thumbs/12.png" alt= "Flowchart showing the user journey from the homescreen to finishing a purchase"/>
+        <img src="/projects/vr/thumbs/12.png" eleventy:formats="webp" alt= "Flowchart showing the user journey from the homescreen to finishing a purchase"/>
         <figcaption>User journey from the homescreen to finishing a purchase </figcaption>
     </figure>
     </a>
     <a href="/projects/vr/13.png">
     <figure>
-        <img src="/projects/vr/thumbs/13.png" alt= "Flowchart showing the user journey from the homescreen to adding an item to the shelf"/>
+        <img src="/projects/vr/thumbs/13.png" eleventy:formats="webp" alt= "Flowchart showing the user journey from the homescreen to adding an item to the shelf"/>
         <figcaption> User journey from the homescreen to adding an item to the shelf </figcaption>
     </figure>
     </a>
@@ -279,7 +279,7 @@ The below sketches shows some drafts of **UI that adapted to authentication**, a
 <div class="lightgallery">
     <a href="/projects/vr/14.png">
     <figure>
-        <img src="/projects/vr/thumbs/14.png" alt= "Rough sketches showing changes to the homescreen, shop screen and navigation bar"/>
+        <img src="/projects/vr/thumbs/14.png" eleventy:formats="webp" alt= "Rough sketches showing changes to the homescreen, shop screen and navigation bar"/>
         <figcaption> Initial ideas and sketches </figcaption>
     </figure>
 </a>
@@ -291,25 +291,25 @@ The prototyping phase involved **wireframing** and **high-fidelity prototypes**.
 <div class="lightgallery" style="margin-top: -1rem">
     <a href="/projects/vr/15.png">
         <figure>
-            <img src="/projects/vr/thumbs/15.png" alt= "Wireframe of the adding to shelf flow"/>
+            <img src="/projects/vr/thumbs/15.png" eleventy:formats="webp" alt= "Wireframe of the adding to shelf flow"/>
             <figcaption> Wireframe of the adding to shelf flow </figcaption>
         </figure>
     </a>
         <a href="/projects/vr/16.png">
         <figure>
-            <img src="/projects/vr/thumbs/16.png" alt= "Hi-fi prototype of the adding to shelf flow"/>
+            <img src="/projects/vr/thumbs/16.png" eleventy:formats="webp" alt= "Hi-fi prototype of the adding to shelf flow"/>
             <figcaption> Hi-fi prototype of the adding to shelf flow </figcaption>
         </figure>
     </a>
             <a href="/projects/vr/16-2.png">
         <figure>
-            <img src="/projects/vr/thumbs/16-2.png" alt= "Hi-fi prototype of the store flow"/>
+            <img src="/projects/vr/thumbs/16-2.png" eleventy:formats="webp" alt= "Hi-fi prototype of the store flow"/>
             <figcaption> Hi-fi prototype of the store flow </figcaption>
         </figure>
     </a>
             <a href="/projects/vr/16-3.png">
         <figure>
-            <img src="/projects/vr/thumbs/16-3.png" alt= "Hi-fi prototype of the add to cart flow"/>
+            <img src="/projects/vr/thumbs/16-3.png" eleventy:formats="webp" alt= "Hi-fi prototype of the add to cart flow"/>
             <figcaption> Hi-fi prototype of the add to cart flow </figcaption>
         </figure>
     </a>
@@ -323,31 +323,31 @@ By the end of the project, virtually every screen of the existing website was re
 <div class="lightgallery" style="margin-top: -1rem">
     <a href="/projects/vr/17.png">
         <figure>
-            <img src="/projects/vr/thumbs/17.png" alt= "Components and branding for Victorian Reports"/>
+            <img src="/projects/vr/thumbs/17.png" eleventy:formats="webp" alt= "Components and branding for Victorian Reports"/>
             <figcaption> Components and branding for Victorian Reports </figcaption>
         </figure>
     </a>
         <a href="/projects/vr/18.png">
         <figure>
-            <img src="/projects/vr/thumbs/18.png" alt= "Screenshot of assorted redesigned screens (home, about, settings)"/>
+            <img src="/projects/vr/thumbs/18.png" eleventy:formats="webp" alt= "Screenshot of assorted redesigned screens (home, about, settings)"/>
             <figcaption> Assorted redesigned screens (home, about, settings) </figcaption>
         </figure>
     </a>
             <a href="/projects/vr/19.png">
         <figure>
-            <img src="/projects/vr/thumbs/19.png" alt= "Screenshot of redesigned store pages"/>
+            <img src="/projects/vr/thumbs/19.png" eleventy:formats="webp" alt= "Screenshot of redesigned store pages"/>
             <figcaption> Redesigned store pages </figcaption>
         </figure>
     </a>
     <a href="/projects/vr/20.png">
         <figure>
-            <img src="/projects/vr/thumbs/20.png" alt= "Screenshot of redesigned browse pages"/>
+            <img src="/projects/vr/thumbs/20.png" eleventy:formats="webp" alt= "Screenshot of redesigned browse pages"/>
             <figcaption> Redesigned browse pages </figcaption>
         </figure>
     </a>
     <a href="/projects/vr/21.png">
         <figure>
-            <img src="/projects/vr/thumbs/21.png" alt= "Screenshot of redesigned error pages, with a Typeform styled to be like a chatbot"/>
+            <img src="/projects/vr/thumbs/21.png" eleventy:formats="webp" alt= "Screenshot of redesigned error pages, with a Typeform styled to be like a chatbot"/>
             <figcaption> Redesigned error pages, with a Typeform styled to be like a chatbot </figcaption>
         </figure>
     </a>

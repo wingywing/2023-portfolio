@@ -1,7 +1,7 @@
-const { getWebmentions } = require("@chrisburnell/eleventy-cache-webmentions");
-const configWebmentions = require("../../_data/webmention");
+import { getWebmentions } from "@chrisburnell/eleventy-cache-webmentions";
+import configWebmentions from "../../_data/webmention.js";
 
-module.exports = {
+export default {
     eleventyComputed: {
         webmentions: (data) => {
             return getWebmentions(configWebmentions, configWebmentions.domain + data.page.url)

@@ -1,18 +1,19 @@
-const eleventySass = require("eleventy-sass");
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
-const { eleventyImagePlugin } = require("@11ty/eleventy-img");
-const implicitFigures = require('markdown-it-image-figures');
-const mdAnchor = require('markdown-it-anchor');
-const blogTools = require("eleventy-plugin-blog-tools");
-const embedYoutube = require("eleventy-plugin-youtube-embed");
-const pluginWebmentions = require("@chrisburnell/eleventy-cache-webmentions");
-const configWebmentions = require("./_data/webmention.js")
-const pluginRss = require("@11ty/eleventy-plugin-rss")
-const markdownIt = require("markdown-it")
-const md = new markdownIt();
-const { DateTime } = require("luxon")
+import { EleventyRenderPlugin } from "@11ty/eleventy"
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
+import implicitFigures from 'markdown-it-image-figures'
+import mdAnchor from 'markdown-it-anchor'
+import blogTools from "eleventy-plugin-blog-tools"
+import embedYoutube from "eleventy-plugin-youtube-embed"
+import pluginWebmentions from "@chrisburnell/eleventy-cache-webmentions"
+import configWebmentions from "./_data/webmention.js"
+import pluginRss from "@11ty/eleventy-plugin-rss"
+import markdownIt from "markdown-it"
+import { DateTime } from "luxon"
+import eleventySass from "@jgarber/eleventy-plugin-sass"
 
-module.exports = function(eleventyConfig) {
+const md = new markdownIt
+
+export default function(eleventyConfig) {
 
     eleventyConfig.addFilter("markdown", function(content) {
       return md.renderInline(content || '');
@@ -25,12 +26,12 @@ module.exports = function(eleventyConfig) {
       return originalString.replace('/src', '');
     })
 
-    eleventyConfig.addPlugin(eleventySass); //to add SASS support from src
     eleventyConfig.addPlugin(EleventyRenderPlugin);
     eleventyConfig.addPlugin(blogTools);
     eleventyConfig.addPlugin(embedYoutube);
     eleventyConfig.addPlugin(pluginWebmentions, configWebmentions);
     eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPlugin(eleventySass);
     
     eleventyConfig.addWatchTarget('src/**/**.md');
     eleventyConfig.addWatchTarget('src/**/**.njk');
@@ -66,19 +67,23 @@ module.exports = function(eleventyConfig) {
           return b.date - a.date;
       });
   });
-    eleventyConfig.addPlugin(eleventyImagePlugin, {
-      // Set global default options
-      formats: ["webp", "jpeg"],
-      urlPath: "/img/",
-  
-      // Notably `outputDir` is resolved automatically
-      // to the project output directory
-  
-      defaultAttributes: {
-        loading: "lazy",
-        decoding: "async"
-      }
-    });
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		// which file extensions to process
+		extensions: "html",
+
+		// Add any other Image utility options here:
+
+		// optional, output image formats
+		formats: ["webp", "jpeg", "png"],
+
+    // optional, output image widths
+
+		// optional, attributes assigned on <img> override these values.
+		defaultAttributes: {
+			loading: "lazy",
+			decoding: "async",
+		},
+	});
     return { 
         templateFormats: [
             "md",

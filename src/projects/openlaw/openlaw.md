@@ -15,7 +15,7 @@ categories:
 
 <div class="project-header">
     <div class="project-banner">
-        <img src="/projects/openlaw/open-law-banner.png"/>
+        <img src="/projects/openlaw/open-law-banner.png" alt=""/>
         <!-- <video autoplay loop muted>
             <source src="" type="video/mp4">
         </video> -->
@@ -217,7 +217,7 @@ After Figma released its colour variables feature, I set out to refactor our exi
             <source src="/projects/openlaw/13.mp4" type="video/mp4">
             <p>Video showing the switching of colour palettes in Figma with semantic colour variables</p>
         </video>
-        <img src="/projects/openlaw/13.png" style="display: none; visibility: hidden"></img>
+        <img src="/projects/openlaw/13.png" alt="" style="display: none; visibility: hidden"></img>
     </a>
     <a href="/projects/openlaw/12.png">
         <figure>
