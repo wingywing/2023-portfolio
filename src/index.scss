@@ -14,8 +14,14 @@
     @include desktop.home-page-desktop;
 }
 picture {
-    width: 100%;
     display: block;
+    align-items: center;
+    height: auto;
+    
+    img {
+        object-fit: contain;
+        height: auto;
+    }
 }
 .snap-scroll{
     scroll-behavior: smooth!important;
