@@ -65,10 +65,10 @@ type: note
     <div class="blogpost-content e-content">
         {% if imageSrc or photo %}
         {% if imageSrc %}
-            <img class="u-photo" src="{{ imageSrc }}" alt="{{ alt }}">
+            <img class="u-photo" src="{{ imageSrc }}" alt="{{ alt }}" eleventy:widths="648">
         {% elif photo %}
             {% for p in photo %}
-                <img class="u-photo" src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">
+                <img class="u-photo" src="{{ p.url | removeSrc }}" alt="{{ p.alt }}" eleventy:widths="648">
             {% endfor %}
         {% endif %}
         {% endif %}

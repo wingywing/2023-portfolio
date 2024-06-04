@@ -13,9 +13,16 @@
     @include tablet.home-page-tablet;
     @include desktop.home-page-desktop;
 }
+
+img {
+    object-fit: contain;
+    height: auto;
+}
+
 picture {
-    display: block;
+    display: contents;
     align-items: center;
+    justify-content: center;
     height: auto;
     
     img {
