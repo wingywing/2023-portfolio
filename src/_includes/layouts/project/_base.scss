@@ -255,6 +255,7 @@
     }
     .blogpost.note .mention-link {
         font-size: 1rem;
+        overflow-wrap: anywhere;
     }
     .blogpost.note .blogpost-content {
         row-gap: 0;
