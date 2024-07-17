@@ -268,6 +268,10 @@
         picture img {
             width: 100%;
         }
+        p {
+            margin-inline: unset;
+            margin-block: 1rem;
+        }
     }
     .blogpost.note .blogpost-header {
         gap: 0;
