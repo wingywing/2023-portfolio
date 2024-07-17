@@ -52,8 +52,8 @@
     }
     aside {
         text-wrap: balance;
-        a {
-            font-size: inherit;
+        .aside-small {
+            font-size: 1.125rem;
         }
     }
 }

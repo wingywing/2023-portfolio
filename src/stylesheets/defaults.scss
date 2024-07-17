@@ -40,7 +40,7 @@ a { //links colour
     }
     background: linear-gradient(0deg, colours.$seasalt, colours.$seasalt) no-repeat right bottom / 0 100%;
     color: colours.$links;
-    font-size: 1.125rem;
+    font-size: inherit;
     transition: background-size .75s, background-color 1s;
     @media (prefers-reduced-motion) {
         &:where(:hover, :focus-visible) {

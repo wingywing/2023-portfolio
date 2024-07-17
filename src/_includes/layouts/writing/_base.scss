@@ -38,6 +38,9 @@
         text-wrap: pretty;
         height: fit-content;
         rotate: 1deg;
+        .aside-small {
+            font-size: 1.125rem;
+        }
     }
     .writing-posts {
         display: flex;
