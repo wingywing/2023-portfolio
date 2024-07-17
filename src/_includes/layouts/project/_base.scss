@@ -253,6 +253,12 @@
             font-size: 1.25rem;
         }
     }
+    .update-note.update-note {
+        p {
+            background-color: colours.$bg-primary;
+            padding: 2rem;
+        }
+    }
     .blogpost.note .mention-link {
         font-size: 1rem;
         overflow-wrap: anywhere;

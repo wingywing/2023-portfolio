@@ -89,5 +89,11 @@
             display: block;
             grid-column: 3/11;
         }
+        .update-note.update-note {
+            padding: 0 2rem;
+            p {
+                margin: 0;
+            }
+        }
     }
 }
