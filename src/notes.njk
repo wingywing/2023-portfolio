@@ -77,11 +77,15 @@ feedtype: notes
                     <div class="note-content">
                         {% if note.data.imageSrc or note.data.photo %}
                             {% if note.data.imageSrc %}
+                            <div class="owl-carousel owl-theme">
                                 <img class="u-photo" src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}" eleventy:widths="648">
+                            </div>
                             {% elif note.data.photo %}
+                            <div class="owl-carousel owl-theme">
                                 {% for p in note.data.photo %}
                                     <img class="u-photo" src="{{ p.url | removeSrc }}" alt="{{ p.alt }}" eleventy:widths="648">
                                 {% endfor %}
+                            </div>
                             {% endif %}
                         {% endif %}
                         {{ note.content | safe }}

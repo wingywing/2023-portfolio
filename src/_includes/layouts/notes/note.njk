@@ -65,11 +65,15 @@ type: note
     <div class="blogpost-content e-content">
         {% if imageSrc or photo %}
         {% if imageSrc %}
+        <div class="owl-carousel owl-theme">
             <img class="u-photo" src="{{ imageSrc }}" alt="{{ alt }}" eleventy:widths="648">
+        </div>
         {% elif photo %}
+        <div class="owl-carousel owl-theme">
             {% for p in photo %}
                 <img class="u-photo" src="{{ p.url | removeSrc }}" alt="{{ p.alt }}" eleventy:widths="648">
             {% endfor %}
+        </div>
         {% endif %}
         {% endif %}
         {{ content | safe }}

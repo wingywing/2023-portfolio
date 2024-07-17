@@ -11,6 +11,8 @@
     {% endfor %}
     <link rel="stylesheet" href="/stylesheets/global.css"/>
     <link rel="stylesheet" href="/js/lightgallery/css/lightgallery-bundle.css"/>
+    <link rel="stylesheet" href="/js/owl.carousel/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="/js/owl.carousel/assets/owl.theme.default.min.css"/>
 
     <link rel="icon" href="/assets/favicon.svg">
     <link rel=”mask-icon” href=”/assets/favicon.svg” color=”#4e4843">
@@ -33,7 +35,6 @@
     <link rel="token_endpoint" href="https://indiekit.wingpang.com/auth/token">
     <link rel="indieauth-metadata" href="https://indiekit.wingpang.com/.well-known/oauth-authorization-server">
     <link rel="microsub" href="https://aperture.p3k.io/microsub/956">
-      
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,7 +76,18 @@
     <script src="/js/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="/js/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
     <script src="/js/lightgallery/plugins/video/lg-video.min.js"></script>
+    <script src="/js/owl.carousel/owl.carousel.min.js"></script>
 
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                autoHeight: true,
+                lazyLoad: true,
+                loop:false,
+                items: 1,
+            });
+        });
+    </script>
 
     <script type="text/javascript">
         var galleries = document.getElementsByClassName('lightgallery');

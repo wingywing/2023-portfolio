@@ -45,6 +45,7 @@
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.0.0",
     "markdown-it-image-figures": "^2.1.1",
+    "owl.carousel": "^2.3.4",
     "panelsnap": "^1.3.0",
     "sharp": "^0.33.4"
   }

@@ -36,6 +36,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addWatchTarget('src/**/**.md');
     eleventyConfig.addWatchTarget('src/**/**.njk');
 
+    eleventyConfig.addPassthroughCopy({"node_modules/owl.carousel/dist" : "js/owl.carousel/"}); //to add GSAP
     eleventyConfig.addPassthroughCopy({"node_modules/gsap/dist/all.js" : "js/gsap.js"}); //to add GSAP
     eleventyConfig.addPassthroughCopy({"node_modules/jquery/dist/jquery.min.js" : "js/jquery.js"}); //to add jquery
     eleventyConfig.addPassthroughCopy({"node_modules/lightgallery/" : "js/lightgallery/"}); //to add lightGallery
