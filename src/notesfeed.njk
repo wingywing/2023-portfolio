@@ -47,13 +47,12 @@
         {{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
 
         {% if note.data.imageSrc %}
-        <![CDATA[<img src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}">]]>
-      {% elif note.data.photo %}
-        {% for p in note.data.photo %}
-          <![CDATA[<img src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">]]>
-        {% endfor %}
-      {% endif %}
-        
+          <![CDATA[<img src="https://wingpang.com{{ note.data.imageSrc }}" alt="{{ note.data.alt }}">]]>
+        {% elif note.data.photo %}
+          {% for p in note.data.photo %}
+            <![CDATA[<img src="https://wingpang.com{{ p.url | removeSrc }}" alt="{{ p.alt }}">]]>
+          {% endfor %}
+        {% endif %}
       </description>
       <pubDate>{{ note.date | dateToRfc822 }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
