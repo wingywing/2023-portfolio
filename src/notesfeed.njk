@@ -44,15 +44,15 @@
             This note is a reply to <![CDATA[<a href="{{ note.data.inReplyTo }}">{{ note.data.inReplyTo }}</a>]]>
         {% endif %}
 
-        {% if note.data.imageSrc %}
-          <![CDATA[<img src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}">]]>
-        {% elif note.data.photo %}
-          {% for p in note.data.photo %}
-            <![CDATA[<img src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">]]>
-          {% endfor %}
-        {% endif %}
-
         {{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+
+        {% if note.data.imageSrc %}
+        <![CDATA[<img src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}">]]>
+      {% elif note.data.photo %}
+        {% for p in note.data.photo %}
+          <![CDATA[<img src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">]]>
+        {% endfor %}
+      {% endif %}
         
       </description>
       <pubDate>{{ note.date | dateToRfc822 }}</pubDate>
