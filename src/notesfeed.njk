@@ -31,29 +31,24 @@
       
       <link>{{ absolutePostUrl }}</link>
 
-      {% if note.data.likeOf %}
-       <a class="u-like-of" href="{{ note.data.likeOf }}">This note is a like of {{ note.data.likeOf }}</a>
-      {% endif %}
-      {% if note.data.targetLink %}
-        <a class="
-        {% if note.notetype == reply %}
-          u-in-reply-to
-        {% elif note.notetype == like %}
-          u-like-of
-        {% elif note.notetype == bookmark %}
-          u-bookmark-of h-cite
-        {% endif %}
-        " href="{{ note.data.targetLink }}">This note mentions {{ note.data.targetLink }}</a>
-      {% endif %}
-      {% if note.data.bookmarkOf %}
-        <a class="u-bookmark-of h-cite" href="{{ note.data.bookmarkOf }}">This note is a bookmark of {{ note.data.bookmarkOf }}</a>
-      {% endif %}
-      {% if note.data.inReplyTo %}
-        <a class="u-in-reply-to" href="{{ note.data.inReplyTo }}">This note is a reply to {{ note.data.inReplyTo }}</a>
-      {% endif %}
+      <description>
 
-      <description>{{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
-      <pubDate>{{ note.date | date }}</pubDate>
+        {% if note.data.likeOf %}
+        This note is a like of <link> {{ note.data.likeOf }}</link>
+       {% endif %}
+       {% if note.data.targetLink %}
+        This note mentions <link> {{ note.data.targetLink }}" </link>
+       {% endif %}
+       {% if note.data.bookmarkOf %}
+         This note is a bookmark of <link>{{ note.data.bookmarkOf }}</link>
+       {% endif %}
+       {% if note.data.inReplyTo %}
+          This note is a reply to <link>{{ note.data.inReplyTo }}</link>
+       {% endif %}
+
+        {{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+      </description>
+      <pubDate>{{ note.date }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
