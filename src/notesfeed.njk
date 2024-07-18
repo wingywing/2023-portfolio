@@ -47,10 +47,10 @@
         {{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
 
         {% if note.data.imageSrc %}
-          <![CDATA[<img src="https://wingpang.com{{ note.data.imageSrc }}" alt="{{ note.data.alt }}">]]>
+          <![CDATA[<img src="https://wingpang.com{{ note.data.imageSrc }}" alt="{{ note.data.alt }}" style="max-width:100%">]]>
         {% elif note.data.photo %}
           {% for p in note.data.photo %}
-            <![CDATA[<img src="https://wingpang.com{{ p.url | removeSrc }}" alt="{{ p.alt }}">]]>
+            <![CDATA[<img src="https://wingpang.com{{ p.url | removeSrc }}" alt="{{ p.alt }}" style="max-width:100%">]]>
           {% endfor %}
         {% endif %}
       </description>
