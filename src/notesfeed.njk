@@ -30,9 +30,7 @@
       {% endif %}
       
       <link>{{ absolutePostUrl }}</link>
-
       <description>
-
         {% if note.data.likeOf %}
         This note is a like of <link> {{ note.data.likeOf }}</link>
        {% endif %}
@@ -45,10 +43,18 @@
        {% if note.data.inReplyTo %}
           This note is a reply to <link>{{ note.data.inReplyTo }}</link>
        {% endif %}
-
+        {% if note.data.imageSrc or note.data.photo %}
+          {% if note.data.imageSrc %}
+            <![CDATA[<img src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}">]]>
+          {% elif note.data.photo %}
+            {% for p in photo %}
+              <![CDATA[<img src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">]]>
+            {% endfor %}
+          {% endif %}
+        {% endif %}
         {{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
       </description>
-      <pubDate>{{ note.date }}</pubDate>
+      <pubDate>{{ note.date | dateToRfc822 }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
