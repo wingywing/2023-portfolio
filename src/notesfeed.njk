@@ -32,27 +32,28 @@
       <link>{{ absolutePostUrl }}</link>
       <description>
         {% if note.data.likeOf %}
-        This note is a like of <link> {{ note.data.likeOf }}</link>
-       {% endif %}
-       {% if note.data.targetLink %}
-        This note mentions <link> {{ note.data.targetLink }}" </link>
-       {% endif %}
-       {% if note.data.bookmarkOf %}
-         This note is a bookmark of <link>{{ note.data.bookmarkOf }}</link>
-       {% endif %}
-       {% if note.data.inReplyTo %}
-          This note is a reply to <link>{{ note.data.inReplyTo }}</link>
-       {% endif %}
-        {% if note.data.imageSrc or note.data.photo %}
-          {% if note.data.imageSrc %}
-            <![CDATA[<img src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}">]]>
-          {% elif note.data.photo %}
-            {% for p in photo %}
-              <![CDATA[<img src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">]]>
-            {% endfor %}
-          {% endif %}
+          This note is a like of <![CDATA[<a href="{{ note.data.likeOf }}"> {{ note.data.likeOf }}</a>]]>
         {% endif %}
+        {% if note.data.targetLink %}
+          This note mentions <![CDATA[<a href="{{ note.data.targetLink }}"> {{ note.data.targetLink }}" </a>]]>
+        {% endif %}
+        {% if note.data.bookmarkOf %}
+          This note is a bookmark of <![CDATA[<a href="{{ note.data.bookmarkOf }}">{{ note.data.bookmarkOf }}</a>]]>
+        {% endif %}
+        {% if note.data.inReplyTo %}
+            This note is a reply to <![CDATA[<a href="{{ note.data.inReplyTo }}">{{ note.data.inReplyTo }}</a>]]>
+        {% endif %}
+
+        {% if note.data.imageSrc %}
+          <![CDATA[<img src="{{ note.data.imageSrc }}" alt="{{ note.data.alt }}">]]>
+        {% elif note.data.photo %}
+          {% for p in note.data.photo %}
+            <![CDATA[<img src="{{ p.url | removeSrc }}" alt="{{ p.alt }}">]]>
+          {% endfor %}
+        {% endif %}
+
         {{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+        
       </description>
       <pubDate>{{ note.date | dateToRfc822 }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
