@@ -217,6 +217,10 @@
         overflow-wrap: anywhere;
     }
     .note-content {
+        blockquote {
+            margin-inline: 0;
+        }
+
         row-gap: 0;
     }
     .post-header.note {
