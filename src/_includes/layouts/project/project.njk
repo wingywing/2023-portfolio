@@ -36,14 +36,14 @@ layout: base.njk
                 {% if replies.length == 0 %}
                     <div class="webmentions-nowebmentions">No replies so far!</div>
                 {% endif %}
-                {% for reply in inreplies | log %} 
+                {% for reply in inreplies %} 
                 <div class="webmention inreply">
                     <div class="header">
                         <img  src="{{ reply.author.photo }}" alt=""/>
                         <div>
                             <div class="author">
                                 <span>{{ reply.author.name }}</span>
-                                <a" href="{{ reply.author.url }}">{{ reply.author.url }}</a>
+                                <a href="{{ reply.author.url }}">{{ reply.author.url }}</a>
                             </div>
                             <time>
                                 {{ reply.published }}

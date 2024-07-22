@@ -63,6 +63,26 @@ type: note
         </div>
     </div>
     <div class="blogpost-content e-content">
+        {% if references %}
+                <blockquote class="reply-quote">
+                {% for name, item in references %}
+                {% set variable = name %}
+                <p class="reply-quote-attribution">
+                    <span class="reply-quote-name">
+                        {{ references[name].name }}
+                    </span>
+                    {% if references[name].publication %}
+                    <span class="reply-quote-publication">
+                        via {{ references[name].publication }}
+                    </span>
+                    {% endif %}
+                </p>
+                <p class="reply-quote-summary">
+                    {{ references[name].summary }}
+                </p>
+             {% endfor %}
+            </blockquote>
+        {% endif %}
         {% if imageSrc or photo %}
         {% if imageSrc %}
         <div class="owl-carousel owl-theme">

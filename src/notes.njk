@@ -88,6 +88,26 @@ feedtype: notes
                             </div>
                             {% endif %}
                         {% endif %}
+                        {% if note.data.references %}
+                        <blockquote class="reply-quote">
+                        {% for name, item in note.data.references %}
+                        {% set variable = name %}
+                        <p class="reply-quote-attribution">
+                            <span class="reply-quote-name">
+                                {{ note.data.references[name].name }}
+                            </span>
+                            {% if note.data.references[name].publication %}
+                            <span class="reply-quote-publication">
+                                via {{ note.data.references[name].publication }}
+                            </span>
+                            {% endif %}
+                        </p>
+                        <p class="reply-quote-summary">
+                            {{ note.data.references[name].summary }}
+                        </p>
+                     {% endfor %}
+                    </blockquote>
+                    {% endif %}
                         {{ note.content | safe }}
                     </div>
                     <div class="blogpost-footer">

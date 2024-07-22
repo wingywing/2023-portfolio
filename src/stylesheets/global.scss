@@ -15,6 +15,25 @@ body {
     overflow-x: hidden;
 }
 
+blockquote {
+    .reply-quote-attribution {
+        font-size: 1rem;
+    }
+    .reply-quote-publication {
+        font-style: italic;
+    }
+    border-left: 4px solid colours.$lemonade;
+    padding: 1rem;
+    margin-block: 1rem;
+    margin-inline: 0rem;
+    background-color: colours.$bg-primary;
+    @include bp.desktop {
+        blockquote {
+            margin-inline: 2rem;
+        }
+    }
+}
+
 #notfound-page {
     display: flex;
     height: calc(100dvh - variables.$header-desktop-height - 5rem);
