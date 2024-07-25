@@ -4,7 +4,7 @@
 @use '../../../stylesheets/variables.scss' as variables;
 
 @mixin project-page-mobile(){
-    * :not(.project-header):not(.project-banner):not(.owl-carousel *) {
+    * :not(.project-header *):not(.project-banner):not(.owl-carousel *) {
         grid-column: 2/12;
         gap: inherit;
         max-width: 100%;
