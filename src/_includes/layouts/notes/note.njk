@@ -64,11 +64,11 @@ type: note
     </div>
     <div class="blogpost-content e-content">
         {% if references %}
-                <blockquote class="reply-quote">
+                <blockquote class="reply-quote h-entry">
                 {% for name, item in references %}
                 {% set variable = name %}
                 <p class="reply-quote-attribution">
-                    <span class="reply-quote-name">
+                    <span class="reply-quote-name h-card">
                         {{ references[name].name }}
                     </span>
                     {% if references[name].publication %}
@@ -77,7 +77,7 @@ type: note
                     </span>
                     {% endif %}
                 </p>
-                <p class="reply-quote-summary">
+                <p class="reply-quote-summary p-content">
                     {{ references[name].summary }}
                 </p>
              {% endfor %}

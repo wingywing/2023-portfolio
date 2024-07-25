@@ -89,11 +89,11 @@ feedtype: notes
                             {% endif %}
                         {% endif %}
                         {% if note.data.references %}
-                        <blockquote class="reply-quote">
+                        <blockquote class="reply-quote h-entry">
                         {% for name, item in note.data.references %}
                         {% set variable = name %}
                         <p class="reply-quote-attribution">
-                            <span class="reply-quote-name">
+                            <span class="reply-quote-name p-author h-card">
                                 {{ note.data.references[name].name }}
                             </span>
                             {% if note.data.references[name].publication %}
@@ -102,7 +102,7 @@ feedtype: notes
                             </span>
                             {% endif %}
                         </p>
-                        <p class="reply-quote-summary">
+                        <p class="reply-quote-summary p-content">
                             {{ note.data.references[name].summary }}
                         </p>
                      {% endfor %}

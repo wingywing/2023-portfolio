@@ -7,7 +7,7 @@
     @include grids.main-grid;
     transition: all, .5s;
     position: relative;
-    * :not(.project-header):not(.owl-carousel *) {
+    * :not(.project-header):not(.project-banner):not(.owl-carousel *) {
         gap: inherit;
         max-width: 44.5rem;        
     }
