@@ -32,10 +32,11 @@
                 gap: .25rem;
             }
         }
-        #blogpost-footer-tags {
+        #blogpost-footer-tags#blogpost-footer-tags {
             display: flex;
             flex-wrap: wrap;
             flex: 1;
+            row-gap: .5rem;
             gap: .5rem;
         }
         .tag {
