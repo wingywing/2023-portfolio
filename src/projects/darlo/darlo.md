@@ -36,9 +36,9 @@ categories:
         </div>
         <a href="{{ link }}">{{ link }}</a>
         <a href="https://historycouncilnsw.org.au/awards-and-prizes-2023/annual-history-awards-winners-2023/" style="text-decoration: none; background: none; color: #4E4843;">
-        {% for award in awards  %}
-            <div class="award-badge">{{ award }}</div>
-        {% endfor %}
+            {% for award in awards  %}
+                <div class="award-badge">{{ award }}</div>
+            {% endfor %}
         </a>
     </div>
 </div>
