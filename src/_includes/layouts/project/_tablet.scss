@@ -12,8 +12,9 @@
         }
         .project-header {
             row-gap: 0;
-            .information {
+            .information.information {
                 padding: 2rem;
+                grid-column: 1/13;
             }
         }
         .content {

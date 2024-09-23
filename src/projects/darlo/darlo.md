@@ -7,7 +7,9 @@ projecttype: Collaboration
 year: 2023
 duration: 6 months (part-time)
 link: https://darlostories.au
-award: Macquarie-PHA Applied History Award
+awards: 
+    - Macquarie-PHA Applied History Award (2023)
+    - Highly Commended for the NSW Premier's Digital History Prize (2024)
 description: Web design for a historical project about Darlinghurst
 date: 2024-02-29T04:48:49.212Z
 preview: /projects/darlo/LiverpoolStMapVideo.mp4
@@ -34,7 +36,9 @@ categories:
         </div>
         <a href="{{ link }}">{{ link }}</a>
         <a href="https://historycouncilnsw.org.au/awards-and-prizes-2023/annual-history-awards-winners-2023/" style="text-decoration: none; background: none; color: #4E4843;">
-        <div class="award-badge">{{ award }}</div>
+        {% for award in awards  %}
+            <div class="award-badge">{{ award }}</div>
+        {% endfor %}
         </a>
     </div>
 </div>
