@@ -68,16 +68,20 @@ $tablet-heading-height: 6rem;
                 flex-direction: row;
                 scroll-snap-align: center;
                 gap: 2rem;
-                .card.vr {
+                .card.climasaur {
                     rotate: -1deg;
                 }
-                .card.ol {
+                .card.vr {
                     rotate: 1deg;
                     margin-top: 3rem;
                 }
-                .card.darlo {
+                .card.ol {
                     rotate: -1deg;
                     margin-top: 6rem;
+                }
+                .card.darlo {
+                    rotate: 1deg;
+                    margin-top: 9rem;
                 }
             }
     
