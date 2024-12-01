@@ -62,7 +62,7 @@
                 align-self: center;
                 margin: 2rem;
             }
-            picture {
+            picture:not(:has(.button-icon)) {
                 padding: 0 2rem;
             }
         }
