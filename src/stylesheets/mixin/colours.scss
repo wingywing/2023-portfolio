@@ -30,18 +30,61 @@ $success: light-dark(#436808, #C6E790);
 $links: light-dark(#116969, #2FE4EF);
 
 //Dark mode globals
-@media (prefers-color-scheme: dark) {
+@mixin dark-mode{
     img:not(.button-icon) {
         filter: brightness(.8) contrast(1.2);
     }
     .squiggle {
         filter: brightness(.3) saturate(9);
     }
-    h1, h2 {
-        span svg path {
-            fill: $text-primary;
+    header {
+        .header-logo {
+            svg {
+                filter: brightness(1.7) saturate(0);
+            }
         }
     }
+    .button-icon {
+        filter: invert(1) brightness(2);
+    }
+    .home-intro__hello-group {
+        svg path {
+            stroke: $bg-tertiary;
+        }
+    }
+    #theme-switcher {
+        .moon {
+            display: none;
+            visibility: hidden;
+        }
+        .sun {
+            display: block;
+            visibility: visible;
+        }
+    }
+    #et, #re{
+        picture {
+            filter: invert(1) brightness(.8);
+        }
+    }
+    #about-page {
+        .image-container {
+            background-color: transparent;
+
+        }
+        .icon{
+            img {
+                filter: brightness(.5);
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    @include dark-mode();
+}
+.dark {
+    @include dark-mode();
 }
 
 //Classes for component styling

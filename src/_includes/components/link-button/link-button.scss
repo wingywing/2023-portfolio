@@ -2,14 +2,15 @@
 @use '../../../stylesheets/mixin/colours.scss' as colours;
 
 .link-button {
-    @media (prefers-color-scheme: dark) {
-        .button-icon {
-            filter: invert(1);
+    picture {
+        display: flex;
+        .button-icon{
+            place-self: center;
+            width: 1.25rem;
+            pointer-events: none;
         }
     }
-    .button-icon, img{
-        place-self: center;
-    }
+
     &:hover {
         cursor: pointer;
     }
@@ -24,6 +25,7 @@
     gap: .625rem;
     padding: 1rem 1.5rem;
     text-decoration: none;
+
     img {
         width: 1.5rem;
     }

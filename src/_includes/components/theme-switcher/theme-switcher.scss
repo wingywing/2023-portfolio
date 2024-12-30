@@ -1,0 +1,56 @@
+@use '../../../stylesheets/variables.scss' as variables;
+
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/fonts.scss' as fonts;
+
+
+#theme-switcher {
+    button {
+        &:hover {
+            span {
+                opacity: 100%;
+                width: fit-content;
+                margin-left: .5rem;
+            }
+            filter: opacity(1);
+        }
+        span {
+            opacity: 0;
+            width: 0;
+            margin-left: 0;
+            text-wrap: nowrap;
+            transition: all .3s;
+        }
+        .sun {
+            display: none;
+            visibility: hidden;
+        }
+        picture {
+            display: flex;
+            img {
+                height: 1.5rem;
+            }
+        }
+
+        border-radius: .5rem .5rem 0 0;
+        gap: 0;
+        padding: .5rem;
+        background-color: colours.$bg-tertiary;
+        width: fit-content;
+        filter: opacity(.5);
+        overflow: hidden;
+        transition: all .3s;
+        right: 0;
+    }
+    position: fixed;
+    z-index: 1;
+    width: fit-content;
+    margin: auto;
+    width: 100%;
+    max-width: 1440px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
