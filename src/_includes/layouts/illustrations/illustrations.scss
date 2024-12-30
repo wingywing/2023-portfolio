@@ -47,6 +47,7 @@
         .lightgallery {
             grid-column: 1/13;
             figure {
+                background-color: transparent;
                 padding: 0;
                 margin: 0;
                 width: 100%;
@@ -55,6 +56,11 @@
                     object-fit: cover;
                 }
             }
+        }
+    }
+    #illustration-gallery {
+        a, figure {
+            aspect-ratio: 1 / 1;
         }
     }
     @media only screen and (min-width: 550px ) {
