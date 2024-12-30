@@ -1,0 +1,60 @@
+{# 
+    You can pass through:
+    - class for classname
+    - onclick for onclick event
+    - text for text
+    - icon for icon --> located in the assets/img/icons folder
+#}
+
+<div id="theme-switcher">
+    <button 
+        data-theme-toggle
+        id="theme-switcher-button"
+        >
+        <img src="{{ "/assets/img/icons/sun.svg"}}" alt="Sun" class="button-icon sun">
+        <img src="{{ "/assets/img/icons/moon.svg"}}" alt="Moon" class="button-icon moon">
+        <span id="theme-switcher-button__span">Toggle dark mode</span>
+    </button>
+</div>
+
+<script>
+    const themeButton = document.getElementById("theme-switcher-button");
+    const themeText = document.getElementById("theme-switcher-button__span");
+    const root = document.documentElement;
+
+    // Get the current theme from localStorage or system preference
+    function getCurrentTheme() {
+        const localStorageTheme = localStorage.getItem("theme");
+        if (localStorageTheme) {
+            return localStorageTheme;
+        }
+        const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        return systemPrefersDark ? "dark" : "light";
+    }
+
+    // Apply the theme and update UI
+    function applyTheme(theme) {
+        root.setAttribute("data-theme", theme); // Apply theme to HTML using data-theme
+        root.style.colorScheme = theme;        // Set color-scheme dynamically
+        root.classList.contains("dark") ? root.classList.remove("dark") : root.classList.remove("light");
+        root.classList.add(theme);
+        localStorage.setItem("theme", theme);  // Save theme in localStorage
+
+        themeText.textContent = theme === "dark" ? "Change to light mode" : "Change to dark mode";
+    }
+
+    // Toggle between light and dark themes, overriding system preference
+    function toggleTheme() {
+        const currentTheme = localStorage.getItem("theme") || getCurrentTheme();
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        applyTheme(newTheme);
+    }
+
+    // Initialize theme on page load
+    const initialTheme = localStorage.getItem("theme") || getCurrentTheme();
+    applyTheme(initialTheme);
+
+    // Add event listener for button click
+    themeButton.addEventListener("click", toggleTheme);
+</script>
+

@@ -13,11 +13,6 @@
     }
 
     .header-logo {
-        @media (prefers-color-scheme: dark){
-            svg {
-                filter: brightness(1.7) saturate(0);
-            }
-        }
         transition: color .3s, fill .3s;
         &:hover, &:focus {
             background: unset;
