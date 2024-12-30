@@ -93,8 +93,10 @@
         }
         #blogpost-footer-actions {
             display: flex;
-            gap: 1rem;
             justify-content: flex-end;
+            .like {
+                margin-right: 1rem;
+            }
             span {
                 display: flex;
                 align-items: center;

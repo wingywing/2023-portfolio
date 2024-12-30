@@ -26,6 +26,9 @@
             gap: 1rem;
             margin-top: .25rem;
             align-self: flex-start;
+            .like, .reply {
+                gap: .25rem;
+            }
             span {
                 display: flex;
                 align-items: center;
