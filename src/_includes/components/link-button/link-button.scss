@@ -1,11 +1,30 @@
-@use 'base';
-@use 'mobile';
-@use 'tablet';
-@use 'desktop';
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
 
 .link-button {
-    @include base.link-button-base;
-    @include mobile.link-button-mobile;
-    @include tablet.link-button-tablet;
-    @include desktop.link-button-desktop;
+    @media (prefers-color-scheme: dark) {
+        .button-icon {
+            filter: invert(1);
+        }
+    }
+    .button-icon, img{
+        place-self: center;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    width: fit-content;
+    align-items: center;
+    border-radius: .5rem;
+    border: none;
+    color: colours.$text-primary;
+    display: flex;
+    font-size: 1.125rem;
+    font-weight: bold;
+    gap: .625rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    img {
+        width: 1.5rem;
+    }
 }

@@ -48,6 +48,11 @@
         gap: 1rem;
     }
     .home-intro__hello-group {
+        @media (prefers-color-scheme: dark) {
+            svg path {
+                stroke: colours.$bg-tertiary;
+            }
+        }
         max-width: 38rem;
         position: relative;
         z-index: -1;

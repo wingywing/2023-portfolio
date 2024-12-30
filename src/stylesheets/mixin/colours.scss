@@ -1,32 +1,48 @@
 //Global colours
-$text-primary: #4E4843; //Main text items
-$text-subdued: #7C6E65; //Text that are asides //CANNOT be used with non bg-tertiary for contrast reasons
+$text-primary: light-dark(#4E4843, #f6f5f3); //Main text items
+$text-subdued: light-dark(#7C6E65, #c4c4c4); //Text that are asides //CANNOT be used with non bg-tertiary for contrast reasons
+$text-inverted: light-dark(white, #303030);
 
-$border-neutral: #9A9384; //Do not use for text
+$border-neutral: light-dark(#9A9384, #9A9384); //Do not use for text
 
-$bg-primary: #F6F5F3; //Main bg colour
-$bg-secondary: #FFFFFF; //Used on top of main bg colour
-$bg-tertiary: #F1ECE4; //Misc
+$bg-primary: light-dark(#F6F5F3, #111010) ; //Main bg colour
+$bg-secondary: light-dark(#FFFFFF, #272222); //Used on top of main bg colour
+$bg-tertiary: light-dark(#F1ECE4, #303030); //Misc
 
 //Below colours work with text-primary and text-subdued for contrast
-$rose: #FFC6C6;
-$sunspray: #F8D0A1;
-$lemonade: #EEE485;
-$lucky: #C6E790;
-$seasalt: #C2DFE1;
+$rose: light-dark(#FFC6C6, #B11B1B);
+$sunspray: light-dark(#F8D0A1, #864C09);
+$lemonade: light-dark(#EEE485, #736002);
+$lucky: light-dark(#C6E790, #436808);
+$seasalt: light-dark(#C2DFE1, #116969);
 
 //Accents are tested in contrast with their counterparts below!
-$accent-negative: #FFC6C6;
-$accent-warning: #F8D0A1;
-$accent-emphasis: #EEE485;
-$accent-success: #C6E790;
-$accent-links: #C2DFE1;
+$accent-negative: light-dark(#FFC6C6, #B11B1B);
+$accent-warning: light-dark(#F8D0A1, #864C09);
+$accent-emphasis: light-dark(#EEE485, #736002);
+$accent-success: light-dark(#C6E790, #436808);
+$accent-links: light-dark(#C2DFE1, #116969);
 
-$negative: #B11B1B;
-$warning: #864C09;
-$emphasis: #736002;
-$success: #436808;
-$links: #116969;
+$negative: light-dark(#B11B1B, #FFC6C6);
+$warning: light-dark(#864C09, #F8D0A1);
+$emphasis: light-dark(#736002, #EEE485);
+$success: light-dark(#436808, #C6E790);
+$links: light-dark(#116969, #2FE4EF);
+
+//Dark mode globals
+@media (prefers-color-scheme: dark) {
+    img:not(.button-icon) {
+        filter: brightness(.8) contrast(1.2);
+    }
+    .squiggle {
+        filter: brightness(.3) saturate(9);
+    }
+    h1, h2 {
+        span svg path {
+            fill: $text-primary;
+        }
+    }
+}
 
 //Classes for component styling
 $main-colours-list: (

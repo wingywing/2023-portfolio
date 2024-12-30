@@ -327,7 +327,7 @@ By the end of the project, virtually every screen of the existing website was re
             <figcaption> Components and branding for Victorian Reports </figcaption>
         </figure>
     </a>
-        <a href="/projects/vr/18.png">
+        {# <a href="/projects/vr/18.png">
         <figure>
             <img src="/projects/vr/thumbs/18.png" eleventy:formats="webp" alt= "Screenshot of assorted redesigned screens (home, about, settings)"/>
             <figcaption> Assorted redesigned screens (home, about, settings) </figcaption>
@@ -350,7 +350,7 @@ By the end of the project, virtually every screen of the existing website was re
             <img src="/projects/vr/thumbs/21.png" eleventy:formats="webp" alt= "Screenshot of redesigned error pages, with a Typeform styled to be like a chatbot"/>
             <figcaption> Redesigned error pages, with a Typeform styled to be like a chatbot </figcaption>
         </figure>
-    </a>
+    </a> #}
 </div>
 
 ### 5. Final comments
