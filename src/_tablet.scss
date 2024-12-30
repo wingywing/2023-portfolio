@@ -177,6 +177,11 @@ $tablet-heading-height: 6rem;
                 rotate: 2deg;
             }
             #et {
+                @media (prefers-color-scheme: dark) {
+                    picture {
+                        filter: invert(1) brightness(.8);
+                    }
+                }
                 grid-column: 1/2;
                 grid-row: 1;
                 top: -1rem;

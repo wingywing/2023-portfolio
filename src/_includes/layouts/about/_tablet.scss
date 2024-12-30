@@ -31,13 +31,23 @@
         .content {
             margin-left: 3rem
         }
+        .icon {
+            @media (prefers-color-scheme: dark) {
+                img {
+                    filter: brightness(.5);
+                }
+            }
+        }
         .image-container {
             @include variables.box-shadow();
+            @media (prefers-color-scheme: dark) {
+                background-color: transparent;
+            }
+            background-color: transparentize(white, .7);
             grid-column: 8/13;
-            background-color: transparentize($color: colours.$bg-secondary, $amount: .7);
-            transform: rotate(0.84deg);
             margin-left: 1rem;
             min-width: 50dvw;
+            transform: rotate(0.84deg);
         }
         h2 {
             font-size: 2.3rem;
@@ -74,6 +84,11 @@
                 grid-column: 4/6;
             }
             #re {
+                @media (prefers-color-scheme: dark) {
+                    img {
+                        filter: invert(1) brightness(.8);
+                    }
+                }
                 grid-column: 6/8;
                 rotate: 11.1deg;
             }

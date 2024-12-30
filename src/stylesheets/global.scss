@@ -7,6 +7,10 @@
 @use '../_includes/components/components.scss';
 @use '../pagestyles.scss';
 
+:root {
+    color-scheme: light dark;
+}
+
 html {
     scroll-behavior: smooth!important;
 }
@@ -54,7 +58,10 @@ blockquote {
         text-decoration: none;
         display: flex;
         figure, video {
-            background-color: white;
+            img {
+                background-color: white;   
+            }
+            background-color: colours.$bg-secondary;
             transition: all .5s;
             border-radius: 1rem;
         }
@@ -74,6 +81,7 @@ blockquote {
     }
     .lg-img-wrap {
         padding: 2rem;
+        background-color: transparent;
     }
     .lg-image, video  {
         @include variables.box-shadow;
@@ -89,7 +97,7 @@ blockquote {
         color: colours.$links;
     }
     .lg-next, .lg-prev {
-        color: white;
+        color: colours.$text-inverted;
     }
     .lg-sub-html p {
         font-size: 1rem;
@@ -100,6 +108,6 @@ blockquote {
     height: 42rem;
     overflow: hidden;
     .lg-container > div {
-        background-color: white;
+        background-color: colours.$bg-secondary;
     }
 }
