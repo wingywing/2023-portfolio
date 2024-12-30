@@ -10,7 +10,7 @@
 :root {
     color-scheme: light dark;
     & *:not(body){
-        transition: background-color .25s, color .25s, filter .25s, fill .25s, stroke .25s;
+        transition: background-color .25s, filter .25s, fill .25s, stroke .25s;
     }
 }
 

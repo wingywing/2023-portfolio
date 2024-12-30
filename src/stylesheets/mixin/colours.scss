@@ -29,8 +29,58 @@ $emphasis: light-dark(#736002, #EEE485);
 $success: light-dark(#436808, #C6E790);
 $links: light-dark(#116969, #2FE4EF);
 
+//Light mode globals
+@mixin light-mode {
+    img:not(.button-icon) {
+        filter: brightness(1) contrast(1);
+    }
+    .squiggle {
+        filter: brightness(1) saturate(1);
+    }
+    header {
+        .header-logo {
+            svg {
+                filter: brightness(1) saturate(1);
+            }
+        }
+    }
+    .button-icon {
+        filter: invert(0) brightness(1);
+    }
+    .home-intro__hello-group {
+        svg path {
+            stroke: $sunspray;
+        }
+    }
+    #theme-switcher {
+        .moon {
+            display: block;
+            visibility: visible;
+        }
+        .sun {
+            display: none;
+            visibility: hidden;
+        }
+    }
+    #et, #re{
+        picture {
+            filter: invert(0) brightness(1);
+        }
+    }
+    #about-page {
+        .image-container {
+            background-color: transparentize(white, .7);
+        }
+        .icon{
+            img {
+                filter: brightness(1);
+            }
+        }
+    }
+}
+
 //Dark mode globals
-@mixin dark-mode{
+@mixin dark-mode {
     img:not(.button-icon) {
         filter: brightness(.8) contrast(1.2);
     }
@@ -86,6 +136,14 @@ $links: light-dark(#116969, #2FE4EF);
 .dark {
     @include dark-mode();
 }
+@media (prefers-color-scheme: light) {
+    @include light-mode();
+}
+.light {
+    @include light-mode();
+}
+
+
 
 //Classes for component styling
 $main-colours-list: (
