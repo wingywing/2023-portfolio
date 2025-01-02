@@ -1,0 +1,21 @@
+<div id="back-to-top">
+    <button 
+        id="back-to-top-button"
+        onclick="backToTop()"
+        >
+        <span id="back-to-top-button__span">Back to top</span>
+        <img src="{{ "/assets/img/icons/top.svg"}}" alt="Top" class="button-icon top">
+    </button>
+</div>
+
+<script>
+function backToTop() {
+    if ($(".snap-scroll")){
+        $(".snap-scroll").scrollTop(0);
+    }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    console.log("to the top!");
+}
+</script>
+

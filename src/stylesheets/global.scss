@@ -3,6 +3,8 @@
 @use 'variables.scss' as variables;
 @use 'mixin/colours.scss' as colours;
 @use 'mixin/breakpoints.scss' as bp;
+@use 'mixin/grids.scss' as grids;
+
 @use 'defaults.scss';
 @use '../_includes/components/components.scss';
 @use '../pagestyles.scss';
@@ -12,6 +14,21 @@
     & *:not(body){
         transition: background-color .25s, filter .25s, fill .25s, stroke .25s;
     }
+}
+
+#bottom-action-bar {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
 }
 
 h1, h2 {

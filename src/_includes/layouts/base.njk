@@ -68,7 +68,12 @@
 
     <a href="#main-content" class="skip-main">Skip to main content</a>
     {% include "src/_includes/components/header/header.njk" %}
-    {% include "src/_includes/components/theme-switcher/theme-switcher.njk" %}
+
+    <div id="bottom-action-bar">
+        {% include "src/_includes/components/theme-switcher/theme-switcher.njk" %}
+        {% include "src/_includes/components/back-to-top/back-to-top.njk" %}
+    </div>
+
     <main id="main-content">
         {% block content %}{% endblock %}
         {{ content | safe }}
