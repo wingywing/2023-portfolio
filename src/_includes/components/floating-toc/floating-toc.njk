@@ -1,0 +1,58 @@
+<div id="floating-toc">
+    <h1>Contents</h1>
+    <div class="floating-toc-content">
+    </div>
+</div>
+
+<script>
+    let toc = $('#contents');
+    $('h2').each(function(){
+        contents = toc.nextUntil('h2').clone();
+    }) //wrap existing ToC into a div called ToC
+    tocDiv = $('<div class="toc" />');
+    tocDiv.insertAfter(toc);
+    tocDiv.html(contents);
+
+    let floatingTocContent = $('#floating-toc');
+    $('.floating-toc-content').html(contents); //Inject the new floating-toc component with content from the main body
+
+    function setSelectedTocItem() { //set selected floating ToC item based on URL slug by matching the href in floating toc items
+        let urlString = $(location).attr('href');
+        urlArray = urlString.split("/");
+        urlSlug = urlArray.pop();
+        $(".floating-toc-content li a").each(function(){
+            if ($(this).attr("href") == urlSlug){
+                $(this).addClass("selected");
+            } else {
+                $(this).removeClass("selected");
+            }
+        })
+    }
+    setSelectedTocItem();
+    $(window).on('hashchange', function(e){
+        setSelectedTocItem();
+    }); //change the ToC active item when the url hash changes
+
+    //Update the url hash to match content that user is up to
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            newHash = entry.target.id
+            history.pushState(null,null, "#" + newHash);
+            setSelectedTocItem(); //call function to update floating ToC
+        })
+    }, {
+        rootMargin: "0px 0px -50% 0px", //Only change hash to new section when it's halfway on the screen
+    });
+    //Watch when a heading is in intersection, e.g. h2, h3...
+    //Watch when user scrolls down
+    const sectionHeadings = document.querySelectorAll("h2, h3, h4");
+    sectionHeadings.forEach( sectionHeading => {
+            observer.observe(sectionHeading)
+        }
+    )
+
+        
+
+
+
+</script>

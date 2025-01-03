@@ -14,6 +14,8 @@ layout: base.njk
     <div class="content">
         {{ content | safe }}
     </div>
+    {% include "src/_includes/components/floating-toc/floating-toc.njk" %}
+
     {% if (type == "writing") or (type == "note") %}
         {% set replies = webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to'])%}
         {% set reactions = webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}

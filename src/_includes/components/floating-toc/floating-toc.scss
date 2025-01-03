@@ -1,0 +1,49 @@
+
+@use '../../../stylesheets/variables.scss' as variables;
+
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/fonts.scss' as fonts;
+
+#floating-toc#floating-toc {
+    display: none;
+    visibility: hidden;
+    &:has(.floating-toc-content > ul) {
+        @include bp.desktop(){
+            display: flex;
+            visibility: visible;
+            flex-direction: column;
+            position: sticky;
+            grid-column: 2/4;
+            grid-row: 1;
+            width: 100%;
+            height: fit-content;
+            margin-top: 7rem;
+            top: 10rem;
+            h1 {
+                font-size: 1rem;
+            }
+            ul {
+                padding: 0;
+                margin: 0 0;
+                li {
+                    list-style: none;
+                    font-size: 1rem;
+                }
+                li li {
+                    margin-left: 1.5rem;
+                }
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                    text-decoration: none;
+                    &.selected {
+                        background-color: colours.$accent-emphasis;
+                    }
+                }
+            }
+        }
+    }
+}
