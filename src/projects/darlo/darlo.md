@@ -55,7 +55,8 @@ A visual web project representing historical data mapping the changes of Darling
 - [4. Solving the problem](#4.-solving-the-problem)
 - [5.Design process](#5.-design-process)
 - [6. Challenges](#6.-challenges)
-- [7. Final comments](#7.-final-comments)
+- [7. Learnings](#7.-learnings)
+- [8. Final comments](#8.-final-comments)
 
 ## 1. The team
 | Human | Role |
