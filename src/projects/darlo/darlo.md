@@ -53,7 +53,7 @@ A visual web project representing historical data mapping the changes of Darling
 - [2. The brief](#2.-the-brief)
 - [3. The problem](#3.-the-problem)
 - [4. Solving the problem](#4.-solving-the-problem)
-- [5.Design process](#5.-design-process)
+- [5. Design process](#5.-design-process)
 - [6. Challenges](#6.-challenges)
 - [7. Learnings](#7.-learnings)
 - [8. Final comments](#8.-final-comments)
