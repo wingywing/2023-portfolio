@@ -6,8 +6,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: 'Linux ARM 64'
 
 steps:
 - script: echo Hello, world!
