@@ -53,17 +53,14 @@
         crossorigin=""></script>
     {% endif %}
 
-    <script>
+    {# <script>
         var backlink = document.getElementById('back-link')
+        const prevPage = document.referrer;
         if (backlink != null) {
-            backlink.setAttribute('href', document.referrer);
-
-            backlink.onclick = function() {
-                history.back();
-                return false;
-            }
+            backlink.setAttribute('href', prevPage);
+            return false;
         }
-    </script>
+    </script> #}
 </head>
 <body>
 
