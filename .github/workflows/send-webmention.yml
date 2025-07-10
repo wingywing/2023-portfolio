@@ -20,6 +20,9 @@ jobs:
 
       - name: Send Webmentions
         run: |
+          echo "⏳ Waiting 180 seconds for Cloudflare Pages deployment..."
+          sleep 180
+          
           DOMAIN="https://wingpang.com"
 
           if git rev-parse ${{ github.event.before }} >/dev/null 2>&1; then
