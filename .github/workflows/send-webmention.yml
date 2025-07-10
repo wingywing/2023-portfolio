@@ -15,16 +15,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history to avoid shallow clone issues
 
       - name: Send Webmentions
         run: |
           DOMAIN="https://wingpang.com"
 
-          # Check if previous commit exists
           if git rev-parse ${{ github.event.before }} >/dev/null 2>&1; then
             FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^src/(notes|writing|projects)/.*\.md$')
           else
-            echo "No valid previous commit found, listing all posts in content folders."
+            echo "No valid previous commit, listing all posts"
             FILES=$(git ls-files 'src/notes/*.md' 'src/writing/*.md' 'src/projects/*.md')
           fi
 
@@ -41,13 +42,11 @@ jobs:
               continue
             fi
 
-            # Determine post URL
             RELATIVE=${FILE#src/}
             SECTION=$(echo "$RELATIVE" | cut -d/ -f1)
             SLUG=$(basename "$RELATIVE" .md)
             POST_URL="$DOMAIN/$SECTION/$SLUG"
 
-            # Determine target URL (reply, like, bookmark, or bridgy)
             TARGET=$(grep -E '^(in-reply-to|like-of|bookmark-of):' "$FILE" | head -n1 | sed 's/.*:[[:space:]]*//')
 
             if [ -z "$TARGET" ]; then
@@ -56,7 +55,6 @@ jobs:
 
             echo "🔗 Sending Webmention: $POST_URL → $TARGET"
 
-            # Try Bridgy Fed first
             curl -s -X POST https://fed.brid.gy/webmention \
               -d "source=$POST_URL" \
               -d "target=$TARGET" \
