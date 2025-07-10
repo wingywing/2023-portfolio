@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch full history to avoid shallow clone issues
+          fetch-depth: 0  # Required to compare against previous commits
 
       - name: Send Webmentions
         run: |
@@ -25,7 +25,7 @@ jobs:
           if git rev-parse ${{ github.event.before }} >/dev/null 2>&1; then
             FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^src/(notes|writing|projects)/.*\.md$')
           else
-            echo "No valid previous commit, listing all posts"
+            echo "⚠️ No valid previous commit found, listing all content files"
             FILES=$(git ls-files 'src/notes/*.md' 'src/writing/*.md' 'src/projects/*.md')
           fi
 
@@ -38,7 +38,7 @@ jobs:
             echo "📄 Checking $FILE"
 
             if grep -q '^draft:\s*true' "$FILE"; then
-              echo "⏭️ Skipping: Not published"
+              echo "⏭️ Skipping draft post"
               continue
             fi
 
@@ -47,26 +47,33 @@ jobs:
             SLUG=$(basename "$RELATIVE" .md)
             POST_URL="$DOMAIN/$SECTION/$SLUG"
 
-            TARGET=$(grep -E '^(in-reply-to|like-of|bookmark-of):' "$FILE" | head -n1 | sed 's/.*:[[:space:]]*//')
+            # Extract any specific webmention target
+            SPECIFIC_TARGET=$(grep -E '^(in-reply-to|like-of|bookmark-of):' "$FILE" | head -n1 | sed 's/.*:[[:space:]]*//')
 
-            if [ -z "$TARGET" ]; then
-              TARGET="https://fed.brid.gy/"
-            fi
-
-            echo "🔗 Sending Webmention: $POST_URL → $TARGET"
-
+            # --- 1. Always send to Bridgy Fed ---
+            echo "🔗 Sending Webmention to Bridgy Fed: $POST_URL → https://fed.brid.gy/"
             curl -s -X POST https://fed.brid.gy/webmention \
               -d "source=$POST_URL" \
-              -d "target=$TARGET" \
-              && echo "✅ Sent to Bridgy Fed or target" \
+              -d "target=https://fed.brid.gy/" \
+              && echo "✅ Sent to Bridgy Fed" \
               || {
                 echo "⚠️ Bridgy Fed failed, trying webmention.io..."
                 curl -s -X POST https://webmention.io/wingpang.com/webmention \
                   -d "source=$POST_URL" \
-                  -d "target=$TARGET" \
+                  -d "target=https://fed.brid.gy/" \
                   && echo "✅ Fallback to webmention.io succeeded" \
-                  || echo "❌ Failed to send Webmention for $POST_URL"
+                  || echo "❌ Failed to send Webmention to Bridgy Fed"
               }
+
+            # --- 2. Also send to specific reply/like/bookmark target ---
+            if [ -n "$SPECIFIC_TARGET" ]; then
+              echo "🔗 Sending Webmention to target: $POST_URL → $SPECIFIC_TARGET"
+              curl -s -X POST https://webmention.io/wingpang.com/webmention \
+                -d "source=$POST_URL" \
+                -d "target=$SPECIFIC_TARGET" \
+                && echo "✅ Sent to target" \
+                || echo "❌ Failed to send Webmention to $SPECIFIC_TARGET"
+            fi
 
             echo ""
           done
