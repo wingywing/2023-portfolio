@@ -37,7 +37,7 @@ jobs:
           for FILE in $FILES; do
             echo "📄 Checking $FILE"
 
-            if ! grep -q '^published:\s*true' "$FILE"; then
+            if grep -q '^draft:\s*true' "$FILE"; then
               echo "⏭️ Skipping: Not published"
               continue
             fi
