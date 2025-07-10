@@ -78,7 +78,12 @@ feedtype: writing
             {% set reactions = post.data.webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}
             {% set mentions = post.data.webmentions | getWebmentionsByTypes(['mention-of']) %}
             {% set inreplies = post.data.webmentions | getWebmentionsByTypes(['in-reply-to'])%}
-
+                <a class="u-bridgy-fed" 
+                    href="https://fed.brid.gy/" 
+                    style="position: absolute; width: 1px; height: 1px; overflow: hidden;" 
+                    aria-hidden="true" 
+                    tabindex="-1">
+                </a>
                 <li class="post-thumbnail h-entry hentry">
                     <div class="post-header">
                         <h2 class="p-name">{{ post.data.title }}</h2>
