@@ -85,10 +85,33 @@ pagination:
                     {% set location = "Sydney, Australia" %}
                 {% endif %}
                 <div class="location-weather block">
-                    <a class="weatherwidget-io" href="{{ weatherLink }}" data-font="Overpass" data-icons="Climacons Animated" data-days="5" data-theme="pure" >Sydney NSW, Australia</a>
+                    <div id="1c3258b2161170c32ad650e31fd8bbae" class="ww-informers-box-854753"><p class="ww-informers-box-854754">
+                    <a href="{{ weatherLink }}">Weather forecast in Sydney for a month</a><br>
+                    <a href="https://world-weather.info/forecast/usa/columbia_1/">Detailed forecast</a></p>
+                </div>
+                <script async type="text/javascript" charset="utf-8" src="https://world-weather.info/wwinformer.php?userid=1c3258b2161170c32ad650e31fd8bbae"></script>
+                    <style>.ww-informers-box-854754{
+                        -webkit-animation-name:ww-informers54;
+                        animation-name:ww-informers54;
+                        -webkit-animation-duration:1.5s;
+                        animation-duration:1.5s;
+                        white-space:nowrap;
+                        overflow:hidden;
+                        -o-text-overflow:ellipsis;
+                        text-overflow:ellipsis;
+                        font-size:16px;
+                        font-family:"overpass";
+                        line-height:18px;
+                        text-align:center}
+                        @-webkit-keyframes 
+                        ww-informers54{0%,80%{opacity:0}100%{opacity:1}}
+                        @keyframes ww-informers54{0%,80%{opacity:0}100%{opacity:1}}
+                    </style>                    
+                    
+                    {# <a class="weatherwidget-io" href="{{ weatherLink }}" data-font="Overpass" data-icons="Climacons Animated" data-days="5" data-theme="pure" >Sydney NSW, Australia</a>
                     <script>
                     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-                    </script>
+                    </script> #}
                 </div>
             </div>
             <div class="work-hobbies column">
