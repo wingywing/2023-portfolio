@@ -11,6 +11,7 @@ date: 2024-03-29T05:01:04.167Z
 preview:
 categories:
     - case-study
+draft: true
 ---
 
 <div class="project-header">
