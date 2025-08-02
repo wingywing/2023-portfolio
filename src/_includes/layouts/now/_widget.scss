@@ -1,0 +1,75 @@
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/mixin/grids.scss' as grids;
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/variables.scss' as variables;
+
+@mixin now-widget(){
+    #city {
+        width: 100%;
+        font-size: 1rem;
+        .weatherInformer18-city {
+            display: none;
+            visibility: hidden;
+        }
+        .weatherInformer18-now__desc, .weatherInformer18-week__day, .weatherInformer18-week__data > span {
+            font-size: 1.25rem;
+            font-family: "overpass";
+            min-height: fit-content;
+        }
+        .weatherInformer18-week__data, .weatherInformer18-week__day {
+            padding: .5rem;
+            line-height: 110%;
+        }
+        .weatherInformer18-week__table {
+            background: colours.$bg-secondary;
+            color: colours.$text-primary;
+            .weatherInformer18-week__data{
+                &:nth-of-type(odd){
+                    background: colours.$bg-primary;
+                }
+                color: colours.$text-primary;
+                background: colours.$bg-secondary;
+            }
+        }
+        .weatherInformer18-now__desc {
+            line-height: 110%;
+            font-size: 1rem;
+        }
+        .weatherInformer18-now {
+            display: flex;
+            height: fit-content;
+            justify-content: space-between;
+            background: colours.$bg-secondary;
+            color: colours.$text-primary;
+            &__temp {
+                display: flex;
+                align-items: center;
+                padding: 1rem .5rem;
+                width: fit-content;
+                > p {
+                    display: none;
+                    visibility: hidden;
+                }
+                > span::after {
+                    content: "°C";
+                }
+                > img, span {
+                    top: unset;
+                    left: unset;
+                    right: unset;
+                    bottom: unset;
+                }
+            }
+            &__desc {
+                margin: 0;
+                padding: 1rem;
+                top: unset;
+                right: unset;
+                left: unset;
+                bottom: unset;
+                height: fit-content;
+            }
+        }
+
+    }
+}
