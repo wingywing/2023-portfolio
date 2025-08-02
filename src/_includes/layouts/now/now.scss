@@ -2,10 +2,12 @@
 @use 'mobile';
 @use 'tablet';
 @use 'desktop';
+@use 'widget';
 
 #now-page {
     @include base.now-base;
     @include mobile.now-mobile;
     @include tablet.now-tablet;
     @include desktop.now-desktop;
+    // @include widget.now-widget;
 }
