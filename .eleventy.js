@@ -47,9 +47,12 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/wenc-setup.js");
     eleventyConfig.addPassthroughCopy("src/projects/**/**.png"); //Passthrough project case study media
     eleventyConfig.addPassthroughCopy("src/admin/**/**.**"); //Passthrough project case study media
+    eleventyConfig.addPassthroughCopy("src/fun/**/**.**"); //Passthrough fun experiments
 
     eleventyConfig.addPassthroughCopy("src/projects/**/**.jpg"); 
     eleventyConfig.addPassthroughCopy("src/projects/**/**.mp4");
+
+
     eleventyConfig.setTemplateFormats(["njk,md"]);
     eleventyConfig.amendLibrary("md", mdLib => mdLib.use(implicitFigures, {
       figcaption: "title"
