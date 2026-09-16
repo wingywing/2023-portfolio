@@ -93,7 +93,7 @@ Here are some output examples of a deck and text doc which were generated from s
 ### Generated slide deck example
 
 
-<figure class="embed">
+<figure class="embed embed--slide">
     <iframe src="/projects/ai-tool-suite/platypus-showcase.html" loading="lazy" title="A deck generated from scratch by the Platypus tool, shown in its own viewer."></iframe>
     <figcaption>A deck generated from scratch by the Platypus tool, shown in its own viewer. <a href="/projects/ai-tool-suite/platypus-showcase.html">Open in a new tab</a></figcaption>
 </figure>
