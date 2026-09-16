@@ -5,8 +5,33 @@ title: Home
 {%- extends "src/_includes/layouts/base.njk" -%}
 {%- block content -%}
 
+{#
+    The h-card lives here rather than in the visible hero: it is kept out of
+    view and out of the accessibility tree, but stays in the markup so
+    microformats parsers, Bridgy and IndieAuth still resolve my web identity.
+#}
+<div class="identity-card h-card vcard" aria-hidden="true">
+    <span class="p-name">Wing Pang</span>
+    <a href="https://wingpang.com/" class="u-url u-uid" tabindex="-1"></a>
+    <div class="p-note">
+        <p>A <span class="p-locality">Sydney</span>-based product designer with an interest in
+            <b>accessible UI and design systems</b>. I work with developers to
+            build <b>scalable UI components working across HTML, SASS and React</b>.
+        </p>
+        <p>
+            If I’m not nerding out on obscure, niche hobbies, or going down
+            rabbitholes on the internet, you might find me
+            at a foodie hotspot near&nbsp;you.
+        </p>
+    </div>
+    <a rel="me" class="u-url" href="https://www.linkedin.com/in/wingy" tabindex="-1">LinkedIn</a>
+    <a rel="me" class="u-url" href="https://github.com/wingywing" tabindex="-1">GitHub</a>
+    <a class="u-email" href="mailto:hello@wingpang.com" tabindex="-1">hello@wingpang.com</a>
+    <img class="u-photo" src="/assets/img/home/me.png" alt="" eleventy:heights="20"/>
+</div>
+
 <div class="snap-scroll">
-    <div id="home-page" class="h-card vcard">
+    <div id="home-page">
         <section id="home-intro">
             <div id="home-intro__hero">
                 <div class="home-intro__hello-group">
@@ -75,8 +100,7 @@ title: Home
                     </svg>
                 </div>
                 <div class="home-intro__i-am">
-                    <h1>I'm <span id="home-intro__name-span" class="p-name">Wing Pang</span></h1>
-                    <a href="http://wingpang.com/" class="u-url u-uid hidden" aria-hidden></a>
+                    <h1>I'm <span id="home-intro__name-span">Wing Pang</span></h1>
                     <a class="note-link" href="/notes" aria-label="Secret link">
                     <svg width="100%" height="100%" id='home-intro__slime' viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M26.4444 1.57143H18.6667V0H26.4444V1.57143ZM24.8889 9.42857V6.28571H20.2222V4.71429H26.4444V1.57143H28V6.28571H26.4444V9.42857H24.8889ZM24.8889 9.42857H18.6667V11H21.7778V14.1429H18.6667V15.7143H17.1111V11H15.5556V9.42857H14V7.85714H15.5556V6.28571H17.1111V4.71429H18.6667V1.57143H17.1111V4.71429H15.5556V6.28571H12.4444V7.85714H10.8889V6.28571H9.33333V4.71429H7.77778V6.28571H6.22222V7.85714H3.11111V9.42857H1.55556V11H0V18.8571H1.55556V20.4286H3.11111V22H14V20.4286H15.5556V18.8571H17.1111V17.2857H18.6667V15.7143H21.7778V14.1429H23.3333V11H24.8889V9.42857ZM6.22222 11H4.66667V15.7143H6.22222V11ZM9.33333 11H7.77778V15.7143H9.33333V11ZM7.77778 17.2857H6.22222V18.8571H7.77778V17.2857Z"/>
@@ -84,114 +108,40 @@ title: Home
                     </a>           
                 </div>
             </div>
-            <div class="home-intro__pills">
-                {{
-                    component('pill',{
-                        innercontent: 'UI/UX',
-                        class: 'home-intro__pill'
-                    })
-                }}
-                {{
-                    component('pill',{
-                        innercontent: 'Code',
-                        class: 'home-intro__pill'
-                    })
-                }}        
-                {{
-                    component('pill',{
-                        innercontent: 'Illustrations',
-                        class: 'home-intro__pill'
-                    })
-                }}
-            </div>
-            {{
-                component('link-button',{
-                    innercontent: 'View my résumé',
-                    class: 'bg-seasalt',
-                    linkurl: 'https://drive.google.com/file/d/1-9JKhDS0nuM92wYQGjIEvdEe2rabE6U_/view?usp=sharing',
-                    icon: 'article',
-                    arialabel: 'View my résumé'
-                })
-            }}
-            <div id="home-intro__paragraphs">
-                <div class="p-note">
-                <p>A <span class="p-locality">Sydney</span>-based product designer with an interest in 
-                    <b>accessible UI and design systems</b>. I work with developers to 
-                    build <b>scalable UI components working across HTML, SASS and React</b>.
-                </p>
-                <p> 
-                    If I’m not nerding out on obscure, niche hobbies, or going down 
-                    rabbitholes on the internet, you might find me 
-                at a foodie hotspot near&nbsp;you.
+            <div id="home-case-studies">
+                <h2 class="visually-hidden">Case studies</h2>
+                {#
+                    Progressive enhancement: with JS off every tile is visible
+                    and the filter bar is hidden, so nothing is unreachable.
+                #}
+                <div class="case-study-filters" data-case-study-filters hidden>
+                    <p class="case-study-filters__label" id="case-study-filters-label">
+                        {% icon "sliders" %}
+                        Filter by
+                    </p>
+                    <div class="case-study-filters__chips" role="group" aria-labelledby="case-study-filters-label">
+                        <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">
+                            {% icon "grid-3x3" %}
+                            <span>All</span>
+                            <span class="filter-chip__count">{{ caseStudies.length }}</span>
+                        </button>
+                        {% for role in caseStudyRoles %}
+                        <button type="button" class="filter-chip" data-filter="{{ role.slug }}" aria-pressed="false">
+                            {% icon role.icon %}
+                            <span>{{ role.name }}</span>
+                            <span class="filter-chip__count">{{ role.count }}</span>
+                        </button>
+                        {% endfor %}
+                    </div>
                 </div>
-                </p><span>(Or, on <a rel="me" class="u-url" href="https://www.linkedin.com/in/wingy">LinkedIn</a> and <a rel="me" class="u-url" href="https://github.com/wingywing">GitHub</a></b>). 
-                (<a href="/now"><b>now</b></a>)</span>
-            </div>
-            <div id="home-intro__image">
-                <img class="u-photo" src="assets/img/home/me.png" alt="Photo of Wing Pang wearing a kimono" eleventy:heights="20"/>
-                <div class="home-deco-circle"></div>
-            </div>
-        </section>
-        <section id="home-design">
-            <h2>
-                <span>
-                    Design
-                    <svg class="header-icon" width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M38.5174 4.87653L34.5641 4.26696L33.9545 8.22024L37.9078 8.82981L38.5174 4.87653ZM10.2348 4.56285L22.0947 6.39154L21.4851 10.3448L9.62526 8.51613L5.3583 36.1891L33.0313 40.4561L34.86 28.5962L38.8132 29.2058L36.375 45.0189L0.795454 39.5328L6.28155 3.95328L10.2348 4.56285ZM15.7031 21.5951L11.7498 20.9855L9.92115 32.8454L21.781 34.6741L22.3906 30.7208L26.3438 31.3304L26.9534 27.3771L23.0001 26.7675L22.3906 30.7208L14.484 29.5017L15.7031 21.5951ZM24.2193 18.861L20.266 18.2514L19.6564 22.2047L15.7031 21.5951L16.3127 17.6418L20.266 18.2514L20.8755 14.2981L24.8288 14.9077L25.4384 10.9544L29.3917 11.564L28.7821 15.5172L24.8288 14.9077L24.2193 18.861ZM30.0012 7.61068L33.9545 8.22024L33.3449 12.1735L29.3917 11.564L30.0012 7.61068ZM37.9078 8.82981L41.8611 9.43937L41.2515 13.3927L45.2048 14.0022L44.5952 17.9555L40.6419 17.3459L40.0324 21.2992L36.0791 20.6897L35.4695 24.6429L31.5162 24.0334L32.1258 20.0801L36.0791 20.6897L36.6887 16.7364L40.6419 17.3459L41.2515 13.3927L37.2982 12.7831L37.9078 8.82981ZM27.563 23.4238L31.5162 24.0334L30.9067 27.9866L26.9534 27.3771L27.563 23.4238Z" fill="#4E4843"/>
-                    </svg>
-                </span>
-                    
-                <svg class="home-design-squiggle squiggle" width="307" height="83" viewBox="0 0 307 83" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g style="mix-blend-mode:multiply">
-                    <path d="M11.7101 73.6286C24.3319 58.2176 60.897 25.9703 106.183 20.2683C162.791 13.1408 158.905 51.5842 138.381 58.2756C117.857 64.9669 105.085 31.3945 168.924 20.667C219.995 12.085 281.254 14.0091 305.5 16.044" stroke="#C2DFE1" stroke-width="28"/>
-                    </g>
-                </svg>   
-            </h2>         
-            <aside>
-                <p class="aside-main">
-                    I think these are kinda neat. <span class="neue-bit">☕</span>
-                </p>
-                <p class="aside-small">
-                    Please <a href="mailto:hello@wingpang.com" class="u-email">contact me</a> if you want a detailed explanation.
-                </p>
-            </aside>
-            <div class="cards">
-                {{
-                    component('card',{
-                        a: '/projects/vr',
-                        class: 'vr',
-                        img: 'home/victorian-reports.png',
-                        heading: 'Website redesign for the Victorian Reports',
-                        caption: 'UI/UX, HTML, SASS, React'
-                    })
-                }}
-                {{
-                    component('card',{
-                        a: '/projects/openlaw',
-                        class: 'ol',
-                        img: 'home/open-law.png',
-                        heading: 'Scalable design system for a legal non-profit',
-                        caption: 'Design system and branding'
-                    })
-                }}
-                {{
-                    component('card',{
-                        a: '/projects/darlo',
-                        class: 'darlo',
-                        img: 'home/darlinghurst.png',
-                        heading: 'Web design for a historical project about Darlinghurst',
-                        caption: 'Web design, HTML, SASS, Hugo'
-                    })
-                }}
-                {{
-                    component('card',{
-                        a: 'https://drive.google.com/file/d/1dq8P7_OWWLmwKpzIXqHNSq3fvMNtxDlU/view?usp=sharing',
-                        class: 'climasaur',
-                        img: 'home/climasaur.png',
-                        heading: 'Mobile app concept for climate activism',
-                        caption: 'UI/UX, Branding, Mobile'
-                    })
-                }}
+
+                <p class="case-study-filters__status" data-case-study-status role="status" aria-live="polite"></p>
+
+                <ul class="case-studies" data-case-study-grid>
+                    {% for study in caseStudies %}
+                        {{ component('case-study', { study: study }) }}
+                    {% endfor %}
+                </ul>
             </div>
         </section>
         <section id="home-tools">
@@ -279,9 +229,9 @@ title: Home
                         }}
                         {{
                             component('tile', {
-                                id: 'hg',
-                                innercontent: 'Hugo',
-                                icon: 'home/hugo.png'
+                                id: 'cc',
+                                innercontent: 'Claude Code CLI',
+                                icon: 'icons/claude-code.svg'
                             })
                         }}
                         {{
@@ -325,6 +275,7 @@ title: Home
 
 </div>
 
-<script src="js/home.js"></script>
+<script src="/js/home.js"></script>
+<script src="/js/case-study-filters.js" defer></script>
 {%- endblock -%}
 

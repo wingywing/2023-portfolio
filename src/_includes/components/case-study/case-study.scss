@@ -1,0 +1,181 @@
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+@use '../../../stylesheets/variables.scss' as variables;
+
+// Case study grid.
+// Every tile sits in the same row track and stretches to the row height, so
+// the grid stays flush no matter how uneven the titles and briefs are — this
+// is what replaces the old hand-staggered margin-top offsets.
+.case-studies {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+
+    @include bp.tablet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+
+    @include bp.desktop {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.case-study-item {
+    display: flex;
+
+    &[hidden] {
+        display: none;
+    }
+}
+
+.case-study {
+    background: colours.$bg-secondary;
+    border: 1px dashed colours.$border-neutral;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    text-decoration: none;
+    color: colours.$text-primary;
+    transition: transform .2s ease, box-shadow .2s ease;
+
+    &:hover,
+    &:focus-visible {
+        @include variables.box-shadow;
+        transform: translateY(-.25rem);
+    }
+
+    &__glyph {
+        font-size: 1.75rem;
+        line-height: 1;
+    }
+
+    &__title {
+        font-family: 'mondwest';
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin: 0;
+        text-wrap: balance;
+    }
+
+    &__brief {
+        margin: 0;
+        font-size: .9375rem;
+        color: colours.$text-subdued;
+        // Push the meta and roles to the bottom so every tile's footer lines up.
+        flex: 1;
+    }
+
+    &__meta {
+        margin: 0;
+        font-size: .8125rem;
+        color: colours.$text-subdued;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .375rem;
+    }
+
+    &__roles {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .375rem;
+
+        li {
+            font-size: .75rem;
+            padding: .1875rem .5rem;
+            border-radius: 999px;
+            background: colours.$bg-tertiary;
+            color: colours.$text-subdued;
+        }
+    }
+}
+
+// --- Filter bar -------------------------------------------------------------
+
+.case-study-filters {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+
+    &[hidden] {
+        display: none;
+    }
+
+    &__label {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: .875rem;
+        color: colours.$text-subdued;
+
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    }
+
+    &__chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    &__status {
+        margin: 0 0 1rem;
+        font-size: .875rem;
+        color: colours.$text-subdued;
+        min-height: 1.25rem;
+    }
+}
+
+.filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+    padding: .5rem .875rem;
+    border-radius: 999px;
+    border: 1px dashed colours.$border-neutral;
+    background: colours.$bg-primary;
+    color: colours.$text-primary;
+    font: inherit;
+    font-size: .875rem;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease;
+
+    .icon {
+        width: 1.125rem;
+        height: 1.125rem;
+        flex-shrink: 0;
+    }
+
+    &__count {
+        font-size: .75rem;
+        color: colours.$text-subdued;
+    }
+
+    &:hover {
+        background: colours.$bg-tertiary;
+    }
+
+    &[aria-pressed="true"] {
+        background: colours.$seasalt;
+        border-style: solid;
+        border-color: colours.$text-primary;
+
+        .filter-chip__count {
+            color: colours.$text-primary;
+        }
+    }
+}

@@ -9,3 +9,18 @@
     @include tablet.writing-tablet;
     @include desktop.writing-desktop;
 }
+#notes-page {
+    // Paginated notes arrive newest-first from Eleventy, so the list renders in
+    // DOM order. The shared column-reverse would flip each page's 20 notes and
+    // show them oldest-first within an otherwise newest-first archive.
+    .writing-posts > ul {
+        flex-direction: column;
+    }
+}
+
+#writing-page, #notes-page {
+    // The pager is a child of the 12-column page grid, so give it the full span.
+    .pagination {
+        grid-column: 1 / -1;
+    }
+}

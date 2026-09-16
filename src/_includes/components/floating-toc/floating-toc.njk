@@ -33,11 +33,22 @@
         setSelectedTocItem();
     }); //change the ToC active item when the url hash changes
 
-    //Update the url hash to match content that user is up to
+    //Update the url hash to match content that user is up to.
+    //This uses replaceState, not pushState: pushState added a history entry for
+    //every section scrolled past, so Back walked up the page section by section
+    //instead of returning to the page the reader actually came from.
+    let currentHash = null;
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            newHash = entry.target.id
-            history.pushState(null,null, "#" + newHash);
+            if (!entry.isIntersecting) {
+                return; //ignore headings scrolling out of view
+            }
+            const newHash = entry.target.id;
+            if (!newHash || newHash === currentHash) {
+                return; //nothing to sync
+            }
+            currentHash = newHash;
+            history.replaceState(null, "", "#" + newHash);
             setSelectedTocItem(); //call function to update floating ToC
         })
     }, {
@@ -50,9 +61,4 @@
             observer.observe(sectionHeading)
         }
     )
-
-        
-
-
-
 </script>

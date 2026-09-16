@@ -1,0 +1,59 @@
+{#
+    Numbered pager for a paginated Eleventy collection.
+    Pass through:
+    - pagination  --> the page's `pagination` object
+    - label       --> accessible name for the nav landmark, e.g. "Notes"
+#}
+{% if params.pagination.pages.length > 1 %}
+{% set p = params.pagination %}
+<nav class="pagination" aria-label="{{ params.label | default('Pagination') }} pages">
+    {% if p.href.previous %}
+        <a class="pagination__step" href="{{ p.href.previous }}" rel="prev">
+            {% icon "chevron-left" %}
+            <span>Previous</span>
+        </a>
+    {% else %}
+        <span class="pagination__step is-disabled" aria-hidden="true">
+            {% icon "chevron-left" %}
+            <span>Previous</span>
+        </span>
+    {% endif %}
+
+    <ol class="pagination__numbers">
+        {% for pageEntry in p.pages %}
+            {% set n = loop.index %}
+            {#
+                Window the numbers so a long archive doesn't render a hundred
+                links: always show first, last, current and its neighbours.
+            #}
+            {% set isEdge = (n == 1) or (n == p.pages.length) %}
+            {% set isNear = (n >= p.pageNumber) and (n <= p.pageNumber + 2) %}
+            {% if isEdge or isNear %}
+                <li>
+                    {% if n == (p.pageNumber + 1) %}
+                        <span class="pagination__number is-current" aria-current="page">{{ n }}</span>
+                    {% else %}
+                        <a class="pagination__number" href="{{ p.hrefs[n - 1] }}">
+                            <span class="visually-hidden">Page </span>{{ n }}
+                        </a>
+                    {% endif %}
+                </li>
+            {% elif (n == 2) or (n == p.pages.length - 1) %}
+                <li class="pagination__gap" aria-hidden="true">&hellip;</li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+    {% if p.href.next %}
+        <a class="pagination__step" href="{{ p.href.next }}" rel="next">
+            <span>Next</span>
+            {% icon "chevron-right" %}
+        </a>
+    {% else %}
+        <span class="pagination__step is-disabled" aria-hidden="true">
+            <span>Next</span>
+            {% icon "chevron-right" %}
+        </span>
+    {% endif %}
+</nav>
+{% endif %}

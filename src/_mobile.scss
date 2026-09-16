@@ -3,17 +3,10 @@
 @use './stylesheets/variables.scss' as variables;
 
 @mixin home-page-mobile(){
-$mobile-heading-height: 4rem;
+$mobile-heading-height: 2.25rem;
 
-    #home-intro {
-        min-height: calc(100dvh - variables.$header-mobile-height)
-    }
-    #home-design {
-        align-content: center;
-        align-items: center;
-    }
     h1 {
-        font-size: min(12vw, $mobile-heading-height);
+        font-size: min(8vw, $mobile-heading-height);
     }
     #home-intro__slime{
         height: $mobile-heading-height;
@@ -21,24 +14,13 @@ $mobile-heading-height: 4rem;
     }
     #home-intro__name-span {
         &::after {
-            bottom: .25rem;
-            height: 1rem;
+            bottom: .15rem;
+            height: .55rem;
         }
     }
     .home-intro__hello-group {
-        margin-bottom: -3rem;
-        margin-left: -1rem;
-    }
-    .home-intro__pills {
-        flex-direction: row;
-        gap: .75rem;
-        max-width: 100%;
-        align-items: flex-start;
-        div {
-            display: flex;
-            justify-content: flex-start;
-            padding: .75rem 1rem;
-        }
+        margin-bottom: -1rem;
+        margin-left: -.5rem;
     }
     #home-intro {
         display: flex;
@@ -46,21 +28,6 @@ $mobile-heading-height: 4rem;
         row-gap: 2rem;
     }
 
-    #home-intro__image {
-        img {
-            transform: rotate(1.82deg);
-        }
-        .home-deco-circle {
-            bottom: -1rem;
-            right: -1rem;
-        }
-    }
-    .cards {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
-    }
     #home-tools {
         padding-bottom: 4rem;
         h2 {
@@ -70,7 +37,7 @@ $mobile-heading-height: 4rem;
             grid-column: 1/11;
         }
     }
-    #home-tools, #home-designs{
+    #home-tools {
         min-height: calc(100dvh - variables.$header-desktop-height);
     }
 }

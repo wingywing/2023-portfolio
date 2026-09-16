@@ -2,27 +2,22 @@
 @use './stylesheets/variables.scss' as variables;
 
 
-$tablet-heading-height: 6rem;
+$tablet-heading-height: 3.25rem;
 
 @mixin home-page-tablet(){
     @include bp.tablet{
         padding-bottom: 0;
         row-gap: 4rem;
-        .link-button {
-            grid-column: 1/4;
-            margin-bottom: -1em;
-        }
         #home-intro {
             display: grid;
             grid-template-columns: subgrid;
             gap: inherit;
             row-gap: 2rem;
-            min-height: calc(100dvh - variables.$header-desktop-height)
         } 
         #home-intro__hero {
             grid-column: 1/10;
             h1{
-                font-size: min(12vw, $tablet-heading-height);
+                font-size: min(6vw, $tablet-heading-height);
             }
         }
         #home-intro__slime{
@@ -30,73 +25,16 @@ $tablet-heading-height: 6rem;
             width: $tablet-heading-height;
         }
         .home-intro__hello-group {
-            margin-bottom: -4rem;
-        }
-        .home-intro__pills {
-            grid-column: 1/5;
-        }
-        #home-intro__paragraphs {
-            grid-column: 1/6;
-        }
-        #home-intro__image {
-            img {
-                transform: rotate(3.64deg);
-            }
-            margin-top: -1rem;
-            grid-column: 7/11;
-        }
-        .home-intro__pills {
-            div {
-                display: flex;
-                justify-content: flex-start;
-                padding: 1rem 2rem;
-            }
+            margin-bottom: -1.5rem;
         }
         #home-intro__name-span {
             &::after {
-                bottom: .75rem;
-                height: 1.5rem;
+                bottom: .3rem;
+                height: .75rem;
             }
         }
         .home-intro__i-am {
             row-gap: 2rem;
-        }
-        #home-design {
-            .cards {
-                grid-column: 1/11;
-                display: flex;
-                flex-direction: row;
-                scroll-snap-align: center;
-                gap: 2rem;
-
-                .card.vr {
-                    rotate: 1deg;
-                }
-                .card.ol {
-                    rotate: -1deg;
-                    margin-top: 3rem;
-                }
-                .card.darlo {
-                    rotate: 1deg;
-                    margin-top: 6rem;
-                }
-                .card.climasaur {
-                    rotate: -1deg;
-                    margin-top: 9rem;
-                }
-            }
-    
-            h2 {
-                grid-column: 1/4;
-                white-space: nowrap;
-            }
-    
-            aside {
-                margin-top: 3rem;
-                text-align: right;
-                grid-column: 6/11;
-                rotate: 1deg;
-            }
         }
         #home-tools {
             display: grid;
@@ -191,7 +129,7 @@ $tablet-heading-height: 6rem;
                 rotate: 5deg;
 
             }
-            #hg {
+            #cc {
                 grid-column: 3/4;
                 grid-row: 2;
                 left: -3rem;
@@ -218,10 +156,10 @@ $tablet-heading-height: 6rem;
                 rotate: 3deg;
             }
         }
-        #home-design, #home-tools {
+        #home-tools {
             min-height: calc(100dvh - variables.$header-mobile-height - 4rem);
         }
-        #home-intro, #home-design, #home-tools {
+        #home-intro, #home-tools {
             padding: 2rem 0;
         }
     }

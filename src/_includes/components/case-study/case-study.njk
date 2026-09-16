@@ -1,0 +1,25 @@
+{#
+    A single case study tile.
+    Pass through `study` — one entry from the caseStudies data file.
+
+    data-roles carries the role slugs so the filter can match without reading
+    the visible text, and the tile stays filterable with JS off (nothing is
+    hidden until the filter script runs).
+#}
+<li class="case-study-item" data-roles="{% for role in params.study.roles %}{{ role | roleSlug }}{% if not loop.last %} {% endif %}{% endfor %}">
+    <a class="case-study" href="/projects/{{ params.study.slug }}/">
+        <span class="case-study__glyph" aria-hidden="true">{{ params.study.glyph }}</span>
+        <h3 class="case-study__title">{{ params.study.title }}</h3>
+        <p class="case-study__brief">{{ params.study.brief }}</p>
+        <p class="case-study__meta">
+            <span>{{ params.study.client }}</span>
+            <span aria-hidden="true">&bull;</span>
+            <span>{{ params.study.timeframe }}</span>
+        </p>
+        <ul class="case-study__roles">
+            {% for role in params.study.roles %}
+                <li>{{ role }}</li>
+            {% endfor %}
+        </ul>
+    </a>
+</li>

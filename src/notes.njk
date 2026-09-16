@@ -2,7 +2,15 @@
 title: Notes
 layout: base.njk
 feedtype: notes
+pagination:
+    data: collections.notes
+    size: 20
+    reverse: true
+    alias: notes
+permalink: "{% if pagination.pageNumber == 0 %}/notes/{% else %}/notes/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
+
+{%- from "components/components.njk" import component -%}
 
 <div id="notes-page">
     <h1>
@@ -19,7 +27,7 @@ feedtype: notes
     </aside>
     <div class="writing-posts h-feed hfeed">
         <ul>
-            {%- for note in collections.notes -%}
+            {%- for note in notes -%}
             {% set replies = note.data.webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to'])%}
             {% set reactions = note.data.webmentions | getWebmentionsByTypes(['like-of', 'repost-of', 'bookmark-of']) %}
             {% set mentions = note.data.webmentions | getWebmentionsByTypes(['mention-of']) %}
@@ -132,4 +140,5 @@ feedtype: notes
             {%- endfor -%}
         </ul>
     </div>
+    {{ component('pagination', { pagination: pagination, label: 'Notes' }) }}
 </div>

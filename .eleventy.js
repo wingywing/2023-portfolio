@@ -10,8 +10,13 @@ import pluginRss from "@11ty/eleventy-plugin-rss"
 import markdownIt from "markdown-it"
 import { DateTime } from "luxon"
 import eleventySass from "@jgarber/eleventy-plugin-sass"
+import fs from "node:fs"
+import path from "node:path"
 
 const md = new markdownIt
+
+const iconDir = path.join("node_modules", "pixelarticons", "svg")
+const iconCache = new Map()
 
 export default function(eleventyConfig) {
 
@@ -24,6 +29,22 @@ export default function(eleventyConfig) {
     // Below is used for images from indiekit to remove the /src prefix
     eleventyConfig.addFilter("removeSrc", (originalString) => {
       return originalString.replace('/src', '');
+    })
+
+    // Same slug rule as caseStudyRoles.js, so markup and filters always agree.
+    eleventyConfig.addFilter("roleSlug", (role) => {
+      return String(role).toLowerCase().replace(/[^a-z0-9]+/g, "-")
+    })
+
+    // Inlines a pixelarticons glyph so it inherits currentColor and needs no extra request.
+    eleventyConfig.addShortcode("icon", (name, className = "") => {
+      if (!iconCache.has(name)) {
+        iconCache.set(name, fs.readFileSync(path.join(iconDir, `${name}.svg`), "utf8").trim())
+      }
+      return iconCache.get(name).replace(
+        "<svg",
+        `<svg aria-hidden="true" focusable="false" class="icon${className ? " " + className : ""}"`
+      )
     })
 
     eleventyConfig.addPlugin(EleventyRenderPlugin);
