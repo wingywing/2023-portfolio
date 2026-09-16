@@ -2,6 +2,7 @@
 @use '../../../stylesheets/mixin/grids.scss' as grids;
 @use '../../../stylesheets/mixin/colours.scss' as colours;
 @use '../../../stylesheets/variables.scss' as variables;
+@use '../../../stylesheets/fonts.scss' as fonts;
 
 @mixin project-page-base(){
     @include grids.main-grid;
@@ -85,8 +86,12 @@
             vertical-align: text-top;
         }
     }
-    table, li {
-        font-size: 1.125rem;
+    table {
+        font-size: fonts.$body;
+    }
+    li {
+        font-size: fonts.$body;
+        line-height: 1.6;
     }
     figure {
         margin-block: 1rem;
@@ -95,6 +100,7 @@
         }
     }
     figcaption {
+        margin-top: .75rem;
         text-wrap: balance;
         text-align: center;
         font-style: italic;
@@ -111,6 +117,43 @@
     p:last-of-type {
         margin: 1rem 0;
     }
+
+    // Headings bind to what follows them: plenty of air above to separate the
+    // section, very little below.
+    .content {
+        h2 {
+            margin-top: 3rem;
+            margin-bottom: .5rem;
+        }
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: .5rem;
+        }
+        h2 + p,
+        h3 + p,
+        h2 + ul,
+        h3 + ul,
+        h2 + .lightgallery,
+        h3 + .lightgallery,
+        h2 + .media-carousel,
+        h3 + .media-carousel,
+        h2 + .column-list,
+        h3 + .column-list {
+            margin-top: 0;
+        }
+    }
+
+    // The contents list is cloned into the floating sidebar on load, so it has
+    // to stay in the DOM. It just doesn't need to be read twice. The script
+    // tags the source itself, which is more reliable than guessing at the
+    // markup that follows the heading.
+    .content {
+        .toc-source,
+        .toc {
+            display: none;
+        }
+    }
+
     .persona {
         border-radius: 1rem;
         font-size: 1.125rem;
@@ -345,7 +388,8 @@
     // `* :not(...)` rule in _mobile.scss caps everything at 100% with a higher
     // specificity and loads later, so it has to be answered from a later file.
     .full-bleed {
-        margin-block: 3rem;
+        margin-block: 2rem;
+        background-color: colours.$bg-secondary;
 
         // The blanket 44.5rem cap on descendants would otherwise hold the
         // image back at the content column's width.

@@ -21,8 +21,22 @@
             height: fit-content;
             // margin-top: 7rem; Removed as Back button is removed
             top: 7rem;
+            // Recedes until wanted: it sits in the margin for the whole read,
+            // so at full strength it competes with the case study itself.
+            opacity: .45;
+            transition: opacity .25s ease;
+
+            &:hover,
+            &:focus-within {
+                opacity: 1;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
             h1 {
                 font-size: 1rem;
+                margin-bottom: .75rem;
             }
             ul {
                 padding: 0;
@@ -31,8 +45,16 @@
                     list-style: none;
                     font-size: 1rem;
                 }
-                li li {
-                    margin-left: 1.5rem;
+                //Sub-headings run long enough to wrap several times each,
+                //which buries the sections they sit under.
+                li ul {
+                    display: none;
+                }
+                //Space between entries, so a wrapped line reads as the same
+                //item rather than the next one.
+                > li {
+                    margin-bottom: .375rem;
+                    line-height: 1.35;
                 }
                 a {
                     &:hover {

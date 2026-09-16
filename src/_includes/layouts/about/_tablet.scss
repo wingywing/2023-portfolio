@@ -33,9 +33,11 @@
             }
 
             // The first block sits directly below the header, so it has no
-            // room to be pulled upwards.
+            // room to be pulled upwards, and the heading's squiggle needs
+            // clearance above it.
             .about-content.first-content-block {
                 margin-top: 0;
+                padding-top: 3rem;
             }
         }
         .content {

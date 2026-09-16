@@ -54,55 +54,23 @@ As part of Digizoo’s internal social committee, I was tasked to create a memen
 ## Project Overview
 
 
-<div class="column-list">
-<div class="column" style="--column-ratio: 0.5">
-
-<div class="lightgallery">
-    <a href="/projects/zooid-cards/01.png">
-        <figure>
-            <img src="/projects/zooid-cards/01.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
-<div class="column" style="--column-ratio: 0.5">
-
-<div class="lightgallery">
-    <a href="/projects/zooid-cards/02.png">
-        <figure>
-            <img src="/projects/zooid-cards/02.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
+<div class="owl-carousel owl-theme media-carousel">
+    <figure>
+        <img src="/projects/zooid-cards/01.png" eleventy:formats="webp" alt="" />
+    </figure>
+    <figure>
+        <img src="/projects/zooid-cards/02.png" eleventy:formats="webp" alt="" />
+    </figure>
 </div>
 
 
-<div class="column-list">
-<div class="column" style="--column-ratio: 0.5">
-
-<div class="lightgallery">
-    <a href="/projects/zooid-cards/03.png">
-        <figure>
-            <img src="/projects/zooid-cards/03.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
-<div class="column" style="--column-ratio: 0.5">
-
-<div class="lightgallery">
-    <a href="/projects/zooid-cards/04.jpg">
-        <figure>
-            <img src="/projects/zooid-cards/04.jpg" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
+<div class="owl-carousel owl-theme media-carousel">
+    <figure>
+        <img src="/projects/zooid-cards/03.png" eleventy:formats="webp" alt="" />
+    </figure>
+    <figure>
+        <img src="/projects/zooid-cards/04.jpg" eleventy:formats="webp" alt="" />
+    </figure>
 </div>
 
 
@@ -113,40 +81,16 @@ As part of Digizoo’s internal social committee, I was tasked to create a memen
 - It made for a fun social activity for the 10 year anniversary celebration dinner.
 - The ZooID also functioned as decoration for our plain office passes!
 
-<div class="column-list">
-<div class="column" style="--column-ratio: 0.3333">
-
-<div class="lightgallery">
-    <a href="/projects/zooid-cards/05.png">
-        <figure>
-            <img src="/projects/zooid-cards/05.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
-<div class="column" style="--column-ratio: 0.3333">
-
-<div class="lightgallery">
-    <a href="/projects/zooid-cards/06.png">
-        <figure>
-            <img src="/projects/zooid-cards/06.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
-<div class="column" style="--column-ratio: 0.3333">
-
-<div class="lightgallery">
-    <a href="/projects/zooid-cards/07.png">
-        <figure>
-            <img src="/projects/zooid-cards/07.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
+<div class="owl-carousel owl-theme media-carousel">
+    <figure>
+        <img src="/projects/zooid-cards/05.png" eleventy:formats="webp" alt="" />
+    </figure>
+    <figure>
+        <img src="/projects/zooid-cards/06.png" eleventy:formats="webp" alt="" />
+    </figure>
+    <figure>
+        <img src="/projects/zooid-cards/07.png" eleventy:formats="webp" alt="" />
+    </figure>
 </div>
 
 

@@ -207,6 +207,16 @@ To begin this process, I examined the existing user base of X Legacy System and 
     </a>
 </div>
 
+
+| User group | Time spent on Truck Tracker (h) |
+| --- | --- |
+| Operational Support (Office) | 5000 |
+| Depot Supervisors (Frontline/Office) | 2400 |
+| Scheduling Specialist (Office) | 1540 |
+| Heavyweight Truck Supervisors
+(Frontline/Office) | 1470 |
+| Truck Drivers (Frontline) | 1400 |
+
 Data showed that Truck Drivers—despite not being office-bound—ranked fifth in terms of overall time spent on the desktop-only Truck Tracker platform.
 
 Meanwhile, mobile usage of the legacy system significantly exceeded desktop or tablet use, validating the demand for mobile access.
@@ -262,29 +272,13 @@ While the supervisors interviewed mostly work from their desktop computers, they
 From the user interviews above, we created some personas for Depot Supervisors and Truck Drivers (note: the images for these personas were generated using AI for anonymity):
 
 
-<div class="column-list">
-<div class="column" style="--column-ratio: 0.5">
-
-<div class="lightgallery">
-    <a href="/projects/asset-mapping/10.png">
-        <figure>
-            <img src="/projects/asset-mapping/10.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
-<div class="column" style="--column-ratio: 0.5">
-
-<div class="lightgallery">
-    <a href="/projects/asset-mapping/11.png">
-        <figure>
-            <img src="/projects/asset-mapping/11.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
+<div class="owl-carousel owl-theme media-carousel">
+    <figure>
+        <img src="/projects/asset-mapping/10.png" eleventy:formats="webp" alt="" />
+    </figure>
+    <figure>
+        <img src="/projects/asset-mapping/11.png" eleventy:formats="webp" alt="" />
+    </figure>
 </div>
 
 

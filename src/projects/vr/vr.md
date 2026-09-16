@@ -85,26 +85,26 @@ draft: true
 
 ## Contents
 - [Special thanks](#special-thanks)
-- [1. The team](#1.-the-team)
-- [2. The problem](#2.-the-problem)
-- [3. Solving the problem](#3.-solving-the-problem)
+- [The team](#the-team)
+- [The problem](#the-problem)
+- [Solving the problem](#solving-the-problem)
   - [Reflect](#reflect)
   - [Observe](#observe)
   - [Make](#make)
-- [4. UI designs](#4.-ui-designs)
-- [5. Final comments](#5.-final-comments)
+- [UI designs](#ui-designs)
+- [Final comments](#final-comments)
 
 ## Special thanks
 Thank you to the director of Open Law – [Michael Green SC](https://www.linkedin.com/in/michael-green-sc-42118b1/) for the opportunity to work on this project. I would also like to thank [Nick&nbsp;Clark](https://clarx.dev/) who showed me the ropes to Tailwind, SASS and taught me so much about frontend development with immense patience.
 
-## 1. The team
+## The team
 
 | Human | Role |
 |:-- |:--|
 | [The&nbsp;Open&nbsp;Law&nbsp;Team](https://openlaw.com.au/) | The software development team are the ones who bring my designs to life. Can't do it without the team!|
 | Me! | Lead Designer – completely overhauled the user interface from scratch using reusable components from my [UI Design System](/projects/openlaw/) to **enhance the end-to-end user experience**. <br/> </br> Assisted the frontend development team by developing a stylesheet framework and converting designs to code through **SASS and HTML**.|
 
-## 2. The problem
+## The problem
 
 > Updating the user interface design to have a more **modern look and feel** while **identifying painpoints in user experience**.
 
@@ -115,7 +115,7 @@ In order to achieve this, I **worked closely with the software development team 
 Currently, the redesigns for the Victorian Reports have been fully completed, and a majority of the frontend development have also been done. We are hoping to launch the redesign soon. -->
 
 
-## 3. Solving the problem
+## Solving the problem
 
 This project was completed using a **lean-agile approach**, focusing on **how we can bring value to our customers** through iterative cycles and continuous feedback loops.
 
@@ -317,7 +317,7 @@ The prototyping phase involved **wireframing** and **high-fidelity prototypes**.
 
 </div>
 
-### 4. UI designs
+### UI designs
 
 By the end of the project, virtually every screen of the existing website was refreshed to follow the new branding.
 
@@ -354,7 +354,7 @@ By the end of the project, virtually every screen of the existing website was re
     </a> #}
 </div>
 
-### 5. Final comments
+### Final comments
 After finishing the Figma redesigns and prototypes, I went on to help with building the frontend components using **SASS and HTML**. Although the project hasn't been launched yet, most of the frontend has been completed.
 
 Some key takeaways and learnings I've gotten from this project through user testing and self-reflection were:

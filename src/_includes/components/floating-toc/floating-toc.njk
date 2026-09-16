@@ -16,6 +16,11 @@
     let floatingTocContent = $('#floating-toc');
     $('.floating-toc-content').html(contents); //Inject the new floating-toc component with content from the main body
 
+    //The list has been copied into the sidebar, so hide the original. Tagging
+    //it here rather than guessing at it in CSS keeps this working whatever
+    //markup a given case study puts after its Contents heading.
+    toc.add(toc.nextUntil('h2')).addClass('toc-source');
+
     function setSelectedTocItem() { //set selected floating ToC item based on URL slug by matching the href in floating toc items
         let urlString = $(location).attr('href');
         urlArray = urlString.split("/");

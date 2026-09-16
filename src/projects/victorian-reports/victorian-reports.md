@@ -37,22 +37,27 @@ categories:
 
 ## Contents
 - [My Role](#my-role)
-  - [Project Overview](#project-overview)
-  - [Impact](#impact)
-  - [The Problem](#the-problem)
-  - [Goals and Objectives](#goals-and-objectives)
-  - [The Solution](#the-solution)
-  - [UX Research](#ux-research)
-  - [Stakeholder Engagement](#stakeholder-engagement)
-  - [Solution Summary](#solution-summary)
-  - [Outcome and Final Remarks](#outcome-and-final-remarks)
+- [Project Overview](#project-overview)
+- [Impact](#impact)
+- [The Problem](#the-problem)
+- [Goals and Objectives](#goals-and-objectives)
+- [The Solution](#the-solution)
+  - [Streamlined eCommerce Flow](#streamlined-ecommerce-flow)
+  - [Responsive Layouts with Collapsible UI](#responsive-layouts-with-collapsible-ui)
+  - [Accessible and Consistent Design](#accessible-and-consistent-design)
+- [UX Research](#ux-research)
+  - [User Interviews and Lean Personas](#user-interviews-and-lean-personas)
+  - [Journey Mapping](#journey-mapping)
+- [Stakeholder Engagement](#stakeholder-engagement)
+- [Solution Summary](#solution-summary)
+- [Outcome and Final Remarks](#outcome-and-final-remarks)
 
 ## My Role
 
 The Victorian Reports design overhaul was a project I completed during my time at [BarNet Open Law](https://openlaw.com.au/). In this project, I took ownership of the full end-to-end design process. I also assisted developers with coding frontend components using SASS and HTML.
 
 
-### Project Overview
+## Project Overview
 
 The Victorian Reports website is the primary digital platform for purchasing and browsing legal publications by the Council of Law Reporting in Victoria.
 
@@ -68,13 +73,13 @@ This project involved a full UI/UX overhaul to modernise the website, improve ac
 </div>
 
 
-### Impact
+## Impact
 
 - Improved accessibility and responsiveness site-wide, adhering to [WCAG 2.2 AA standards](https://www.w3.org/WAI/WCAG22/Understanding/).
 - Redesigned end-to-end purchase and browsing journeys to reduce friction.
 - Supported frontend developers by implementing a mobile-responsive, modular stylesheet system with SASS and HTML.
 
-### The Problem
+## The Problem
 
 Although the Victorian Reports website was usable from a functionality standpoint, there were some issues with the User Interface and Experience:
 
@@ -103,19 +108,19 @@ Although the Victorian Reports website was usable from a functionality standpoin
 </div>
 
 
-### Goals and Objectives
+## Goals and Objectives
 
 - Conduct a UX audit to identify usability issues.
 - Improve the end-to-end user journey for browsing, purchasing, and accessing legal volumes.
 - Design a consistent and accessible UI system aligned with WCAG AA standards.
 - Assist with building out frontend components through HTML and SASS.
 
-### The Solution
+## The Solution
 
 After analysing the existing site and collaborating with internal stakeholders, I conducted a full design overhaul of the Victorian Reports website.
 
 
-#### Streamlined eCommerce Flow
+### Streamlined eCommerce Flow
 
 The legacy purchase flow required users to recall items already added to the cart, creating confusion and distrust. I redesigned the flow to support:
 
@@ -133,7 +138,7 @@ The legacy purchase flow required users to recall items already added to the car
 </div>
 
 
-#### Responsive Layouts with Collapsible UI
+### Responsive Layouts with Collapsible UI
 
 To reduce mobile scrolling fatigue for mobile users, I introduced collapsible content blocks for product information, settings, and forms. This also helps desktop users by keeping the interface clean and distraction-free.
 
@@ -148,7 +153,7 @@ To reduce mobile scrolling fatigue for mobile users, I introduced collapsible co
 </div>
 
 
-#### Accessible and Consistent Design
+### Accessible and Consistent Design
 
 I implemented a design system that addressed contrast issues and inconsistent component styling. The redesign adheres to WCAG 2.2 Level AA standards, with:
 
@@ -156,10 +161,10 @@ I implemented a design system that addressed contrast issues and inconsistent co
 - Large touch targets for key buttons and links.
 - Consistent UI components reused across the platform.
 
-### UX Research
+## UX Research
 
 
-#### User Interviews and Lean Personas
+### User Interviews and Lean Personas
 
 To better understand our audience, I created personas based on discussions with internal legal professionals. Our key users were lawyers and law librarians who relied on the site for up-to-date legal material.
 
@@ -179,7 +184,7 @@ Their pain points informed the following key design principles:
 - Clear product filtering and categorisation.
 - Simple, mobile-friendly navigation.
 
-#### Journey Mapping
+### Journey Mapping
 
 User flows revealed where users dropped off or became confused—especially during purchasing or when attempting to browse by volume.
 
@@ -207,7 +212,7 @@ Key blockers:
 - No preview of selected items.
 - Difficulty in finding or reordering volumes.
 
-### Stakeholder Engagement
+## Stakeholder Engagement
 
 The Open Law team was highly collaborative throughout. For this project, I worked directly with both legal experts and developers to align on priorities.
 
@@ -216,7 +221,7 @@ I also supported developers by:
 - Building a scalable stylesheet system with SASS.
 - Coding reusable components using HTML and SASS.
 
-### Solution Summary
+## Solution Summary
 
 - Designed responsive screens for every major section: home, product browse, purchase, and error pages.
 - Coded reusable UI components using HTML and SASS.
@@ -232,7 +237,7 @@ I also supported developers by:
 </div>
 
 
-### Outcome and Final Remarks
+## Outcome and Final Remarks
 
 While the full rollout of the new Victorian Reports site is still underway, the majority of the frontend is complete and awaiting integration.
 

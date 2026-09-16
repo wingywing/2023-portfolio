@@ -14,7 +14,9 @@ categories:
 ---
 <div class="project-header">
     <div class="project-banner">
-        <img src="/projects/climasaur/hero.png" eleventy:formats="webp" alt=""/>
+        <video controls autoplay loop muted playsinline poster="/projects/climasaur/hero-poster.png" aria-label="Walkthrough of the Climasaur app concept">
+            <source src="/projects/climasaur/hero.mp4" type="video/mp4">
+        </video>
     </div>
     <div class="information">
         <h1>{{ title }}</h1>
@@ -51,9 +53,6 @@ categories:
 
 ## The brief
 
-<div class="column-list">
-<div class="column">
-
 An **engaging mobile experience** that integrates brand design, user interface design and user research to **empower climate action in an innovative way**.
 
 ### Audience
@@ -67,18 +66,12 @@ An **engaging mobile experience** that integrates brand design, user interface d
 - How might I promote the **urgency of climate action without invoking fear or climate anxiety**?
 - How might I **educate people on issues surrounding climate change while inspiring impactful action**?
 
-</div>
-<div class="column">
-
 <div class="lightgallery">
     <a href="/projects/climasaur/hero-election-card.png">
         <figure>
             <img src="/projects/climasaur/hero-election-card.png" eleventy:formats="webp" alt="Someone holding a phone in the dark, showing a Climasaur card reading 'Election time is coming up!' with a 22 day streak." />
         </figure>
     </a>
-</div>
-
-</div>
 </div>
 
 ## Timeline

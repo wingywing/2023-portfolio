@@ -167,3 +167,41 @@ blockquote {
     // Pixel art should stay crisp when it is scaled.
     image-rendering: pixelated;
 }
+
+// Cross-document fade between pages. Browsers without view transitions fall
+// back to the keyframe fade on #main-content below, so both get the same feel.
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: .25s;
+    animation-timing-function: ease;
+}
+
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// Scoped to main rather than body: body already runs the grid background
+// animation, and a second shorthand there would replace it.
+#main-content {
+    animation: page-fade-in .3s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #main-content {
+        animation: none;
+    }
+
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation: none;
+    }
+}

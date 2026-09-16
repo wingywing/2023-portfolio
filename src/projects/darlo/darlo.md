@@ -50,34 +50,34 @@ A visual web project representing historical data mapping the changes of Darling
 <br/>
 
 ## Contents
-- [1. The team](#1.-the-team)
-- [2. The brief](#2.-the-brief)
-- [3. The problem](#3.-the-problem)
-- [4. Solving the problem](#4.-solving-the-problem)
-- [5. Design process](#5.-design-process)
-- [6. Challenges](#6.-challenges)
-- [7. Learnings](#7.-learnings)
-- [8. Final comments](#8.-final-comments)
+- [The team](#the-team)
+- [The brief](#the-brief)
+- [The problem](#the-problem)
+- [Solving the problem](#solving-the-problem)
+- [Design process](#design-process)
+- [Challenges](#challenges)
+- [Learnings](#learnings)
+- [Final comments](#final-comments)
 
-## 1. The team
+## The team
 | Human | Role |
 |:-- |:--|
 | [Nicole&nbsp;Cama](https://nicolecama.com.au) | Project Lead – professional historian specialising in public history who led this project, provided archival images and conducted all the historical research for this project |
 | [Nick&nbsp;Clark](https://clarx.dev/) | Software Engineer – created the site from the ground-up and provided the base for SASS styling |
 | Me! | Lead Designer – digitising archival maps, graphic and web design, and SASS styling site-wide |
 
-## 2. The brief
+## The brief
 From the first briefing email, Nicole provided me with a clear outline and attached a detailed brief along with some images for the vibe of the site:
 > ...a **data visualisation project** mapping the people and structures of Liverpool Street, Darlinghurst based on a particular historical source dating **from 1845 to 1948**. [...] a website which will creatively illustrate the data from this source **using graphics, media and other interactive strategies**.
 <br/>
-## 3. The problem
+## The problem
 > “How can we visualise a whole century of historical data for a modern, general audience?”
 1. How can we avoid information fatigue?
 2. How do we tie together information from separate time periods?
 3. Can we incorporate archival images?
 <br/>
 
-## 4. Solving the problem
+## Solving the problem
 We started off the design process with some **mood-boards and brainstorming**. Below is a mood-board that Nicole had included in the project brief, which had some archival images that set the tone of how the project might look and feel. These images are in the public domain and some were used as visual assets in the final project.
 
 <div class="lightgallery">
@@ -126,7 +126,7 @@ Archival images paid an important role in tying the project together visually. T
 </div>
 
 
-## 5. Design process
+## Design process
 ### Brainstorming
 I brainstormed some initial ideas in a list format, but a lot of these ideas were changed throughout the project due to technical or usability reasons. **The process of design and iteration for this project was very agile and cyclical, targeting problems as they arose.**
 
@@ -199,7 +199,7 @@ Some of the icons were hand-illustrated for consistency since there weren't any 
 </div>
 
 
-## 6. Challenges
+## Challenges
 ### Tracing the maps
 One of the biggest challenges in this project was vectorising existing archival images so that they could overlap and allow for easier visual comparison. 
 
@@ -227,7 +227,7 @@ This meant that some features that would’ve been nice to be implemented ran ou
 
 Nonetheless, I’m grateful to have been able to work on this project with the amazing Nicole Cama and Nick Clark.
 <br/>
-## 7. Learnings
+## Learnings
 ### Sometimes, design is messy and non-linear
 While we can do our best to work in an organised design process, sometimes things change during the project which will require us to adapt and think on the spot. 
 
@@ -236,7 +236,7 @@ For example, the implementation of the stories tab had a quick turnaround time, 
 ### Communication is key
 In the beginning of this project, a lot of the communication was done through email only. I found that once we were able to organise a time to call and talk the project through live, ideas started flying and we had a place to start our work.
 
-## 8. Final comments
+## Final comments
 I absolutely loved working on this project! The topic of local histories is so interesting and I really enjoyed chatting to [Nicole&nbsp;Cama](https://nicolecama.com.au) and [Nick&nbsp;Clark](https://clarx.dev/) about fun trivia tidbits surrounding Liverpool Street. 
 
 As the project came to a close, it got me thinking about how there could be so many stories and secrets hidden away from us in plain view. I hope that this project could help spark some curiosity in researching the streets that surround you!

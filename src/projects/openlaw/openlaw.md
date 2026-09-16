@@ -42,9 +42,9 @@ draft: true
 
 ## Contents
 - [Special thanks](#special-thanks)
-- [1. The team](#1.-the-team)
-- [2. The brief](#2.-the-brief)
-- [3. Design process](#3.-design-process)
+- [The team](#the-team)
+- [The brief](#the-brief)
+- [Design process](#design-process)
   - [Rebranding](#rebranding)
     - [Logos](#logos)
     - [Colours](#colours)
@@ -55,19 +55,19 @@ draft: true
     - [Icon library](#icon-library)
     - [Reuseable components](#reuseable-components)
   - [Developing an illustration style](#developing-an-illustration-style)
-- [4. Challenges](#4.-challenges)
-- [5. Final comments](#5.-final-comments)
+- [Challenges](#challenges)
+- [Final comments](#final-comments)
 
 ## Special thanks
 Thank you to the director of Open Law – [Michael Green SC](https://www.linkedin.com/in/michael-green-sc-42118b1/) for the opportunity to work on this project. I would also like to thank [Nick&nbsp;Clark](https://clarx.dev/) who showed me the ropes to Tailwind, SASS and taught me so much about frontend development with immense patience.
 
-## 1. The team
+## The team
 | Human | Role |
 |:-- |:--|
 | [The&nbsp;Open&nbsp;Law&nbsp;Team](https://openlaw.com.au/) | The software development team are the ones who bring my designs to life. Can't do it without the team!|
 | Me! | Lead Designer – Worked with pre-existing design collateral to create a **unified design system** across the Open Law ecosystem. Wrote **comprehensive documentation** on Confluence and Figma that promotes **scalability and consistency**. |
 
-## 2. The brief
+## The brief
 As the range of Open Law projects begin to expand, a **cohesive design system** is important for aesthetic, practical and usability reasons.
 1. **Brand identity** – sharing the same design language makes it clearer that the projects are all created by the Open Law initiative.
 2. **Speed** – creating a reusable component library in Figma and in a React component library makes designing UI layouts and building web pages much more speedier.
@@ -83,7 +83,7 @@ In the process of rebranding Open Law and its product offerings,we also want to 
 
 > *To be the leading legal informatics company that organises and provides the best legal information accessible to all.*
 
-## 3. Design process
+## Design process
 ### Rebranding
 #### Logos
 The previous logos for Open Law, JADE, and the Victorian Reports had vastly differing design styles, making each product standalone from one another.
@@ -334,7 +334,7 @@ There are a few types of illustrations:
         </a>
     </div>
 
-## 4. Challenges
+## Challenges
 A lot of work was done on the Open Law Design System and rebranding, and not without its challenges!
 
 1. **Adapting to new software** <br/><br/>
@@ -348,11 +348,11 @@ In 2023, Figma released [colour variables and modes](https://help.figma.com/hc/e
 <br/>
 
 3. **Working from (almost) zero** <br/><br/>
-Other than the original JADE logo and some of the colour palettes seen in the [Rebranding section](#rebranding), all of the work in this document was completed by myself as the sole designer. Although it was challenging to complete, I'm grateful for the inputs of my colleagues in improving and iterating the design system.
+Other than the original JADE logo and some of the colour palettes seen in the [Rebranding section](#rebranding-section), all of the work in this document was completed by myself as the sole designer. Although it was challenging to complete, I'm grateful for the inputs of my colleagues in improving and iterating the design system.
 
 <br/>
 
-## 5. Final comments
+## Final comments
 Working on the Open Law Design System and rebranding was one of the most rewarding projects I've done to date (as of 2024!). Seeing the impact that my work has on the organisation is very rewarding and I've learnt a lot along the way.
 
 <br/>

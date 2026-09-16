@@ -91,9 +91,21 @@ Here are some output examples of a deck and text doc which were generated from s
 ### Generated slide deck example
 
 
+<div class="embed" style="--embed-ratio: 0.6">
+    <iframe src="attachment:b3ec571b-dc4e-40ce-bed0-6a05a25a5f20:platypus-showcase.html" loading="lazy"
+            allowfullscreen title="Embedded preview"></iframe>
+</div>
+
+
 ### Generated document example
 
 Echidna-styled documents are often used for policy documents, Statement of Work (SoW) documents or Business Requirements Documents (BRD).
+
+
+<div class="embed" style="--embed-ratio: 0.6">
+    <iframe src="attachment:e1cf76af-5a71-414f-874b-509c5d97be54:echidna-documents-overview.html" loading="lazy"
+            allowfullscreen title="Embedded preview"></iframe>
+</div>
 
 
 ## Impact
@@ -128,29 +140,13 @@ Additionally, most AI design tools on the market often lack refinement in the fi
 Themes, blocks and layouts can be extensively customised by a designer to adapt to different/client branding.
 
 
-<div class="column-list">
-<div class="column" style="--column-ratio: 0.5">
-
-<div class="lightgallery">
-    <a href="/projects/ai-tool-suite/02.png">
-        <figure>
-            <img src="/projects/ai-tool-suite/02.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
-<div class="column" style="--column-ratio: 0.5">
-
-<div class="lightgallery">
-    <a href="/projects/ai-tool-suite/03.png">
-        <figure>
-            <img src="/projects/ai-tool-suite/03.png" eleventy:formats="webp" alt="" />
-        </figure>
-    </a>
-</div>
-
-</div>
+<div class="owl-carousel owl-theme media-carousel">
+    <figure>
+        <img src="/projects/ai-tool-suite/02.png" eleventy:formats="webp" alt="" />
+    </figure>
+    <figure>
+        <img src="/projects/ai-tool-suite/03.png" eleventy:formats="webp" alt="" />
+    </figure>
 </div>
 
 
