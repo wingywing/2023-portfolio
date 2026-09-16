@@ -248,4 +248,4 @@ This project taught me the importance of:
 - Aligning closely with developers to ensure feasibility and maintainability.
 I really enjoyed working on this project and pushing the boundaries on how I could give the Victorian Reports a refreshed branding. It was great to be able to be involved in the frontend development process, allowing quick changes and components that fit my design vision.
 
-© 2024 BarNetwork Pty Limited (ABN 32 092 121 198) and Wing Pang
+<p class="copyright-line">© 2024 BarNetwork Pty Limited (ABN 32 092 121 198) and Wing Pang</p>

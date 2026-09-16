@@ -96,11 +96,19 @@ blockquote {
 .lightgallery {
     a {
         background: none;
-        figure, video { 
-            &:hover {
+        // The lift is applied to the media, not the whole figure. Padding and
+        // scaling the figure resized the caption with it and rewrapped the
+        // text, so the words moved whenever the image was hovered.
+        figure, video {
+            img, video {
+                transition: transform .25s ease;
+            }
+
+            &:hover > img,
+            &:hover > picture img,
+            &:hover > video {
                 @include variables.box-shadow;
-                transform: scale(1.03); 
-                padding: 1rem;
+                transform: scale(1.03);
             }
         }
         text-decoration: none;

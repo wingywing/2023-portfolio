@@ -82,7 +82,9 @@
     }
     table {
         font-size: fonts.$body;
-        width: 100%;
+        // Not 100%: the tablet rule gives it a 2rem side margin, and a full
+        // width on top of that pushed it out past the column.
+        width: auto;
         border-collapse: collapse;
         margin-block: 1rem 2.5rem;
         text-align: left;
