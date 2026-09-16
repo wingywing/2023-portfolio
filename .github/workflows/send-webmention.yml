@@ -8,9 +8,21 @@ on:
       - 'src/writing/**.md'
       - 'src/projects/**.md'
 
+# Let an earlier run finish before a newer one starts, so two quick pushes
+# don't race each other's deploys.
+concurrency:
+  group: send-webmentions
+  cancel-in-progress: false
+
 jobs:
   send-webmentions:
     runs-on: ubuntu-latest
+
+    env:
+      DOMAIN: https://wingpang.com
+      # How long to wait for Cloudflare Pages to publish the new post.
+      DEPLOY_TIMEOUT_SECONDS: 1200
+      DEPLOY_POLL_SECONDS: 15
 
     steps:
       - name: Checkout repository
@@ -20,13 +32,12 @@ jobs:
 
       - name: Send Webmentions
         run: |
-          echo "⏳ Waiting 180 seconds for Cloudflare Pages deployment..."
-          sleep 180
-          
-          DOMAIN="https://wingpang.com"
+          set -uo pipefail
 
-          if git rev-parse ${{ github.event.before }} >/dev/null 2>&1; then
-            FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^src/(notes|writing|projects)/.*\.md$')
+          # Added or modified content only — deleted posts will never return 200.
+          if git rev-parse "${{ github.event.before }}" >/dev/null 2>&1; then
+            FILES=$(git diff --name-only --diff-filter=d "${{ github.event.before }}" "${{ github.sha }}" \
+              | grep -E '^src/(notes|writing|projects)/.*\.md$' || true)
           else
             echo "⚠️ No valid previous commit found, listing all content files"
             FILES=$(git ls-files 'src/notes/*.md' 'src/writing/*.md' 'src/projects/*.md')
@@ -37,46 +48,105 @@ jobs:
             exit 0
           fi
 
+          FAILURES=0
+
+          # wait_for_deploy <url> — poll until the URL serves 200, or time out.
+          wait_for_deploy() {
+            local url="$1"
+            local deadline=$(( $(date +%s) + DEPLOY_TIMEOUT_SECONDS ))
+            local status
+
+            while [ "$(date +%s)" -lt "$deadline" ]; do
+              status=$(curl -sS -L -o /dev/null -w '%{http_code}' --max-time 30 "$url" || echo 000)
+              if [ "$status" = "200" ]; then
+                echo "   ✅ Live (HTTP 200)"
+                return 0
+              fi
+              echo "   ⏳ HTTP $status — waiting ${DEPLOY_POLL_SECONDS}s for the deploy..."
+              sleep "$DEPLOY_POLL_SECONDS"
+            done
+
+            echo "   ❌ Still not live after ${DEPLOY_TIMEOUT_SECONDS}s (last status: $status)"
+            return 1
+          }
+
+          # send_webmention <endpoint> <source> <target>
+          send_webmention() {
+            local endpoint="$1" source="$2" target="$3"
+            local body status
+
+            body=$(curl -sS -X POST "$endpoint" \
+              --max-time 60 \
+              -w '\n%{http_code}' \
+              -d "source=$source" \
+              -d "target=$target") || { echo "   ❌ Request to $endpoint failed"; return 1; }
+
+            status=$(printf '%s' "$body" | tail -n1)
+            body=$(printf '%s' "$body" | sed '$d')
+
+            echo "   ↳ HTTP $status ${body:+— $body}"
+
+            case "$status" in
+              2*) return 0 ;;
+              *)  return 1 ;;
+            esac
+          }
+
           for FILE in $FILES; do
             echo "📄 Checking $FILE"
 
-            if grep -q '^draft:\s*true' "$FILE"; then
-              echo "⏭️ Skipping draft post"
+            if grep -qE '^draft:[[:space:]]*true' "$FILE"; then
+              echo "   ⏭️ Skipping draft post"
               continue
             fi
 
             RELATIVE=${FILE#src/}
             SECTION=$(echo "$RELATIVE" | cut -d/ -f1)
             SLUG=$(basename "$RELATIVE" .md)
-            POST_URL="$DOMAIN/$SECTION/$SLUG"
+            # Trailing slash matches the u-url Eleventy emits, and avoids a 308.
+            POST_URL="$DOMAIN/$SECTION/$SLUG/"
 
-            # Extract any specific webmention target
-            SPECIFIC_TARGET=$(grep -E '^(in-reply-to|like-of|bookmark-of):' "$FILE" | head -n1 | sed 's/.*:[[:space:]]*//')
+            # Frontmatter uses camelCase (inReplyTo / likeOf / bookmarkOf / targetLink);
+            # kebab-case is accepted too in case older posts use it.
+            SPECIFIC_TARGET=$(grep -iE '^(inReplyTo|likeOf|bookmarkOf|targetLink|in-reply-to|like-of|bookmark-of):' "$FILE" \
+              | head -n1 \
+              | sed -E 's/^[^:]+:[[:space:]]*//; s/^["'\'']//; s/["'\'']$//' \
+              | tr -d '\r')
+
+            echo "   🌐 $POST_URL"
+            if ! wait_for_deploy "$POST_URL"; then
+              echo "   ❌ Skipping webmentions — Bridgy Fed would just get a 404."
+              FAILURES=$((FAILURES + 1))
+              echo ""
+              continue
+            fi
 
             # --- 1. Always send to Bridgy Fed ---
-            echo "🔗 Sending Webmention to Bridgy Fed: $POST_URL → https://fed.brid.gy/"
-            curl -s -X POST https://fed.brid.gy/webmention \
-              -d "source=$POST_URL" \
-              -d "target=https://fed.brid.gy/" \
-              && echo "✅ Sent to Bridgy Fed" \
-              || {
-                echo "⚠️ Bridgy Fed failed, trying webmention.io..."
-                curl -s -X POST https://webmention.io/wingpang.com/webmention \
-                  -d "source=$POST_URL" \
-                  -d "target=https://fed.brid.gy/" \
-                  && echo "✅ Fallback to webmention.io succeeded" \
-                  || echo "❌ Failed to send Webmention to Bridgy Fed"
-              }
+            echo "   🔗 Bridgy Fed: $POST_URL → https://fed.brid.gy/"
+            if send_webmention "https://fed.brid.gy/webmention" "$POST_URL" "https://fed.brid.gy/"; then
+              echo "   ✅ Sent to Bridgy Fed"
+            else
+              echo "   ❌ Failed to send Webmention to Bridgy Fed"
+              FAILURES=$((FAILURES + 1))
+            fi
 
             # --- 2. Also send to specific reply/like/bookmark target ---
             if [ -n "$SPECIFIC_TARGET" ]; then
-              echo "🔗 Sending Webmention to target: $POST_URL → $SPECIFIC_TARGET"
-              curl -s -X POST https://webmention.io/wingpang.com/webmention \
-                -d "source=$POST_URL" \
-                -d "target=$SPECIFIC_TARGET" \
-                && echo "✅ Sent to target" \
-                || echo "❌ Failed to send Webmention to $SPECIFIC_TARGET"
+              echo "   🔗 Target: $POST_URL → $SPECIFIC_TARGET"
+              if send_webmention "https://webmention.io/wingpang.com/webmention" "$POST_URL" "$SPECIFIC_TARGET"; then
+                echo "   ✅ Sent to target"
+              else
+                echo "   ❌ Failed to send Webmention to $SPECIFIC_TARGET"
+                FAILURES=$((FAILURES + 1))
+              fi
             fi
 
             echo ""
           done
+
+          if [ "$FAILURES" -gt 0 ]; then
+            echo "❌ $FAILURES webmention(s) failed."
+            exit 1
+          fi
+
+          echo "✅ All webmentions sent."
