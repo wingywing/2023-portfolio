@@ -2,6 +2,15 @@
 @use '../../../stylesheets/mixin/breakpoints.scss' as bp;
 @use '../../../stylesheets/fonts.scss' as fonts;
 
+// The site has no global box-sizing reset, so borders here would otherwise sit
+// outside the declared width and overflow their grid track.
+.filter-panel,
+.filter-panel *,
+.filter-panel *::before,
+.filter-panel *::after {
+    box-sizing: border-box;
+}
+
 // Vertical filter panel: title, search field, then grouped checkboxes.
 .filter-panel {
     color: colours.$text-subdued;
@@ -102,6 +111,7 @@
 .filter-panel__groups {
     display: grid;
     gap: 1.25rem;
+    min-width: 0;
 
     // Topics takes the flexible column; Year only needs room for its dropdown.
     @include bp.desktop {
@@ -113,6 +123,11 @@
 
 .filter-group {
     border: 0;
+    // A fieldset defaults to `min-inline-size: min-content`, which ignores its
+    // grid track and overflows. That overflow was then shaved off by the
+    // scrolling ancestor, clipping the dropdown's right border.
+    min-inline-size: 0;
+    min-width: 0;
 
     // Collapsible, so the chips can be folded away in the narrow sidebar.
     &__legend {
@@ -332,6 +347,9 @@
         position: sticky;
         top: 1.5rem;
         max-height: calc(100dvh - 3rem);
+        // Setting overflow on one axis makes the other compute to `auto` too,
+        // so this box clips horizontally as well: nothing inside it may
+        // overflow, which is what the border-box rule above guarantees.
         overflow-y: auto;
     }
 
