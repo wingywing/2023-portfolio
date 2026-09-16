@@ -111,7 +111,7 @@ jobs:
             SPECIFIC_TARGET=$(grep -iE '^(inReplyTo|likeOf|bookmarkOf|targetLink|in-reply-to|like-of|bookmark-of):' "$FILE" \
               | head -n1 \
               | sed -E 's/^[^:]+:[[:space:]]*//; s/^["'\'']//; s/["'\'']$//' \
-              | tr -d '\r')
+              | tr -d '\r' || true)
 
             echo "   🌐 $POST_URL"
             if ! wait_for_deploy "$POST_URL"; then
