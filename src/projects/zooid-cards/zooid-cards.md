@@ -65,10 +65,6 @@ As part of Digizoo’s internal social committee, I was tasked to create a memen
             <img src="/projects/zooid-cards/02.png" eleventy:formats="webp" alt="" />
         </figure>
     </a>
-</div>
-
-
-<div class="lightgallery media-group">
     <a href="/projects/zooid-cards/03.png">
     <figure>
             <img src="/projects/zooid-cards/03.png" eleventy:formats="webp" alt="" />
