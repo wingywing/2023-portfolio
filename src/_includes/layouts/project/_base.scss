@@ -437,8 +437,12 @@
     // Sits in from the column edges so the screenshots read as a set being
     // shown, rather than filling the page like the other imagery.
     .testimonial-carousel {
+        // There is no global border-box reset, so side padding was adding to
+        // the width and pushing the carousel out past the column.
+        box-sizing: border-box;
+        width: 80%;
         margin-block: 1.5rem 2rem;
-        padding-inline: 3rem;
+        margin-inline: auto;
 
         figure {
             margin: 0;
