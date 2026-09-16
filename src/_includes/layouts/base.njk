@@ -84,11 +84,24 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
+            $('.owl-carousel:not([data-autoplay])').owlCarousel({
                 autoHeight: true,
                 lazyLoad: true,
                 loop:false,
                 items: 1,
+            });
+            //Carousels that advance on their own, and pause when hovered so a
+            //reader can finish what they are looking at.
+            $('.owl-carousel[data-autoplay]').owlCarousel({
+                autoHeight: true,
+                lazyLoad: true,
+                loop: true,
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 4500,
+                autoplayHoverPause: true,
+                dots: true,
+                nav: false,
             });
         });
     </script>

@@ -434,6 +434,27 @@
         margin-inline: auto;
     }
 
+    // Sits in from the column edges so the screenshots read as a set being
+    // shown, rather than filling the page like the other imagery.
+    .testimonial-carousel {
+        margin-block: 1.5rem 2rem;
+        padding-inline: 3rem;
+
+        figure {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .owl-dots {
+            margin-top: .75rem;
+            text-align: center;
+        }
+    }
+
     // A run of images shown as one block, with nothing between them.
     .media-stack {
         display: flex;
@@ -473,6 +494,29 @@
             width: 100%;
             max-height: 22rem;
             object-fit: contain;
+        }
+
+        // Four images wrap as three then a stray one, at whatever heights the
+        // originals happen to be. As a square 2x2 block they read as one set.
+        &:has(> a:nth-child(4):last-child) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0;
+
+            > a {
+                flex: none;
+                // The blanket rule puts every descendant in grid-column 2/12,
+                // which stacked all four into a single column.
+                grid-column: auto;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-height: none;
+                aspect-ratio: 1;
+                object-fit: cover;
+            }
         }
     }
 
