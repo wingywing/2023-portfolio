@@ -41,3 +41,41 @@
         margin-bottom: -.2rem;
     }
 } 
+// Tiles rest at a slight angle set per tile as `--tilt`, so the hover wiggle
+// can swing around that angle rather than flattening it.
+.tile {
+    rotate: var(--tilt, 0deg);
+    touch-action: none;
+
+    &.is-draggable {
+        cursor: grab;
+    }
+
+    &.is-dragging {
+        cursor: grabbing;
+        z-index: 2;
+    }
+
+    // Only wiggle when the tile is sitting still; dragging has its own feel.
+    &.is-draggable:hover:not(.is-dragging) {
+        animation: tile-wiggle .5s ease-in-out infinite;
+    }
+}
+
+@keyframes tile-wiggle {
+    0%, 100% {
+        rotate: var(--tilt, 0deg);
+    }
+    25% {
+        rotate: calc(var(--tilt, 0deg) - 4deg);
+    }
+    75% {
+        rotate: calc(var(--tilt, 0deg) + 4deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tile.is-draggable:hover:not(.is-dragging) {
+        animation: none;
+    }
+}

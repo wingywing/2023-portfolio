@@ -128,6 +128,9 @@ Additionally, most AI design tools on the market often lack refinement in the fi
 Themes, blocks and layouts can be extensively customised by a designer to adapt to different/client branding.
 
 
+<div class="column-list">
+<div class="column" style="--column-ratio: 0.5">
+
 <div class="lightgallery">
     <a href="/projects/ai-tool-suite/02.png">
         <figure>
@@ -136,6 +139,8 @@ Themes, blocks and layouts can be extensively customised by a designer to adapt 
     </a>
 </div>
 
+</div>
+<div class="column" style="--column-ratio: 0.5">
 
 <div class="lightgallery">
     <a href="/projects/ai-tool-suite/03.png">
@@ -143,6 +148,9 @@ Themes, blocks and layouts can be extensively customised by a designer to adapt 
             <img src="/projects/ai-tool-suite/03.png" eleventy:formats="webp" alt="" />
         </figure>
     </a>
+</div>
+
+</div>
 </div>
 
 

@@ -7,6 +7,14 @@
     }
 }
 
+// Laptop widths: a 13"/14" MacBook sits between the tablet and desktop
+// breakpoints, and is wide enough for a sidebar beside the content.
+@mixin laptop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
 @mixin desktop {
     @media only screen and (min-width: 1440px) {
         @content;

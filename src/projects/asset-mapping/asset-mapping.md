@@ -262,6 +262,9 @@ While the supervisors interviewed mostly work from their desktop computers, they
 From the user interviews above, we created some personas for Depot Supervisors and Truck Drivers (note: the images for these personas were generated using AI for anonymity):
 
 
+<div class="column-list">
+<div class="column" style="--column-ratio: 0.5">
+
 <div class="lightgallery">
     <a href="/projects/asset-mapping/10.png">
         <figure>
@@ -270,6 +273,8 @@ From the user interviews above, we created some personas for Depot Supervisors a
     </a>
 </div>
 
+</div>
+<div class="column" style="--column-ratio: 0.5">
 
 <div class="lightgallery">
     <a href="/projects/asset-mapping/11.png">
@@ -277,6 +282,9 @@ From the user interviews above, we created some personas for Depot Supervisors a
             <img src="/projects/asset-mapping/11.png" eleventy:formats="webp" alt="" />
         </figure>
     </a>
+</div>
+
+</div>
 </div>
 
 

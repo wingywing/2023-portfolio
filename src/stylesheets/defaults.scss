@@ -73,9 +73,16 @@ p {
 }
 
 // Headings are display sizes, so they want much tighter leading than body copy.
+// They also bind to the content beneath them: generous space above separates
+// sections, a small gap below keeps the heading attached to its paragraph.
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     text-wrap: balance;
+    margin-block: 1.5em .375em;
+
+    &:first-child {
+        margin-block-start: 0;
+    }
 }
 
 .text-hero {

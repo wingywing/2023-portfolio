@@ -4,7 +4,7 @@
 @use '../../../stylesheets/variables.scss' as variables;
 
 @mixin project-page-desktop(){
-    @include bp.desktop{
+    @include bp.laptop{
         margin-bottom: 4rem;
         .content {
             grid-column: 4/10;

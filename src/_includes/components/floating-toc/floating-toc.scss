@@ -10,7 +10,7 @@
     display: none;
     visibility: hidden;
     &:has(.floating-toc-content > ul) {
-        @include bp.desktop(){
+        @include bp.laptop(){
             display: flex;
             visibility: visible;
             flex-direction: column;

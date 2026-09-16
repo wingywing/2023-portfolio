@@ -276,4 +276,28 @@
     .blogpost.note .u-photo:not(:last-child) {
         margin-bottom: 1rem;;
     }
+
+    // Side-by-side blocks carried over from Notion columns. Stacks on narrow
+    // screens, where two columns would leave each one unreadably small.
+    .column-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-block: 1rem;
+
+        @include bp.tablet {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+
+    .column {
+        flex: var(--column-ratio, 1) 1 0;
+        min-width: 0;
+
+        // The figures inside already carry their own spacing.
+        > *:first-child {
+            margin-block-start: 0;
+        }
+    }
 }
