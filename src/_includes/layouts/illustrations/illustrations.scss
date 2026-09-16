@@ -63,6 +63,21 @@
             aspect-ratio: 1 / 1;
         }
     }
+
+    // The blanket `#project-page * :not(...)` rule sets `gap: inherit` at a
+    // higher specificity, so the grid was picking up the content column's
+    // zeroed row gap. The id is repeated to out-weigh it.
+    #illustration-gallery#illustration-gallery {
+        @media only screen and (min-width: 550px) {
+            column-gap: 0.625rem;
+            row-gap: 0.625rem;
+        }
+
+        @include bp.laptop {
+            column-gap: 1rem;
+            row-gap: 1rem;
+        }
+    }
     @media only screen and (min-width: 550px ) {
         .lightgallery {
             display: flex;
