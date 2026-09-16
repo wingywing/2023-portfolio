@@ -321,7 +321,7 @@ The climate action tasks are typesetted in a variety of typefaces, bringing visu
 
 In the future, collections with more variety in style can be created through collaboration with a range of artists.
 
-<div class="lightgallery">
+<div class="lightgallery media-pad">
     <a href="/projects/climasaur/illustrations.png">
         <figure>
             <img src="/projects/climasaur/illustrations.png" eleventy:formats="webp" alt="Six Climasaur climate action cards, each with its own illustration and typeface treatment." />

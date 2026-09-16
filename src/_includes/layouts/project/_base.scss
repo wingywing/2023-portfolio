@@ -114,6 +114,13 @@
         margin-block: 0;
         margin-bottom: 1rem;
     }
+    // The quote's own padding closes it off; the last paragraph's bottom
+    // margin stacked on top, leaving twice the space below the text as above.
+    // Needs to out-weigh p:last-of-type just below, which carries an id.
+    blockquote > p:last-child {
+        margin-bottom: 0;
+    }
+
     p:last-of-type {
         margin: 0 0 1rem;
     }
@@ -378,6 +385,12 @@
     // Grouped images sit as a row of thumbnails; lightGallery turns the group
     // into one swipeable lightbox on click, rather than taking over the page
     // as an inline carousel.
+    // An image whose own artwork runs to its edges, so it needs the breathing
+    // room the column would otherwise have given it.
+    .media-pad {
+        padding-inline: 2rem;
+    }
+
     // A tall portrait image that would otherwise tower over the page at the
     // full column width.
     // Doubled so it clears the general image rule further down, which sets
@@ -486,15 +499,28 @@
     .embed {
         margin-block: 1.5rem;
 
-        // These render a whole deck or document at their own size, so a wide
-        // frame cropped them. A tall frame fits a page, and the sample
-        // scrolls inside it.
-        iframe {
-            width: 100%;
-            height: 70vh;
-            min-height: 30rem;
-            border: 1px solid colours.$border-neutral;
-            background: colours.$bg-primary;
+        // The samples lay out at a desktop width, so in a column-width frame
+        // they came out cropped and over-magnified. The frame is given twice
+        // the room and scaled back down, which shows the whole page instead.
+        --embed-scale: .5;
+
+        position: relative;
+        height: 70vh;
+        min-height: 30rem;
+        overflow: hidden;
+        border: 1px solid colours.$border-neutral;
+        background: colours.$bg-primary;
+
+        // The blanket rule caps everything at max-width: 100%, which clamped
+        // the oversized frame straight back to the column width and undid the
+        // scaling. Three classes clear it.
+        &.embed.embed iframe {
+            width: calc(100% / var(--embed-scale));
+            max-width: none;
+            height: calc(100% / var(--embed-scale));
+            border: 0;
+            transform: scale(var(--embed-scale));
+            transform-origin: 0 0;
         }
     }
 
