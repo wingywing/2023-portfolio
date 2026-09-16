@@ -30,6 +30,12 @@
 
         .project-banner {
             grid-column: 1/13;
+
+            // A banner narrower than the content column left a white gap
+            // beside it rather than reading as a banner.
+            img {
+                width: 100%;
+            }
         }
         .information {
             padding: 2rem 0;
@@ -287,9 +293,9 @@
 
         @include bp.tablet {
             flex-direction: row;
-            // Paired images are rarely the same shape, so centre them against
-            // each other rather than leaving a ragged bottom edge.
-            align-items: center;
+            // Top aligned: where a column holds prose, centring drops the
+            // image halfway down the text and leaves a hole above it.
+            align-items: flex-start;
         }
 
         // Keeps one tall portrait shot from towering over its neighbour.
@@ -297,9 +303,6 @@
         .lightgallery img,
         figure img {
             max-height: 22rem;
-            width: auto;
-            max-width: 100%;
-            margin-inline: auto;
         }
     }
 
@@ -307,6 +310,13 @@
     // own, which makes the case study read as a slideshow rather than a page.
     .lightgallery img {
         max-height: 70vh;
+    }
+
+    // Images sit centred in their column. They have to be block level for the
+    // auto margins to do anything.
+    .lightgallery img,
+    figure img {
+        display: block;
         width: auto;
         max-width: 100%;
         margin-inline: auto;
@@ -319,10 +329,37 @@
     .column {
         flex: var(--column-ratio, 1) 1 0;
         min-width: 0;
+        // Breathing room so an image never sits flush against the column edge.
+        padding-inline: .5rem;
 
         // The figures inside already carry their own spacing.
         > *:first-child {
             margin-block-start: 0;
+        }
+    }
+
+    // Widens a figure past the content column. It only grows to the right: the
+    // contents sidebar sits in the left margin, so a symmetric bleed would run
+    // straight through it.
+    // The width override itself lives in _desktop.scss: the blanket
+    // `* :not(...)` rule in _mobile.scss caps everything at 100% with a higher
+    // specificity and loads later, so it has to be answered from a later file.
+    .full-bleed {
+        margin-block: 3rem;
+
+        // The blanket 44.5rem cap on descendants would otherwise hold the
+        // image back at the content column's width.
+        a,
+        figure,
+        picture,
+        img {
+            max-width: none;
+            width: 100%;
+        }
+
+        img {
+            max-height: none;
+            height: auto;
         }
     }
 }

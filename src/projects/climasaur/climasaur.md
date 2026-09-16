@@ -114,30 +114,13 @@ I wanted this app to be **as simple as possible, enabling climate action in pock
 
 **Climasaur drafts an email for you and finds the email address of your local MP, so that sending through your thoughts would only take two taps.**
 
-<div class="column-list">
-<div class="column">
-
 <div class="lightgallery">
     <a href="/projects/climasaur/card-email-mp.png">
         <figure>
-            <img src="/projects/climasaur/card-email-mp.png" eleventy:formats="webp" alt="A green Climasaur card reading 'Email your local member of parliament', illustrated with a hand holding a letter." />
-        </figure>
-    </a>
-</div>
-
-</div>
-<div class="column">
-
-<div class="lightgallery">
-    <a href="/projects/climasaur/card-email-mp-tap.png">
-        <figure>
-            <img src="/projects/climasaur/card-email-mp-tap.png" eleventy:formats="webp" alt="The same card with a 'Tap for a pre-filled email' action surfaced over the illustration." />
+            <img src="/projects/climasaur/card-email-mp.png" eleventy:formats="webp" alt="A green Climasaur card reading 'Email your local member of parliament', with a 'Tap for a pre-filled email' action at the bottom." />
             <figcaption>Two taps: open the card, send the email.</figcaption>
         </figure>
     </a>
-</div>
-
-</div>
 </div>
 
 ## Make it a habit
@@ -205,9 +188,9 @@ Users will also receive 'return cards' for when a climate action they have taken
 <div class="column">
 
 <div class="lightgallery">
-    <a href="/projects/climasaur/good-news-cards.png">
+    <a href="/projects/climasaur/good-news-phone.png">
         <figure>
-            <img src="/projects/climasaur/good-news-cards.png" eleventy:formats="webp" alt="A return card celebrating the New Vehicle Efficiency Standards being enacted, paired with a thank you note from the Climate Council." />
+            <img src="/projects/climasaur/good-news-phone.png" eleventy:formats="webp" alt="Phone showing the daily good news card: 48 countries now generate over 50% of their electricity from renewable energy." />
         </figure>
     </a>
 </div>
@@ -216,9 +199,9 @@ Users will also receive 'return cards' for when a climate action they have taken
 <div class="column">
 
 <div class="lightgallery">
-    <a href="/projects/climasaur/good-news-phone.png">
+    <a href="/projects/climasaur/good-news-card.png">
         <figure>
-            <img src="/projects/climasaur/good-news-phone.png" eleventy:formats="webp" alt="Phone showing the daily good news card: 48 countries now generate over 50% of their electricity from renewable energy." />
+            <img src="/projects/climasaur/good-news-card.png" eleventy:formats="webp" alt="A return card celebrating the New Vehicle Efficiency Standards being enacted, illustrated with balloons lifting a car." />
             <figcaption>One piece of good news a day, on top of the daily action.</figcaption>
         </figure>
     </a>
@@ -241,9 +224,9 @@ By encouraging people to share the climate efforts that they have taken, **Clima
 <div class="column">
 
 <div class="lightgallery">
-    <a href="/projects/climasaur/share-in-hand.png">
+    <a href="/projects/climasaur/share-sheet.png">
         <figure>
-            <img src="/projects/climasaur/share-in-hand.png" eleventy:formats="webp" alt="Someone sharing a Climasaur card from the share sheet on their phone." />
+            <img src="/projects/climasaur/share-sheet.png" eleventy:formats="webp" alt="A rare golden egg card open in a social share sheet, ready to post to a story." />
         </figure>
     </a>
 </div>
@@ -252,9 +235,9 @@ By encouraging people to share the climate efforts that they have taken, **Clima
 <div class="column">
 
 <div class="lightgallery">
-    <a href="/projects/climasaur/share-card-phone.png">
+    <a href="/projects/climasaur/share-in-hand.png">
         <figure>
-            <img src="/projects/climasaur/share-card-phone.png" eleventy:formats="webp" alt="A rare golden egg card shown on a phone, ready to share." />
+            <img src="/projects/climasaur/share-in-hand.png" eleventy:formats="webp" alt="Someone holding a phone in the dark, sharing a Climasaur card." />
             <figcaption>Rarer actions get rarer cards, which are the ones worth sharing.</figcaption>
         </figure>
     </a>
@@ -317,11 +300,19 @@ The logotype has been altered to have more rounded features in the letters "C", 
 
 **The logotype is never used on its own.**
 
+<div class="lightgallery">
+    <a href="/projects/climasaur/logos.png">
+        <figure>
+            <img src="/projects/climasaur/logos.png" eleventy:formats="webp" alt="The Climasaur logomark and logotype in light and dark lockups, with Dino the brontosaurus set against a modified Cirka wordmark." />
+        </figure>
+    </a>
+</div>
+
 ## Branding
 
 Large title is set in Cirka (Regular) and body in Pangram Sans Rounded (Regular): modern and sharp, yet friendly and inviting. Built to be accessible and scalable.
 
-<div class="lightgallery">
+<div class="lightgallery full-bleed">
     <a href="/projects/climasaur/branding.png">
         <figure>
             <img src="/projects/climasaur/branding.png" eleventy:formats="webp" alt="Climasaur's type and colour system: semantic text, background and fill tokens alongside the named palette." />
@@ -334,7 +325,7 @@ Large title is set in Cirka (Regular) and body in Pangram Sans Rounded (Regular)
 
 Every colour was expanded into a full luminance scale, with documented rules pairing each background step to a text step that meets contrast requirements.
 
-<div class="lightgallery">
+<div class="lightgallery full-bleed">
     <a href="/projects/climasaur/colour-scale.png">
         <figure>
             <img src="/projects/climasaur/colour-scale.png" eleventy:formats="webp" alt="The palette expanded into luminance scales, with a table pairing each background step with an accessible text step." />
@@ -351,7 +342,7 @@ The climate action tasks are typesetted in a variety of typefaces, bringing visu
 
 In the future, collections with more variety in style can be created through collaboration with a range of artists.
 
-<div class="lightgallery">
+<div class="lightgallery full-bleed">
     <a href="/projects/climasaur/illustrations.png">
         <figure>
             <img src="/projects/climasaur/illustrations.png" eleventy:formats="webp" alt="Six Climasaur climate action cards, each with its own illustration and typeface treatment." />
