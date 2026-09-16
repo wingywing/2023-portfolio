@@ -364,6 +364,23 @@
     // Grouped images sit as a row of thumbnails; lightGallery turns the group
     // into one swipeable lightbox on click, rather than taking over the page
     // as an inline carousel.
+    // A run of images shown as one block, with nothing between them.
+    .media-stack {
+        display: flex;
+        flex-direction: column;
+        margin-block: 1.5rem;
+
+        .lightgallery,
+        figure {
+            margin: 0;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
     .media-group.media-group {
         display: flex;
         flex-wrap: wrap;
@@ -410,20 +427,15 @@
         }
     }
 
-    // A single very tall image would otherwise fill more than a screen on its
-    // own, which makes the case study read as a slideshow rather than a page.
-    .lightgallery img {
-        max-height: 70vh;
-    }
-
-    // Images sit centred in their column. They have to be block level for the
-    // auto margins to do anything.
+    // Images run the full width of the column. A height cap used to shrink
+    // them to fit, which left space down either side.
     .lightgallery img,
     figure img {
         display: block;
-        width: auto;
+        width: 100%;
         max-width: 100%;
-        margin-inline: auto;
+        height: auto;
+        max-height: none;
     }
 
     figure {

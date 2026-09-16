@@ -247,6 +247,7 @@ Climasaur's aim isn't just to enable personal political and social climate actio
 
 Merchandise made from illustrations used in climate action cards can serve as a way for users to advocate for actions that they care strongly about.
 
+<div class="media-stack">
 <div class="lightgallery">
     <a href="/projects/climasaur/merch-tote-chair.png">
         <figure>
@@ -267,6 +268,7 @@ Merchandise made from illustrations used in climate action cards can serve as a 
             <img src="/projects/climasaur/merch-bottles.png" eleventy:formats="webp" alt="Two Climasaur branded drink bottles, one black and one cream." />
         </figure>
     </a>
+</div>
 </div>
 
 ## Logos
