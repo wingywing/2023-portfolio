@@ -140,13 +140,17 @@ Additionally, most AI design tools on the market often lack refinement in the fi
 Themes, blocks and layouts can be extensively customised by a designer to adapt to different/client branding.
 
 
-<div class="owl-carousel owl-theme media-carousel">
+<div class="lightgallery media-group">
+    <a href="/projects/ai-tool-suite/02.png">
     <figure>
-        <img src="/projects/ai-tool-suite/02.png" eleventy:formats="webp" alt="" />
-    </figure>
+            <img src="/projects/ai-tool-suite/02.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+    <a href="/projects/ai-tool-suite/03.png">
     <figure>
-        <img src="/projects/ai-tool-suite/03.png" eleventy:formats="webp" alt="" />
-    </figure>
+            <img src="/projects/ai-tool-suite/03.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
 </div>
 
 

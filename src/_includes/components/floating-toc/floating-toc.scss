@@ -45,7 +45,20 @@
                     list-style: none;
                     font-size: 1rem;
                 }
+                //Numbering matches the section numbers on the headings
+                //themselves. Top-level entries are the h2s, in document order.
+                counter-reset: toc-section;
+
+                > li {
+                    counter-increment: toc-section;
+
+                    > a::before {
+                        content: counter(toc-section) ". ";
+                    }
+                }
+
                 //Sub-headings run long enough to wrap several times each,
+
                 //which buries the sections they sit under.
                 li ul {
                     display: none;

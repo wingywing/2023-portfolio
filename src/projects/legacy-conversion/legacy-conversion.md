@@ -123,13 +123,17 @@ The designs incorporate alerts created by the Data Engineering team, allowing Sa
 The vehicle fleet dashboard allows Safety Officers to see an overview of all assets and their statuses. Meanwhile, individual car dashboards enable more granular viewing of specific assets.
 
 
-<div class="owl-carousel owl-theme media-carousel">
+<div class="lightgallery media-group">
+    <a href="/projects/legacy-conversion/03.png">
     <figure>
-        <img src="/projects/legacy-conversion/03.png" eleventy:formats="webp" alt="" />
-    </figure>
+            <img src="/projects/legacy-conversion/03.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+    <a href="/projects/legacy-conversion/04.png">
     <figure>
-        <img src="/projects/legacy-conversion/04.png" eleventy:formats="webp" alt="" />
-    </figure>
+            <img src="/projects/legacy-conversion/04.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
 </div>
 
 

@@ -25,8 +25,6 @@ categories:
             <span>&bull;</span>
             <span>{{ projecttype }}</span>
             <span>&bull;</span>
-            <span>{{ client }}</span>
-            <span>&bull;</span>
             <span>{{ duration }}</span>
         </div>
     </div>
@@ -231,7 +229,7 @@ By encouraging people to share the climate efforts that they have taken, **Clima
     <a href="/projects/climasaur/share-in-hand.png">
         <figure>
             <img src="/projects/climasaur/share-in-hand.png" eleventy:formats="webp" alt="Someone holding a phone in the dark, sharing a Climasaur card." />
-            <figcaption>Rarer actions get rarer cards, which are the ones worth sharing.</figcaption>
+            <figcaption>Rarer actions get rarer cards, which can be shared on social media.</figcaption>
         </figure>
     </a>
 </div>

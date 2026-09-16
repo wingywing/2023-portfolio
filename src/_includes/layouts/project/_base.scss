@@ -115,18 +115,18 @@
         margin-bottom: 1rem;
     }
     p:last-of-type {
-        margin: 1rem 0;
+        margin: 0 0 1rem;
     }
 
     // Headings bind to what follows them: plenty of air above to separate the
     // section, very little below.
     .content {
         h2 {
-            margin-top: 3rem;
+            margin-top: 2.5rem;
             margin-bottom: .5rem;
         }
         h3 {
-            margin-top: 2rem;
+            margin-top: 1.75rem;
             margin-bottom: .5rem;
         }
         h2 + p,
@@ -135,11 +135,31 @@
         h3 + ul,
         h2 + .lightgallery,
         h3 + .lightgallery,
-        h2 + .media-carousel,
-        h3 + .media-carousel,
+        h2 + .media-group,
+        h3 + .media-group,
         h2 + .column-list,
         h3 + .column-list {
             margin-top: 0;
+        }
+    }
+
+    // Numbered sections. The hidden contents heading is display:none, and a
+    // box that isn't generated can't increment a counter, so it is skipped.
+    .content {
+        counter-reset: section;
+
+        h2 {
+            counter-reset: subsection;
+
+            &::before {
+                counter-increment: section;
+                content: counter(section) ". ";
+            }
+        }
+
+        h3::before {
+            counter-increment: subsection;
+            content: counter(section) "." counter(subsection) " ";
         }
     }
 
@@ -328,6 +348,34 @@
 
     // Side-by-side blocks carried over from Notion columns. Stacks on narrow
     // screens, where two columns would leave each one unreadably small.
+    // Grouped images sit as a row of thumbnails; lightGallery turns the group
+    // into one swipeable lightbox on click, rather than taking over the page
+    // as an inline carousel.
+    .media-group.media-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-block: 1.5rem;
+        align-items: flex-start;
+
+        > a {
+            flex: 1 1 10rem;
+            min-width: 0;
+            max-width: none;
+            background: none;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            max-height: 22rem;
+            object-fit: contain;
+        }
+    }
+
     .column-list {
         display: flex;
         flex-direction: column;

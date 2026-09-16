@@ -90,13 +90,17 @@ As technology advances, we wanted to show our human side through our website. On
 ### Mobile responsive
 
 
-<div class="owl-carousel owl-theme media-carousel">
+<div class="lightgallery media-group">
+    <a href="/projects/digizoo-website/04.png">
     <figure>
-        <img src="/projects/digizoo-website/04.png" eleventy:formats="webp" alt="" />
-    </figure>
+            <img src="/projects/digizoo-website/04.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+    <a href="/projects/digizoo-website/05.png">
     <figure>
-        <img src="/projects/digizoo-website/05.png" eleventy:formats="webp" alt="" />
-    </figure>
+            <img src="/projects/digizoo-website/05.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
 </div>
 
 
