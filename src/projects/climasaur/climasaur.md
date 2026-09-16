@@ -247,7 +247,7 @@ Climasaur's aim isn't just to enable personal political and social climate actio
 
 Merchandise made from illustrations used in climate action cards can serve as a way for users to advocate for actions that they care strongly about.
 
-<div class="column-list full-bleed">
+<div class="column-list">
 <div class="column">
 
 <div class="lightgallery">
@@ -303,7 +303,7 @@ The logotype has been altered to have more rounded features in the letters "C", 
 
 Large title is set in Cirka (Regular) and body in Pangram Sans Rounded (Regular): modern and sharp, yet friendly and inviting. Built to be accessible and scalable.
 
-<div class="lightgallery full-bleed">
+<div class="lightgallery">
     <a href="/projects/climasaur/branding.png">
         <figure>
             <img src="/projects/climasaur/branding.png" eleventy:formats="webp" alt="Climasaur's type and colour system: semantic text, background and fill tokens alongside the named palette." />
@@ -316,7 +316,7 @@ Large title is set in Cirka (Regular) and body in Pangram Sans Rounded (Regular)
 
 Every colour was expanded into a full luminance scale, with documented rules pairing each background step to a text step that meets contrast requirements.
 
-<div class="lightgallery full-bleed">
+<div class="lightgallery">
     <a href="/projects/climasaur/colour-scale.png">
         <figure>
             <img src="/projects/climasaur/colour-scale.png" eleventy:formats="webp" alt="The palette expanded into luminance scales, with a table pairing each background step with an accessible text step." />
@@ -333,7 +333,7 @@ The climate action tasks are typesetted in a variety of typefaces, bringing visu
 
 In the future, collections with more variety in style can be created through collaboration with a range of artists.
 
-<div class="lightgallery full-bleed">
+<div class="lightgallery">
     <a href="/projects/climasaur/illustrations.png">
         <figure>
             <img src="/projects/climasaur/illustrations.png" eleventy:formats="webp" alt="Six Climasaur climate action cards, each with its own illustration and typeface treatment." />

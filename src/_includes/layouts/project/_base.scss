@@ -118,6 +118,11 @@
         margin: 0 0 1rem;
     }
 
+    .content ul,
+    .content ol {
+        margin-block: 0 1rem;
+    }
+
     // Headings bind to what follows them: plenty of air above to separate the
     // section, very little below.
     .content {
@@ -343,7 +348,7 @@
         gap: 0;
     }
     .blogpost.note .u-photo:not(:last-child) {
-        margin-bottom: 1rem;;
+        margin-bottom: 1rem;
     }
 
     // Side-by-side blocks carried over from Notion columns. Stacks on narrow
@@ -455,32 +460,4 @@
         margin-top: 0;
     }
 
-    // The width override itself lives in _desktop.scss: the blanket
-    // `* :not(...)` rule in _mobile.scss caps everything at 100% with a higher
-    // specificity and loads later, so it has to be answered from a later file.
-    .full-bleed {
-        margin-block: 2rem;
-        background-color: colours.$bg-secondary;
-
-        // The blanket 44.5rem cap on descendants would otherwise hold the
-        // image back at the content column's width.
-        a,
-        figure,
-        picture,
-        img {
-            max-width: none;
-            width: 100%;
-        }
-
-        img {
-            max-height: none;
-            height: auto;
-        }
-
-        // A bleeding row still wants its columns side by side, with room to
-        // breathe now that there is more width to use.
-        &.column-list {
-            gap: 1.5rem;
-        }
-    }
 }

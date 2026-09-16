@@ -50,7 +50,7 @@ draft: true
     </a>
 </div>
 
-<div id="inline-gallery-container" style="margin-top: -1rem">
+<div id="inline-gallery-container">
     <a href="/projects/vr/17.png">
         <figure>
             <img src="/projects/vr/thumbs/17.png" eleventy:formats="webp" alt= "Components and branding for Victorian Reports"/>
@@ -254,7 +254,7 @@ After reflecting on the key issues in the existing design, **observation of user
 #### User journey maps
 Some user journey maps of the existing site were created to see opportunities for improvement in the existing **eCommerce** and **adding to shelf** journey.
 
-<div class="lightgallery" style="margin-top: -1rem">
+<div class="lightgallery">
     <a href="/projects/vr/12.png">
     <figure>
         <img src="/projects/vr/thumbs/12.png" eleventy:formats="webp" alt= "Flowchart showing the user journey from the homescreen to finishing a purchase"/>
@@ -289,7 +289,7 @@ The below sketches shows some drafts of **UI that adapted to authentication**, a
 #### Prototyping
 The prototyping phase involved **wireframing** and **high-fidelity prototypes**. Wireframes were used to help with the initial iterative process before [components from the Open Law Design System](/projects/openlaw/#reuseable-components) was integrated.
 
-<div class="lightgallery" style="margin-top: -1rem">
+<div class="lightgallery">
     <a href="/projects/vr/15.png">
         <figure>
             <img src="/projects/vr/thumbs/15.png" eleventy:formats="webp" alt= "Wireframe of the adding to shelf flow"/>
@@ -321,7 +321,7 @@ The prototyping phase involved **wireframing** and **high-fidelity prototypes**.
 
 By the end of the project, virtually every screen of the existing website was refreshed to follow the new branding.
 
-<div class="lightgallery" style="margin-top: -1rem">
+<div class="lightgallery">
     <a href="/projects/vr/17.png">
         <figure>
             <img src="/projects/vr/thumbs/17.png" eleventy:formats="webp" alt= "Components and branding for Victorian Reports"/>

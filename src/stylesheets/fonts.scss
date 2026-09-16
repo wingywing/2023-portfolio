@@ -64,13 +64,13 @@ $text-small: fluid(.8125, .875);  // captions and small print
 }
 
 @font-face {
-    font-family: 'overpass' sans-serif;
+    font-family: 'overpass';
     src: url('../assets/fonts/overpass.ttf') format('ttf');
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'overpass' sans-serif;
+    font-family: 'overpass';
     src: url('../assets/fonts/overpass-italic.ttf') format('ttf');
     font-style: italic;
 }

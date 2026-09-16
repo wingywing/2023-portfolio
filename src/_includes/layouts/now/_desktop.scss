@@ -4,7 +4,7 @@
 @use '../../../stylesheets/variables.scss' as variables;
 
 @mixin now-desktop(){
-    @include bp.desktop{
+    @include bp.laptop{
         padding-bottom: 4rem;
         .writing-posts {
             grid-column: 4/10;

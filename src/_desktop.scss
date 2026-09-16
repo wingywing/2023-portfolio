@@ -6,7 +6,7 @@ $desktop-heading-height: 4rem;
     @include bp.desktop{
         row-gap: 0;
         #home-intro__hero {
-            grid-column: 1/10;
+            grid-column: 1/11;
             h1 {
                 font-size: min(5vw, $desktop-heading-height);
             }

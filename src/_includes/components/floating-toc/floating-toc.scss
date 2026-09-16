@@ -6,6 +6,12 @@
 @use '../../../stylesheets/mixin/grids.scss' as grids;
 @use '../../../stylesheets/fonts.scss' as fonts;
 
+// Pages can opt out of listing sub-headings, where they run long enough to
+// bury the sections they sit under.
+[data-toc-children="false"] #floating-toc .floating-toc-content li ul {
+    display: none;
+}
+
 #floating-toc#floating-toc {
     display: none;
     visibility: hidden;
@@ -57,12 +63,22 @@
                     }
                 }
 
-                //Sub-headings run long enough to wrap several times each,
-
-                //which buries the sections they sit under.
+                //Sub-headings, indented under their section and numbered
+                //to match the headings on the page.
                 li ul {
-                    display: none;
+                    counter-reset: toc-sub;
+                    margin-left: 1rem;
+                    margin-top: .375rem;
+
+                    > li {
+                        counter-increment: toc-sub;
+
+                        > a::before {
+                            content: counter(toc-section) "." counter(toc-sub) " ";
+                        }
+                    }
                 }
+
                 //Space between entries, so a wrapped line reads as the same
                 //item rather than the next one.
                 > li {

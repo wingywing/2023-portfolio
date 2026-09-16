@@ -57,6 +57,12 @@ blockquote.reply-quote:not(:has(p)) {
     margin-top: 1rem;
 }
 
+// The quote's own padding sits above, but the last paragraph's bottom margin
+// stacked under it, so quotes were bottom heavy.
+blockquote > p:last-child {
+    margin-bottom: 0;
+}
+
 blockquote {
     .reply-quote-attribution {
         font-size: 1rem;

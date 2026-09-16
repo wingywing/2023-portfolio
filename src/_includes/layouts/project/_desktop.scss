@@ -8,23 +8,10 @@
         margin-bottom: 4rem;
         .content {
             grid-column: 4/10;
-            // The flex gap stacked on top of each block's own margins, which
-            // left too much air under every heading. Mobile keeps the gap.
-            row-gap: 0;
         }
         .webmentions-header {
             flex-direction: row;
         }
 
-        // Bleeding figures run flush to the right edge of the viewport, with
-        // no gap. The contents sidebar sits in the left margin, so they start
-        // at the content column rather than bleeding both ways.
-        //
-        // The class is repeated to out-specify the blanket
-        // `* :not(...) { max-width: 100% }` rule in _mobile.scss.
-        .full-bleed.full-bleed.full-bleed {
-            max-width: none;
-            margin-inline-end: calc(50% - 50vw);
-        }
     }
 }

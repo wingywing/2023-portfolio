@@ -9,6 +9,7 @@ duration: "1 month"
 year: 2025
 description: "A cost-conscious redesign that put a previously desktop-only asset mapping tool in the hands of frontline logistics workers, without compromising technical feasibility."
 date: 2025-08-01
+tocchildren: false
 categories:
     - case-study
 ---

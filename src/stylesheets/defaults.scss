@@ -5,7 +5,7 @@
 
 html {
     color: colours.$text-primary;
-    font-family: 'overpass';
+    font-family: 'overpass', 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     // Fluid root size. Nearly everything downstream is in rem, so this scales
     // type, padding, gaps and component widths together. At laptop widths it
     // lands around 14.5px, which is the "80% zoom" proportion the layout reads
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 aside {
     color: colours.$text-subdued;
-    font-family: 'overpass';
+    font-family: 'overpass', 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: normal;
     font-size: fonts.$subtitle;
     .links {
