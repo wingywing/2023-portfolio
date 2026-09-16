@@ -6,9 +6,9 @@ role: "UX Design, UI Design, Frontend Development, Branding, Accessibility"
 projecttype: "Website"
 client: "Legal/Government"
 duration: "3 months"
-year: 2025
+year: 2024
 description: "An accessible, mobile-responsive overhaul of the Victorian Reports platform, so legal professionals can access and purchase the Victorian Law Reports online."
-date: 2025-04-01
+date: 2024-04-01
 categories:
     - case-study
 ---

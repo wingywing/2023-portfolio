@@ -6,9 +6,9 @@ role: "Branding, Graphic Design"
 projecttype: "Print Design"
 client: "Digizoo"
 duration: "1 month"
-year: 2026
+year: 2025
 description: "Physical merchandise designed to commemorate Digizoo's 10 year anniversary and spark a bit of joy with bespoke memorabilia."
-date: 2026-05-01
+date: 2025-05-01
 categories:
     - case-study
 ---

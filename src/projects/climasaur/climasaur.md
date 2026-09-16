@@ -247,7 +247,7 @@ Climasaur's aim isn't just to enable personal political and social climate actio
 
 Merchandise made from illustrations used in climate action cards can serve as a way for users to advocate for actions that they care strongly about.
 
-<div class="column-list">
+<div class="column-list full-bleed">
 <div class="column">
 
 <div class="lightgallery">

@@ -23,7 +23,7 @@ export default [
         tools: ["Figma"],
         url: "https://www.digizoo.com.au/work/rail-bulk-transport",
         img: "/assets/img/home/rail-bulk-transport.png",
-        date: "2026-09-01"
+        date: "2025-09-01"
     },
     {
         slug: "asset-mapping",
@@ -65,7 +65,7 @@ export default [
         tools: ["Figma", "Miro", "Google Analytics"],
         url: "/projects/victorian-reports/",
         img: "/projects/victorian-reports/cover.png",
-        date: "2025-04-01"
+        date: "2024-04-01"
     },
     {
         slug: "ai-tool-suite",
@@ -135,7 +135,7 @@ export default [
         tools: ["Microsoft Forms", "InDesign", "Aseprite"],
         url: "/projects/zooid-cards/",
         img: "/projects/zooid-cards/cover.png",
-        date: "2026-05-01"
+        date: "2025-05-01"
     },
     {
         slug: "climasaur",

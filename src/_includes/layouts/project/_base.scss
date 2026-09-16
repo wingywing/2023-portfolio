@@ -453,5 +453,12 @@
             max-height: none;
             height: auto;
         }
+
+        // A bleeding row still wants its columns side by side, with room to
+        // breathe now that there is more width to use.
+        &.column-list {
+            gap: 2rem;
+            padding-inline: 2rem;
+        }
     }
 }

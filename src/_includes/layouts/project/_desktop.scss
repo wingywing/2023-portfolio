@@ -19,9 +19,12 @@
         //
         // The class is repeated to out-specify the blanket
         // `* :not(...) { max-width: 100% }` rule in _mobile.scss.
+        // Widened figures stop at the content card. Bleeding past it left the
+        // image protruding from the card as a visible step, since the card
+        // itself still ends at the content column.
         .full-bleed.full-bleed.full-bleed {
             max-width: none;
-            margin-inline-end: calc(50% - 50vw + 2rem);
+            margin-inline-end: 0;
         }
     }
 }
