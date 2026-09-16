@@ -140,15 +140,15 @@ export default [
     {
         slug: "climasaur",
         title: "Mobile app concept for climate activism",
-        brief: "A mobile app concept that turns individual climate action into something social and habit-forming, researched and prototyped end to end.",
-        caption: "UI/UX, Branding, Mobile",
+        brief: "An engaging mobile experience that integrates brand design, user interface design and user research to empower climate action in an innovative way.",
+        caption: "UX, UI, Branding, Illustration",
         client: "Self-directed",
-        timeframe: "Concept",
+        timeframe: "6 week sprint",
         type: "Mobile",
-        roles: ["UX Design", "UI Design", "Branding"],
-        tools: ["Figma", "Illustrator"],
-        url: "https://drive.google.com/file/d/1dq8P7_OWWLmwKpzIXqHNSq3fvMNtxDlU/view?usp=sharing",
+        roles: ["UX Design", "UI Design", "Branding", "Graphic Design"],
+        tools: ["Figma", "Illustrator", "Procreate"],
+        url: "/projects/climasaur/",
         img: "/assets/img/home/climasaur.png",
-        date: "2022-01-01"
+        date: "2024-05-01"
     }
 ]
