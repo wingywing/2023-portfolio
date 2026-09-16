@@ -1,0 +1,214 @@
+@use '../../../stylesheets/mixin/colours.scss' as colours;
+@use '../../../stylesheets/mixin/breakpoints.scss' as bp;
+
+// Vertical filter panel: title, search field, then grouped checkboxes.
+.filter-panel {
+    color: colours.$text-subdued;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &[hidden] {
+        display: none;
+    }
+
+    // Below desktop the disclosure summary already says "Filters", so the
+    // panel's own header would repeat it.
+    &__header {
+        display: none;
+
+        @include bp.desktop {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+    }
+
+    &__title {
+        font-family: 'Overpass', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        color: colours.$text-subdued;
+    }
+
+    &__mark {
+        width: 1.25rem;
+        height: auto;
+        flex-shrink: 0;
+        margin-top: .25rem;
+    }
+
+    // 2px hard border and no radius, matching the pixel treatment.
+    &__search {
+        position: relative;
+
+        input {
+            width: 100%;
+            font: inherit;
+            font-size: 1rem;
+            padding: .625rem 2.75rem .625rem .75rem;
+            border: 2px solid colours.$text-subdued;
+            border-radius: 0;
+            background: transparent;
+            color: colours.$text-primary;
+            appearance: none;
+
+            &::placeholder {
+                color: colours.$text-subdued;
+            }
+
+            &::-webkit-search-cancel-button {
+                appearance: none;
+            }
+        }
+    }
+
+    &__search-icon {
+        position: absolute;
+        right: .75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.25rem;
+        height: 1.25rem;
+        pointer-events: none;
+    }
+
+    &__clear {
+        align-self: flex-start;
+        font: inherit;
+        font-size: .875rem;
+        padding: .375rem .75rem;
+        border: 2px solid colours.$text-subdued;
+        background: transparent;
+        color: colours.$text-subdued;
+        cursor: pointer;
+
+        &[hidden] {
+            display: none;
+        }
+
+        &:hover {
+            background: colours.$bg-tertiary;
+            color: colours.$text-primary;
+        }
+    }
+}
+
+.filter-group {
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    &__legend {
+        font-family: 'Overpass', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: 0;
+        margin-bottom: .5rem;
+        color: colours.$text-subdued;
+    }
+
+    &__options {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+    }
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .375rem .5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+
+    &:hover {
+        background: colours.$bg-tertiary;
+    }
+
+    &__box {
+        width: 1.125rem;
+        height: 1.125rem;
+        flex-shrink: 0;
+    }
+
+    // Only one of the two box states is drawn at a time.
+    &__box-on {
+        display: none;
+    }
+
+    &__name {
+        flex: 1;
+    }
+
+    &__count {
+        font-size: .8125rem;
+        opacity: .7;
+    }
+
+    // Keyboard focus lands on the visually hidden input, so surface it here.
+    input:focus-visible + .filter-option__box {
+        outline: 2px solid colours.$links;
+        outline-offset: 2px;
+    }
+
+    input:checked ~ .filter-option__name {
+        color: colours.$text-primary;
+    }
+
+    input:checked + .filter-option__box {
+        color: colours.$text-primary;
+
+        .filter-option__box-off {
+            display: none;
+        }
+
+        .filter-option__box-on {
+            display: block;
+        }
+    }
+}
+
+// --- Placement --------------------------------------------------------------
+// On narrow screens the panel collapses so it doesn't push the grid off screen.
+.case-study-layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+
+    @include bp.desktop {
+        grid-template-columns: 14rem minmax(0, 1fr);
+        gap: 3rem;
+        align-items: start;
+    }
+}
+
+.case-study-layout__filters {
+    @include bp.desktop {
+        position: sticky;
+        top: 2rem;
+    }
+
+    > summary {
+        font-family: 'Overpass', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        cursor: pointer;
+        color: colours.$text-subdued;
+        padding: .5rem 0;
+    }
+
+    // Above desktop the disclosure is always open and its summary is redundant.
+    @include bp.desktop {
+        > summary {
+            display: none;
+        }
+    }
+}

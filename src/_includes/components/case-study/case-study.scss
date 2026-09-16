@@ -100,82 +100,18 @@
     }
 }
 
-// --- Filter bar -------------------------------------------------------------
+.case-study-status {
+    margin: 0 0 1rem;
+    font-size: .875rem;
+    color: colours.$text-subdued;
+    min-height: 1.25rem;
+}
 
-.case-study-filters {
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
-    margin-bottom: 1.5rem;
+.case-study-empty {
+    margin: 2rem 0;
+    color: colours.$text-subdued;
 
     &[hidden] {
         display: none;
-    }
-
-    &__label {
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-        font-size: .875rem;
-        color: colours.$text-subdued;
-
-        .icon {
-            width: 1.25rem;
-            height: 1.25rem;
-        }
-    }
-
-    &__chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: .5rem;
-    }
-
-    &__status {
-        margin: 0 0 1rem;
-        font-size: .875rem;
-        color: colours.$text-subdued;
-        min-height: 1.25rem;
-    }
-}
-
-.filter-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: .375rem;
-    padding: .5rem .875rem;
-    border-radius: 999px;
-    border: 1px dashed colours.$border-neutral;
-    background: colours.$bg-primary;
-    color: colours.$text-primary;
-    font: inherit;
-    font-size: .875rem;
-    cursor: pointer;
-    transition: background-color .2s ease, border-color .2s ease;
-
-    .icon {
-        width: 1.125rem;
-        height: 1.125rem;
-        flex-shrink: 0;
-    }
-
-    &__count {
-        font-size: .75rem;
-        color: colours.$text-subdued;
-    }
-
-    &:hover {
-        background: colours.$bg-tertiary;
-    }
-
-    &[aria-pressed="true"] {
-        background: colours.$seasalt;
-        border-style: solid;
-        border-color: colours.$text-primary;
-
-        .filter-chip__count {
-            color: colours.$text-primary;
-        }
     }
 }

@@ -110,38 +110,25 @@ title: Home
             </div>
             <div id="home-case-studies">
                 <h2 class="visually-hidden">Case studies</h2>
-                {#
-                    Progressive enhancement: with JS off every tile is visible
-                    and the filter bar is hidden, so nothing is unreachable.
-                #}
-                <div class="case-study-filters" data-case-study-filters hidden>
-                    <p class="case-study-filters__label" id="case-study-filters-label">
-                        {% icon "sliders" %}
-                        Filter by
-                    </p>
-                    <div class="case-study-filters__chips" role="group" aria-labelledby="case-study-filters-label">
-                        <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">
-                            {% icon "grid-3x3" %}
-                            <span>All</span>
-                            <span class="filter-chip__count">{{ caseStudies.length }}</span>
-                        </button>
-                        {% for role in caseStudyRoles %}
-                        <button type="button" class="filter-chip" data-filter="{{ role.slug }}" aria-pressed="false">
-                            {% icon role.icon %}
-                            <span>{{ role.name }}</span>
-                            <span class="filter-chip__count">{{ role.count }}</span>
-                        </button>
-                        {% endfor %}
+
+                <div class="case-study-layout">
+                    <details class="case-study-layout__filters" data-filter-disclosure>
+                        <summary>Filters</summary>
+                        {{ component('filter-panel', { groups: caseStudyFilters, total: caseStudies.length }) }}
+                    </details>
+
+                    <div class="case-study-layout__results">
+                        <p class="case-study-status" data-case-study-status role="status" aria-live="polite"></p>
+                        <ul class="case-studies" data-case-study-grid>
+                            {% for study in caseStudies %}
+                                {{ component('case-study', { study: study }) }}
+                            {% endfor %}
+                        </ul>
+                        <p class="case-study-empty" data-case-study-empty hidden>
+                            No case studies match those filters yet.
+                        </p>
                     </div>
                 </div>
-
-                <p class="case-study-filters__status" data-case-study-status role="status" aria-live="polite"></p>
-
-                <ul class="case-studies" data-case-study-grid>
-                    {% for study in caseStudies %}
-                        {{ component('case-study', { study: study }) }}
-                    {% endfor %}
-                </ul>
             </div>
         </section>
         <section id="home-tools">

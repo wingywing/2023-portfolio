@@ -31,7 +31,10 @@ export default function(eleventyConfig) {
       return originalString.replace('/src', '');
     })
 
-    // Same slug rule as caseStudyRoles.js, so markup and filters always agree.
+    // Nunjucks' slice() chunks a list, so pull the year out here instead.
+    eleventyConfig.addFilter("year", (value) => String(value).slice(0, 4))
+
+    // Same slug rule as caseStudyFilters.js, so markup and filters always agree.
     eleventyConfig.addFilter("roleSlug", (role) => {
       return String(role).toLowerCase().replace(/[^a-z0-9]+/g, "-")
     })
