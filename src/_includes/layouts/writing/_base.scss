@@ -35,7 +35,9 @@
     aside {
         font-size: 1.5rem;
         margin: 2rem 0;
-        text-wrap: pretty;
+        // A short right-aligned line, so balance rather than pretty: pretty
+        // only guards the last line, which still left a word stranded.
+        text-wrap: balance;
         height: fit-content;
         rotate: 1deg;
         .aside-small {

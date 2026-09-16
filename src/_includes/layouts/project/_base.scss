@@ -120,7 +120,10 @@
 
     // Sits centred on its own, so balancing keeps a lone trailing word off
     // the second line.
-    .copyright-line {
+    .copyright-line.copyright-line {
+        // Closes the page off, so it wants clear air above it rather than
+        // sitting a paragraph's gap below the last section.
+        margin-top: 3.5rem;
         font-size: .95rem;
         color: colours.$text-subdued;
         text-align: center;

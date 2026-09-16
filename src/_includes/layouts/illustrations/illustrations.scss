@@ -64,18 +64,30 @@
         }
     }
 
-    // The blanket `#project-page * :not(...)` rule sets `gap: inherit` at a
-    // higher specificity, so the grid was picking up the content column's
-    // zeroed row gap. The id is repeated to out-weigh it.
+    // Width and gap have to come from the same value: the items are sized by
+    // subtracting the gap, so if the two drift apart three tiles no longer fit
+    // a row and wrap to two.
+    //
+    // The id is repeated because the blanket `#project-page * :not(...)` rule
+    // applies `gap: inherit` at a higher specificity.
     #illustration-gallery#illustration-gallery {
-        @media only screen and (min-width: 550px) {
-            column-gap: 0.625rem;
-            row-gap: 0.625rem;
-        }
+        --gallery-gap: 0.625rem;
+
+        column-gap: var(--gallery-gap);
+        row-gap: var(--gallery-gap);
 
         @include bp.laptop {
-            column-gap: 1rem;
-            row-gap: 1rem;
+            --gallery-gap: 1rem;
+        }
+
+        > a {
+            @media only screen and (min-width: 550px) {
+                width: calc((100% - var(--gallery-gap)) / 2);
+            }
+
+            @include bp.tablet {
+                width: calc((100% - 2 * var(--gallery-gap)) / 3);
+            }
         }
     }
     @media only screen and (min-width: 550px ) {
