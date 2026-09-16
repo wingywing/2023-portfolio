@@ -50,11 +50,16 @@
             position: sticky;
             top: 2rem;
         }
-        ol, ul, table {
+        ol, ul {
             margin: 0 2rem;
             li {
                 line-height: 150%;
             }
+        }
+        // A table is a block of its own, so it keeps the side inset but wants
+        // clear space above and below rather than butting onto the prose.
+        table {
+            margin: 1rem 2rem 2.5rem;
         }
         figure {
             margin-block: 2rem;

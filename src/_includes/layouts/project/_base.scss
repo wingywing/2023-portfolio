@@ -81,13 +81,35 @@
         width: fit-content;
     }
     table {
+        font-size: fonts.$body;
+        width: 100%;
+        border-collapse: collapse;
+        margin-block: 1rem 2.5rem;
+        text-align: left;
+
         th, td {
-            padding: .5rem;
+            padding: .625rem .75rem;
             vertical-align: text-top;
         }
-    }
-    table {
-        font-size: fonts.$body;
+
+        // A single rule under the header, and hairlines between rows, rather
+        // than a boxed-in grid.
+        th {
+            border-bottom: 2px solid colours.$text-subdued;
+            font-weight: 700;
+        }
+
+        td {
+            border-bottom: 1px solid colours.$bg-tertiary;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: colours.$bg-primary;
+        }
     }
     li {
         font-size: fonts.$body;
@@ -248,8 +270,11 @@
     }
     .webmentions {
         &-header {
-            > .webmentions-header_title {
+            // The blanket rule appears twice, and the later copy ties a
+            // doubled class, so this needs one more to win outright.
+            > .webmentions-header_title.webmentions-header_title.webmentions-header_title {
                 display: flex;
+                align-items: baseline;
                 gap: 1ch;
                 span {
                     font-size: 1.5rem;
@@ -332,6 +357,7 @@
             // at one id and three classes.
             .webmentions-summary.webmentions-summary.webmentions-summary {
                 display: flex;
+                align-items: center;
                 gap: 1rem;
                 .chevron-down {
                     rotate: 180deg;
