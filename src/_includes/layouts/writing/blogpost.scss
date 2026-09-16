@@ -77,3 +77,21 @@
     }
 }
 
+
+// The webmentions card is a sibling of `.content` in project/project.njk, not
+// a child of `.blogpost`, so it has to be addressed from the page scope.
+//
+// At tablet both sit in columns 3/11, but at laptop `.content` narrows to 4/10
+// while the shared webmentions rule stays at 3/11. Below 1440px the 44.5rem cap
+// isn't reached, so the wider span makes the comments card visibly broader than
+// the post above it and their edges stop lining up. Track the content column
+// instead of restating a pixel width.
+//
+// This file loads after project.scss, so the equal-specificity selector wins.
+#project-page .webmentions {
+    max-width: 44.5rem;
+
+    @include bp.laptop {
+        grid-column: 4/10;
+    }
+}

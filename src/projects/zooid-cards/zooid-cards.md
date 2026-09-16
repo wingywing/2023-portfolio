@@ -85,19 +85,23 @@ As part of Digizoo’s internal social committee, I was tasked to create a memen
 - It made for a fun social activity for the 10 year anniversary celebration dinner.
 - The ZooID also functioned as decoration for our plain office passes!
 
-<div class="lightgallery media-group">
+<div class="lightgallery">
     <a href="/projects/zooid-cards/05.png">
-    <figure>
+        <figure>
             <img src="/projects/zooid-cards/05.png" eleventy:formats="webp" alt="" />
         </figure>
     </a>
+</div>
+<div class="lightgallery">
     <a href="/projects/zooid-cards/06.png">
-    <figure>
+        <figure>
             <img src="/projects/zooid-cards/06.png" eleventy:formats="webp" alt="" />
         </figure>
     </a>
+</div>
+<div class="lightgallery">
     <a href="/projects/zooid-cards/07.png">
-    <figure>
+        <figure>
             <img src="/projects/zooid-cards/07.png" eleventy:formats="webp" alt="" />
         </figure>
     </a>

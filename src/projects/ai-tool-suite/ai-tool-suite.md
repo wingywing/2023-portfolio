@@ -78,6 +78,7 @@ Monotreme was designed to be AI-first, usable by AI agents and non-technical aud
     <a href="/projects/ai-tool-suite/01.png">
         <figure>
             <img src="/projects/ai-tool-suite/01.png" eleventy:formats="webp" alt="" />
+            <figcaption>Diagram of how the Monotreme tools and skills reach the end user, via the Keeper MCP server and Claude Cowork.</figcaption>
         </figure>
     </a>
 </div>
@@ -91,10 +92,10 @@ Here are some output examples of a deck and text doc which were generated from s
 ### Generated slide deck example
 
 
-<div class="embed" style="--embed-ratio: 0.6">
-    <iframe src="attachment:b3ec571b-dc4e-40ce-bed0-6a05a25a5f20:platypus-showcase.html" loading="lazy"
-            allowfullscreen title="Embedded preview"></iframe>
-</div>
+<figure class="embed">
+    <iframe src="/projects/ai-tool-suite/platypus-showcase.html" loading="lazy" title="A deck generated from scratch by the Platypus tool, shown in its own viewer."></iframe>
+    <figcaption>A deck generated from scratch by the Platypus tool, shown in its own viewer. <a href="/projects/ai-tool-suite/platypus-showcase.html">Open in a new tab</a></figcaption>
+</figure>
 
 
 ### Generated document example
@@ -102,10 +103,10 @@ Here are some output examples of a deck and text doc which were generated from s
 Echidna-styled documents are often used for policy documents, Statement of Work (SoW) documents or Business Requirements Documents (BRD).
 
 
-<div class="embed" style="--embed-ratio: 0.6">
-    <iframe src="attachment:e1cf76af-5a71-414f-874b-509c5d97be54:echidna-documents-overview.html" loading="lazy"
-            allowfullscreen title="Embedded preview"></iframe>
-</div>
+<figure class="embed">
+    <iframe src="/projects/ai-tool-suite/echidna-documents-overview.html" loading="lazy" title="A document generated from scratch by the Echidna tool, shown in its own viewer."></iframe>
+    <figcaption>A document generated from scratch by the Echidna tool, shown in its own viewer. <a href="/projects/ai-tool-suite/echidna-documents-overview.html">Open in a new tab</a></figcaption>
+</figure>
 
 
 ## Impact
@@ -144,11 +145,13 @@ Themes, blocks and layouts can be extensively customised by a designer to adapt 
     <a href="/projects/ai-tool-suite/02.png">
     <figure>
             <img src="/projects/ai-tool-suite/02.png" eleventy:formats="webp" alt="" />
+            <figcaption>A Platypus title slide in a brown theme, for a deck on Digizoo’s internal AI platform, Keeper.</figcaption>
         </figure>
     </a>
     <a href="/projects/ai-tool-suite/03.png">
     <figure>
             <img src="/projects/ai-tool-suite/03.png" eleventy:formats="webp" alt="" />
+            <figcaption>A content slide from the same deck, using a three-card layout.</figcaption>
         </figure>
     </a>
 </div>
@@ -176,6 +179,7 @@ Users can provide a client logo for the document to be co-branded with the clien
     <a href="/projects/ai-tool-suite/05.png">
         <figure>
             <img src="/projects/ai-tool-suite/05.png" eleventy:formats="webp" alt="" />
+            <figcaption>The header of an Echidna document, with the Echidna and Digizoo logos sitting side by side above the table of contents.</figcaption>
         </figure>
     </a>
 </div>
@@ -185,6 +189,7 @@ Users can provide a client logo for the document to be co-branded with the clien
     <a href="/projects/ai-tool-suite/06.png">
         <figure>
             <img src="/projects/ai-tool-suite/06.png" eleventy:formats="webp" alt="" />
+            <figcaption>The cover page of the same document, carrying both logos above the title.</figcaption>
         </figure>
     </a>
 </div>
@@ -199,6 +204,7 @@ Legal/policy documents have numbered sections and legal footers
     <a href="/projects/ai-tool-suite/07.png">
         <figure>
             <img src="/projects/ai-tool-suite/07.png" eleventy:formats="webp" alt="" />
+            <figcaption>Numbered sections and sub-sections listed in the contents page of a policy document.</figcaption>
         </figure>
     </a>
 </div>
@@ -208,6 +214,7 @@ Legal/policy documents have numbered sections and legal footers
     <a href="/projects/ai-tool-suite/08.png">
         <figure>
             <img src="/projects/ai-tool-suite/08.png" eleventy:formats="webp" alt="" />
+            <figcaption>The foot of a policy document page, showing the page number and the Digizoo legal entity and ABN.</figcaption>
         </figure>
     </a>
 </div>
@@ -220,6 +227,7 @@ Legal/policy documents have numbered sections and legal footers
     <a href="/projects/ai-tool-suite/09.png">
         <figure>
             <img src="/projects/ai-tool-suite/09.png" eleventy:formats="webp" alt="" />
+            <figcaption>A title slide shown with the layout grid overlaid.</figcaption>
         </figure>
     </a>
 </div>
@@ -232,6 +240,7 @@ Legal/policy documents have numbered sections and legal footers
     <a href="/projects/ai-tool-suite/10.png">
         <figure>
             <img src="/projects/ai-tool-suite/10.png" eleventy:formats="webp" alt="" />
+            <figcaption>A slide built from three icon cards, drawing on the bespoke icon library.</figcaption>
         </figure>
     </a>
 </div>
@@ -241,6 +250,7 @@ Legal/policy documents have numbered sections and legal footers
     <a href="/projects/ai-tool-suite/11.png">
         <figure>
             <img src="/projects/ai-tool-suite/11.png" eleventy:formats="webp" alt="" />
+            <figcaption>A two-by-two card layout from the same library, each card pairing an icon with a short label.</figcaption>
         </figure>
     </a>
 </div>

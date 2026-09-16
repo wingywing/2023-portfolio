@@ -75,6 +75,7 @@ export default function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("src/projects/**/**.jpg"); 
     eleventyConfig.addPassthroughCopy("src/projects/**/**.mp4");
+    eleventyConfig.addPassthroughCopy("src/projects/**/**.html"); //Embedded sample output
 
 
     eleventyConfig.setTemplateFormats(["njk,md"]);

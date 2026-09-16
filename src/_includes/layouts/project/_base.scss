@@ -432,6 +432,29 @@
     // Widens a figure past the content column. It only grows to the right: the
     // contents sidebar sits in the left margin, so a symmetric bleed would run
     // straight through it.
+    // Embedded sample output, shown in its own frame.
+    .embed {
+        margin-block: 1.5rem;
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            border: 1px solid colours.$border-neutral;
+            background: colours.$bg-primary;
+        }
+    }
+
+    // Consecutive media blocks each carry their own vertical margin, so back
+    // to back they left a gap twice as large as a single one.
+    .media-group + .media-group,
+    .media-group + .column-list,
+    .column-list + .media-group,
+    .column-list + .column-list,
+    .media-group + .lightgallery,
+    .lightgallery + .media-group {
+        margin-top: 0;
+    }
+
     // The width override itself lives in _desktop.scss: the blanket
     // `* :not(...)` rule in _mobile.scss caps everything at 100% with a higher
     // specificity and loads later, so it has to be answered from a later file.

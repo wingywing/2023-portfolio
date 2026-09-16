@@ -72,6 +72,7 @@ type: note
                 <blockquote class="reply-quote h-entry">
                 {% for name, item in references %}
                 {% set variable = name %}
+                {% if references[name].name %}
                 <p class="reply-quote-attribution">
                     <span class="reply-quote-name h-card">
                         {{ references[name].name }}
@@ -82,9 +83,12 @@ type: note
                     </span>
                     {% endif %}
                 </p>
+                {% endif %}
+                {% if references[name].summary %}
                 <p class="reply-quote-summary p-content">
                     {{ references[name].summary }}
                 </p>
+                {% endif %}
              {% endfor %}
             </blockquote>
         {% endif %}

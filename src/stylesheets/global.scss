@@ -45,6 +45,18 @@ body {
     overflow-x: hidden;
 }
 
+// A bookmark often has a reference with no quoted text, which left an empty
+// bar on the page. With both paragraphs guarded out there is nothing to show.
+blockquote.reply-quote:not(:has(p)) {
+    display: none;
+}
+
+// Breathing room between a note's photo and the words under it.
+.blogpost-content .owl-carousel + p,
+.note-content .owl-carousel + p {
+    margin-top: 1rem;
+}
+
 blockquote {
     .reply-quote-attribution {
         font-size: 1rem;

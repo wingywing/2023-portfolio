@@ -20,6 +20,10 @@
         .content {
             display: flex;
             flex-direction: column;
+            // Flex items don't margin-collapse, so the inherited grid gap
+            // stacked on top of every block's own margin. _desktop.scss
+            // already zeroes this; tablet was missed.
+            row-gap: 0;
             grid-column: 3/11;
             margin-block: 0;
             margin-inline: 0;
