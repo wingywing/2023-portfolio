@@ -118,6 +118,15 @@
         margin: 0 0 1rem;
     }
 
+    // Sits centred on its own, so balancing keeps a lone trailing word off
+    // the second line.
+    .copyright-line {
+        font-size: .95rem;
+        color: colours.$text-subdued;
+        text-align: center;
+        text-wrap: balance;
+    }
+
     .content ul,
     .content ol {
         margin-block: 0 1rem;
