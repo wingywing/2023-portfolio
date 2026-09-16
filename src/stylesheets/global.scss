@@ -55,10 +55,12 @@ blockquote.reply-quote:not(:has(p)) {
     display: none;
 }
 
-// Breathing room between a note's photo and the words under it.
-.blogpost-content .owl-carousel + p,
-.note-content .owl-carousel + p {
-    margin-top: 1rem;
+// Breathing room between a note's photo and the words under it. Hanging the
+// margin off the carousel rather than the paragraph covers lists and headings
+// under a photo too, and :not(:last-child) keeps it off a photo-only note.
+.blogpost-content .owl-carousel:not(:last-child),
+.note-content .owl-carousel:not(:last-child) {
+    margin-bottom: 2rem;
 }
 
 // The quote's own padding sits above, but the last paragraph's bottom margin
