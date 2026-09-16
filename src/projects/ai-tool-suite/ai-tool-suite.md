@@ -9,6 +9,7 @@ duration: "3 months"
 year: 2026
 description: "A tool suite that automates the styling of documents and slide decks, cutting the time the sales team needs to send a Digizoo-branded SoW."
 date: 2026-08-01
+tocchildren: false
 categories:
     - case-study
 ---

@@ -121,6 +121,14 @@
     .content ul,
     .content ol {
         margin-block: 0 1rem;
+        // The browser default is 40px a level, which marches deeply nested
+        // notes most of the way across the column.
+        padding-inline-start: 1.5rem;
+
+        ul,
+        ol {
+            padding-inline-start: 1.25rem;
+        }
     }
 
     // Headings bind to what follows them: plenty of air above to separate the
@@ -441,11 +449,35 @@
     .embed {
         margin-block: 1.5rem;
 
+        // These render a whole deck or document at their own size, so a wide
+        // frame cropped them. A tall frame fits a page, and the sample
+        // scrolls inside it.
         iframe {
             width: 100%;
-            aspect-ratio: 16 / 10;
+            height: 70vh;
+            min-height: 30rem;
             border: 1px solid colours.$border-neutral;
             background: colours.$bg-primary;
+        }
+    }
+
+    // Runs wider than the reading column. It carries the card's background so
+    // the widened area reads as part of the card rather than a hole in it.
+    .full-bleed {
+        margin-block: 2rem;
+        background-color: colours.$bg-secondary;
+
+        a,
+        figure,
+        picture,
+        img {
+            max-width: none;
+            width: 100%;
+        }
+
+        img {
+            max-height: none;
+            height: auto;
         }
     }
 

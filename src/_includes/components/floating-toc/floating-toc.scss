@@ -8,7 +8,7 @@
 
 // Pages can opt out of listing sub-headings, where they run long enough to
 // bury the sections they sit under.
-[data-toc-children="false"] #floating-toc .floating-toc-content li ul {
+#floating-toc[data-toc-children="false"] .floating-toc-content li ul {
     display: none;
 }
 
