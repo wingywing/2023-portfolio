@@ -63,4 +63,9 @@
         text-wrap: balance;
         line-height: 1.2;
     }
+    // The role list wraps to two lines on most tiles; balancing keeps a lone
+    // trailing word off the second line.
+    div.text p {
+        text-wrap: balance;
+    }
 }
