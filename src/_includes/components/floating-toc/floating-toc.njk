@@ -38,6 +38,27 @@
         setSelectedTocItem();
     }); //change the ToC active item when the url hash changes
 
+    //Jumping to a section shouldn't be a place the reader can go "back" to.
+    //A plain anchor pushes a history entry per click, so after reading down a
+    //case study the back button walks up the sections it visited instead of
+    //returning to wherever the reader came from. Scroll it ourselves and
+    //replace the entry rather than adding one.
+    $('#floating-toc').on('click', 'a[href^="#"]', function (event) {
+        const id = decodeURIComponent(this.getAttribute('href').slice(1));
+        const target = document.getElementById(id);
+        if (!target) {
+            return; //let the browser deal with it
+        }
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        //Move focus with the scroll, so keyboard and screen reader users land
+        //on the section rather than staying in the sidebar.
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+        history.replaceState(null, '', '#' + id);
+        setSelectedTocItem();
+    });
+
     //Update the url hash to match content that user is up to.
     //This uses replaceState, not pushState: pushState added a history entry for
     //every section scrolled past, so Back walked up the page section by section
