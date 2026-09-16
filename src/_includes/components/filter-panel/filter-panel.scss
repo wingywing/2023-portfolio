@@ -92,6 +92,13 @@
         font: inherit;
         font-size: .875rem;
         padding: .375rem .75rem;
+        // It inherits display:flex, where text-align doesn't centre the
+        // content: the label is an anonymous flex item and needs the
+        // container's own alignment.
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         border: 2px solid colours.$text-subdued;
         background: transparent;
         color: colours.$text-subdued;
