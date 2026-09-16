@@ -6,7 +6,6 @@ on:
     paths:
       - 'src/notes/**.md'
       - 'src/writing/**.md'
-      - 'src/projects/**.md'
 
 # Let an earlier run finish before a newer one starts, so two quick pushes
 # don't race each other's deploys.
@@ -37,10 +36,10 @@ jobs:
           # Added or modified content only — deleted posts will never return 200.
           if git rev-parse "${{ github.event.before }}" >/dev/null 2>&1; then
             FILES=$(git diff --name-only --diff-filter=d "${{ github.event.before }}" "${{ github.sha }}" \
-              | grep -E '^src/(notes|writing|projects)/.*\.md$' || true)
+              | grep -E '^src/(notes|writing)/.*\.md$' || true)
           else
             echo "⚠️ No valid previous commit found, listing all content files"
-            FILES=$(git ls-files 'src/notes/*.md' 'src/writing/*.md' 'src/projects/*.md')
+            FILES=$(git ls-files 'src/notes/*.md' 'src/writing/*.md')
           fi
 
           if [ -z "$FILES" ]; then
