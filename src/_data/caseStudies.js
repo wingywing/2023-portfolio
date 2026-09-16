@@ -69,7 +69,7 @@ export default [
     },
     {
         slug: "ai-tool-suite",
-        title: "Automating document and presentation styling with a tool suite",
+        title: "An AI tool suite for automating document and presentation styling",
         brief: "A tool suite that automates the styling of documents and slide decks, cutting the time the sales team needs to send a Digizoo-branded SoW.",
         caption: "Frontend development, Product strategy, Design system",
         client: "Digizoo",

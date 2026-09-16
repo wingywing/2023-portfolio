@@ -1,7 +1,7 @@
 ---
 layout: project/project.njk
 tags: project
-title: "Automating document and presentation styling with a tool suite"
+title: "An AI tool suite for automating document and presentation styling"
 role: "Frontend Development, Product Strategy, Branding, Design System, AI Tooling"
 projecttype: "AI Ops"
 client: "Digizoo"
