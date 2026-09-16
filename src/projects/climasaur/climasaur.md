@@ -105,7 +105,7 @@ I wanted this app to be **as simple as possible, enabling climate action in pock
 
 **Climasaur drafts an email for you and finds the email address of your local MP, so that sending through your thoughts would only take two taps.**
 
-<div class="lightgallery">
+<div class="lightgallery media-inset">
     <a href="/projects/climasaur/card-email-mp.png">
         <figure>
             <img src="/projects/climasaur/card-email-mp.png" eleventy:formats="webp" alt="A green Climasaur card reading 'Email your local member of parliament', with a 'Tap for a pre-filled email' action at the bottom." />
