@@ -33,6 +33,7 @@ export default [
     {
         id: "topics",
         label: "Topics",
+        control: "chips",
         options: topics.map((name) => ({
             name,
             value: slugify(name),
@@ -42,6 +43,7 @@ export default [
     {
         id: "year",
         label: "Year",
+        control: "dropdown",
         options: years.map((year) => ({
             name: year,
             value: year,

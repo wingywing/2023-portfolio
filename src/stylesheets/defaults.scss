@@ -6,7 +6,11 @@
 html {
     color: colours.$text-primary;
     font-family: 'overpass';
-    font-size: 16px;
+    // Fluid root size. Nearly everything downstream is in rem, so this scales
+    // type, padding, gaps and component widths together. At laptop widths it
+    // lands around 14.5px, which is the "80% zoom" proportion the layout reads
+    // best at, and it reaches the full 16px on large desktops.
+    font-size: clamp(14px, 10px + 0.3125vw, 16px);
     text-wrap: pretty;
 }
 
@@ -54,34 +58,49 @@ b {
     font-weight: 900;
 }
 
+// Paragraph rhythm, applied site-wide.
+// Space goes after a paragraph, never before: a leading margin on the first
+// paragraph in a block fights whatever spacing its container already set, and
+// collapsing margins made the gaps inconsistent between sections.
 p {
-    font-size: 1.125rem;
-    line-height: 150%;
+    font-size: fonts.$body;
+    line-height: 1.6;
+    margin-block: 0 1em;
+
+    &:last-child {
+        margin-block-end: 0;
+    }
+}
+
+// Headings are display sizes, so they want much tighter leading than body copy.
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    text-wrap: balance;
 }
 
 .text-hero {
     font-family: 'mondwest';
     font-weight: bold;
-    font-size: 4.5rem;
+    font-size: fonts.$hero;
 }
 
 aside {
     color: colours.$text-subdued;
     font-family: 'overpass';
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: fonts.$subtitle;
     .links {
-        font-size: 1.125rem;
+        font-size: fonts.$body;
     }
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: fonts.$title;
     font-weight: bold;
 }
 
 .text-sm {
-    font-size: 1rem;
+    font-size: fonts.$text-small;
 }
 
 a.skip-main {

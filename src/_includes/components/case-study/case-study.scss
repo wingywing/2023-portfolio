@@ -1,11 +1,10 @@
 @use '../../../stylesheets/mixin/colours.scss' as colours;
 @use '../../../stylesheets/mixin/breakpoints.scss' as bp;
-@use '../../../stylesheets/variables.scss' as variables;
 
 // Case study grid.
-// Every tile sits in the same row track and stretches to the row height, so
-// the grid stays flush no matter how uneven the titles and briefs are — this
-// is what replaces the old hand-staggered margin-top offsets.
+// Every tile stretches to its row height so the grid stays flush no matter how
+// uneven the titles are — this is what replaces the old hand-staggered
+// margin-top offsets.
 .case-studies {
     list-style: none;
     margin: 0;
@@ -14,14 +13,13 @@
     gap: 1.5rem;
     grid-template-columns: 1fr;
     align-items: stretch;
+    // Every row takes the tallest row's height, so a heading that wraps to an
+    // extra line doesn't leave one row of tiles shorter than the others.
+    grid-auto-rows: 1fr;
 
     @include bp.tablet {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 2rem;
-    }
-
-    @include bp.desktop {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
     }
 }
 
@@ -31,71 +29,47 @@
     &[hidden] {
         display: none;
     }
-}
 
-.case-study {
-    background: colours.$bg-secondary;
-    border: 1px dashed colours.$border-neutral;
-    border-radius: .5rem;
-    padding: 1.5rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
-    text-decoration: none;
-    color: colours.$text-primary;
-    transition: transform .2s ease, box-shadow .2s ease;
+    // The card sizes to its content by default. In the grid every tile should
+    // fill its cell and every preview should crop to one ratio, so the images
+    // and the tiles below them line up across the row.
+    > .card {
+        width: 100%;
+        max-width: none;
+        height: 100%;
 
-    &:hover,
-    &:focus-visible {
-        @include variables.box-shadow;
-        transform: translateY(-.25rem);
-    }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            max-width: none;
+        }
 
-    &__glyph {
-        font-size: 1.75rem;
-        line-height: 1;
-    }
+        picture {
+            display: block;
+            flex-shrink: 0;
+            width: 100%;
+        }
 
-    &__title {
-        font-family: 'mondwest';
-        font-weight: 400;
-        font-size: 1.5rem;
-        margin: 0;
-        text-wrap: balance;
-    }
+        .card-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 10;
+            // Covers in Notion come in at assorted ratios, so crop rather than
+            // letterbox them.
+            object-fit: cover;
+            object-position: center;
+        }
 
-    &__brief {
-        margin: 0;
-        font-size: .9375rem;
-        color: colours.$text-subdued;
-        // Push the meta and roles to the bottom so every tile's footer lines up.
-        flex: 1;
-    }
+        h3 {
+            // Evens out the ragged last line on these long titles.
+            text-wrap: balance;
+        }
 
-    &__meta {
-        margin: 0;
-        font-size: .8125rem;
-        color: colours.$text-subdued;
-        display: flex;
-        flex-wrap: wrap;
-        gap: .375rem;
-    }
-
-    &__roles {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: .375rem;
-
-        li {
-            font-size: .75rem;
-            padding: .1875rem .5rem;
-            border-radius: 999px;
-            background: colours.$bg-tertiary;
-            color: colours.$text-subdued;
+        // Fills the leftover height so the cards end flush even when one
+        // heading wraps to an extra line.
+        .text {
+            flex: 1;
         }
     }
 }

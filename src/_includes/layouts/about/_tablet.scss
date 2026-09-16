@@ -22,10 +22,20 @@
             .about-content {
                 display: flex;
                 max-width: 52ch;
-                justify-content: center;
+                // `safe` keeps the block centred while it fits, but stops
+                // centring once it is taller than the viewport. Plain `center`
+                // overflowed equally in both directions, pushing the heading
+                // up behind the header where it could not be scrolled back to.
+                justify-content: safe center;
                 margin-top: -3rem;
                 flex-direction: column;
                 min-height: calc(100dvh - variables.$header-desktop-height);
+            }
+
+            // The first block sits directly below the header, so it has no
+            // room to be pulled upwards.
+            .about-content.first-content-block {
+                margin-top: 0;
             }
         }
         .content {

@@ -4,6 +4,7 @@
     - class for classname
     - id for id
     - img for image --> located in the assets/img folder WITH file
+    - imgsrc for an image outside assets/img --> a full path, used instead of img
     - heading for tile heading
     - caption for tile caption
 #}
@@ -18,8 +19,8 @@
     {% endif %} 
 >
     <div class="container">
-        {% if params.img %}
-        <img src="{{ "/assets/img/" + params.img}}" alt="{{params.alt}}" class="card-image">
+        {% if params.imgsrc or params.img %}
+        <img src="{{ params.imgsrc if params.imgsrc else "/assets/img/" + params.img }}" alt="{{params.alt}}" class="card-image">
         {% endif %}
         {% if params.heading %}
         <div class="text">

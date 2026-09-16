@@ -6,6 +6,7 @@ role: "UX Design, UI Design, Frontend Development, Branding, Accessibility"
 projecttype: "Website"
 client: "Legal/Government"
 duration: "3 months"
+year: 2025
 description: "An accessible, mobile-responsive overhaul of the Victorian Reports platform, so legal professionals can access and purchase the Victorian Law Reports online."
 date: 2025-04-01
 categories:
@@ -13,7 +14,7 @@ categories:
 ---
 <div class="project-header">
     <div class="project-banner">
-        <img src="/projects/victorian-reports/01.png" eleventy:formats="webp" alt=""/>
+        <img src="/projects/victorian-reports/cover.png" eleventy:formats="webp" alt=""/>
     </div>
     <div class="information">
         <h1>{{ title }}</h1>
@@ -29,7 +30,22 @@ categories:
     </div>
 </div>
 
+*We acknowledge the Aboriginal people as the Traditional Owners of this land, and pay our respects to Elders past and present. Working from Darug and Gadigal land.*
+
 {{ description }}
+<br/>
+
+## Contents
+- [My Role](#my-role)
+  - [Project Overview](#project-overview)
+  - [Impact](#impact)
+  - [The Problem](#the-problem)
+  - [Goals and Objectives](#goals-and-objectives)
+  - [The Solution](#the-solution)
+  - [UX Research](#ux-research)
+  - [Stakeholder Engagement](#stakeholder-engagement)
+  - [Solution Summary](#solution-summary)
+  - [Outcome and Final Remarks](#outcome-and-final-remarks)
 
 ## My Role
 
@@ -42,6 +58,14 @@ The Victorian Reports website is the primary digital platform for purchasing and
 
 This project involved a full UI/UX overhaul to modernise the website, improve accessibility, and streamline eCommerce flows. I worked closely with the Open Law development team to implement the new design system and ensure the platform was future-proof and maintainable.
 
+
+<div class="lightgallery">
+    <a href="/projects/victorian-reports/01.png">
+        <figure>
+            <img src="/projects/victorian-reports/01.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ### Impact
@@ -59,10 +83,24 @@ Although the Victorian Reports website was usable from a functionality standpoin
 - Lack of responsive design and poor accessibility compliance.
 - A dated design aesthetic.
 
-![Existing webpage design](/projects/victorian-reports/02.png "Existing webpage design")
+<div class="lightgallery">
+    <a href="/projects/victorian-reports/02.png">
+        <figure>
+            <img src="/projects/victorian-reports/02.png" eleventy:formats="webp" alt="Existing webpage design" />
+            <figcaption>Existing webpage design</figcaption>
+        </figure>
+    </a>
+</div>
 
 
-![Existing text colours fail to pass WCAG contrast tests](/projects/victorian-reports/03.png "Existing text colours fail to pass WCAG contrast tests")
+<div class="lightgallery">
+    <a href="/projects/victorian-reports/03.png">
+        <figure>
+            <img src="/projects/victorian-reports/03.png" eleventy:formats="webp" alt="Existing text colours fail to pass WCAG contrast tests" />
+            <figcaption>Existing text colours fail to pass WCAG contrast tests</figcaption>
+        </figure>
+    </a>
+</div>
 
 
 ### Goals and Objectives
@@ -85,7 +123,14 @@ The legacy purchase flow required users to recall items already added to the car
 - Bulk volume selection.
 - Clear purchase summaries.
 
-![Updated eCommerce flow with cart persistence and a consistent purchasing flow](/projects/victorian-reports/04.png "Updated eCommerce flow with cart persistence and a consistent purchasing flow")
+<div class="lightgallery">
+    <a href="/projects/victorian-reports/04.png">
+        <figure>
+            <img src="/projects/victorian-reports/04.png" eleventy:formats="webp" alt="Updated eCommerce flow with cart persistence and a consistent purchasing flow" />
+            <figcaption>Updated eCommerce flow with cart persistence and a consistent purchasing flow</figcaption>
+        </figure>
+    </a>
+</div>
 
 
 #### Responsive Layouts with Collapsible UI
@@ -93,7 +138,14 @@ The legacy purchase flow required users to recall items already added to the car
 To reduce mobile scrolling fatigue for mobile users, I introduced collapsible content blocks for product information, settings, and forms. This also helps desktop users by keeping the interface clean and distraction-free.
 
 
-![Mobile designs were created in junction with its desktop counterpart, allowing for a mobile-responsive experience](/projects/victorian-reports/05.png "Mobile designs were created in junction with its desktop counterpart, allowing for a mobile-responsive experience")
+<div class="lightgallery">
+    <a href="/projects/victorian-reports/05.png">
+        <figure>
+            <img src="/projects/victorian-reports/05.png" eleventy:formats="webp" alt="Mobile designs were created in junction with its desktop counterpart, allowing for a mobile-responsive experience" />
+            <figcaption>Mobile designs were created in junction with its desktop counterpart, allowing for a mobile-responsive experience</figcaption>
+        </figure>
+    </a>
+</div>
 
 
 #### Accessible and Consistent Design
@@ -132,10 +184,22 @@ Their pain points informed the following key design principles:
 User flows revealed where users dropped off or became confused—especially during purchasing or when attempting to browse by volume.
 
 
-![](/projects/victorian-reports/06.png "")
+<div class="lightgallery">
+    <a href="/projects/victorian-reports/06.png">
+        <figure>
+            <img src="/projects/victorian-reports/06.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
-![](/projects/victorian-reports/07.png "")
+<div class="lightgallery">
+    <a href="/projects/victorian-reports/07.png">
+        <figure>
+            <img src="/projects/victorian-reports/07.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 Key blockers:
 
@@ -159,7 +223,13 @@ I also supported developers by:
 - Supported dev team with frontend integration and live design QA.
 - Simplified mobile and desktop navigation with collapsible UI and touch-friendly layouts.
 
-![](/projects/victorian-reports/08.png "")
+<div class="lightgallery">
+    <a href="/projects/victorian-reports/08.png">
+        <figure>
+            <img src="/projects/victorian-reports/08.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ### Outcome and Final Remarks

@@ -1,77 +1,134 @@
-// Case studies, mirrored from notion.wingpang.com.
-// `roles` drives the filter chips on the home page — keep these strings in sync
-// with the Role multi-select in Notion so the two don't drift.
+// Case studies shown on the home page.
+// The first six mirror notion.wingpang.com; the rest are the earlier projects
+// that predate the Notion database.
+//
+// `roles` drives the Topics filter — keep those strings in sync with the Role
+// multi-select in Notion so the two don't drift.
 export default [
     {
         slug: "digizoo-website",
         title: "Website rebranding for Digizoo, with dynamic heroes",
         brief: "An Astro-based website with time-gated hero sections for event campaigns, rebuilt from the ground up to reflect Digizoo's identity.",
+        caption: "UX, UI, Branding, Astro",
         client: "Digizoo",
         timeframe: "2 weeks",
         type: "Website",
         roles: ["UX Design", "UI Design", "Branding", "AI Tooling"],
         tools: ["Git", "Claude Code CLI"],
-        glyph: "🌐",
+        url: "/projects/digizoo-website/",
+        img: "/projects/digizoo-website/cover.png",
         date: "2026-06-30"
-    },
-    {
-        slug: "victorian-reports",
-        title: "Accessible platform redesign for the Victorian Reports",
-        brief: "An accessible, mobile-responsive overhaul of the Victorian Reports platform, so legal professionals can access and purchase the Victorian Law Reports online.",
-        client: "Legal/Government",
-        timeframe: "3 months",
-        type: "Website",
-        roles: ["UX Design", "UI Design", "Frontend Development", "Branding", "Accessibility"],
-        tools: ["Figma", "Miro", "Google Analytics"],
-        glyph: "⚖️",
-        date: "2025-04-01"
     },
     {
         slug: "ai-tool-suite",
         title: "Automating document and presentation styling with a tool suite",
         brief: "A tool suite that automates the styling of documents and slide decks, cutting the time the sales team needs to send a Digizoo-branded SoW.",
+        caption: "Frontend development, Product strategy, Design system",
         client: "Digizoo",
         timeframe: "3 months",
         type: "AI Ops",
         roles: ["Frontend Development", "Product Strategy", "Branding", "Design System", "AI Tooling"],
         tools: ["Claude Code CLI", "Git"],
-        glyph: "🤖",
+        url: "/projects/ai-tool-suite/",
+        img: "/projects/ai-tool-suite/cover.png",
         date: "2026-08-01"
-    },
-    {
-        slug: "asset-mapping",
-        title: "Transforming a desktop-only logistics platform for mobile users",
-        brief: "A cost-conscious redesign that put a previously desktop-only asset mapping tool in the hands of frontline logistics workers, without compromising technical feasibility.",
-        client: "Logistics",
-        timeframe: "1 month",
-        type: "Mobile",
-        roles: ["UX Design", "UI Design"],
-        tools: ["Figma", "Miro", "Google Analytics"],
-        glyph: "🚛",
-        date: "2025-08-01"
-    },
-    {
-        slug: "legacy-conversion",
-        title: "Conversion and consolidation from a legacy to modern experience",
-        brief: "A research-led integration of data sources that cut the number of platforms and the context-switching a frontline worker needs to get through their day.",
-        client: "Logistics",
-        timeframe: "1 month",
-        type: "Mobile",
-        roles: ["UX Design", "UI Design"],
-        tools: ["Figma", "Miro", "Google Analytics"],
-        glyph: "📦",
-        date: "2025-11-01"
     },
     {
         slug: "zooid-cards",
         title: "Celebrating Digizoo's 10 year anniversary with ZooID cards",
         brief: "Physical merchandise designed to commemorate Digizoo's 10 year anniversary and spark a bit of joy with bespoke memorabilia.",
+        caption: "Branding, Graphic design, Print",
         client: "Digizoo",
         timeframe: "1 month",
         type: "Print Design",
         roles: ["Branding", "Graphic Design"],
         tools: ["Microsoft Forms", "InDesign", "Aseprite"],
-        glyph: "🪪",
+        url: "/projects/zooid-cards/",
+        img: "/projects/zooid-cards/cover.png",
         date: "2026-05-01"
+    },
+    {
+        slug: "legacy-conversion",
+        title: "Conversion and consolidation from a legacy to modern experience",
+        brief: "A research-led integration of data sources that cut the number of platforms and the context-switching a frontline worker needs to get through their day.",
+        caption: "UX, UI, User research",
+        client: "Logistics",
+        timeframe: "1 month",
+        type: "Mobile",
+        roles: ["UX Design", "UI Design"],
+        tools: ["Figma", "Miro", "Google Analytics"],
+        url: "/projects/legacy-conversion/",
+        img: "/projects/legacy-conversion/cover.png",
+        date: "2025-11-01"
+    },
+    {
+        slug: "asset-mapping",
+        title: "Transforming a desktop-only logistics platform for mobile users",
+        brief: "A cost-conscious redesign that put a previously desktop-only asset mapping tool in the hands of frontline logistics workers, without compromising technical feasibility.",
+        caption: "UX, UI, Mobile conversion",
+        client: "Logistics",
+        timeframe: "1 month",
+        type: "Mobile",
+        roles: ["UX Design", "UI Design"],
+        tools: ["Figma", "Miro", "Google Analytics"],
+        url: "/projects/asset-mapping/",
+        img: "/projects/asset-mapping/cover.png",
+        date: "2025-08-01"
+    },
+    {
+        slug: "victorian-reports",
+        title: "Accessible platform redesign for the Victorian Reports",
+        brief: "An accessible, mobile-responsive overhaul of the Victorian Reports platform, so legal professionals can access and purchase the Victorian Law Reports online.",
+        caption: "UI/UX, HTML, SASS, React",
+        client: "Legal/Government",
+        timeframe: "3 months",
+        type: "Website",
+        roles: ["UX Design", "UI Design", "Frontend Development", "Branding", "Accessibility"],
+        tools: ["Figma", "Miro", "Google Analytics"],
+        url: "/projects/victorian-reports/",
+        img: "/projects/victorian-reports/cover.png",
+        date: "2025-04-01"
+    },
+    {
+        slug: "openlaw",
+        title: "Scalable design system for a legal non-profit",
+        brief: "A scalable design system for Open Law, a BarNet non-profit initiative aiming to improve access to legal information through a collection of digital tools.",
+        caption: "Design system and branding",
+        client: "Open Law",
+        timeframe: "Ongoing",
+        type: "Design System",
+        roles: ["UI Design", "Design System", "Branding", "Frontend Development", "Graphic Design"],
+        tools: ["Figma", "Illustrator"],
+        url: "/projects/openlaw/",
+        img: "/assets/img/home/open-law.png",
+        date: "2023-06-01"
+    },
+    {
+        slug: "darlo",
+        title: "Web design for a historical project about Darlinghurst",
+        brief: "An award-winning collaboration telling the story of Darlinghurst's Liverpool Street, built as a static site with archival imagery and an interactive timeline.",
+        caption: "Web design, HTML, SASS",
+        client: "Darlo Stories",
+        timeframe: "6 months (part-time)",
+        type: "Website",
+        roles: ["UI Design", "Frontend Development"],
+        tools: ["Figma", "Illustrator"],
+        url: "/projects/darlo/",
+        img: "/assets/img/home/darlinghurst.png",
+        date: "2023-01-01"
+    },
+    {
+        slug: "climasaur",
+        title: "Mobile app concept for climate activism",
+        brief: "A mobile app concept that turns individual climate action into something social and habit-forming, researched and prototyped end to end.",
+        caption: "UI/UX, Branding, Mobile",
+        client: "Self-directed",
+        timeframe: "Concept",
+        type: "Mobile",
+        roles: ["UX Design", "UI Design", "Branding"],
+        tools: ["Figma", "Illustrator"],
+        url: "https://drive.google.com/file/d/1dq8P7_OWWLmwKpzIXqHNSq3fvMNtxDlU/view?usp=sharing",
+        img: "/assets/img/home/climasaur.png",
+        date: "2022-01-01"
     }
 ]

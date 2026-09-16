@@ -6,6 +6,7 @@ role: "Branding, Graphic Design"
 projecttype: "Print Design"
 client: "Digizoo"
 duration: "1 month"
+year: 2026
 description: "Physical merchandise designed to commemorate Digizoo's 10 year anniversary and spark a bit of joy with bespoke memorabilia."
 date: 2026-05-01
 categories:
@@ -13,7 +14,7 @@ categories:
 ---
 <div class="project-header">
     <div class="project-banner">
-        <img src="/projects/zooid-cards/01.png" eleventy:formats="webp" alt=""/>
+        <img src="/projects/zooid-cards/cover.png" eleventy:formats="webp" alt=""/>
     </div>
     <div class="information">
         <h1>{{ title }}</h1>
@@ -29,7 +30,21 @@ categories:
     </div>
 </div>
 
+*We acknowledge the Aboriginal people as the Traditional Owners of this land, and pay our respects to Elders past and present. Working from Darug and Gadigal land.*
+
 {{ description }}
+<br/>
+
+## Contents
+- [My Role](#my-role)
+- [Project Overview](#project-overview)
+- [Impact](#impact)
+- [The Problem](#the-problem)
+- [Goals and Objectives](#goals-and-objectives)
+- [The Solution](#the-solution)
+  - [Trading cards have fun personal statistics inspired by Dungeons and Dragons](#trading-cards-have-fun-personal-statistics-inspired-by-dungeons-and-dragons)
+  - [Attributes, stats and quotes on the trading cards were collected through Microsoft Forms](#attributes,-stats-and-quotes-on-the-trading-cards-were-collected-through-microsoft-forms)
+- [Outcome and Final Remarks](#outcome-and-final-remarks)
 
 ## My Role
 
@@ -39,14 +54,40 @@ As part of Digizoo’s internal social committee, I was tasked to create a memen
 ## Project Overview
 
 
+<div class="lightgallery">
+    <a href="/projects/zooid-cards/01.png">
+        <figure>
+            <img src="/projects/zooid-cards/01.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
-![](/projects/zooid-cards/02.png "")
+
+<div class="lightgallery">
+    <a href="/projects/zooid-cards/02.png">
+        <figure>
+            <img src="/projects/zooid-cards/02.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
-![](/projects/zooid-cards/03.png "")
+<div class="lightgallery">
+    <a href="/projects/zooid-cards/03.png">
+        <figure>
+            <img src="/projects/zooid-cards/03.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
-![](/projects/zooid-cards/04.jpg "")
+<div class="lightgallery">
+    <a href="/projects/zooid-cards/04.jpg">
+        <figure>
+            <img src="/projects/zooid-cards/04.jpg" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ## Impact
@@ -56,13 +97,31 @@ As part of Digizoo’s internal social committee, I was tasked to create a memen
 - It made for a fun social activity for the 10 year anniversary celebration dinner.
 - The ZooID also functioned as decoration for our plain office passes!
 
-![](/projects/zooid-cards/05.png "")
+<div class="lightgallery">
+    <a href="/projects/zooid-cards/05.png">
+        <figure>
+            <img src="/projects/zooid-cards/05.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
-![](/projects/zooid-cards/06.png "")
+<div class="lightgallery">
+    <a href="/projects/zooid-cards/06.png">
+        <figure>
+            <img src="/projects/zooid-cards/06.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
-![](/projects/zooid-cards/07.png "")
+<div class="lightgallery">
+    <a href="/projects/zooid-cards/07.png">
+        <figure>
+            <img src="/projects/zooid-cards/07.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ## The Problem
@@ -90,7 +149,13 @@ Many employees at Digizoo enjoy playing video games and are aware of the Dungeon
 The final six stats were derived from a group brainstorm: Team Player (TMP), Humour (HUM), Wisdom (WIS), Caffeine Addition (CAF), Social (SOC) and Hunger (HNG).
 
 
-![](/projects/zooid-cards/08.png "")
+<div class="lightgallery">
+    <a href="/projects/zooid-cards/08.png">
+        <figure>
+            <img src="/projects/zooid-cards/08.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ### Attributes, stats and quotes on the trading cards were collected through Microsoft Forms

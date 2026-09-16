@@ -6,6 +6,7 @@ role: "Frontend Development, Product Strategy, Branding, Design System, AI Tooli
 projecttype: "AI Ops"
 client: "Digizoo"
 duration: "3 months"
+year: 2026
 description: "A tool suite that automates the styling of documents and slide decks, cutting the time the sales team needs to send a Digizoo-branded SoW."
 date: 2026-08-01
 categories:
@@ -13,7 +14,7 @@ categories:
 ---
 <div class="project-header">
     <div class="project-banner">
-        <img src="/projects/ai-tool-suite/01.png" eleventy:formats="webp" alt=""/>
+        <img src="/projects/ai-tool-suite/cover.png" eleventy:formats="webp" alt=""/>
     </div>
     <div class="information">
         <h1>{{ title }}</h1>
@@ -29,10 +30,29 @@ categories:
     </div>
 </div>
 
+*We acknowledge the Aboriginal people as the Traditional Owners of this land, and pay our respects to Elders past and present. Working from Darug and Gadigal land.*
+
 {{ description }}
+<br/>
 
 This technical details of this project have been omitted to comply with NDA as Digizoo’s Intellectual Property.
 
+## Contents
+- [My Role](#my-role)
+- [Project Overview](#project-overview)
+- [Output examples](#output-examples)
+  - [Generated slide deck example](#generated-slide-deck-example)
+  - [Generated document example](#generated-document-example)
+- [Impact](#impact)
+- [The Problem](#the-problem)
+- [Goals and Objectives](#goals-and-objectives)
+- [The Solution](#the-solution)
+  - [Extendable themes](#extendable-themes)
+  - [Typography engine that balances text visually where possible, and prevents orphans and widows (stranded words/sentences)](#typography-engine-that-balances-text-visually-where-possible,-and-prevents-orphans-and-widows-(stranded-words/sentences))
+  - [Styled documents and decks with the ability to be co-branded for client pitches](#styled-documents-and-decks-with-the-ability-to-be-co-branded-for-client-pitches)
+  - [Document formatting customised based on sales or legal requirements](#document-formatting-customised-based-on-sales-or-legal-requirements)
+  - [Slide layouts that adhere to a design grid](#slide-layouts-that-adhere-to-a-design-grid)
+  - [Bespoke icon libraries and layouts](#bespoke-icon-libraries-and-layouts)
 
 ## My Role
 
@@ -53,6 +73,14 @@ The tool suite was created to be highly designed and customisable, with theming 
 
 Monotreme was designed to be AI-first, usable by AI agents and non-technical audiences through Claude Cowork (or other AI harnesses) as a plugin and a MCP server.
 
+
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/01.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/01.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ## Output examples
@@ -100,16 +128,35 @@ Additionally, most AI design tools on the market often lack refinement in the fi
 Themes, blocks and layouts can be extensively customised by a designer to adapt to different/client branding.
 
 
-![](/projects/ai-tool-suite/02.png "")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/02.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/02.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
-![](/projects/ai-tool-suite/03.png "")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/03.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/03.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ### Typography engine that balances text visually where possible, and prevents orphans and widows (stranded words/sentences)
 
 
-![While there is enough space in the cells for “and” and “per” to be on the top line, the typography engine pushes it to the next line to avoid orphans at the end of a sentence](/projects/ai-tool-suite/04.png "While there is enough space in the cells for “and” and “per” to be on the top line, the typography engine pushes it to the next line to avoid orphans at the end of a sentence")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/04.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/04.png" eleventy:formats="webp" alt="While there is enough space in the cells for “and” and “per” to be on the top line, the typography engine pushes it to the next line to avoid orphans at the end of a sentence" />
+            <figcaption>While there is enough space in the cells for “and” and “per” to be on the top line, the typography engine pushes it to the next line to avoid orphans at the end of a sentence</figcaption>
+        </figure>
+    </a>
+</div>
 
 
 ### Styled documents and decks with the ability to be co-branded for client pitches
@@ -117,10 +164,22 @@ Themes, blocks and layouts can be extensively customised by a designer to adapt 
 Users can provide a client logo for the document to be co-branded with the client’s logo in the cover pages and/or contents
 
 
-![](/projects/ai-tool-suite/05.png "")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/05.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/05.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
-![](/projects/ai-tool-suite/06.png "")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/06.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/06.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ### Document formatting customised based on sales or legal requirements
@@ -128,22 +187,52 @@ Users can provide a client logo for the document to be co-branded with the clien
 Legal/policy documents have numbered sections and legal footers
 
 
-![](/projects/ai-tool-suite/07.png "")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/07.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/07.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
-![](/projects/ai-tool-suite/08.png "")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/08.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/08.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ### Slide layouts that adhere to a design grid
 
 
-![](/projects/ai-tool-suite/09.png "")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/09.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/09.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
 ### Bespoke icon libraries and layouts
 
 
-![](/projects/ai-tool-suite/10.png "")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/10.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/10.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>
 
 
-![](/projects/ai-tool-suite/11.png "")
+<div class="lightgallery">
+    <a href="/projects/ai-tool-suite/11.png">
+        <figure>
+            <img src="/projects/ai-tool-suite/11.png" eleventy:formats="webp" alt="" />
+        </figure>
+    </a>
+</div>

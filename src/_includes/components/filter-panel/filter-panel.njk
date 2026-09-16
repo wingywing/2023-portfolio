@@ -1,8 +1,11 @@
 {#
     Filter panel for the case study grid.
     Pass through:
-    - groups --> the caseStudyFilters data (an array of { id, label, options })
-    - total  --> how many items the grid holds, for the initial status line
+    - groups --> the caseStudyFilters data (an array of { id, label, control, options })
+
+    A group renders as compact chips or as a multi-select dropdown, depending
+    on its `control`. Both are checkboxes underneath, so the whole panel is
+    keyboard operable and multi-select without any custom widget semantics.
 
     Icons are the pixel paths from the filter design, kept inline so they
     inherit currentColor and stay crisp alongside the rest of the pixel art.
@@ -14,9 +17,6 @@
 <form class="filter-panel" data-filter-panel hidden>
     <div class="filter-panel__header">
         <h3 class="filter-panel__title">Filters</h3>
-        <svg class="filter-panel__mark" viewBox="0 0 18.67 10.67" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.666 0H0v2.667h2.666v2.666h2.667V8h2.667v2.667h2.666V8h2.667V5.333h2.667V2.667H18.666V0h-2.667v2.667h-2.667v2.666h-2.666V8H8V5.333H5.333V2.667H2.666V0Z"/>
-        </svg>
     </div>
 
     <div class="filter-panel__search">
@@ -28,28 +28,60 @@
         </svg>
     </div>
 
+    <div class="filter-panel__groups">
     {% for group in params.groups %}
-    <fieldset class="filter-group">
-        <legend class="filter-group__legend">{{ group.label }}</legend>
-        <ul class="filter-group__options">
-            {% for option in group.options %}
-            <li>
-                <label class="filter-option">
+        {% if group.control == "dropdown" %}
+        <fieldset class="filter-group filter-group--{{ group.id }}">
+            <legend class="filter-group__legend">{{ group.label }}</legend>
+            <details class="filter-dropdown" data-filter-dropdown>
+                <summary class="filter-dropdown__summary">
+                    <span class="filter-dropdown__value" data-filter-dropdown-value>Any</span>
+                    <svg class="filter-dropdown__chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h2v2H0V0Zm2 2h2v2H2V2Zm2 2h4v2H4V4Zm4-2h2v2H8V2Zm2-2h2v2h-2V0Z"/>
+                    </svg>
+                </summary>
+                <ul class="filter-dropdown__options">
+                {% for option in group.options %}
+                <li>
+                    <label class="filter-option">
+                        <input type="checkbox" class="visually-hidden"
+                               name="{{ group.id }}" value="{{ option.value }}"
+                               data-filter-group="{{ group.id }}">
+                        <svg class="filter-option__box" viewBox="0 0 18 18" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path class="filter-option__box-off" d="M0 0h18v18H0V0Zm16 16V2H2v14h14Z"/>
+                            <path class="filter-option__box-on" d="M2 0H0V18H18V0H2ZM2 2H16V16H2V2ZM6 9H4V11H6V13H8V11H10V9H12V7H14V5H12V7H10V9H8V11H6V9Z"/>
+                        </svg>
+                        <span class="filter-option__name">{{ option.name }}</span>
+                        <span class="filter-option__count">{{ option.count }}</span>
+                    </label>
+                </li>
+                {% endfor %}
+                </ul>
+            </details>
+        </fieldset>
+        {% else %}
+        <details class="filter-group filter-group--{{ group.id }}" open>
+            <summary class="filter-group__legend">
+                {{ group.label }}
+                <svg class="filter-panel__mark" viewBox="-1 -1 21 13" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.666 0H0v2.667h2.666v2.666h2.667V8h2.667v2.667h2.666V8h2.667V5.333h2.667V2.667H18.666V0h-2.667v2.667h-2.667v2.666h-2.666V8H8V5.333H5.333V2.667H2.666V0Z"/>
+                </svg>
+            </summary>
+            <div class="filter-chips" role="group" aria-label="{{ group.label }}">
+                {% for option in group.options %}
+                <label class="filter-chip">
                     <input type="checkbox" class="visually-hidden"
                            name="{{ group.id }}" value="{{ option.value }}"
                            data-filter-group="{{ group.id }}">
-                    <svg class="filter-option__box" viewBox="0 0 18 18" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path class="filter-option__box-off" d="M0 0h18v18H0V0Zm16 16V2H2v14h14Z"/>
-                        <path class="filter-option__box-on" d="M2 0H0v18h18V0H2Zm0 2h14v14H2V2Zm4 9H4v2h2v2h2v-2h2v-2h2V9h2V7h-2v2h-2v2H8v2H6v-2Z"/>
-                    </svg>
-                    <span class="filter-option__name">{{ option.name }}</span>
-                    <span class="filter-option__count">{{ option.count }}</span>
+                    <span class="filter-chip__name">#{{ option.value }}</span>
+                    <span class="filter-chip__count">{{ option.count }}</span>
                 </label>
-            </li>
-            {% endfor %}
-        </ul>
-    </fieldset>
+                {% endfor %}
+            </div>
+        </details>
+        {% endif %}
     {% endfor %}
+    </div>
 
     <button type="button" class="filter-panel__clear" data-filter-clear hidden>
         Clear filters

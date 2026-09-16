@@ -104,8 +104,30 @@
         }
     }
 
+    // Reflect each dropdown's selection in its summary, so a collapsed
+    // dropdown still shows what it is filtering by.
+    function syncDropdowns() {
+        var dropdowns = Array.prototype.slice.call(
+            panel.querySelectorAll('[data-filter-dropdown]'));
+
+        dropdowns.forEach(function (dropdown) {
+            var label = dropdown.querySelector('[data-filter-dropdown-value]');
+            if (!label) {
+                return;
+            }
+            var picked = Array.prototype.slice.call(
+                dropdown.querySelectorAll('input:checked')).map(function (input) {
+                    return input.value;
+                });
+            label.textContent = picked.length ? picked.join(', ') : 'Any';
+        });
+    }
+
     boxes.forEach(function (box) {
-        box.addEventListener('change', apply);
+        box.addEventListener('change', function () {
+            syncDropdowns();
+            apply();
+        });
     });
 
     if (search) {
@@ -120,6 +142,7 @@
             if (search) {
                 search.value = '';
             }
+            syncDropdowns();
             apply();
         });
     }
@@ -129,5 +152,6 @@
         event.preventDefault();
     });
 
+    syncDropdowns();
     apply();
 })();

@@ -1,13 +1,36 @@
+@use 'sass:math';
 @use './variables.scss' as variables;
 @use './mixin/colours.scss' as colours;
 
 
 //Fonts!
-$title: 1.5rem;
-$text-small: 1rem;
+// Fluid type. Each step clamps between a minimum at the 375px phone width and
+// a maximum at the 1440px page width, scaling on viewport width in between so
+// nothing has to be re-set per breakpoint.
+//
+//   $min  — size at 375px and below
+//   $max  — size at 1440px and above
+@function fluid($min, $max) {
+    $min-vw: 23.4375; // 375px in rem
+    $max-vw: 90;      // 1440px in rem
+    $slope: math.div($max - $min, $max-vw - $min-vw);
+    $intercept: $min - ($slope * $min-vw);
+
+    @return clamp(
+        #{$min}rem,
+        #{$intercept}rem + #{$slope * 100}vw,
+        #{$max}rem
+    );
+}
+
+$hero: fluid(2, 3.75);            // display / hero text
+$title: fluid(1.0625, 1.25);      // card and section titles
+$subtitle: fluid(1, 1.1875);      // asides
+$body: fluid(.9375, 1);           // body copy
+$text-small: fluid(.8125, .875);  // captions and small print
 
 @mixin big-title {
-    font-size: 4.5rem;
+    font-size: $hero;
     font-family: 'mondwest';
     margin: 0;
     position: relative;
@@ -16,7 +39,7 @@ $text-small: 1rem;
 
 .neue-bit {
     font-family: 'neuebit';
-    font-size: 2rem;
+    font-size: fluid(1.5, 2);
 }
 
 @font-face {
